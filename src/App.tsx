@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Lenis from 'lenis';
 import { TowerResidence } from './data/towerData';
 
 // 111W57-Inspired Component Suite
@@ -30,6 +31,38 @@ export const App: React.FC = () => {
   // Toast State
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
+  // Apple-grade Smooth Scroll Interpolation with Lenis
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const lenis = new Lenis({
+      duration: 1.25,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential deceleration for natural deceleration
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      touchMultiplier: 1.2
+    });
+
+    (window as any).__lenis = lenis;
+
+    let rafId: number;
+    function raf(time: number) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+      delete (window as any).__lenis;
+    };
+  }, []);
+
   const showToast = (msg: string) => {
     setToastMessage(msg);
     setTimeout(() => {
@@ -60,7 +93,14 @@ export const App: React.FC = () => {
         <TowerHero
           onExploreClick={() => {
             const el = document.getElementById('landmark');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
+            if (el) {
+              const lenis = (window as any).__lenis;
+              if (lenis) {
+                lenis.scrollTo(el, { offset: -30, duration: 1.4 });
+              } else {
+                el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
           }}
           onInquireClick={() => handleOpenInquire()}
         />

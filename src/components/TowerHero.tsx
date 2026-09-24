@@ -8,9 +8,30 @@ interface TowerHeroProps {
 
 export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireClick }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     setIsLoaded(true);
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // Subtle, restrained parallax (only within the hero viewport)
+          if (window.scrollY < window.innerHeight) {
+            setScrollY(window.scrollY);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -27,7 +48,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
         backgroundColor: '#121110'
       }}
     >
-      {/* Background Architectural Canvas (111W57 slender soaring facade aesthetic) */}
+      {/* Background Architectural Canvas with Subtle Scroll-Linked Parallax */}
       <div
         style={{
           position: 'absolute',
@@ -35,9 +56,12 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
           backgroundImage: `linear-gradient(to bottom, rgba(18, 17, 16, 0.35) 0%, rgba(18, 17, 16, 0.45) 50%, rgba(18, 17, 16, 0.9) 100%), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2600&q=90')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center 30%',
-          transform: isLoaded ? 'scale(1)' : 'scale(1.06)',
-          transition: 'transform 2.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease',
-          opacity: isLoaded ? 1 : 0
+          transform: isLoaded
+            ? `translate3d(0, ${scrollY * 0.18}px, 0) scale(1)`
+            : 'translate3d(0, 0, 0) scale(1.06)',
+          transition: isLoaded ? 'transform 0.15s ease-out' : 'transform 2.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease',
+          opacity: isLoaded ? 1 : 0,
+          willChange: 'transform, opacity'
         }}
       />
 
@@ -75,8 +99,9 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             color: 'var(--accent-gold)',
             marginBottom: '1.75rem',
             opacity: isLoaded ? 1 : 0,
-            transform: isLoaded ? 'translateY(0)' : 'translateY(15px)',
-            transition: 'all 1s var(--ease-cinematic) 0.2s'
+            transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 15px, 0)',
+            transition: 'all 1s var(--ease-cinematic) 0.2s',
+            willChange: 'opacity, transform'
           }}
         >
           • CXVII • NEW YORK •
@@ -91,8 +116,9 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             maxWidth: '1200px',
             marginBottom: '1.75rem',
             opacity: isLoaded ? 1 : 0,
-            transform: isLoaded ? 'translateY(0)' : 'translateY(25px)',
-            transition: 'all 1.1s var(--ease-cinematic) 0.4s'
+            transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 25px, 0)',
+            transition: 'all 1.1s var(--ease-cinematic) 0.4s',
+            willChange: 'opacity, transform'
           }}
         >
           117 WEST 57
@@ -110,8 +136,9 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             lineHeight: 1.6,
             marginBottom: '3rem',
             opacity: isLoaded ? 1 : 0,
-            transform: isLoaded ? 'translateY(0)' : 'translateY(25px)',
-            transition: 'all 1.1s var(--ease-cinematic) 0.6s'
+            transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 25px, 0)',
+            transition: 'all 1.1s var(--ease-cinematic) 0.6s',
+            willChange: 'opacity, transform'
           }}
         >
           A soaring silhouette of fluted terra-cotta, cast bronze, and classical grandeur rising 1,428 feet above Central Park.
@@ -126,8 +153,9 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             justifyContent: 'center',
             gap: '1.5rem',
             opacity: isLoaded ? 1 : 0,
-            transform: isLoaded ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 1.1s var(--ease-cinematic) 0.8s'
+            transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
+            transition: 'all 1.1s var(--ease-cinematic) 0.8s',
+            willChange: 'opacity, transform'
           }}
         >
           <button
