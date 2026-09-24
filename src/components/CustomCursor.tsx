@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 export const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [trailingPos, setTrailingPos] = useState({ x: -100, y: -100 });
-  const [cursorType, setCursorType] = useState<'' | 'view' | 'explore' | 'drag'>('');
+  const [cursorType, setCursorType] = useState<'' | 'view' | 'explore'>('');
   const [isPointer, setIsPointer] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only activate for mouse/pointer devices with fine precision
+    // Only activate for desktop mouse/fine pointer devices
     const isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     if (!isFinePointer) return;
 
@@ -22,13 +22,13 @@ export const CustomCursor: React.FC = () => {
       if (!target) return;
 
       const cursorAttr = target.closest('[data-cursor]')?.getAttribute('data-cursor');
-      if (cursorAttr === 'view' || cursorAttr === 'explore' || cursorAttr === 'drag') {
+      if (cursorAttr === 'view' || cursorAttr === 'explore') {
         setCursorType(cursorAttr);
       } else {
         setCursorType('');
       }
 
-      const isInteractive = target.closest('button, a, input, select, textarea, [role="button"]');
+      const isInteractive = target.closest('button, a, select, input, [role="button"]');
       setIsPointer(Boolean(isInteractive));
     };
 
@@ -68,7 +68,7 @@ export const CustomCursor: React.FC = () => {
   return (
     <>
       <div
-        className="custom-cursor-dot"
+        className="cursor-dot"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
@@ -76,14 +76,14 @@ export const CustomCursor: React.FC = () => {
         }}
       />
       <div
-        className={`custom-cursor-ring ${cursorType ? `cursor-${cursorType}` : ''}`}
+        className={`cursor-ring ${cursorType ? `cursor-${cursorType}` : ''}`}
         style={{
           left: `${trailingPos.x}px`,
           top: `${trailingPos.y}px`,
-          transform: `translate(-50%, -50%) scale(${isPointer && !cursorType ? 1.4 : 1})`
+          transform: `translate(-50%, -50%) scale(${isPointer && !cursorType ? 1.35 : 1})`
         }}
       >
-        {cursorType && <span className="custom-cursor-label">{cursorType}</span>}
+        {cursorType && <span className="cursor-label">{cursorType}</span>}
       </div>
     </>
   );

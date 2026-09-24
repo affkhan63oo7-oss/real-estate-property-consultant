@@ -1,237 +1,130 @@
-import React, { useState, useEffect } from 'react';
-import { Property } from './types';
-import { PROPERTIES } from './data/mockData';
+import React, { useState } from 'react';
+import { TowerResidence } from './data/towerData';
 
-// Component Suite
+// 111W57-Inspired Component Suite
 import { CustomCursor } from './components/CustomCursor';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { VisionSection } from './components/VisionSection';
-import { FeaturedProperty } from './components/FeaturedProperty';
-import { PropertyDiscovery } from './components/PropertyDiscovery';
-import { AmenitiesStory } from './components/AmenitiesStory';
-import { ProgressSlider } from './components/ProgressSlider';
-import { FloorPlanViewer } from './components/FloorPlanViewer';
-import { Model3DViewer } from './components/Model3DViewer';
-import { LocationExplorer } from './components/LocationExplorer';
-import { StatsCounter } from './components/StatsCounter';
-import { DeveloperHeritage } from './components/DeveloperHeritage';
-import { Testimonials } from './components/Testimonials';
-import { Footer } from './components/Footer';
-import { FloatingConcierge } from './components/FloatingConcierge';
+import { TowerHeader } from './components/TowerHeader';
+import { TowerHero } from './components/TowerHero';
+import { TowerManifesto } from './components/TowerManifesto';
+import { TowerArchitecture } from './components/TowerArchitecture';
+import { TowerResidences } from './components/TowerResidences';
+import { TowerInteriors } from './components/TowerInteriors';
+import { TowerPanorama } from './components/TowerPanorama';
+import { TowerAmenities } from './components/TowerAmenities';
+import { TowerLocation } from './components/TowerLocation';
+import { TowerAvailability } from './components/TowerAvailability';
+import { TowerFooter } from './components/TowerFooter';
 
-// Interactive Modals & Drawers
-import { ScheduleModal } from './components/ScheduleModal';
-import { PropertyDetailModal } from './components/PropertyDetailModal';
-import { GalleryLightbox } from './components/GalleryLightbox';
-import { FavoritesDrawer } from './components/FavoritesDrawer';
-import { EnquiryDrawer } from './components/EnquiryDrawer';
+// Modals
+import { ResidenceDossierModal } from './components/ResidenceDossierModal';
+import { TowerInquiryModal } from './components/TowerInquiryModal';
 import { AdminPanel } from './components/AdminPanel';
 
 export const App: React.FC = () => {
-  // Favorites State (stored in localStorage)
-  const [favoriteIds, setFavoriteIds] = useState<string[]>(() => {
-    try {
-      const saved = localStorage.getItem('aethelgard_favorites');
-      return saved ? JSON.parse(saved) : ['villa-solaria'];
-    } catch {
-      return ['villa-solaria'];
-    }
-  });
-
   // Modal States
-  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
-  const [scheduleTargetProperty, setScheduleTargetProperty] = useState<Property | null>(null);
-
-  const [detailProperty, setDetailProperty] = useState<Property | null>(null);
-
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const [galleryImages, setGalleryImages] = useState<{ url: string; caption: string; category: string }[]>([]);
-  const [galleryStartIndex, setGalleryStartIndex] = useState(0);
-
-  const [isFavoritesOpen, setIsFavoritesOpen] = useState(false);
-  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+  const [selectedResidence, setSelectedResidence] = useState<TowerResidence | null>(null);
+  const [isInquireOpen, setIsInquireOpen] = useState(false);
+  const [inquireTargetResidence, setInquireTargetResidence] = useState<TowerResidence | null>(null);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
 
-  // Toast Notification State
+  // Toast State
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('aethelgard_favorites', JSON.stringify(favoriteIds));
-    } catch (err) {
-      console.error('Failed to save favorites to localStorage:', err);
-    }
-  }, [favoriteIds]);
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
     setTimeout(() => {
       setToastMessage((prev) => (prev === msg ? null : prev));
-    }, 4000);
+    }, 4500);
   };
 
-  const handleToggleFavorite = (id: string) => {
-    if (favoriteIds.includes(id)) {
-      setFavoriteIds((prev) => prev.filter((item) => item !== id));
-      showToast('Removed residence from private wishlist.');
-    } else {
-      setFavoriteIds((prev) => [...prev, id]);
-      showToast('Preserved residence in private wishlist.');
-    }
+  const handleOpenInquire = (residence?: TowerResidence | null) => {
+    setInquireTargetResidence(residence || null);
+    setIsInquireOpen(true);
   };
-
-  const handleOpenSchedule = (property?: Property) => {
-    setScheduleTargetProperty(property || null);
-    setIsScheduleOpen(true);
-  };
-
-  const handleOpenGallery = (images: { url: string; caption: string; category: string }[], startIndex = 0) => {
-    setGalleryImages(images);
-    setGalleryStartIndex(startIndex);
-    setIsGalleryOpen(true);
-  };
-
-  const favoriteProperties = PROPERTIES.filter((p) => favoriteIds.includes(p.id));
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', backgroundColor: 'var(--bg-primary)' }}>
-      {/* Refined Desktop Custom Cursor */}
+    <div style={{ position: 'relative', minHeight: '100vh', backgroundColor: 'var(--bg-parchment)' }}>
+      {/* Desktop Custom Cursor */}
       <CustomCursor />
 
-      {/* Navigation Header */}
-      <Header
-        favoritesCount={favoriteIds.length}
-        onOpenFavorites={() => setIsFavoritesOpen(true)}
-        onOpenSchedule={() => handleOpenSchedule()}
+      {/* 111W57 Minimal Chapter Navigation Header */}
+      <TowerHeader
+        onOpenInquire={() => handleOpenInquire()}
         onToggleAdmin={() => setIsAdminOpen(!isAdminOpen)}
         isAdminOpen={isAdminOpen}
       />
 
-      {/* Main Page Storytelling Experience */}
+      {/* Main Architectural Storytelling Stream */}
       <main>
-        {/* Full-Screen Cinematic Hero */}
-        <Hero
+        {/* Full-Screen Soaring Slender Silhouette Hero */}
+        <TowerHero
           onExploreClick={() => {
-            const el = document.getElementById('collection');
+            const el = document.getElementById('landmark');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
-          onScheduleClick={() => handleOpenSchedule()}
+          onInquireClick={() => handleOpenInquire()}
         />
 
-        {/* 01 / Architectural Manifesto */}
-        <VisionSection />
+        {/* Chapter I: The Landmark (1,428 FT, 1:24 Aspect Ratio, Asymmetric Grid) */}
+        <TowerManifesto />
 
-        {/* 02 / Landmark Feature (Villa Solaria) */}
-        <FeaturedProperty
-          property={PROPERTIES[0]}
-          onExplore={(prop) => setDetailProperty(prop)}
-          onSchedule={(prop) => handleOpenSchedule(prop)}
-          isFavorite={favoriteIds.includes(PROPERTIES[0].id)}
-          onToggleFavorite={handleToggleFavorite}
+        {/* Chapter II: Architecture & Craft (Terra-Cotta & Cast Bronze Filigree) */}
+        <TowerArchitecture />
+
+        {/* Chapter III: The Residences (Full-Bleed Editorial Spreads) */}
+        <TowerResidences
+          onSelectResidence={(res) => setSelectedResidence(res)}
+          onInquireResidence={(res) => handleOpenInquire(res)}
         />
 
-        {/* 03 / The Sovereign Collection (Catalog, Filters, Grid/Carousel) */}
-        <PropertyDiscovery
-          properties={PROPERTIES}
-          onSelectProperty={(prop) => setDetailProperty(prop)}
-          onScheduleProperty={(prop) => handleOpenSchedule(prop)}
-          favorites={favoriteIds}
-          onToggleFavorite={handleToggleFavorite}
+        {/* Chapter IV: Interior Craft (French Herringbone, Cristallo Quartzite, Statuario Marble) */}
+        <TowerInteriors />
+
+        {/* Chapter V: The Panorama (Interactive Central Park Day/Dusk/Night Views) */}
+        <TowerPanorama />
+
+        {/* Chapter VI: Amenities & Wellness (82-Ft Limestone Pool, Private Dining, Athletic Club) */}
+        <TowerAmenities />
+
+        {/* Chapter VII: The Enclave (Billionaires' Row & Cultural Destinations) */}
+        <TowerLocation />
+
+        {/* Chapter VIII: Availability Index (Clean Editorial Inventory Table) */}
+        <TowerAvailability
+          onSelectResidence={(res) => setSelectedResidence(res)}
+          onInquireResidence={(res) => handleOpenInquire(res)}
         />
-
-        {/* 04 / Signature Amenities Visual Story */}
-        <AmenitiesStory />
-
-        {/* 05 / Construction Progress Before/After Slider */}
-        <ProgressSlider />
-
-        {/* 06 / Spatial Blueprint & Interactive Floor Plans */}
-        <FloorPlanViewer />
-
-        {/* 07 / Interactive 3D Massing & Blueprint Viewer */}
-        <Model3DViewer />
-
-        {/* 08 / Sovereign Geography & Connectivity Map */}
-        <LocationExplorer />
-
-        {/* Numerical Mastery Statistics */}
-        <StatsCounter />
-
-        {/* 09 / Sovereign Lineage & Portfolio Archive */}
-        <DeveloperHeritage />
-
-        {/* Client & Patron Statements */}
-        <Testimonials />
       </main>
 
-      {/* Editorial Footer with Final Signature CTA */}
-      <Footer
-        onScheduleClick={() => handleOpenSchedule()}
-        onEnquiryClick={() => setIsEnquiryOpen(true)}
-        onToast={showToast}
+      {/* Editorial Footer */}
+      <TowerFooter onInquireClick={() => handleOpenInquire()} />
+
+      {/* Residence Detailed Architectural Dossier Modal */}
+      <ResidenceDossierModal
+        residence={selectedResidence}
+        onClose={() => setSelectedResidence(null)}
+        onInquire={(res) => {
+          setSelectedResidence(null);
+          handleOpenInquire(res);
+        }}
       />
 
-      {/* Unobtrusive Floating Concierge & WhatsApp */}
-      <FloatingConcierge
-        onOpenEnquiry={() => setIsEnquiryOpen(true)}
-        onOpenSchedule={() => handleOpenSchedule()}
-      />
-
-      {/* Modals & Slide-out Drawers */}
-      <ScheduleModal
-        isOpen={isScheduleOpen}
-        onClose={() => setIsScheduleOpen(false)}
-        initialProperty={scheduleTargetProperty}
+      {/* Chapter IX: Private Salon Viewing & Inquire Modal */}
+      <TowerInquiryModal
+        isOpen={isInquireOpen}
+        onClose={() => setIsInquireOpen(false)}
+        selectedResidence={inquireTargetResidence}
         onSuccessToast={showToast}
       />
 
-      <PropertyDetailModal
-        property={detailProperty}
-        onClose={() => setDetailProperty(null)}
-        onSchedule={(prop) => {
-          setDetailProperty(null);
-          handleOpenSchedule(prop);
-        }}
-        isFavorite={detailProperty ? favoriteIds.includes(detailProperty.id) : false}
-        onToggleFavorite={handleToggleFavorite}
-        onOpenGallery={(startIndex) => {
-          if (detailProperty) {
-            handleOpenGallery(detailProperty.gallery, startIndex);
-          }
-        }}
-        onToast={showToast}
-      />
-
-      <GalleryLightbox
-        isOpen={isGalleryOpen}
-        onClose={() => setIsGalleryOpen(false)}
-        images={galleryImages}
-        initialIndex={galleryStartIndex}
-      />
-
-      <FavoritesDrawer
-        isOpen={isFavoritesOpen}
-        onClose={() => setIsFavoritesOpen(false)}
-        favorites={favoriteProperties}
-        onRemoveFavorite={handleToggleFavorite}
-        onSelectProperty={(prop) => setDetailProperty(prop)}
-        onScheduleProperty={(prop) => handleOpenSchedule(prop)}
-      />
-
-      <EnquiryDrawer
-        isOpen={isEnquiryOpen}
-        onClose={() => setIsEnquiryOpen(false)}
-        onToast={showToast}
-      />
-
+      {/* Operations Registry & Database Status Panel */}
       <AdminPanel
         isOpen={isAdminOpen}
         onClose={() => setIsAdminOpen(false)}
         onToast={showToast}
       />
 
-      {/* Toast Feedback Notification */}
+      {/* Minimalist Editorial Toast Notification */}
       {toastMessage && (
         <div
           style={{
@@ -239,18 +132,17 @@ export const App: React.FC = () => {
             bottom: '2.5rem',
             left: '50%',
             transform: 'translateX(-50%)',
-            backgroundColor: 'rgba(18, 19, 22, 0.95)',
-            backdropFilter: 'blur(10px)',
-            color: '#FFFFFF',
+            backgroundColor: 'var(--text-espresso)',
+            color: '#FAF8F5',
             padding: '0.85rem 1.75rem',
-            borderRadius: '100px',
-            fontSize: '0.8125rem',
-            fontWeight: 500,
-            letterSpacing: '0.04em',
-            boxShadow: '0 12px 30px rgba(0, 0, 0, 0.3)',
+            fontFamily: 'var(--font-title)',
+            fontSize: '0.6875rem',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            boxShadow: 'var(--shadow-elevated)',
             zIndex: 3000,
-            animation: 'fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-            border: '1px solid rgba(255, 255, 255, 0.15)'
+            border: '1px solid rgba(250, 248, 245, 0.2)',
+            animation: 'fadeIn 0.3s var(--ease-cinematic)'
           }}
         >
           {toastMessage}

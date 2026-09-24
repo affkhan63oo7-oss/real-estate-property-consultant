@@ -1,41 +1,40 @@
 /* ==========================================================================
-   AETHELGARD — LUXURY ARCHITECTURAL REAL ESTATE DESIGN SYSTEM
+   117 WEST 57TH STREET — ARCHITECTURAL EDITORIAL DESIGN SYSTEM
+   Inspired by 111W57 design language: Asymmetry, generous whitespace,
+   fluted terracotta, bronze filigree, and high-fashion editorial grids.
    ========================================================================== */
 
 :root {
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-title: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-editorial: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Color Palette */
-  --bg-primary: #FAF9F6;
-  --bg-surface: #FFFFFF;
-  --bg-alt: #F3F1EC;
-  --bg-dark: #0D0E10;
-  --bg-dark-card: #151619;
-  
-  --text-primary: #121316;
-  --text-secondary: #5F6368;
-  --text-muted: #8E9299;
-  --text-inverse: #F9F9F8;
-  --text-inverse-muted: #A3A6AD;
+  /* Palette */
+  --bg-parchment: #F4F1EA;
+  --bg-limestone: #FAF8F5;
+  --bg-sandstone: #ECE7DE;
+  --bg-dark: #121110;
+  --bg-dark-card: #1C1A18;
 
-  --accent-bronze: #B38E5D;
-  --accent-bronze-hover: #9E7948;
-  --accent-bronze-light: #F7F3EE;
-  
-  --border-light: rgba(18, 19, 22, 0.08);
-  --border-medium: rgba(18, 19, 22, 0.16);
-  --border-dark: rgba(255, 255, 255, 0.12);
+  --text-espresso: #1B1917;
+  --text-bronze: #726A5F;
+  --text-muted: #999083;
+  --text-white: #FAF9F6;
+  --text-white-muted: #C2BBB0;
+
+  --accent-gold: #BCA06B;
+  --accent-gold-hover: #9E834F;
+  --accent-gold-light: #F7F3EB;
+
+  --hairline-light: rgba(114, 106, 95, 0.22);
+  --hairline-dark: rgba(244, 241, 234, 0.14);
 
   /* Shadows */
-  --shadow-subtle: 0 4px 20px -2px rgba(18, 19, 22, 0.04);
-  --shadow-elevated: 0 20px 40px -8px rgba(18, 19, 22, 0.08);
-  --shadow-floating: 0 30px 60px -12px rgba(18, 19, 22, 0.16);
+  --shadow-editorial: 0 20px 50px -10px rgba(27, 25, 23, 0.08);
+  --shadow-elevated: 0 30px 80px -15px rgba(27, 25, 23, 0.16);
 
-  /* Transitions */
-  --transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-medium: 350ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 750ms cubic-bezier(0.16, 1, 0.3, 1);
+  /* Smooth Transitions */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -47,8 +46,8 @@
 html {
   font-family: var(--font-sans);
   font-size: 16px;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--bg-parchment);
+  color: var(--text-espresso);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,252 +56,252 @@ html {
 
 body {
   overflow-x: hidden;
-  line-height: 1.6;
+  line-height: 1.65;
+  background-color: var(--bg-parchment);
 }
 
 /* Editorial Typography */
-h1, h2, h3, .font-serif {
-  font-family: var(--font-serif);
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+h1, h2, h3, .font-title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
 }
 
 h1 {
-  font-size: clamp(2.8rem, 6.5vw, 6.5rem);
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+  font-size: clamp(2.4rem, 5.5vw, 5.8rem);
+  letter-spacing: 0.15em;
 }
 
 h2 {
-  font-size: clamp(2rem, 4.2vw, 3.8rem);
-  letter-spacing: -0.02em;
+  font-size: clamp(1.8rem, 3.8vw, 3.6rem);
+  letter-spacing: 0.14em;
 }
 
 h3 {
-  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+  letter-spacing: 0.1em;
 }
 
 p {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.7;
+  color: var(--text-bronze);
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+/* Hairline Dividers */
+.hairline-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--hairline-light);
+  border: none;
+}
+
+.hairline-divider-dark {
+  width: 100%;
+  height: 1px;
+  background-color: var(--hairline-dark);
+  border: none;
+}
+
+/* Chapter Label */
+.chapter-number {
+  font-family: var(--font-title);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 1.25rem;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: var(--bg-parchment);
 }
 ::-webkit-scrollbar-thumb {
-  background: #D1CEC6;
-  border-radius: 3px;
+  background: #C4BCAC;
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-bronze);
+  background: var(--accent-gold);
 }
 
-/* Custom Cursor (Desktop Only) */
+/* Custom Desktop Cursor */
 @media (hover: hover) and (pointer: fine) {
   body.has-custom-cursor {
     cursor: none;
   }
   body.has-custom-cursor a,
   body.has-custom-cursor button,
-  body.has-custom-cursor [role="button"] {
+  body.has-custom-cursor [role="button"],
+  body.has-custom-cursor select,
+  body.has-custom-cursor input {
     cursor: none;
   }
 
-  .custom-cursor-dot {
+  .cursor-dot {
     position: fixed;
     top: 0;
     left: 0;
-    width: 8px;
-    height: 8px;
-    background: var(--text-primary);
+    width: 6px;
+    height: 6px;
+    background: var(--text-espresso);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    transition: opacity 0.2s;
   }
 
-  .custom-cursor-ring {
+  .cursor-ring {
     position: fixed;
     top: 0;
     left: 0;
-    width: 38px;
-    height: 38px;
-    border: 1px solid rgba(18, 19, 22, 0.4);
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(114, 106, 95, 0.45);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9998;
     transform: translate(-50%, -50%);
-    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.2s,
+    transition: width 0.25s var(--ease-cinematic),
+                height 0.25s var(--ease-cinematic),
                 background-color 0.2s,
-                opacity 0.2s;
+                border-color 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .custom-cursor-ring.cursor-view,
-  .custom-cursor-ring.cursor-explore,
-  .custom-cursor-ring.cursor-drag {
-    width: 76px;
-    height: 76px;
-    background: rgba(18, 19, 22, 0.9);
+  .cursor-ring.cursor-view,
+  .cursor-ring.cursor-explore {
+    width: 72px;
+    height: 72px;
+    background: rgba(27, 25, 23, 0.92);
     border-color: transparent;
     backdrop-filter: blur(4px);
   }
 
-  .custom-cursor-label {
-    color: #FFFFFF;
-    font-size: 10px;
+  .cursor-label {
+    color: #FAF8F5;
+    font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
   }
 }
 
-/* Layout Utilities */
-.container-luxury {
+/* Container & Layout */
+.container-editorial {
   width: 100%;
-  max-width: 1480px;
+  max-width: 1540px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(1.25rem, 4vw, 3.5rem);
-  padding-right: clamp(1.25rem, 4vw, 3.5rem);
+  padding-left: clamp(1.5rem, 5vw, 4.5rem);
+  padding-right: clamp(1.5rem, 5vw, 4.5rem);
 }
 
-.section-spacing {
-  padding-top: clamp(4.5rem, 9vw, 9rem);
-  padding-bottom: clamp(4.5rem, 9vw, 9rem);
+.section-editorial {
+  padding-top: clamp(5.5rem, 10vw, 11rem);
+  padding-bottom: clamp(5.5rem, 10vw, 11rem);
 }
 
-/* Refined UI Buttons */
-.btn-luxury-primary {
+/* 111W57 Inspired Buttons */
+.btn-111-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  gap: 0.85rem;
+  padding: 1.15rem 2.25rem;
+  font-family: var(--font-title);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: var(--text-primary);
-  border: 1px solid var(--text-primary);
-  border-radius: 2px;
+  color: var(--text-white);
+  background-color: var(--text-espresso);
+  border: 1px solid var(--text-espresso);
   text-decoration: none;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all var(--transition-medium);
+  transition: all 0.35s var(--ease-cinematic);
 }
 
-.btn-luxury-primary:hover {
-  background-color: var(--accent-bronze);
-  border-color: var(--accent-bronze);
+.btn-111-primary:hover {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #121110;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px -4px rgba(179, 142, 93, 0.3);
 }
 
-.btn-luxury-secondary {
+.btn-111-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  gap: 0.85rem;
+  padding: 1.15rem 2.25rem;
+  font-family: var(--font-title);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--text-primary);
+  color: var(--text-espresso);
   background: transparent;
-  border: 1px solid var(--border-medium);
-  border-radius: 2px;
+  border: 1px solid var(--hairline-light);
   text-decoration: none;
   cursor: pointer;
-  transition: all var(--transition-medium);
+  transition: all 0.35s var(--ease-cinematic);
 }
 
-.btn-luxury-secondary:hover {
-  border-color: var(--text-primary);
-  background: rgba(18, 19, 22, 0.03);
+.btn-111-secondary:hover {
+  border-color: var(--text-espresso);
+  background-color: rgba(27, 25, 23, 0.04);
   transform: translateY(-2px);
 }
 
-.btn-luxury-ghost {
+.btn-111-ghost {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8125rem;
+  gap: 0.6rem;
+  font-family: var(--font-title);
+  font-size: 0.6875rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-bronze);
+  color: var(--text-espresso);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 0;
-  position: relative;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--text-espresso);
+  transition: all 0.25s var(--ease-cinematic);
 }
 
-.btn-luxury-ghost::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: var(--accent-bronze);
-  transition: transform var(--transition-medium);
-  transform-origin: left;
-}
-
-.btn-luxury-ghost:hover::after {
-  transform: scaleX(0.7);
-}
-
-/* Badges */
-.badge-luxury {
-  display: inline-block;
-  padding: 0.35rem 0.85rem;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  border-radius: 1px;
-  background: var(--accent-bronze-light);
-  color: var(--accent-bronze-hover);
-  border: 1px solid rgba(179, 142, 93, 0.2);
+.btn-111-ghost:hover {
+  color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes pulseSubtle {
-  0%, 100% { opacity: 0.8; }
-  50% { opacity: 0.3; }
-}
-
 .animate-fade-in {
-  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeIn 0.9s var(--ease-cinematic) forwards;
 }
 
-/* Accessibility: Prefers Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -310,8 +309,7 @@ p {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .custom-cursor-dot,
-  .custom-cursor-ring {
+  .cursor-dot, .cursor-ring {
     display: none !important;
   }
 }
