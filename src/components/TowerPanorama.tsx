@@ -22,7 +22,7 @@ export const TowerPanorama: React.FC = () => {
         style={{
           position: 'relative',
           width: '100%',
-          height: 'clamp(550px, 75vh, 850px)',
+          height: 'clamp(480px, 68vh, 850px)',
           overflow: 'hidden'
         }}
       >
@@ -43,7 +43,7 @@ export const TowerPanorama: React.FC = () => {
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to top, rgba(18, 17, 16, 0.95) 0%, rgba(18, 17, 16, 0.25) 50%, rgba(18, 17, 16, 0.6) 100%)'
+            background: 'linear-gradient(to top, rgba(18, 17, 16, 0.96) 0%, rgba(18, 17, 16, 0.3) 50%, rgba(18, 17, 16, 0.65) 100%)'
           }}
         />
 
@@ -52,7 +52,7 @@ export const TowerPanorama: React.FC = () => {
           className="container-editorial"
           style={{
             position: 'absolute',
-            top: '3rem',
+            top: 'clamp(1.25rem, 3vh, 3rem)',
             left: '50%',
             transform: 'translateX(-50%)',
             width: '100%',
@@ -60,7 +60,7 @@ export const TowerPanorama: React.FC = () => {
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: '1rem',
+            gap: '0.85rem',
             zIndex: 10
           }}
         >
@@ -69,8 +69,8 @@ export const TowerPanorama: React.FC = () => {
               <span
                 style={{
                   fontFamily: 'var(--font-title)',
-                  fontSize: '0.6875rem',
-                  letterSpacing: '0.35em',
+                  fontSize: '0.625rem',
+                  letterSpacing: '0.3em',
                   color: 'var(--accent-gold)',
                   textTransform: 'uppercase',
                   display: 'block'
@@ -81,8 +81,8 @@ export const TowerPanorama: React.FC = () => {
               <span
                 style={{
                   fontFamily: 'var(--font-title)',
-                  fontSize: '0.8125rem',
-                  letterSpacing: '0.15em',
+                  fontSize: 'clamp(0.72rem, 1.8vw, 0.8125rem)',
+                  letterSpacing: '0.12em',
                   color: '#FAF8F5',
                   textTransform: 'uppercase'
                 }}
@@ -97,16 +97,16 @@ export const TowerPanorama: React.FC = () => {
             <div
               style={{
                 display: 'flex',
-                backgroundColor: 'rgba(27, 25, 23, 0.8)',
+                backgroundColor: 'rgba(27, 25, 23, 0.85)',
                 backdropFilter: 'blur(8px)',
                 border: '1px solid rgba(250, 248, 245, 0.2)',
-                padding: '4px'
+                padding: '3px'
               }}
             >
               {[
-                { id: 'day', label: 'Morning Light', icon: <Sun size={13} /> },
-                { id: 'dusk', label: 'Golden Hour', icon: <Sunset size={13} /> },
-                { id: 'night', label: 'Starlight', icon: <Moon size={13} /> }
+                { id: 'day', label: 'Morning Light', mobileLabel: 'Morning', icon: <Sun size={13} /> },
+                { id: 'dusk', label: 'Golden Hour', mobileLabel: 'Dusk', icon: <Sunset size={13} /> },
+                { id: 'night', label: 'Starlight', mobileLabel: 'Night', icon: <Moon size={13} /> }
               ].map((tab) => {
                 const isSelected = activeViewId === tab.id;
                 return (
@@ -116,16 +116,17 @@ export const TowerPanorama: React.FC = () => {
                     style={{
                       display: 'flex',
                       alignItems: 'center',
-                      gap: '0.4rem',
-                      padding: '0.5rem 1rem',
+                      gap: '0.35rem',
+                      padding: '0.45rem clamp(0.55rem, 1.5vw, 0.95rem)',
                       border: 'none',
                       backgroundColor: isSelected ? 'var(--accent-gold)' : 'transparent',
                       color: isSelected ? '#121110' : '#FAF8F5',
                       fontFamily: 'var(--font-title)',
                       fontSize: '0.625rem',
-                      letterSpacing: '0.2em',
+                      letterSpacing: '0.15em',
                       textTransform: 'uppercase',
                       cursor: 'pointer',
+                      minHeight: '38px',
                       transition: 'all 0.25s var(--ease-cinematic)'
                     }}
                   >
@@ -143,7 +144,7 @@ export const TowerPanorama: React.FC = () => {
           className="container-editorial"
           style={{
             position: 'absolute',
-            bottom: '3.5rem',
+            bottom: 'clamp(1.5rem, 3.5vh, 3.5rem)',
             left: '50%',
             transform: 'translateX(-50%)',
             width: '100%',
@@ -152,20 +153,20 @@ export const TowerPanorama: React.FC = () => {
         >
           <ScrollReveal delay={120} distance={14}>
             <div style={{ maxWidth: '680px' }}>
-              <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
+              <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.22em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
                 {activeView.time} • Mumbai Western Suburbs Perspective
               </span>
               <h3
                 style={{
-                  fontSize: 'clamp(1.6rem, 3vw, 2.4rem)',
+                  fontSize: 'clamp(1.25rem, 3vw, 2.2rem)',
                   color: '#FAF8F5',
-                  marginTop: '0.25rem',
-                  marginBottom: '0.5rem'
+                  marginTop: '0.2rem',
+                  marginBottom: '0.4rem'
                 }}
               >
                 {activeView.headline}
               </h3>
-              <p style={{ color: 'rgba(250, 248, 245, 0.85)', fontSize: '0.9375rem', lineHeight: 1.8 }}>
+              <p style={{ color: 'rgba(250, 248, 245, 0.88)', fontSize: 'clamp(0.8125rem, 1.4vw, 0.9rem)', lineHeight: 1.7 }}>
                 {activeView.description}
               </p>
             </div>

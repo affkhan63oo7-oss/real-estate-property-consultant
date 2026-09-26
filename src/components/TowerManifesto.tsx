@@ -35,8 +35,8 @@ export const TowerManifesto: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: 'clamp(2.5rem, 6vw, 6rem)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: 'clamp(2rem, 5vw, 5rem)',
             alignItems: 'center'
           }}
         >
@@ -46,9 +46,10 @@ export const TowerManifesto: React.FC = () => {
               style={{
                 position: 'relative',
                 width: '100%',
-                height: 'clamp(480px, 65vh, 760px)',
+                height: 'clamp(280px, 48vw, 680px)',
                 overflow: 'hidden',
-                backgroundColor: 'var(--bg-sandstone)'
+                backgroundColor: 'var(--bg-sandstone)',
+                boxShadow: 'var(--shadow-editorial)'
               }}
             >
               <img
@@ -65,15 +66,16 @@ export const TowerManifesto: React.FC = () => {
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '1.25rem',
-                  left: '1.25rem',
-                  backgroundColor: 'rgba(27, 25, 23, 0.85)',
+                  bottom: '1rem',
+                  left: '1rem',
+                  backgroundColor: 'rgba(27, 25, 23, 0.88)',
                   color: '#FAF8F5',
-                  padding: '0.4rem 0.85rem',
+                  padding: '0.4rem 0.75rem',
                   fontSize: '0.625rem',
                   fontFamily: 'var(--font-title)',
-                  letterSpacing: '0.2em',
-                  textTransform: 'uppercase'
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  maxWidth: 'calc(100% - 2rem)'
                 }}
               >
                 Namo Property Consultant • Kandivali East, Mumbai
@@ -87,11 +89,11 @@ export const TowerManifesto: React.FC = () => {
               <p
                 style={{
                   fontFamily: 'var(--font-editorial)',
-                  fontSize: 'clamp(1.2rem, 1.8vw, 1.5rem)',
-                  lineHeight: 1.6,
+                  fontSize: 'clamp(1.1rem, 2vw, 1.45rem)',
+                  lineHeight: 1.55,
                   color: 'var(--text-espresso)',
                   fontStyle: 'italic',
-                  marginBottom: '2rem'
+                  marginBottom: '1.5rem'
                 }}
               >
                 "Navigating Mumbai’s property market requires practical guidance, transparent communication, and dedicated assistance focused on your individual goals."
@@ -99,13 +101,13 @@ export const TowerManifesto: React.FC = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={200} distance={12}>
-              <p style={{ marginBottom: '1.5rem', lineHeight: 1.9 }}>
+              <p style={{ marginBottom: '1.25rem', lineHeight: 1.85 }}>
                 Namo Property Consultant is a Mumbai-based real-estate consultancy associated with Dishank Asija, helping clients with residential and commercial property requirements.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={240} distance={12}>
-              <p style={{ marginBottom: '2.5rem', lineHeight: 1.9 }}>
+              <p style={{ marginBottom: '2rem', lineHeight: 1.85 }}>
                 We guide clients through buying, selling, renting, commercial property, property management, and personalised real-estate consultation. Our approach centers on practical property assistance, local market understanding, and clear communication from your first inquiry to the final decision.
               </p>
             </ScrollReveal>
@@ -115,44 +117,44 @@ export const TowerManifesto: React.FC = () => {
               <div
                 style={{
                   borderTop: '1px solid var(--hairline-light)',
-                  paddingTop: '1.75rem',
+                  paddingTop: '1.5rem',
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(3, 1fr)',
-                  gap: '1.5rem'
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 130px), 1fr))',
+                  gap: 'clamp(1rem, 2.5vw, 1.5rem)'
                 }}
               >
                 <div>
-                  <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+                  <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.18em', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
                     Guidance
                   </span>
-                  <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.15rem', color: 'var(--text-espresso)', marginTop: '0.25rem' }}>
+                  <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
                     Personalised
                   </div>
-                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.2rem' }}>
-                    Tailored to your requirements
+                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.15rem' }}>
+                    Tailored to your goals
                   </span>
                 </div>
 
                 <div>
-                  <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+                  <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.18em', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
                     Assistance
                   </span>
-                  <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.15rem', color: 'var(--text-espresso)', marginTop: '0.25rem' }}>
+                  <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
                     End-to-End
                   </div>
-                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.2rem' }}>
+                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.15rem' }}>
                     Enquiry to decision
                   </span>
                 </div>
 
                 <div>
-                  <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+                  <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.18em', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
                     Location
                   </span>
-                  <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.15rem', color: 'var(--text-espresso)', marginTop: '0.25rem' }}>
+                  <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
                     Mumbai
                   </div>
-                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.2rem' }}>
+                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.15rem' }}>
                     Kandivali East & Suburbs
                   </span>
                 </div>

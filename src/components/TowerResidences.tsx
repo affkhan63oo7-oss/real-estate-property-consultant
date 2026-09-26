@@ -47,7 +47,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
         </div>
 
         {/* Large Editorial Features (Progressive Scroll Revealing) */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(3.5rem, 8vw, 7.5rem)' }}>
           {TOWER_RESIDENCES.map((res, index) => {
             const isReversed = index % 2 !== 0;
 
@@ -56,8 +56,8 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                 key={res.id}
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-                  gap: 'clamp(2.5rem, 6vw, 6rem)',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+                  gap: 'clamp(2rem, 5vw, 5rem)',
                   alignItems: 'center'
                 }}
               >
@@ -68,7 +68,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                       style={{
                         position: 'relative',
                         width: '100%',
-                        height: 'clamp(440px, 58vh, 680px)',
+                        height: 'clamp(240px, 46vw, 640px)',
                         overflow: 'hidden',
                         backgroundColor: 'var(--bg-sandstone)',
                         boxShadow: 'var(--shadow-editorial)',
@@ -94,15 +94,16 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                       <div
                         style={{
                           position: 'absolute',
-                          top: '1.5rem',
-                          left: '1.5rem',
+                          top: '1rem',
+                          left: '1rem',
                           backgroundColor: 'rgba(27, 25, 23, 0.9)',
                           color: '#FAF8F5',
-                          padding: '0.4rem 0.85rem',
+                          padding: '0.4rem 0.75rem',
                           fontFamily: 'var(--font-title)',
                           fontSize: '0.625rem',
-                          letterSpacing: '0.25em',
-                          textTransform: 'uppercase'
+                          letterSpacing: '0.2em',
+                          textTransform: 'uppercase',
+                          maxWidth: 'calc(100% - 2rem)'
                         }}
                       >
                         {res.location || 'Kandivali East, Mumbai'}
@@ -118,11 +119,11 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                       style={{
                         fontFamily: 'var(--font-title)',
                         fontSize: '0.6875rem',
-                        letterSpacing: '0.25em',
+                        letterSpacing: '0.22em',
                         textTransform: 'uppercase',
                         color: 'var(--accent-gold)',
                         display: 'block',
-                        marginBottom: '0.5rem'
+                        marginBottom: '0.35rem'
                       }}
                     >
                       {res.type}
@@ -130,10 +131,10 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
 
                     <h3
                       style={{
-                        fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
+                        fontSize: 'clamp(1.5rem, 3vw, 2.4rem)',
                         color: 'var(--text-espresso)',
-                        marginBottom: '0.75rem',
-                        letterSpacing: '0.05em'
+                        marginBottom: '0.65rem',
+                        letterSpacing: '0.04em'
                       }}
                     >
                       {res.residenceNumber}
@@ -144,11 +145,11 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                     <p
                       style={{
                         fontFamily: 'var(--font-editorial)',
-                        fontSize: '1.25rem',
+                        fontSize: 'clamp(1.05rem, 2vw, 1.25rem)',
                         fontStyle: 'italic',
                         color: 'var(--text-espresso)',
                         lineHeight: 1.5,
-                        marginBottom: '1.5rem'
+                        marginBottom: '1.25rem'
                       }}
                     >
                       "{res.tagline}"
@@ -156,7 +157,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                   </ScrollReveal>
 
                   <ScrollReveal delay={200} distance={12}>
-                    <p style={{ lineHeight: 1.9, marginBottom: '2rem', color: 'var(--text-espresso)' }}>
+                    <p style={{ lineHeight: 1.85, marginBottom: '1.5rem', color: 'var(--text-espresso)' }}>
                       {res.description}
                     </p>
                   </ScrollReveal>
@@ -167,36 +168,36 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                       style={{
                         borderTop: '1px solid var(--hairline-light)',
                         borderBottom: '1px solid var(--hairline-light)',
-                        padding: '1.25rem 0',
-                        marginBottom: '2rem',
+                        padding: '1rem 0',
+                        marginBottom: '1.75rem',
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(3, 1fr)',
-                        gap: '1rem'
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 110px), 1fr))',
+                        gap: '0.85rem'
                       }}
                     >
                       <div>
-                        <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+                        <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
                           Configuration
                         </span>
-                        <div style={{ fontFamily: 'var(--font-title)', fontSize: '1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
+                        <div style={{ fontFamily: 'var(--font-title)', fontSize: '0.95rem', color: 'var(--text-espresso)', marginTop: '0.15rem' }}>
                           {res.bedrooms > 0 ? `${res.bedrooms} BHK` : 'Commercial'}
                         </div>
                       </div>
 
                       <div>
-                        <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+                        <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
                           Carpet Area
                         </span>
-                        <div style={{ fontFamily: 'var(--font-title)', fontSize: '1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
+                        <div style={{ fontFamily: 'var(--font-title)', fontSize: '0.95rem', color: 'var(--text-espresso)', marginTop: '0.15rem' }}>
                           {res.interiorSqFt.toLocaleString()} SQ FT
                         </div>
                       </div>
 
                       <div>
-                        <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+                        <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
                           Price / Terms
                         </span>
-                        <div style={{ fontFamily: 'var(--font-title)', fontSize: '1rem', color: 'var(--text-espresso)', marginTop: '0.2rem', fontWeight: 600 }}>
+                        <div style={{ fontFamily: 'var(--font-title)', fontSize: '0.95rem', color: 'var(--text-espresso)', marginTop: '0.15rem', fontWeight: 600 }}>
                           {res.priceFormatted}
                         </div>
                       </div>
@@ -205,10 +206,11 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
 
                   {/* Action CTAs */}
                   <ScrollReveal delay={280} distance={8}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', flexWrap: 'wrap' }}>
                       <button
                         onClick={() => onSelectResidence(res)}
                         className="btn-111-primary"
+                        style={{ flex: '1 1 180px' }}
                       >
                         <span>Explore Property</span>
                         <ArrowUpRight size={14} />
@@ -217,6 +219,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                       <button
                         onClick={() => onInquireResidence(res)}
                         className="btn-111-secondary"
+                        style={{ flex: '1 1 180px' }}
                       >
                         Inquire With Consultant
                       </button>

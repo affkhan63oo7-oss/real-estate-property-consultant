@@ -39,14 +39,14 @@ export const TowerAmenities: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: 'clamp(2.5rem, 5vw, 5rem)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: 'clamp(2rem, 5vw, 5rem)',
             alignItems: 'center'
           }}
         >
           {/* Left: Service Titles Menu */}
           <ScrollReveal delay={100} distance={12}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
               {SERVICES_DATA.map((item, idx) => {
                 const isSelected = activeServiceIndex === idx;
 
@@ -55,39 +55,42 @@ export const TowerAmenities: React.FC = () => {
                     key={item.id}
                     onClick={() => setActiveServiceIndex(idx)}
                     onMouseEnter={() => setActiveServiceIndex(idx)}
+                    role="button"
+                    tabIndex={0}
                     style={{
-                      padding: '1.25rem 1.5rem',
+                      padding: 'clamp(0.85rem, 2vw, 1.25rem) clamp(1rem, 2.5vw, 1.5rem)',
                       backgroundColor: isSelected ? 'var(--bg-limestone)' : 'transparent',
                       borderLeft: `2px solid ${isSelected ? 'var(--accent-gold)' : 'transparent'}`,
                       cursor: 'pointer',
-                      transition: 'all 0.35s var(--ease-cinematic)'
+                      transition: 'all 0.35s var(--ease-cinematic)',
+                      minHeight: '44px'
                     }}
                   >
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.5rem' }}>
                       <h3
                         style={{
                           fontFamily: 'var(--font-title)',
-                          fontSize: 'clamp(1.05rem, 1.6vw, 1.3rem)',
+                          fontSize: 'clamp(0.95rem, 1.6vw, 1.25rem)',
                           color: isSelected ? 'var(--text-espresso)' : 'var(--text-muted)',
-                          letterSpacing: '0.08em'
+                          letterSpacing: '0.06em'
                         }}
                       >
                         {item.title}
                       </h3>
-                      <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', color: 'var(--accent-gold)', letterSpacing: '0.15em' }}>
+                      <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', color: 'var(--accent-gold)', letterSpacing: '0.15em', flexShrink: 0 }}>
                         0{idx + 1}
                       </span>
                     </div>
 
                     <span
                       style={{
-                        fontSize: '0.75rem',
+                        fontSize: '0.72rem',
                         fontFamily: 'var(--font-title)',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
                         color: isSelected ? 'var(--text-bronze)' : 'transparent',
                         display: 'block',
-                        marginTop: '0.25rem'
+                        marginTop: '0.2rem'
                       }}
                     >
                       {item.category}
@@ -108,7 +111,7 @@ export const TowerAmenities: React.FC = () => {
                 overflow: 'hidden'
               }}
             >
-              <div style={{ height: 'clamp(460px, 58vh, 640px)', position: 'relative' }}>
+              <div style={{ height: 'clamp(340px, 48vw, 640px)', position: 'relative' }}>
                 <img
                   key={active.id}
                   src={active.image}
@@ -125,7 +128,7 @@ export const TowerAmenities: React.FC = () => {
                   style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to top, rgba(27, 25, 23, 0.92) 0%, rgba(27, 25, 23, 0.25) 55%, transparent 100%)'
+                    background: 'linear-gradient(to top, rgba(27, 25, 23, 0.94) 0%, rgba(27, 25, 23, 0.3) 55%, transparent 100%)'
                   }}
                 />
 
@@ -136,23 +139,23 @@ export const TowerAmenities: React.FC = () => {
                     bottom: 0,
                     left: 0,
                     width: '100%',
-                    padding: '2.25rem',
+                    padding: 'clamp(1.25rem, 4vw, 2.25rem)',
                     color: '#FAF8F5'
                   }}
                 >
-                  <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
+                  <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.22em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
                     {active.subtitle}
                   </span>
-                  <h4 style={{ fontFamily: 'var(--font-title)', fontSize: '1.5rem', margin: '0.25rem 0 0.5rem 0', color: '#FAF8F5' }}>
+                  <h4 style={{ fontFamily: 'var(--font-title)', fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', margin: '0.2rem 0 0.45rem 0', color: '#FAF8F5' }}>
                     {active.title}
                   </h4>
-                  <p style={{ color: 'rgba(250, 248, 245, 0.9)', fontSize: '0.875rem', lineHeight: 1.75, maxWidth: '540px', marginBottom: '1rem' }}>
+                  <p style={{ color: 'rgba(250, 248, 245, 0.9)', fontSize: '0.85rem', lineHeight: 1.7, maxWidth: '540px', marginBottom: '0.85rem' }}>
                     {active.description}
                   </p>
 
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
                     {active.featurePoints.slice(0, 3).map((fp, i) => (
-                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.75rem', color: 'rgba(250, 248, 245, 0.75)' }}>
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.75rem', color: 'rgba(250, 248, 245, 0.8)' }}>
                         <Check size={12} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
                         <span>{fp}</span>
                       </div>

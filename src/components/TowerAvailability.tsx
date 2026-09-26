@@ -37,9 +37,11 @@ export const TowerAvailability: React.FC<TowerAvailabilityProps> = ({
           </ScrollReveal>
         </div>
 
-        {/* Minimalist Editorial Inventory Table */}
+        {/* Minimalist Editorial Inventory: Table for Desktop / Cards for Mobile */}
         <ScrollReveal delay={120} distance={12}>
+          {/* Desktop Table View */}
           <div
+            className="desktop-availability-table"
             style={{
               borderTop: '1px solid var(--text-espresso)',
               overflowX: 'auto'
@@ -116,7 +118,7 @@ export const TowerAvailability: React.FC<TowerAvailabilityProps> = ({
                         <button
                           onClick={() => onInquireResidence(res)}
                           style={{
-                            padding: '0.35rem 0.75rem',
+                            padding: '0.45rem 0.85rem',
                             backgroundColor: 'var(--text-espresso)',
                             color: '#FAF8F5',
                             border: 'none',
@@ -136,8 +138,87 @@ export const TowerAvailability: React.FC<TowerAvailabilityProps> = ({
               </tbody>
             </table>
           </div>
+
+          {/* Mobile Card Directory (Clean, Touch-Friendly, No Horizontal Scrolling) */}
+          <div className="mobile-availability-cards" style={{ display: 'none', flexDirection: 'column', gap: '1rem' }}>
+            {TOWER_RESIDENCES.map((res) => (
+              <div
+                key={res.id}
+                style={{
+                  backgroundColor: 'var(--bg-limestone)',
+                  border: '1px solid var(--hairline-light)',
+                  padding: '1.25rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.85rem',
+                  boxShadow: '0 4px 15px rgba(27, 25, 23, 0.04)'
+                }}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <div>
+                    <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', color: 'var(--accent-gold)', textTransform: 'uppercase', display: 'block' }}>
+                      {res.type} • Floor {res.floor}
+                    </span>
+                    <h4 style={{ fontFamily: 'var(--font-title)', fontSize: '1.15rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
+                      {res.residenceNumber}
+                    </h4>
+                  </div>
+                  <span style={{ fontFamily: 'var(--font-title)', fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-espresso)' }}>
+                    {res.priceFormatted}
+                  </span>
+                </div>
+
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', fontSize: '0.75rem', color: 'var(--text-bronze)' }}>
+                  <span style={{ backgroundColor: 'rgba(27, 25, 23, 0.05)', padding: '0.25rem 0.5rem' }}>
+                    {res.bedrooms > 0 ? `${res.bedrooms} BHK` : 'Commercial'}
+                  </span>
+                  <span style={{ backgroundColor: 'rgba(27, 25, 23, 0.05)', padding: '0.25rem 0.5rem' }}>
+                    {res.interiorSqFt.toLocaleString()} SQ FT
+                  </span>
+                  <span style={{ backgroundColor: 'rgba(27, 25, 23, 0.05)', padding: '0.25rem 0.5rem' }}>
+                    {res.exposure}
+                  </span>
+                </div>
+
+                <div style={{ display: 'flex', gap: '0.75rem', paddingTop: '0.5rem', borderTop: '1px solid var(--hairline-light)' }}>
+                  <button
+                    onClick={() => onSelectResidence(res)}
+                    className="btn-111-ghost"
+                    style={{ flex: 1, justifyContent: 'center' }}
+                  >
+                    <span>View Details</span>
+                    <ArrowUpRight size={12} />
+                  </button>
+
+                  <button
+                    onClick={() => onInquireResidence(res)}
+                    className="btn-111-primary"
+                    style={{
+                      flex: 1,
+                      padding: '0.65rem 1rem',
+                      fontSize: '0.625rem',
+                      minHeight: '40px'
+                    }}
+                  >
+                    Inquire
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </ScrollReveal>
       </div>
+
+      <style>{`
+        @media (max-width: 820px) {
+          .desktop-availability-table {
+            display: none !important;
+          }
+          .mobile-availability-cards {
+            display: flex !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };

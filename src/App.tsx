@@ -39,12 +39,13 @@ export const App: React.FC = () => {
     }
 
     const lenis = new Lenis({
-      duration: 1.25,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential deceleration for natural deceleration
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      touchMultiplier: 1.2
+      syncTouch: true,
+      touchMultiplier: 1
     });
 
     (window as any).__lenis = lenis;

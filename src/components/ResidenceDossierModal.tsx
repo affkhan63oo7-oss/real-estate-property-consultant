@@ -47,27 +47,29 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
         {/* Floating Close Button */}
         <button
           onClick={onClose}
+          aria-label="Close dossier"
           style={{
             position: 'absolute',
-            top: '1.5rem',
-            right: '1.5rem',
+            top: '1rem',
+            right: '1rem',
             zIndex: 10,
-            width: '40px',
-            height: '40px',
+            width: '44px',
+            height: '44px',
             borderRadius: '50%',
-            backgroundColor: 'rgba(250, 248, 245, 0.9)',
+            backgroundColor: 'rgba(250, 248, 245, 0.92)',
             border: 'none',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
           }}
         >
           <X size={18} color="#1A1917" />
         </button>
 
         {/* Hero Image */}
-        <div style={{ position: 'relative', width: '100%', height: '460px', overflow: 'hidden' }}>
+        <div style={{ position: 'relative', width: '100%', height: 'clamp(240px, 45vw, 440px)', overflow: 'hidden' }}>
           <img
             src={residence.imageHero}
             alt={residence.residenceNumber}
@@ -77,7 +79,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(to top, rgba(27, 25, 23, 0.9) 0%, rgba(27, 25, 23, 0.2) 60%, transparent 100%)'
+              background: 'linear-gradient(to top, rgba(27, 25, 23, 0.92) 0%, rgba(27, 25, 23, 0.3) 60%, transparent 100%)'
             }}
           />
 
@@ -87,32 +89,32 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
               bottom: 0,
               left: 0,
               width: '100%',
-              padding: 'clamp(1.5rem, 4vw, 3rem)',
+              padding: 'clamp(1.25rem, 3.5vw, 2.5rem)',
               color: '#FAF8F5',
               display: 'flex',
               flexWrap: 'wrap',
               alignItems: 'flex-end',
               justifyContent: 'space-between',
-              gap: '1.5rem'
+              gap: '1rem'
             }}
           >
-            <div>
-              <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
+            <div style={{ flex: '1 1 240px' }}>
+              <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
                 {residence.type} • Floor {residence.floor} • {residence.location || 'Kandivali East, Mumbai'}
               </span>
-              <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', color: '#FAF8F5', marginTop: '0.25rem' }}>
+              <h2 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#FAF8F5', marginTop: '0.25rem', lineHeight: 1.15 }}>
                 {residence.residenceNumber}
               </h2>
-              <span style={{ fontStyle: 'italic', fontFamily: 'var(--font-editorial)', fontSize: '1.15rem', color: '#FAF8F5' }}>
+              <span style={{ fontStyle: 'italic', fontFamily: 'var(--font-editorial)', fontSize: 'clamp(0.95rem, 1.8vw, 1.15rem)', color: '#FAF8F5' }}>
                 {residence.tagline}
               </span>
             </div>
 
-            <div style={{ textAlign: 'right' }}>
+            <div>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(250, 248, 245, 0.7)' }}>
                 Price / Terms
               </span>
-              <div style={{ fontFamily: 'var(--font-title)', fontSize: '2.4rem', color: '#FAF8F5', fontWeight: 500 }}>
+              <div style={{ fontFamily: 'var(--font-title)', fontSize: 'clamp(1.75rem, 4vw, 2.4rem)', color: '#FAF8F5', fontWeight: 500 }}>
                 {residence.priceFormatted}
               </div>
             </div>
@@ -120,16 +122,16 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
         </div>
 
         {/* Content Body */}
-        <div style={{ padding: 'clamp(1.5rem, 4vw, 3.5rem)' }}>
+        <div style={{ padding: 'clamp(1.25rem, 3.5vw, 3rem)' }}>
           {/* Quick Specifications Bar */}
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 120px), 1fr))',
               gap: '1rem',
               borderBottom: '1px solid var(--hairline-light)',
-              paddingBottom: '2rem',
-              marginBottom: '2.5rem'
+              paddingBottom: '1.75rem',
+              marginBottom: '2rem'
             }}
           >
             <div>
@@ -179,21 +181,21 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
           </div>
 
           {/* Description */}
-          <div style={{ marginBottom: '2.5rem' }}>
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-espresso)', marginBottom: '0.75rem' }}>
+          <div style={{ marginBottom: '2rem' }}>
+            <h3 style={{ fontSize: '1.4rem', color: 'var(--text-espresso)', marginBottom: '0.75rem' }}>
               Property Overview
             </h3>
-            <p style={{ fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--text-espresso)' }}>
+            <p style={{ fontSize: 'clamp(0.95rem, 1.5vw, 1.05rem)', lineHeight: 1.8, color: 'var(--text-espresso)' }}>
               {residence.description}
             </p>
           </div>
 
           {/* Key Features */}
-          <div style={{ marginBottom: '3rem' }}>
-            <h4 style={{ fontFamily: 'var(--font-title)', fontSize: '1.15rem', color: 'var(--text-espresso)', marginBottom: '1rem', letterSpacing: '0.08em' }}>
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h4 style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginBottom: '1rem', letterSpacing: '0.08em' }}>
               Key Highlights & Amenities
             </h4>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.85rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '0.85rem' }}>
               {residence.keyFeatures.map((feat) => (
                 <div key={feat} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <Check size={14} color="var(--accent-gold)" />
@@ -204,10 +206,11 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
           </div>
 
           {/* Bottom Action Ribbon */}
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem', borderTop: '1px solid var(--hairline-light)', paddingTop: '2rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', gap: '0.75rem', borderTop: '1px solid var(--hairline-light)', paddingTop: '1.75rem' }}>
             <button
               onClick={onClose}
               className="btn-111-secondary"
+              style={{ flex: '1 1 140px', minHeight: '48px' }}
             >
               Close Details
             </button>
@@ -218,6 +221,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
                 onInquire(residence);
               }}
               className="btn-111-primary"
+              style={{ flex: '2 1 220px', minHeight: '48px' }}
             >
               <span>Inquire Regarding Property</span>
               <ArrowUpRight size={14} />

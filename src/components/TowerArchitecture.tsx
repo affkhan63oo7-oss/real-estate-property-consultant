@@ -34,26 +34,26 @@ export const TowerArchitecture: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: 'clamp(2.5rem, 5vw, 5rem)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: 'clamp(2rem, 5vw, 5rem)',
             alignItems: 'start',
-            marginBottom: '6rem'
+            marginBottom: 'clamp(3rem, 6vw, 5.5rem)'
           }}
         >
           {/* Card 1: Dishank Asija Profile */}
           <ScrollReveal delay={100} distance={16} scale>
             <div>
-              <div style={{ height: '460px', overflow: 'hidden', marginBottom: '1.75rem', backgroundColor: 'var(--bg-sandstone)' }}>
+              <div style={{ height: 'clamp(240px, 45vw, 440px)', overflow: 'hidden', marginBottom: '1.5rem', backgroundColor: 'var(--bg-sandstone)', boxShadow: 'var(--shadow-editorial)' }}>
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
                   alt="Dishank Asija Property Consultant Namo Property Consultant"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
-              <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
+              <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.22em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
                 Associated Person • Property Consultant
               </span>
-              <h3 style={{ fontSize: '1.5rem', color: 'var(--text-espresso)', marginTop: '0.35rem', marginBottom: '0.75rem' }}>
+              <h3 style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.6rem)', color: 'var(--text-espresso)', marginTop: '0.35rem', marginBottom: '0.65rem' }}>
                 Dishank Asija
               </h3>
               <p style={{ lineHeight: 1.85, color: 'var(--text-espresso)' }}>
@@ -63,20 +63,20 @@ export const TowerArchitecture: React.FC = () => {
           </ScrollReveal>
 
           {/* Card 2: Why Choose Us */}
-          <div style={{ marginTop: 'clamp(0rem, 4vw, 4rem)' }}>
+          <div style={{ marginTop: 'clamp(0rem, 3vw, 3rem)' }}>
             <ScrollReveal delay={180} distance={16} scale>
               <div>
-                <div style={{ height: '460px', overflow: 'hidden', marginBottom: '1.75rem', backgroundColor: 'var(--bg-sandstone)' }}>
+                <div style={{ height: 'clamp(240px, 45vw, 440px)', overflow: 'hidden', marginBottom: '1.5rem', backgroundColor: 'var(--bg-sandstone)', boxShadow: 'var(--shadow-editorial)' }}>
                   <img
                     src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85"
                     alt="Professional Real Estate Guidance in Mumbai"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
-                <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
+                <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.22em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
                   Why Choose Us • Genuine Customer Value
                 </span>
-                <h3 style={{ fontSize: '1.5rem', color: 'var(--text-espresso)', marginTop: '0.35rem', marginBottom: '0.75rem' }}>
+                <h3 style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.6rem)', color: 'var(--text-espresso)', marginTop: '0.35rem', marginBottom: '0.65rem' }}>
                   Clear Communication & Local Insight
                 </h3>
                 <p style={{ lineHeight: 1.85, color: 'var(--text-espresso)' }}>
@@ -93,22 +93,22 @@ export const TowerArchitecture: React.FC = () => {
             style={{
               borderTop: '1px solid var(--hairline-light)',
               borderBottom: '1px solid var(--hairline-light)',
-              padding: '4rem 0',
+              padding: 'clamp(2.5rem, 5vw, 4rem) 0',
               textAlign: 'center'
             }}
           >
-            <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--accent-gold)', display: 'block', marginBottom: '1rem' }}>
+            <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--accent-gold)', display: 'block', marginBottom: '0.85rem' }}>
               Consulting Principle
             </span>
             <p
               style={{
                 fontFamily: 'var(--font-editorial)',
-                fontSize: 'clamp(1.5rem, 3vw, 2.3rem)',
+                fontSize: 'clamp(1.25rem, 3.2vw, 2.2rem)',
                 color: 'var(--text-espresso)',
                 fontStyle: 'italic',
                 maxWidth: '900px',
                 margin: '0 auto',
-                lineHeight: 1.45
+                lineHeight: 1.5
               }}
             >
               "Helping clients navigate Mumbai’s property market with practical guidance and personalised assistance."

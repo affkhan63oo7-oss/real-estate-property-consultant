@@ -56,11 +56,12 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
           left: 0,
           width: '100%',
           zIndex: 1000,
-          padding: isScrolled ? '1.25rem 0' : '2.25rem 0',
-          backgroundColor: isScrolled ? 'rgba(244, 241, 234, 0.95)' : 'transparent',
-          backdropFilter: isScrolled ? 'blur(12px)' : 'none',
+          padding: isScrolled ? '0.75rem 0' : 'clamp(1rem, 2.8vw, 2.25rem) 0',
+          backgroundColor: isScrolled ? 'rgba(244, 241, 234, 0.96)' : 'transparent',
+          backdropFilter: isScrolled ? 'blur(16px)' : 'none',
+          WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'none',
           borderBottom: isScrolled ? '1px solid var(--hairline-light)' : '1px solid transparent',
-          transition: 'all 0.4s var(--ease-cinematic)'
+          transition: 'padding 0.3s var(--ease-cinematic), background-color 0.3s, border-color 0.3s'
         }}
       >
         <div
@@ -68,7 +69,8 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
           style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            gap: '0.75rem'
           }}
         >
           {/* Brand Wordmark */}
@@ -78,17 +80,22 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'baseline',
-              gap: '0.85rem'
+              gap: '0.65rem',
+              minWidth: 0,
+              flexShrink: 1
             }}
           >
             <span
               style={{
                 fontFamily: 'var(--font-title)',
-                fontSize: '1.15rem',
-                letterSpacing: '0.2em',
+                fontSize: 'clamp(0.78rem, 3.4vw, 1.15rem)',
+                letterSpacing: 'clamp(0.06em, 1.4vw, 0.2em)',
                 color: isScrolled ? 'var(--text-espresso)' : '#FAF8F5',
                 textTransform: 'uppercase',
-                transition: 'color 0.3s'
+                transition: 'color 0.3s',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis'
               }}
             >
               NAMO PROPERTY CONSULTANT
@@ -100,7 +107,8 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 fontSize: '0.625rem',
                 letterSpacing: '0.25em',
                 color: isScrolled ? 'var(--text-bronze)' : 'rgba(250, 248, 245, 0.7)',
-                textTransform: 'uppercase'
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap'
               }}
             >
               • KANDIVALI EAST, MUMBAI
@@ -223,17 +231,22 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
               Inquire
             </button>
 
-            {/* Mobile Menu Trigger */}
+            {/* Mobile Menu Trigger with accessible touch target */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="mobile-trigger"
+              aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
               style={{
                 background: 'none',
                 border: 'none',
                 color: isScrolled ? 'var(--text-espresso)' : '#FAF8F5',
                 cursor: 'pointer',
-                padding: '0.25rem',
-                display: 'none'
+                padding: '0.5rem',
+                minWidth: '44px',
+                minHeight: '44px',
+                display: 'none',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -250,38 +263,51 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
             inset: 0,
             backgroundColor: 'var(--bg-dark)',
             color: '#FAF8F5',
-            zIndex: 999,
+            zIndex: 9999,
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             alignItems: 'center',
-            padding: '2.5rem',
-            animation: 'fadeIn 0.35s var(--ease-cinematic)'
+            padding: 'clamp(2rem, 6vh, 4rem) 1.5rem',
+            overflowY: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            maxHeight: '100dvh',
+            animation: 'fadeIn 0.25s var(--ease-cinematic)'
           }}
         >
           <button
             onClick={() => setIsMenuOpen(false)}
+            aria-label="Close Menu"
             style={{
-              position: 'absolute',
-              top: '2rem',
-              right: '2rem',
-              background: 'none',
-              border: 'none',
+              position: 'fixed',
+              top: '1.25rem',
+              right: '1.25rem',
+              width: '44px',
+              height: '44px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(255, 255, 255, 0.08)',
+              border: '1px solid rgba(255, 255, 255, 0.15)',
+              borderRadius: '50%',
               color: '#FAF8F5',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              zIndex: 10000
             }}
           >
-            <X size={30} />
+            <X size={22} />
           </button>
 
           <span
             style={{
               fontFamily: 'var(--font-title)',
-              fontSize: '0.8125rem',
-              letterSpacing: '0.35em',
+              fontSize: 'clamp(0.6875rem, 2.2vw, 0.8125rem)',
+              letterSpacing: '0.28em',
               color: 'var(--accent-gold)',
+              marginTop: '1.5rem',
               marginBottom: '2rem',
-              textTransform: 'uppercase'
+              textTransform: 'uppercase',
+              textAlign: 'center'
             }}
           >
             NAMO PROPERTY CONSULTANT • DIRECTORY
@@ -292,7 +318,9 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              gap: '1.75rem'
+              gap: 'clamp(1rem, 2.5vh, 1.75rem)',
+              width: '100%',
+              maxWidth: '360px'
             }}
           >
             {navChapters.map((ch, idx) => (
@@ -305,17 +333,23 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 }}
                 style={{
                   fontFamily: 'var(--font-title)',
-                  fontSize: 'clamp(1.4rem, 4vw, 2.2rem)',
-                  letterSpacing: '0.2em',
+                  fontSize: 'clamp(1.15rem, 4vw, 1.85rem)',
+                  letterSpacing: '0.15em',
                   textTransform: 'uppercase',
                   color: '#FAF8F5',
                   textDecoration: 'none',
+                  minHeight: '44px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  padding: '0.25rem 0',
                   transition: 'color 0.2s'
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-gold)')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#FAF8F5')}
               >
-                <span style={{ fontSize: '0.9rem', color: 'var(--accent-gold)', marginRight: '0.75rem' }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--accent-gold)', marginRight: '0.65rem' }}>
                   0{idx + 1}.
                 </span>
                 {ch.label}
@@ -323,7 +357,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
             ))}
           </div>
 
-          <div style={{ marginTop: '3rem' }}>
+          <div style={{ marginTop: 'clamp(2rem, 4vh, 3rem)', width: '100%', maxWidth: '340px', paddingBottom: '2rem' }}>
             <button
               onClick={() => {
                 setIsMenuOpen(false);
@@ -331,10 +365,12 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
               }}
               className="btn-111-primary"
               style={{
+                width: '100%',
                 backgroundColor: 'var(--accent-gold)',
                 color: '#121110',
                 borderColor: 'var(--accent-gold)',
-                padding: '1rem 2.5rem'
+                padding: '1rem 1.5rem',
+                fontSize: '0.6875rem'
               }}
             >
               Talk to a Property Consultant
@@ -349,7 +385,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
             display: none !important;
           }
           .mobile-trigger {
-            display: block !important;
+            display: flex !important;
           }
         }
       `}</style>

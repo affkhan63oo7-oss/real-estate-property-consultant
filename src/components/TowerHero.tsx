@@ -107,13 +107,14 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
       style={{
         position: 'relative',
         width: '100%',
-        height: '100vh',
-        minHeight: '700px',
+        minHeight: '100dvh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        backgroundColor: '#121110'
+        backgroundColor: '#121110',
+        paddingTop: 'clamp(5rem, 11vh, 8rem)',
+        paddingBottom: 'clamp(3.5rem, 8vh, 5.5rem)'
       }}
     >
       {/* Background Slideshow Canvas: completely locked, rock-solid positioning with zero layout shift */}
@@ -133,11 +134,6 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
           const isCurrent = index === currentSlide;
           const isPrev = index === previousSlide;
 
-          // Stable dual-layer GPU crossfade:
-          // Incoming slide (current) has zIndex 2 and fades in smoothly over 0.75s.
-          // Outgoing slide (prev) remains at opacity 1 underneath at zIndex 1 until incoming is solid.
-          // Inactive slides stay hidden at opacity 0 at zIndex 0.
-          // No snapping animations, no layout resizing, no jerks.
           let opacity = 0;
           let zIndex = 0;
 
@@ -196,7 +192,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to bottom, rgba(18, 17, 16, 0.48) 0%, rgba(18, 17, 16, 0.38) 40%, rgba(18, 17, 16, 0.92) 100%)',
+          background: 'linear-gradient(to bottom, rgba(18, 17, 16, 0.52) 0%, rgba(18, 17, 16, 0.4) 40%, rgba(18, 17, 16, 0.94) 100%)',
           pointerEvents: 'none',
           zIndex: 3
         }}
@@ -223,19 +219,19 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          paddingTop: '4rem'
+          width: '100%'
         }}
       >
         {/* Roman Monogram Tag */}
         <span
           style={{
             fontFamily: 'var(--font-title)',
-            fontSize: '0.6875rem',
+            fontSize: 'clamp(0.625rem, 1.8vw, 0.6875rem)',
             fontWeight: 600,
-            letterSpacing: '0.45em',
+            letterSpacing: 'clamp(0.25em, 1.5vw, 0.45em)',
             textTransform: 'uppercase',
             color: 'var(--accent-gold)',
-            marginBottom: '1.75rem',
+            marginBottom: 'clamp(1rem, 2.5vh, 1.75rem)',
             opacity: isLoaded ? 1 : 0,
             transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 15px, 0)',
             transition: 'all 1s var(--ease-cinematic) 0.2s',
@@ -252,7 +248,9 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             color: '#FAF8F5',
             lineHeight: 1.15,
             maxWidth: '1200px',
-            marginBottom: '1.75rem',
+            fontSize: 'clamp(1.85rem, 5.5vw, 4.8rem)',
+            letterSpacing: 'clamp(0.06em, 1.5vw, 0.15em)',
+            marginBottom: 'clamp(1rem, 2.5vh, 1.75rem)',
             opacity: isLoaded ? 1 : 0,
             transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 25px, 0)',
             transition: 'all 1.1s var(--ease-cinematic) 0.4s',
@@ -266,13 +264,13 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
         <p
           style={{
             fontFamily: 'var(--font-editorial)',
-            fontSize: 'clamp(1.15rem, 2.2vw, 1.65rem)',
+            fontSize: 'clamp(0.95rem, 2.2vw, 1.55rem)',
             fontStyle: 'italic',
-            color: 'rgba(250, 248, 245, 0.85)',
+            color: 'rgba(250, 248, 245, 0.88)',
             maxWidth: '780px',
-            letterSpacing: '0.04em',
+            letterSpacing: '0.03em',
             lineHeight: 1.6,
-            marginBottom: '3rem',
+            marginBottom: 'clamp(1.75rem, 4vh, 3rem)',
             opacity: isLoaded ? 1 : 0,
             transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 25px, 0)',
             transition: 'all 1.1s var(--ease-cinematic) 0.6s',
@@ -289,7 +287,9 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '1.5rem',
+            gap: 'clamp(0.75rem, 2vw, 1.25rem)',
+            width: '100%',
+            maxWidth: '680px',
             opacity: isLoaded ? 1 : 0,
             transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
             transition: 'all 1.1s var(--ease-cinematic) 0.8s',
@@ -303,7 +303,9 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
               backgroundColor: '#FAF8F5',
               color: '#1A1917',
               borderColor: '#FAF8F5',
-              padding: '1.15rem 2.5rem'
+              padding: 'clamp(0.85rem, 2.5vw, 1.15rem) clamp(1.5rem, 3.5vw, 2.5rem)',
+              flex: '1 1 240px',
+              maxWidth: '320px'
             }}
           >
             Explore Properties
@@ -314,8 +316,12 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             className="btn-111-secondary"
             style={{
               color: '#FAF8F5',
-              borderColor: 'rgba(250, 248, 245, 0.35)',
-              padding: '1.15rem 2.5rem'
+              borderColor: 'rgba(250, 248, 245, 0.45)',
+              backgroundColor: 'rgba(18, 17, 16, 0.35)',
+              backdropFilter: 'blur(8px)',
+              padding: 'clamp(0.85rem, 2.5vw, 1.15rem) clamp(1.5rem, 3.5vw, 2.5rem)',
+              flex: '1 1 240px',
+              maxWidth: '320px'
             }}
           >
             Talk to a Property Consultant
@@ -328,7 +334,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
         onClick={onExploreClick}
         style={{
           position: 'absolute',
-          bottom: '2.5rem',
+          bottom: 'clamp(1rem, 2.5vh, 2.5rem)',
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 10,
@@ -336,7 +342,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '0.4rem',
+          gap: '0.35rem',
           opacity: isLoaded ? 0.75 : 0,
           transition: 'opacity 1s ease 1s'
         }}

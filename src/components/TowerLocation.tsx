@@ -33,8 +33,8 @@ export const TowerLocation: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: 'clamp(2.5rem, 5vw, 5rem)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: 'clamp(2rem, 5vw, 5rem)',
             alignItems: 'center'
           }}
         >
@@ -43,10 +43,11 @@ export const TowerLocation: React.FC = () => {
             <div
               style={{
                 position: 'relative',
-                height: '460px',
+                height: 'clamp(260px, 46vw, 460px)',
                 backgroundColor: '#EDE8DF',
                 border: '1px solid var(--hairline-light)',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                boxShadow: 'var(--shadow-editorial)'
               }}
             >
               <svg
@@ -127,55 +128,58 @@ export const TowerLocation: React.FC = () => {
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '1rem',
-                  left: '1rem',
-                  backgroundColor: 'rgba(27, 25, 23, 0.85)',
+                  bottom: '0.75rem',
+                  left: '0.75rem',
+                  backgroundColor: 'rgba(27, 25, 23, 0.88)',
                   color: '#FAF8F5',
-                  padding: '0.4rem 0.85rem',
+                  padding: '0.35rem 0.65rem',
                   fontFamily: 'var(--font-title)',
                   fontSize: '0.625rem',
-                  letterSpacing: '0.15em',
+                  letterSpacing: '0.12em',
                   textTransform: 'uppercase',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '0.4rem'
+                  gap: '0.4rem',
+                  maxWidth: 'calc(100% - 1.5rem)'
                 }}
               >
-                <MapPin size={11} color="var(--accent-gold)" />
-                <span>Kandivali East, Mumbai, Maharashtra, India</span>
+                <MapPin size={11} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
+                <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  Kandivali East, Mumbai
+                </span>
               </div>
             </div>
           </ScrollReveal>
 
           {/* Right: Connectivity Directory */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {NEIGHBORHOOD_DESTINATIONS.map((dest, idx) => (
               <ScrollReveal key={dest.name} delay={120 + idx * 50} distance={10}>
                 <div
                   style={{
                     borderBottom: '1px solid var(--hairline-light)',
-                    paddingBottom: '1.25rem'
+                    paddingBottom: '1rem'
                   }}
                 >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.25rem' }}>
-                    <h4 style={{ fontFamily: 'var(--font-title)', fontSize: '1.15rem', color: 'var(--text-espresso)', letterSpacing: '0.08em' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.5rem', marginBottom: '0.2rem' }}>
+                    <h4 style={{ fontFamily: 'var(--font-title)', fontSize: 'clamp(1rem, 2vw, 1.15rem)', color: 'var(--text-espresso)', letterSpacing: '0.06em' }}>
                       {dest.name}
                     </h4>
-                    <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
+                    <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.12em', color: 'var(--accent-gold)', textTransform: 'uppercase', flexShrink: 0 }}>
                       {dest.distance}
                     </span>
                   </div>
-                  <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-title)', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem' }}>
+                  <span style={{ fontSize: '0.72rem', fontFamily: 'var(--font-title)', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '0.25rem' }}>
                     {dest.category}
                   </span>
-                  <p style={{ fontSize: '0.875rem', lineHeight: 1.7, color: 'var(--text-espresso)' }}>
+                  <p style={{ fontSize: '0.85rem', lineHeight: 1.65, color: 'var(--text-espresso)' }}>
                     {dest.desc}
                   </p>
                 </div>
               </ScrollReveal>
             ))}
 
-            <div style={{ marginTop: '0.75rem' }}>
+            <div style={{ marginTop: '0.5rem' }}>
               <a
                 href="https://maps.google.com/?q=Kandivali+East+Mumbai+Maharashtra"
                 target="_blank"
@@ -186,12 +190,13 @@ export const TowerLocation: React.FC = () => {
                   gap: '0.5rem',
                   fontFamily: 'var(--font-title)',
                   fontSize: '0.6875rem',
-                  letterSpacing: '0.2em',
+                  letterSpacing: '0.18em',
                   textTransform: 'uppercase',
                   color: 'var(--text-espresso)',
                   textDecoration: 'none',
                   borderBottom: '1px solid var(--accent-gold)',
-                  paddingBottom: '0.25rem'
+                  paddingBottom: '0.35rem',
+                  minHeight: '44px'
                 }}
               >
                 <Navigation size={13} color="var(--accent-gold)" />

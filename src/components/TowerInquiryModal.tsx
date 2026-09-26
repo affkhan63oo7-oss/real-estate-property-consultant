@@ -130,7 +130,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '1.5rem',
+        padding: 'clamp(0.5rem, 3vw, 1.5rem)',
         animation: 'fadeIn 0.3s var(--ease-cinematic)'
       }}
       onClick={onClose}
@@ -140,25 +140,32 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
         style={{
           width: '100%',
           maxWidth: '640px',
-          maxHeight: '90vh',
+          maxHeight: '92dvh',
           overflowY: 'auto',
           backgroundColor: 'var(--bg-parchment)',
           border: '1px solid var(--hairline-light)',
-          padding: 'clamp(2rem, 4vw, 3rem)',
+          padding: 'clamp(1.25rem, 4vw, 2.5rem)',
           position: 'relative',
           boxShadow: 'var(--shadow-elevated)'
         }}
       >
         <button
           onClick={onClose}
+          aria-label="Close modal"
           style={{
             position: 'absolute',
-            top: '1.5rem',
-            right: '1.5rem',
+            top: '0.75rem',
+            right: '0.75rem',
+            width: '44px',
+            height: '44px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
-            color: 'var(--text-espresso)'
+            color: 'var(--text-espresso)',
+            zIndex: 10
           }}
         >
           <X size={20} />
@@ -306,7 +313,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
                 />
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
                     Email Address *
@@ -386,7 +393,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
               </div>
 
               {/* Preferred Date & Time */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
                     Preferred Meeting Date
@@ -456,7 +463,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
                 type="submit"
                 disabled={isSubmitting}
                 className="btn-111-primary"
-                style={{ width: '100%', marginTop: '0.75rem' }}
+                style={{ width: '100%', minHeight: '48px', marginTop: '0.75rem' }}
               >
                 {isSubmitting ? 'Transmitting Request...' : 'Submit Consultation Request'}
               </button>
