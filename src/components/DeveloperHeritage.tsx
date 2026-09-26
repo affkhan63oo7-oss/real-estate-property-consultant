@@ -71,13 +71,13 @@ export const DeveloperHeritage: React.FC = () => {
               marginBottom: '0.75rem'
             }}
           >
-            09 / Sovereign Lineage
+            09 / Professional Lineage
           </span>
           <h2 style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', color: 'var(--text-primary)' }}>
-            The Aethelgard Heritage
+            Namo Property Consultant
           </h2>
           <p style={{ maxWidth: '650px', marginTop: '0.5rem' }}>
-            Founded in Geneva in 1998, Aethelgard collaborates exclusively with Pritzker laureates, master craftsmen, and private art patrons to realize residential landmarks that defy temporal obsolescence.
+            Namo Property Consultant is a Mumbai-based real-estate consultancy associated with Dishank Asija, helping clients navigate residential and commercial property requirements with practical guidance.
           </p>
         </div>
 

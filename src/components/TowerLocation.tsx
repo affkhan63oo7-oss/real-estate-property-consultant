@@ -1,6 +1,7 @@
 import React from 'react';
 import { NEIGHBORHOOD_DESTINATIONS } from '../data/towerData';
 import { ScrollReveal } from './ScrollReveal';
+import { MapPin, Navigation } from 'lucide-react';
 
 export const TowerLocation: React.FC = () => {
   return (
@@ -16,14 +17,14 @@ export const TowerLocation: React.FC = () => {
         {/* Chapter Header */}
         <div style={{ marginBottom: '4.5rem' }}>
           <ScrollReveal delay={0} distance={10}>
-            <span className="chapter-number">VII. The Enclave</span>
+            <span className="chapter-number">VII. Location & Connectivity</span>
           </ScrollReveal>
           <ScrollReveal delay={80} distance={14}>
             <h2 style={{ maxWidth: '900px', color: 'var(--text-espresso)' }}>
-              The Cultural Epicenter of Manhattan.
+              Kandivali East, Mumbai.
             </h2>
-            <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem' }}>
-              Anchored on Billionaires’ Row between Sixth and Seventh Avenues, positioned precisely at the crossroads of Central Park, high fashion, and international performing arts.
+            <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-bronze)' }}>
+              Strategically located in Mumbai's thriving Western Suburbs, offering seamless arterial road connectivity, suburban railway access, and rapid metro networks.
             </p>
           </ScrollReveal>
         </div>
@@ -52,65 +53,77 @@ export const TowerLocation: React.FC = () => {
                 viewBox="0 0 500 420"
                 style={{ width: '100%', height: '100%', backgroundColor: '#ECE7DE' }}
               >
-                {/* Central Park Green Grid */}
-                <rect x="0" y="0" width="500" height="150" fill="#DDD8CE" />
-                <text x="250" y="80" textAnchor="middle" fontSize="14" fontFamily="Cinzel" letterSpacing="5" fill="#726A5F">
-                  CENTRAL PARK
+                {/* Sanjay Gandhi National Park Green Reserve East Flank */}
+                <rect x="370" y="0" width="130" height="420" fill="#DDD8CE" />
+                <text x="435" y="210" textAnchor="middle" fontSize="10" fontFamily="Cinzel" letterSpacing="3" fill="#726A5F" transform="rotate(-90 435 210)">
+                  NATIONAL PARK GREEN BELT
                 </text>
 
-                {/* 59th Street Border Line */}
-                <line x1="0" y1="150" x2="500" y2="150" stroke="#726A5F" strokeWidth="2" />
-                <text x="50" y="142" fontSize="9" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="#726A5F">
-                  CENTRAL PARK SOUTH (59TH ST)
+                {/* Western Express Highway (WEH) Main North-South Artery */}
+                <line x1="280" y1="0" x2="280" y2="420" stroke="#1B1917" strokeWidth="3" />
+                <text x="288" y="45" fontSize="9" fontFamily="Cinzel" fontWeight="600" letterSpacing="1" fill="#1B1917">
+                  WESTERN EXPRESS HIGHWAY (WEH)
                 </text>
 
-                {/* 58th Street */}
-                <line x1="0" y1="210" x2="500" y2="210" stroke="#C4BCAC" strokeWidth="1" strokeDasharray="3 3" />
-
-                {/* 57th Street (Billionaires' Row) */}
-                <line x1="0" y1="270" x2="500" y2="270" stroke="#1B1917" strokeWidth="2.5" />
-                <text x="50" y="262" fontSize="10" fontFamily="Cinzel" fontWeight="600" letterSpacing="2" fill="#1B1917">
-                  WEST 57TH STREET • BILLIONAIRES' ROW
+                {/* Metro Line 7 Elevated Corridor */}
+                <line x1="295" y1="0" x2="295" y2="420" stroke="#BCA06B" strokeWidth="2" strokeDasharray="6 3" />
+                <text x="303" y="110" fontSize="8" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="#726A5F">
+                  METRO LINE 7
                 </text>
 
-                {/* 56th Street */}
-                <line x1="0" y1="330" x2="500" y2="330" stroke="#C4BCAC" strokeWidth="1" strokeDasharray="3 3" />
-
-                {/* Avenues (Vertical lines) */}
-                <line x1="120" y1="150" x2="120" y2="420" stroke="#726A5F" strokeWidth="1.5" />
-                <text x="120" y="405" textAnchor="middle" fontSize="9" fontFamily="Cinzel" letterSpacing="1" fill="#726A5F">
-                  7TH AVE
+                {/* Suburban Railway Line (Western Line) */}
+                <line x1="100" y1="0" x2="100" y2="420" stroke="#726A5F" strokeWidth="2" strokeDasharray="8 4" />
+                <text x="108" y="380" fontSize="9" fontFamily="Cinzel" letterSpacing="1" fill="#726A5F">
+                  WESTERN RAILWAY LINE
                 </text>
 
-                <line x1="380" y1="150" x2="380" y2="420" stroke="#726A5F" strokeWidth="1.5" />
-                <text x="380" y="405" textAnchor="middle" fontSize="9" fontFamily="Cinzel" letterSpacing="1" fill="#726A5F">
-                  6TH AVE
+                {/* East-West Cross Roads: Akurli Road / Lokhandwala Township Road */}
+                <line x1="100" y1="210" x2="370" y2="210" stroke="#726A5F" strokeWidth="2" />
+                <text x="190" y="202" fontSize="9" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="#726A5F">
+                  AKURLI ROAD
                 </text>
 
-                {/* 117 West 57th Street Marker (The Tower) */}
-                <g transform="translate(250, 270)">
-                  <circle cx="0" cy="0" r="16" fill="rgba(188, 160, 107, 0.3)" />
-                  <circle cx="0" cy="0" r="8" fill="#BCA06B" />
-                  <circle cx="0" cy="0" r="3" fill="#1B1917" />
-                  <text x="0" y="-22" textAnchor="middle" fontSize="11" fontFamily="Cinzel" fontWeight="700" letterSpacing="2" fill="#1B1917">
-                    117 WEST 57
+                <line x1="100" y1="120" x2="370" y2="120" stroke="#C4BCAC" strokeWidth="1.5" strokeDasharray="3 3" />
+                <text x="175" y="112" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">
+                  THAKUR VILLAGE ROAD
+                </text>
+
+                <line x1="100" y1="300" x2="370" y2="300" stroke="#C4BCAC" strokeWidth="1.5" strokeDasharray="3 3" />
+                <text x="175" y="292" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">
+                  LOKHANDWALA COMPLEX
+                </text>
+
+                {/* Kandivali Railway Station Marker */}
+                <g transform="translate(100, 210)">
+                  <circle cx="0" cy="0" r="5" fill="#726A5F" />
+                  <text x="-8" y="-12" textAnchor="end" fontSize="9" fontFamily="Cinzel" fontWeight="600" fill="#1B1917">
+                    Kandivali Stn
                   </text>
                 </g>
 
-                {/* Carnegie Hall Marker */}
-                <g transform="translate(145, 270)">
+                {/* Growel's 101 Mall Marker */}
+                <g transform="translate(280, 160)">
                   <circle cx="0" cy="0" r="4" fill="#726A5F" />
-                  <text x="0" y="16" textAnchor="middle" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">Carnegie Hall</text>
+                  <text x="-12" y="4" textAnchor="end" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">
+                    Growel's 101 Mall
+                  </text>
                 </g>
 
-                {/* Bergdorf Goodman Marker */}
-                <g transform="translate(440, 230)">
-                  <circle cx="0" cy="0" r="4" fill="#726A5F" />
-                  <text x="0" y="16" textAnchor="middle" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">Bergdorf Goodman</text>
+                {/* Namo Property Consultant — Dishank Asija Marker */}
+                <g transform="translate(240, 210)">
+                  <circle cx="0" cy="0" r="16" fill="rgba(188, 160, 107, 0.3)" />
+                  <circle cx="0" cy="0" r="8" fill="#BCA06B" />
+                  <circle cx="0" cy="0" r="3" fill="#1B1917" />
+                  <text x="0" y="-22" textAnchor="middle" fontSize="10" fontFamily="Cinzel" fontWeight="700" letterSpacing="1" fill="#1B1917">
+                    NAMO PROPERTY CONSULTANT
+                  </text>
+                  <text x="0" y="26" textAnchor="middle" fontSize="8" fontFamily="Plus Jakarta Sans" fontWeight="600" fill="#726A5F">
+                    Dishank Asija • Kandivali East
+                  </text>
                 </g>
               </svg>
 
-              {/* Geographical Coordinates Badge */}
+              {/* Location Badge */}
               <div
                 style={{
                   position: 'absolute',
@@ -122,15 +135,19 @@ export const TowerLocation: React.FC = () => {
                   fontFamily: 'var(--font-title)',
                   fontSize: '0.625rem',
                   letterSpacing: '0.15em',
-                  textTransform: 'uppercase'
+                  textTransform: 'uppercase',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
                 }}
               >
-                40°45'54"N 73°58'39"W • Central Park South
+                <MapPin size={11} color="var(--accent-gold)" />
+                <span>Kandivali East, Mumbai, Maharashtra, India</span>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* Right: Cultural Directory with Staggered Item Reveals */}
+          {/* Right: Connectivity Directory */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             {NEIGHBORHOOD_DESTINATIONS.map((dest, idx) => (
               <ScrollReveal key={dest.name} delay={120 + idx * 50} distance={10}>
@@ -151,12 +168,36 @@ export const TowerLocation: React.FC = () => {
                   <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-title)', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem' }}>
                     {dest.category}
                   </span>
-                  <p style={{ fontSize: '0.875rem', lineHeight: 1.7 }}>
+                  <p style={{ fontSize: '0.875rem', lineHeight: 1.7, color: 'var(--text-espresso)' }}>
                     {dest.desc}
                   </p>
                 </div>
               </ScrollReveal>
             ))}
+
+            <div style={{ marginTop: '0.75rem' }}>
+              <a
+                href="https://maps.google.com/?q=Kandivali+East+Mumbai+Maharashtra"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  fontFamily: 'var(--font-title)',
+                  fontSize: '0.6875rem',
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase',
+                  color: 'var(--text-espresso)',
+                  textDecoration: 'none',
+                  borderBottom: '1px solid var(--accent-gold)',
+                  paddingBottom: '0.25rem'
+                }}
+              >
+                <Navigation size={13} color="var(--accent-gold)" />
+                <span>Get Directions to Kandivali East</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

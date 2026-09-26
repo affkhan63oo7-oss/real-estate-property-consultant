@@ -18,138 +18,161 @@ export interface TowerResidence {
   floorPlanUrl: string;
   description: string;
   keyFeatures: string[];
+  location?: string;
+  category?: 'Buy' | 'Rent' | 'Commercial' | 'Residential';
+}
+
+export interface BusinessService {
+  id: string;
+  title: string;
+  subtitle: string;
+  category: string;
+  description: string;
+  scope: string;
+  image: string;
+  featurePoints: string[];
 }
 
 export const TOWER_RESIDENCES: TowerResidence[] = [
   {
-    id: 'res-42',
-    residenceNumber: 'Residence 42',
-    floor: 42,
-    type: 'Tower Full Floor Residence',
-    tagline: 'Centered directly on the grand axis of Central Park with north and south exposures.',
-    price: 28500000,
-    priceFormatted: '$28,500,000',
+    id: 'res-kandivali-3bhk',
+    residenceNumber: '3 BHK Premium Residence',
+    floor: 18,
+    type: 'Residential Property for Sale',
+    tagline: 'Well-ventilated high-floor residence with open city views in Kandivali East.',
+    price: 24500000,
+    priceFormatted: '₹2.45 Cr',
     bedrooms: 3,
     bathrooms: 3,
-    powderRooms: 1,
-    interiorSqFt: 4492,
-    exposure: 'North / South / East',
-    ceilingHeight: '14 FT',
+    powderRooms: 0,
+    interiorSqFt: 1180,
+    exposure: 'East / North Facing',
+    ceilingHeight: '10 FT',
     imageHero: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-    description: 'Encompassing the entire 42nd floor, this residence features private elevator access directly into an entry vestibule finished in white macauba stone. A 50-foot great hall frames uninterrupted views of Central Park.',
+    description: 'A spacious 3 BHK residential layout situated on an upper floor with ample natural light, cross-ventilation, and unobstructed views. Located in a prime residential pocket of Kandivali East with direct access to local conveniences, schools, and transit links.',
     keyFeatures: [
-      'Private key-lock high-speed elevator vestibule',
-      '50-foot Great Hall overlooking Central Park',
-      'Custom Boffi kitchen in book-matched Cristallo quartzite',
-      'Primary bathroom in Statuario marble with freestanding soaking tub',
-      'Smoke-gray quarter-sawn oak herringbone floors throughout'
-    ]
+      'Prime residential location in Kandivali East, Mumbai',
+      'Spacious living-dining layout with dedicated balcony space',
+      'Master bedroom with ensuite bathroom and wardrobe niche',
+      'Gated residential society with 24/7 security and elevators',
+      'Assistance with verified property paperwork and bank loan coordination'
+    ],
+    location: 'Kandivali East, Mumbai',
+    category: 'Buy'
   },
   {
-    id: 'res-64',
-    residenceNumber: 'Residence 64',
-    floor: 64,
-    type: 'Tower Grand Full Floor',
-    tagline: 'Soaring above the tree line with 360-degree panoramic glass curtain wall.',
-    price: 39000000,
-    priceFormatted: '$39,000,000',
-    bedrooms: 4,
-    bathrooms: 4,
-    powderRooms: 1,
-    interiorSqFt: 5268,
-    exposure: 'Panoramic 360°',
-    ceilingHeight: '14.5 FT',
+    id: 'res-kandivali-2bhk',
+    residenceNumber: '2 BHK Modern Apartment',
+    floor: 12,
+    type: 'Residential Property for Sale',
+    tagline: 'Thoughtfully designed 2 BHK home ideal for families seeking connectivity and comfort.',
+    price: 16500000,
+    priceFormatted: '₹1.65 Cr',
+    bedrooms: 2,
+    bathrooms: 2,
+    powderRooms: 0,
+    interiorSqFt: 780,
+    exposure: 'North / West Facing',
+    ceilingHeight: '10 FT',
     imageHero: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    description: 'At floor 64, the horizon opens from the Atlantic Ocean to the foothills of the Hudson Valley. Features dual corner primary suites and a dedicated service entrance with chef pantry.',
+    description: 'Efficiently planned 2 BHK flat offering comfortable living areas, modern kitchen platform, and peaceful residential surroundings in Kandivali East. Close to Western Express Highway and Western Line suburban railway.',
     keyFeatures: [
-      'Floor-to-ceiling acoustic triple-glazed curtain walls',
-      'Dual primary bedroom suites with private dressing lounges',
-      'Custom bronze joinery and P.E. Guerin hand-cast hardware',
-      'Integrated motorized solar & blackout shading by Lutron',
-      'Bespoke sommelier wine room with 800-bottle storage'
-    ]
+      'Proximity to Western Express Highway and metro station',
+      'Well-lit bedrooms with vitrified flooring throughout',
+      'Modular kitchen setup with piped gas provision',
+      'Reserved covered parking space and visitor parking',
+      'Transparent title verification and property consultation'
+    ],
+    location: 'Kandivali East, Mumbai',
+    category: 'Buy'
   },
   {
-    id: 'res-72',
-    residenceNumber: 'Duplex Residence 72',
-    floor: 72,
-    type: 'The Tower Duplex',
-    tagline: 'A monumental two-storey sky residence with a 28-foot double-height salon.',
-    price: 54000000,
-    priceFormatted: '$54,000,000',
+    id: 'res-kandivali-4bhk',
+    residenceNumber: '4 BHK Luxury Deck Residence',
+    floor: 24,
+    type: 'Residential Property for Sale',
+    tagline: 'Expansive family residence featuring panoramic green vistas and premium layout.',
+    price: 39500000,
+    priceFormatted: '₹3.95 Cr',
     bedrooms: 4,
-    bathrooms: 5,
+    bathrooms: 4,
     powderRooms: 1,
-    interiorSqFt: 7128,
-    exposure: 'North / South / East / West',
-    ceilingHeight: '28 FT Double-Height',
+    interiorSqFt: 1850,
+    exposure: 'East / South Panoramic',
+    ceilingHeight: '11 FT',
     imageHero: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-    description: 'Connected by a sculptural cantilevered bronze and oak spiral stair, Duplex 72 captures the grandest architectural proportions ever realized on Billionaires’ Row.',
+    description: 'Generously proportioned 4 BHK residence offering large living spaces, dedicated dining zone, and open decks framing views toward the Sanjay Gandhi National Park greens and the Mumbai city skyline.',
     keyFeatures: [
-      'Dramatic 28-foot double-height entertaining salon',
-      'Sculptural bronze-and-travertine floating staircase',
-      'Mezzanine library overlooking Central Park',
-      'Private catering scullery with Gaggenau 400 series',
-      'Four ensuite guest suites each with private marble bath'
-    ]
+      'High-floor configuration with expansive wide-deck balcony',
+      'Four ensuite bedrooms with private bath suites',
+      'Modern modular kitchen with adjoining utility and service area',
+      'Clubhouse, fitness center, and landscaped garden amenities',
+      'Full guidance on legal evaluation and ownership transfer'
+    ],
+    location: 'Kandivali East, Mumbai',
+    category: 'Buy'
   },
   {
-    id: 'res-80',
-    residenceNumber: 'Penthouse 80',
-    floor: 80,
-    type: 'The Quadplex Crown Penthouse',
-    tagline: 'The pinnacle of Manhattan. Four private storeys crowned by an open-air sky loggia.',
-    price: 88000000,
-    priceFormatted: '$88,000,000',
-    bedrooms: 5,
-    bathrooms: 7,
-    powderRooms: 2,
-    interiorSqFt: 11500,
-    exteriorSqFt: 3800,
-    exposure: '360° Unobstructed',
-    ceilingHeight: '16 FT to 30 FT',
+    id: 'res-comm-office',
+    residenceNumber: 'Commercial Office Space',
+    floor: 7,
+    type: 'Commercial Real Estate',
+    tagline: 'Prime commercial office space suited for corporate setups, clinics, or consultancies.',
+    price: 21000000,
+    priceFormatted: '₹2.10 Cr',
+    bedrooms: 0,
+    bathrooms: 2,
+    powderRooms: 0,
+    interiorSqFt: 950,
+    exposure: 'Main Road Frontage',
+    ceilingHeight: '12 FT',
     imageHero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-    description: 'Rising more than 1,300 feet above Manhattan, Penthouse 80 represents the ultimate residential commission in the world. Includes an internal private elevator, 3,800 sq ft private heated open-air terrace with infinity plunge spa, and private 360-degree observatory.',
+    description: 'Strategic commercial unit situated in a well-connected commercial complex in Kandivali East. Features open floor-plate flexibility, high ceiling clearance, power backup, and prominent road visibility.',
     keyFeatures: [
-      'Four private elevator levels with custom bronze cabs',
-      '3,800 sq ft open-air heated terrace & sky plunge pool',
-      'Full-floor primary retreat with private spa hammam',
-      'Separate staff duplex with private service corridor',
-      'Curated contemporary art gallery corridors'
-    ]
+      'Prominent business commercial hub in Kandivali East',
+      'Suitable for corporate office, consultancy, IT, or healthcare clinic',
+      '24/7 building access with multiple high-speed elevators',
+      'Close to metro corridor and public transport nodes',
+      'Dedicated commercial leasing & sale advisory support'
+    ],
+    location: 'Kandivali East, Mumbai',
+    category: 'Commercial'
   },
   {
-    id: 'res-14',
-    residenceNumber: 'Landmark Residence 14',
-    floor: 14,
-    type: 'The Heritage Salon Residence',
-    tagline: 'Intimate landmark proportion marrying 1920s historic detailing with modern minimalism.',
-    price: 17500000,
-    priceFormatted: '$17,500,000',
-    bedrooms: 3,
-    bathrooms: 3,
-    powderRooms: 1,
-    interiorSqFt: 3820,
-    exposure: 'North / West',
-    ceilingHeight: '13.5 FT',
+    id: 'res-rental-2bhk',
+    residenceNumber: '2 BHK Rental Residence',
+    floor: 9,
+    type: 'Property Rental / Lease',
+    tagline: 'Semi-furnished 2 BHK apartment available for immediate family or corporate lease.',
+    price: 45000,
+    priceFormatted: '₹45,000 / month',
+    bedrooms: 2,
+    bathrooms: 2,
+    powderRooms: 0,
+    interiorSqFt: 720,
+    exposure: 'Garden Facing',
+    ceilingHeight: '10 FT',
     imageHero: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
-    description: 'Situated within the landmarked historic rotunda of the tower podium, featuring restored hand-plastered decorative moldings, coffered ceilings, and warm Parisian chevron parquet.',
+    description: 'Well-maintained rental apartment in an established gated community in Kandivali East. Comes with essential woodwork, modular kitchen, safety grills, and pleasant internal garden exposure.',
     keyFeatures: [
-      'Original restored 1920s neoclassical cornices and moldings',
-      'Grand wood-burning fireplace in Belgian black marble',
-      'Private formal library finished in fluted French walnut',
-      'Chef show kitchen opening into breakfast solarium'
-    ]
+      'Ready to move in with essential fittings and wardrobes',
+      'Peaceful society environment with children play zone',
+      'Convenient access to local markets, banks, and schools',
+      'Assistance with police verification, agreement, and registration',
+      'Rental management support for both tenants and landlords'
+    ],
+    location: 'Kandivali East, Mumbai',
+    category: 'Rent'
   }
 ];
 
@@ -158,75 +181,171 @@ export const PANORAMA_VIEWS = [
     id: 'day',
     label: 'Morning Light',
     time: '09:30 AM',
-    headline: '843 Acres of Crystalline Green',
-    description: 'The vast tapestry of Central Park stretches uninterrupted to the northern horizon, framed in razor-sharp acoustic glass.',
+    headline: 'Western Suburbs Daylight & Connectivity',
+    description: 'Expansive vistas stretching across Kandivali East and Mumbai’s western corridor, framed by lush foliage and thriving neighborhoods.',
     imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2200&q=90'
   },
   {
     id: 'dusk',
     label: 'Golden Hour',
-    time: '06:45 PM',
-    headline: 'Warm Amber Over the Manhattan Skyline',
-    description: 'Sunlight catches the fluted terra-cotta pilasters, casting elongated shadows across the park and igniting the skyline in gold.',
+    time: '06:15 PM',
+    headline: 'Warm Sunset Over Mumbai Skyline',
+    description: 'Sunlight casts an amber glow across residential towers and arterial highways connecting Kandivali East to the wider metropolis.',
     imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2200&q=90'
   },
   {
     id: 'night',
-    label: 'Starlight & City Lights',
-    time: '11:15 PM',
-    headline: 'A Constellation of Urban Brilliance',
-    description: 'Looking south toward the Empire State and New York Harbor, the city becomes a shimmering sea of incandescent geometry.',
+    label: 'Evening Citylights',
+    time: '09:45 PM',
+    headline: 'Metropolitan Illumination & Community Life',
+    description: 'The vibrant evening rhythm of Mumbai comes alive with illuminated transit arteries, neighborhood avenues, and calm residential enclaves.',
     imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90'
   }
 ];
 
-export const AMENITIES_SUITE = [
+export const SERVICES_DATA: BusinessService[] = [
   {
-    id: 'swimming-pool',
-    title: 'The Swimming Colonnade',
-    dimensions: '82-Foot Heated Lap Pool',
-    material: 'Warm French Chamesson Limestone',
-    description: 'A serene 82-foot two-lane heated pool enveloped in vaulted limestone arches and bronze sconces, featuring private daybed cabanas and acoustic sound isolation.',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85'
+    id: 'service-1',
+    title: 'Residential Property Buying',
+    subtitle: 'Service 01 • Buying Assistance',
+    category: 'Residential Buying',
+    description: 'Assistance for clients looking to find and evaluate residential properties based on their requirements, location preferences and budget.',
+    scope: 'Requirement Assessment • Property Scouting • Price Evaluation',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+    featurePoints: [
+      'Careful analysis of client budget, configuration, and preferred localities',
+      'Shortlisting verified residential options across Kandivali East and Mumbai',
+      'Objective evaluation of carpet areas, builder reputation, and layout efficiency',
+      'Assistance with property visits and negotiation support'
+    ]
   },
   {
-    id: 'dining-salon',
-    title: 'The Private Dining Salon',
-    dimensions: '24-Seat Private State Room',
-    material: 'Macassar Ebony & Hand-Chased Bronze',
-    description: 'Designed for private state dinners, galas, and celebrations with an adjoining professional catering kitchen for visiting Michelin-starred chefs.',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85'
+    id: 'service-2',
+    title: 'Residential Property Selling',
+    subtitle: 'Service 02 • Selling Assistance',
+    category: 'Residential Selling',
+    description: 'Property selling assistance for owners looking to present and market their property to potential buyers.',
+    scope: 'Property Valuation • Strategic Presentation • Qualified Buyer Reach',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
+    featurePoints: [
+      'Realistic market evaluation based on current Mumbai property trends',
+      'Preparation and clear presentation of property highlights',
+      'Direct outreach to genuine, pre-screened prospective buyers',
+      'Guidance through documentation, agreement drafting, and closing procedures'
+    ]
   },
   {
-    id: 'fitness-club',
-    title: 'Double-Height Athletic Club',
-    dimensions: '4,500 Sq Ft Wellness Pavilion',
-    material: 'Vals Quartzite & Swiss Cedar',
-    description: 'Outfitted with custom Technogym Artis series machinery, dedicated reformer Pilates studio, infrared sauna suites, and private personal training consultation.',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=85'
+    id: 'service-3',
+    title: 'Property Rentals',
+    subtitle: 'Service 03 • Leasing & Tenancy',
+    category: 'Rental Assistance',
+    description: 'Assistance with residential and rental property requirements for clients looking to find suitable properties.',
+    scope: 'Tenant Matching • Lease Agreements • Property Handover',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
+    featurePoints: [
+      'Helping tenants discover verified homes that fit their lifestyle needs',
+      'Assisting landlords in securing reliable, verified tenants',
+      'Coordination of leave-and-license agreements and registration',
+      'Smooth move-in and handover guidance'
+    ]
   },
   {
-    id: 'porte-cochere',
-    title: 'Discreet Private Porte-Cochère',
-    dimensions: 'Subterranean Covered Arrival',
-    material: 'Granite Cobblestones & Bronze Gates',
-    description: 'A 24-hour subterranean vehicular arrival hall ensuring total discretion, private valet staging, and direct elevator transfer to private residences.',
-    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85'
+    id: 'service-4',
+    title: 'Commercial Real Estate',
+    subtitle: 'Service 04 • Commercial Support',
+    category: 'Commercial Property',
+    description: 'Support for clients exploring commercial property opportunities and requirements.',
+    scope: 'Office Spaces • Retail Outlets • Commercial Investment',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
+    featurePoints: [
+      'Support for commercial office spaces, clinics, and business consultancies',
+      'Evaluation of footfall, frontage, connectivity, and commercial zoning',
+      'Commercial purchase and leasing negotiation assistance',
+      'Understanding of business requirements and practical workspace planning'
+    ]
   },
   {
-    id: 'music-salon',
-    title: 'Steinway Concert Grand Hall',
-    dimensions: 'Acoustically Tuned Music Room',
-    material: 'Acoustic White Oak & Belgian Velvet',
-    description: 'Honoring the storied historic Steinway heritage on 57th Street, an intimate performance salon hosting private chamber recitals.',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1800&q=85'
+    id: 'service-5',
+    title: 'Property Management',
+    subtitle: 'Service 05 • Asset Care',
+    category: 'Property Management',
+    description: 'Property-related management assistance for owners who need support with their real-estate assets.',
+    scope: 'Tenancy Oversight • Asset Coordination • Owner Peace of Mind',
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85',
+    featurePoints: [
+      'Support for non-resident and outstation property owners',
+      'Tenancy management, agreement renewals, and tenant coordination',
+      'Periodic inspection support and asset maintenance monitoring',
+      'Dedicated point of contact for property-related matters'
+    ]
+  },
+  {
+    id: 'service-6',
+    title: 'Real Estate Marketing',
+    subtitle: 'Service 06 • Targeted Marketing',
+    category: 'Property Marketing',
+    description: 'Property marketing support designed to present properties clearly to potential buyers and tenants.',
+    scope: 'Clear Presentation • Targeted Outreach • Honest Communication',
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=85',
+    featurePoints: [
+      'Clear, honest photography and accurate property feature articulation',
+      'Direct distribution across active buyer and investor networks in Mumbai',
+      'Transparent communication without exaggerated marketing claims',
+      'Highlighting actual location advantages and real living amenities'
+    ]
+  },
+  {
+    id: 'service-7',
+    title: 'Property Consultation',
+    subtitle: 'Service 07 • Advisory Guidance',
+    category: 'Personalised Advisory',
+    description: 'Personalised guidance for clients evaluating property options and making real-estate decisions.',
+    scope: 'One-on-One Advisory • Market Insight • Goal Alignment',
+    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1800&q=85',
+    featurePoints: [
+      'One-on-one consultation with Dishank Asija for individual property questions',
+      'Objective analysis of market conditions in Kandivali East and Mumbai',
+      'Balancing budget considerations with long-term lifestyle and family goals',
+      'Unbiased advice focused solely on client best interests'
+    ]
   }
 ];
 
 export const NEIGHBORHOOD_DESTINATIONS = [
-  { name: 'Central Park', category: 'Nature & Parks', distance: '1 Minute Walk', desc: 'Direct access to Grand Army Plaza and the southern bridle paths.' },
-  { name: 'Carnegie Hall', category: 'World Culture', distance: 'Adjacent', desc: 'The world’s premiere acoustic concert hall, steps from the lobby.' },
-  { name: 'Museum of Modern Art (MoMA)', category: 'Fine Arts', distance: '4 Minutes Walk', desc: 'The world’s greatest collection of modern and contemporary masterworks.' },
-  { name: 'Bergdorf Goodman', category: 'High Fashion', distance: '3 Minutes Walk', desc: 'Legendary Fifth Avenue luxury couture and private styling salons.' },
-  { name: 'Le Bernardin', category: 'Fine Gastronomy', distance: '5 Minutes Walk', desc: 'Eric Ripert’s three-Michelin-star seafood institution.' }
+  {
+    name: 'Western Express Highway (WEH)',
+    category: 'Arterial Highway',
+    distance: '5 Minutes',
+    desc: 'Direct north-south arterial transit spine connecting Kandivali East to Mumbai International Airport, Bandra-Kurla Complex (BKC), and South Mumbai.'
+  },
+  {
+    name: 'Kandivali Railway Station',
+    category: 'Suburban Rail',
+    distance: '7 Minutes',
+    desc: 'Key Western Railway suburban hub with regular fast and slow train access throughout Mumbai’s rail corridor.'
+  },
+  {
+    name: 'Metro Line 7 & Line 2A',
+    category: 'Metro Transit',
+    distance: '4 Minutes',
+    desc: 'Rapid elevated transit network connecting Dahisar, Kandivali, Andheri, and interchanging with Line 1 for East-West cross connectivity.'
+  },
+  {
+    name: 'Growel’s 101 Mall',
+    category: 'Retail & Dining',
+    distance: '5 Minutes',
+    desc: 'Major shopping, dining, entertainment, and department retail center serving residents across Kandivali East.'
+  },
+  {
+    name: 'Thakur Village & Lokhandwala',
+    category: 'Civic & Commercial Hub',
+    distance: 'Within Vicinity',
+    desc: 'Established residential townships featuring reputed schools, healthcare centers, banks, sports clubs, and business avenues.'
+  },
+  {
+    name: 'Sanjay Gandhi National Park',
+    category: 'Green Reserve',
+    distance: '10 Minutes',
+    desc: 'Expansive natural protected forest and green reserve flanking eastern Kandivali, offering clean air and scenic vistas.'
+  }
 ];

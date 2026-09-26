@@ -76,7 +76,7 @@ export const TowerPanorama: React.FC = () => {
                   display: 'block'
                 }}
               >
-                V. The Panorama
+                VII. Cityscape & Panorama
               </span>
               <span
                 style={{
@@ -87,7 +87,7 @@ export const TowerPanorama: React.FC = () => {
                   textTransform: 'uppercase'
                 }}
               >
-                Floor 72 • 980 FT Elevation
+                Kandivali East • Mumbai Horizon
               </span>
             </div>
           </ScrollReveal>
@@ -153,7 +153,7 @@ export const TowerPanorama: React.FC = () => {
           <ScrollReveal delay={120} distance={14}>
             <div style={{ maxWidth: '680px' }}>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
-                {activeView.time} • The Northern Vista
+                {activeView.time} • Mumbai Western Suburbs Perspective
               </span>
               <h3
                 style={{

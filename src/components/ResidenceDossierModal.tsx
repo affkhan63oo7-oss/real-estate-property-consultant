@@ -1,6 +1,6 @@
 import React from 'react';
 import { TowerResidence } from '../data/towerData';
-import { X, ArrowUpRight, Check, Compass } from 'lucide-react';
+import { X, ArrowUpRight, Check } from 'lucide-react';
 
 interface ResidenceDossierModalProps {
   residence: TowerResidence | null;
@@ -98,7 +98,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
           >
             <div>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
-                {residence.type} • Floor {residence.floor}
+                {residence.type} • Floor {residence.floor} • {residence.location || 'Kandivali East, Mumbai'}
               </span>
               <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', color: '#FAF8F5', marginTop: '0.25rem' }}>
                 {residence.residenceNumber}
@@ -110,7 +110,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
 
             <div style={{ textAlign: 'right' }}>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(250, 248, 245, 0.7)' }}>
-                Acquisition Value
+                Price / Terms
               </span>
               <div style={{ fontFamily: 'var(--font-title)', fontSize: '2.4rem', color: '#FAF8F5', fontWeight: 500 }}>
                 {residence.priceFormatted}
@@ -134,10 +134,10 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
           >
             <div>
               <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                Bedrooms
+                Configuration
               </span>
               <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.25rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
-                {residence.bedrooms} Suites
+                {residence.bedrooms > 0 ? `${residence.bedrooms} BHK` : 'Commercial Unit'}
               </div>
             </div>
 
@@ -146,13 +146,13 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
                 Bathrooms
               </span>
               <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.25rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
-                {residence.bathrooms}.{residence.powderRooms} Baths
+                {residence.bathrooms} Baths
               </div>
             </div>
 
             <div>
               <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                Interior Living
+                Carpet Area
               </span>
               <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.25rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
                 {residence.interiorSqFt.toLocaleString()} SQ FT
@@ -161,16 +161,16 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
 
             <div>
               <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                Ceiling Height
+                Location
               </span>
-              <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.25rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
-                {residence.ceilingHeight}
+              <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
+                {residence.location || 'Kandivali East, Mumbai'}
               </div>
             </div>
 
             <div>
               <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                Exposures
+                Facing / View
               </span>
               <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
                 {residence.exposure}
@@ -181,9 +181,9 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
           {/* Description */}
           <div style={{ marginBottom: '2.5rem' }}>
             <h3 style={{ fontSize: '1.5rem', color: 'var(--text-espresso)', marginBottom: '0.75rem' }}>
-              Architectural Dossier
+              Property Overview
             </h3>
-            <p style={{ fontSize: '1.05rem', lineHeight: 1.85 }}>
+            <p style={{ fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--text-espresso)' }}>
               {residence.description}
             </p>
           </div>
@@ -191,7 +191,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
           {/* Key Features */}
           <div style={{ marginBottom: '3rem' }}>
             <h4 style={{ fontFamily: 'var(--font-title)', fontSize: '1.15rem', color: 'var(--text-espresso)', marginBottom: '1rem', letterSpacing: '0.08em' }}>
-              Distinctive Finishes & Specifications
+              Key Highlights & Amenities
             </h4>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.85rem' }}>
               {residence.keyFeatures.map((feat) => (
@@ -209,7 +209,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
               onClick={onClose}
               className="btn-111-secondary"
             >
-              Close Dossier
+              Close Details
             </button>
 
             <button
@@ -219,7 +219,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
               }}
               className="btn-111-primary"
             >
-              <span>Schedule Private Salon Viewing</span>
+              <span>Inquire Regarding Property</span>
               <ArrowUpRight size={14} />
             </button>
           </div>

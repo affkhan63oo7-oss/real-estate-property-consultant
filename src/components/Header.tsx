@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
                 transition: 'color 0.3s'
               }}
             >
-              Aethelgard
+              Namo Property Consultant
             </span>
             <span
               style={{
@@ -280,8 +280,8 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-            <span style={{ fontFamily: 'var(--font-serif)', fontSize: '2.2rem', textTransform: 'uppercase' }}>
-              Aethelgard
+            <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', textTransform: 'uppercase' }}>
+              Namo Property Consultant
             </span>
           </div>
 

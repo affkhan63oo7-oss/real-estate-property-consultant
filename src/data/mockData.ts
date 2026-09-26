@@ -669,10 +669,10 @@ export const STATS_DATA = [
 export const TESTIMONIALS = [
   {
     id: 't-01',
-    quote: 'Aethelgard does not merely build luxury houses; they sculpt timeless spatial instruments. Moving into Villa Solaria fundamentally altered our perception of light, silence, and presence.',
-    author: 'Arch. Henrik Lindqvist',
-    title: 'Founder, Nordic Design Guild & Collector',
-    location: 'Zurich & St. Moritz'
+    quote: 'Namo Property Consultant provides practical guidance and personalised real-estate assistance. Navigating our property decision was seamless, transparent, and focused on our requirements.',
+    author: 'Resident Client',
+    title: 'Property Buyer',
+    location: 'Kandivali East, Mumbai'
   },
   {
     id: 't-02',

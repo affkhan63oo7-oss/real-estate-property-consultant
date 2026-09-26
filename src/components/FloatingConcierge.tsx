@@ -46,7 +46,7 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
           </span>
 
           <a
-            href="https://wa.me/41228199200?text=I%20am%20inquiring%20regarding%20Aethelgard%20sovereign%20properties."
+            href="https://wa.me/?text=I%20am%20inquiring%20regarding%20properties%20with%20Namo%20Property%20Consultant."
             target="_blank"
             rel="noopener noreferrer"
             style={{

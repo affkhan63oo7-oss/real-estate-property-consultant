@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, MapPin, Send } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 interface TowerFooterProps {
@@ -18,6 +18,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
 
   return (
     <footer
+      id="contact"
       style={{
         backgroundColor: '#121110',
         color: '#FAF8F5',
@@ -53,18 +54,18 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                   marginBottom: '1rem'
                 }}
               >
-                The Slender Silhouette
+                Real Estate Consultant • Mumbai
               </span>
               <h2
                 style={{
                   fontFamily: 'var(--font-title)',
-                  fontSize: 'clamp(2.5rem, 6vw, 5.5rem)',
+                  fontSize: 'clamp(2.2rem, 5vw, 4.5rem)',
                   color: '#FAF8F5',
-                  lineHeight: 1.1,
-                  letterSpacing: '0.12em'
+                  lineHeight: 1.15,
+                  letterSpacing: '0.08em'
                 }}
               >
-                117 WEST 57
+                NAMO PROPERTY CONSULTANT
               </h2>
               <span
                 style={{
@@ -76,7 +77,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                   marginTop: '0.5rem'
                 }}
               >
-                Billionaires' Row • Central Park South • New York
+                Dishank Asija • Kandivali East, Mumbai, Maharashtra, India
               </span>
             </div>
 
@@ -91,7 +92,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                   padding: '1.25rem 2.5rem'
                 }}
               >
-                Private Salon Inquiry
+                Talk to a Property Consultant
               </button>
             </div>
           </div>
@@ -109,54 +110,85 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
               color: 'rgba(250, 248, 245, 0.7)'
             }}
           >
-            {/* Sales Gallery */}
+            {/* Consultancy Office */}
             <div>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase', display: 'block', marginBottom: '1rem' }}>
-                Sales Gallery
+                Consultancy Office
               </span>
               <p style={{ color: 'rgba(250, 248, 245, 0.7)', lineHeight: 1.8 }}>
-                117 West 57th Street<br />
-                New York, NY 10019<br />
-                +1 (212) 555-0157<br />
-                concierge@117w57.com
+                <strong style={{ color: '#FAF8F5' }}>Namo Property Consultant</strong><br />
+                Dishank Asija, Property Consultant<br />
+                Kandivali East, Mumbai<br />
+                Maharashtra, India
               </p>
+              <div style={{ marginTop: '1rem' }}>
+                <button
+                  onClick={onInquireClick}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: 'var(--accent-gold)',
+                    cursor: 'pointer',
+                    padding: 0,
+                    fontFamily: 'var(--font-title)',
+                    fontSize: '0.6875rem',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.35rem'
+                  }}
+                >
+                  <Send size={12} />
+                  <span>Send Property Enquiry</span>
+                </button>
+              </div>
             </div>
 
-            {/* Architecture & Team */}
+            {/* Services */}
             <div>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase', display: 'block', marginBottom: '1rem' }}>
-                Architectural Pedigree
+                Our Services
               </span>
-              <p style={{ color: 'rgba(250, 248, 245, 0.7)', lineHeight: 1.8 }}>
-                Design Architect: SHoP Architects<br />
-                Interior Atelier: Studio Sofield<br />
-                Structural Engineering: WSP Cantor Seinuk<br />
-                Terra-Cotta Fabrication: NBK Keramik
-              </p>
-            </div>
-
-            {/* Quick Chapters */}
-            <div>
-              <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase', display: 'block', marginBottom: '1rem' }}>
-                Chapters
-              </span>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <li><a href="#landmark" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>I. The Landmark</a></li>
-                <li><a href="#architecture" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>II. Architecture & Craft</a></li>
-                <li><a href="#residences" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>III. The Residences</a></li>
-                <li><a href="#views" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>V. The Panorama</a></li>
-                <li><a href="#availability" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>VIII. Availability</a></li>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.45rem', padding: 0 }}>
+                <li>Residential Property Buying</li>
+                <li>Residential Property Selling</li>
+                <li>Property Rentals & Leasing</li>
+                <li>Commercial Real Estate</li>
+                <li>Property Management</li>
+                <li>Real Estate Marketing</li>
+                <li>Property Consultation</li>
               </ul>
             </div>
 
-            {/* Legal / Fair Housing */}
+            {/* Quick Navigation */}
             <div>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase', display: 'block', marginBottom: '1rem' }}>
-                Governance
+                Navigation
+              </span>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', padding: 0 }}>
+                <li><a href="#about" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>About Us</a></li>
+                <li><a href="#consultant" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>Dishank Asija</a></li>
+                <li><a href="#services" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>Services</a></li>
+                <li><a href="#properties" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>Properties</a></li>
+                <li><a href="#location" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>Location</a></li>
+                <li><a href="#availability" style={{ color: 'rgba(250, 248, 245, 0.7)', textDecoration: 'none' }}>Availability Index</a></li>
+              </ul>
+            </div>
+
+            {/* Governance & Privacy */}
+            <div>
+              <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase', display: 'block', marginBottom: '1rem' }}>
+                Privacy & Professional Standards
               </span>
               <p style={{ fontSize: '0.75rem', color: 'rgba(250, 248, 245, 0.5)', lineHeight: 1.7 }}>
-                Equal Housing Opportunity. The complete offering terms are in an offering plan available from Sponsor. File No. CD15-0146.
+                Professional real-estate consultancy based in Kandivali East, Mumbai. Client information, enquiries, and property transactions are treated with complete confidentiality and professional standards.
               </p>
+              <div style={{ marginTop: '0.75rem', display: 'flex', gap: '1rem', fontSize: '0.6875rem', color: 'rgba(250, 248, 245, 0.6)' }}>
+                <span>Privacy Policy</span>
+                <span>•</span>
+                <span>Terms</span>
+              </div>
             </div>
           </div>
         </ScrollReveal>
@@ -173,7 +205,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
             color: 'rgba(250, 248, 245, 0.45)'
           }}
         >
-          <span>© 2026 117 West 57th Street Holding S.A. All rights reserved.</span>
+          <span>© 2026 Namo Property Consultant. Associated with Dishank Asija. All rights reserved.</span>
 
           <button
             onClick={scrollToTop}

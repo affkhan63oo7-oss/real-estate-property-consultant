@@ -26,11 +26,11 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
   const [phone, setPhone] = useState('');
   
   // DATE OF BIRTH FIX: accepts legitimate historical birth dates (e.g. 1970–2006), rejects future/invalid dates
-  const [dateOfBirth, setDateOfBirth] = useState('1985-05-18');
+  const [dateOfBirth, setDateOfBirth] = useState('1988-06-15');
   const [dobError, setDobError] = useState('');
 
-  const [preferredDate, setPreferredDate] = useState('2026-10-20');
-  const [preferredTime, setPreferredTime] = useState('11:00 AM (Morning Central Park Light)');
+  const [preferredDate, setPreferredDate] = useState('2026-10-10');
+  const [preferredTime, setPreferredTime] = useState('11:00 AM (Morning)');
   const [notes, setNotes] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -42,7 +42,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
 
   const validateDob = (val: string): boolean => {
     if (!val) {
-      setDobError('Date of birth is required for security clearance.');
+      setDobError('Date of birth is required.');
       return false;
     }
     const d = new Date(val);
@@ -57,7 +57,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
     }
     const ageYears = (now.getTime() - d.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
     if (ageYears < 18) {
-      setDobError('Guests must be 18 years of age or older.');
+      setDobError('Must be 18 years of age or older.');
       return false;
     }
     setDobError('');
@@ -67,7 +67,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim()) {
-      setErrorMessage('Please provide your full legal name.');
+      setErrorMessage('Please provide your full name.');
       return;
     }
     if (!email.trim() || !email.includes('@')) {
@@ -88,22 +88,22 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
     try {
       const saved = await saveAppointmentToStore({
         property_id: currentResidence.id,
-        property_title: `117 W 57 — ${currentResidence.residenceNumber}`,
+        property_title: currentResidence.residenceNumber,
         full_name: fullName,
         email: email,
         phone: phone,
         date_of_birth: dateOfBirth,
         preferred_date: preferredDate,
         preferred_time: preferredTime,
-        inquiry_type: 'Private Viewing',
+        inquiry_type: 'Property Consultation',
         notes: notes,
         status: 'Pending'
       });
 
       setConfirmedRecord(saved);
-      onSuccessToast(`Private Viewing confirmed for ${currentResidence.residenceNumber}. Reference #${saved.id}`);
+      onSuccessToast(`Consultation enquiry registered for ${currentResidence.residenceNumber}. Reference #${saved.id}`);
     } catch (err: any) {
-      setErrorMessage(err?.message || 'Error transmitting viewing request. Information preserved.');
+      setErrorMessage(err?.message || 'Error transmitting enquiry request. Information preserved.');
     } finally {
       setIsSubmitting(false);
     }
@@ -183,13 +183,13 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
             </div>
 
             <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--accent-gold)' }}>
-              Clearance Confirmed
+              Enquiry Confirmed
             </span>
             <h3 style={{ fontSize: '1.75rem', color: 'var(--text-espresso)', margin: '0.35rem 0 1rem 0' }}>
-              Private Viewing Scheduled
+              Consultation Enquiry Received
             </h3>
-            <p style={{ fontSize: '0.9375rem', lineHeight: 1.8, marginBottom: '2rem' }}>
-              Your private appointment has been registered with the 117 West 57th Street residential sales gallery. An associate director will coordinate direct chauffeur arrival and security clearance.
+            <p style={{ fontSize: '0.9375rem', lineHeight: 1.8, marginBottom: '2rem', color: 'var(--text-espresso)' }}>
+              Your consultation request has been registered with Namo Property Consultant. Dishank Asija will connect with you to review your property requirements and discuss next steps.
             </p>
 
             <div
@@ -210,39 +210,35 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
                 <span style={{ fontWeight: 600, fontFamily: 'monospace' }}>#{confirmedRecord.id}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-muted)' }}>Residence:</span>
+                <span style={{ color: 'var(--text-muted)' }}>Property:</span>
                 <span style={{ fontWeight: 600 }}>{confirmedRecord.property_title}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-muted)' }}>Date & Light Window:</span>
+                <span style={{ color: 'var(--text-muted)' }}>Preferred Date & Time:</span>
                 <span style={{ fontWeight: 600 }}>{confirmedRecord.preferred_date} • {confirmedRecord.preferred_time}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-muted)' }}>Guest:</span>
+                <span style={{ color: 'var(--text-muted)' }}>Client Name:</span>
                 <span style={{ fontWeight: 600 }}>{confirmedRecord.full_name}</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-muted)' }}>DOB Security Verified:</span>
-                <span style={{ fontWeight: 600 }}>{confirmedRecord.date_of_birth}</span>
               </div>
             </div>
 
             <button
               onClick={handleReset}
               className="btn-111-primary"
-              style={{ width: '100%' }}
+              style={{ padding: '0.85rem 2rem' }}
             >
-              Return to The Tower
+              Close & Return to Website
             </button>
           </div>
         ) : (
           <div>
-            <span className="chapter-number">IX. Private Salon</span>
+            <span className="chapter-number">Consultant Inquiry</span>
             <h3 style={{ fontSize: '1.85rem', color: 'var(--text-espresso)', marginBottom: '0.5rem' }}>
-              Schedule A Private Viewing
+              Talk to a Property Consultant
             </h3>
-            <p style={{ fontSize: '0.875rem', lineHeight: 1.8, marginBottom: '2rem' }}>
-              Private tours of completed residences and the full-floor sales gallery are conducted exclusively by appointment.
+            <p style={{ fontSize: '0.875rem', lineHeight: 1.8, marginBottom: '2rem', color: 'var(--text-espresso)' }}>
+              Personalised real-estate guidance with Dishank Asija. Submit your details to discuss residential, commercial, buying, selling, or rental requirements in Mumbai.
             </p>
 
             {errorMessage && (
@@ -267,7 +263,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                  Target Residence
+                  Property Requirement / Listing
                 </label>
                 <select
                   value={selectedId}
@@ -291,12 +287,12 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
 
               <div>
                 <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                  Full Legal Name *
+                  Full Name *
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Lord Julian Sterling"
+                  placeholder="e.g. Rahul Sharma"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   style={{
@@ -313,12 +309,12 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                    Private Email *
+                    Email Address *
                   </label>
                   <input
                     type="email"
                     required
-                    placeholder="e.g. j.sterling@sterling.ch"
+                    placeholder="e.g. rahul.sharma@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     style={{
@@ -334,12 +330,12 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
 
                 <div>
                   <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                    Telephone / Signal *
+                    Phone / Mobile *
                   </label>
                   <input
                     type="tel"
                     required
-                    placeholder="e.g. +1 (212) 555-0190"
+                    placeholder="e.g. +91 98200 00000"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     style={{
@@ -358,10 +354,10 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.35rem' }}>
                   <label style={{ fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
-                    Date of Birth (Security Clearance Verification) *
+                    Date of Birth *
                   </label>
                   <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>
-                    Pre-2026 Birth Dates Permitted
+                    Pre-2026 Birth Dates Accepted
                   </span>
                 </div>
                 <input
@@ -389,11 +385,11 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
                 )}
               </div>
 
-              {/* Preferred Date & Light Window */}
+              {/* Preferred Date & Time */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                    Preferred Date
+                    Preferred Meeting Date
                   </label>
                   <input
                     type="date"
@@ -413,7 +409,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
 
                 <div>
                   <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                    Lighting Window
+                    Time Window
                   </label>
                   <select
                     value={preferredTime}
@@ -427,21 +423,21 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
                       outline: 'none'
                     }}
                   >
-                    <option value="10:00 AM (Crisp Morning Park Sun)">10:00 AM (Crisp Morning Park Sun)</option>
-                    <option value="11:30 AM (Solar Zenith)">11:30 AM (Solar Zenith)</option>
-                    <option value="02:30 PM (Afternoon Light)">02:30 PM (Afternoon Light)</option>
-                    <option value="05:45 PM (Sunset & Golden Hour)">05:45 PM (Sunset & Golden Hour)</option>
+                    <option value="10:00 AM (Morning)">10:00 AM (Morning)</option>
+                    <option value="12:00 PM (Midday)">12:00 PM (Midday)</option>
+                    <option value="03:00 PM (Afternoon)">03:00 PM (Afternoon)</option>
+                    <option value="06:00 PM (Evening)">06:00 PM (Evening)</option>
                   </select>
                 </div>
               </div>
 
               <div>
                 <label style={{ display: 'block', fontSize: '0.75rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                  Confidential Notes & Arrival Coordination (Optional)
+                  Property Requirements / Notes (Optional)
                 </label>
                 <textarea
                   rows={2}
-                  placeholder="e.g. Arriving via private car, requiring NDA clearance..."
+                  placeholder="e.g. Specific budget, preferred BHK, commercial size, or timeline..."
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   style={{
@@ -462,7 +458,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
                 className="btn-111-primary"
                 style={{ width: '100%', marginTop: '0.75rem' }}
               >
-                {isSubmitting ? 'Transmitting Request...' : 'Confirm Private Salon Appointment'}
+                {isSubmitting ? 'Transmitting Request...' : 'Submit Consultation Request'}
               </button>
             </form>
           </div>

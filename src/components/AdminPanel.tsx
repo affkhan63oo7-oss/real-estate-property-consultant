@@ -40,10 +40,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
 
   // Supabase Custom Configuration in-browser override
   const [customUrl, setCustomUrl] = useState(
-    typeof window !== 'undefined' ? localStorage.getItem('AETHELGARD_SUPABASE_URL') || '' : ''
+    typeof window !== 'undefined' ? localStorage.getItem('NAMO_SUPABASE_URL') || localStorage.getItem('AETHELGARD_SUPABASE_URL') || '' : ''
   );
   const [customKey, setCustomKey] = useState(
-    typeof window !== 'undefined' ? localStorage.getItem('AETHELGARD_SUPABASE_KEY') || '' : ''
+    typeof window !== 'undefined' ? localStorage.getItem('NAMO_SUPABASE_KEY') || localStorage.getItem('AETHELGARD_SUPABASE_KEY') || '' : ''
   );
 
   const reloadData = () => {
@@ -61,14 +61,18 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
 
   const handleSaveCredentials = () => {
     if (customUrl.trim()) {
+      localStorage.setItem('NAMO_SUPABASE_URL', customUrl.trim());
       localStorage.setItem('AETHELGARD_SUPABASE_URL', customUrl.trim());
     } else {
+      localStorage.removeItem('NAMO_SUPABASE_URL');
       localStorage.removeItem('AETHELGARD_SUPABASE_URL');
     }
 
     if (customKey.trim()) {
+      localStorage.setItem('NAMO_SUPABASE_KEY', customKey.trim());
       localStorage.setItem('AETHELGARD_SUPABASE_KEY', customKey.trim());
     } else {
+      localStorage.removeItem('NAMO_SUPABASE_KEY');
       localStorage.removeItem('AETHELGARD_SUPABASE_KEY');
     }
 
@@ -83,6 +87,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
       apt.id === id ? { ...apt, status: newStatus } : apt
     );
     setAppointments(updated);
+    localStorage.setItem('namo_appointments_vault', JSON.stringify(updated));
     localStorage.setItem('aethelgard_appointments_vault', JSON.stringify(updated));
     onToast(`Appointment #${id} updated to ${newStatus}.`);
   };
@@ -143,10 +148,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
             <Shield size={20} color="#C9A982" />
             <div>
               <span style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A982', fontWeight: 700 }}>
-                Aethelgard Sovereign Admin
+                Namo Property Consultant Admin
               </span>
               <h3 style={{ fontSize: '1.25rem', color: '#FFFFFF', fontWeight: 400 }}>
-                Operations & Database Registry
+                Consultancy Registry & Operations
               </h3>
             </div>
           </div>
@@ -605,7 +610,9 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
                       onClick={() => {
                         setCustomUrl('');
                         setCustomKey('');
+                        localStorage.removeItem('NAMO_SUPABASE_URL');
                         localStorage.removeItem('AETHELGARD_SUPABASE_URL');
+                        localStorage.removeItem('NAMO_SUPABASE_KEY');
                         localStorage.removeItem('AETHELGARD_SUPABASE_KEY');
                         onToast('Credentials cleared. Returned to Local Vault mode.');
                         setTimeout(() => window.location.reload(), 600);

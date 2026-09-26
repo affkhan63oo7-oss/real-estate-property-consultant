@@ -26,12 +26,11 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
   }, []);
 
   const navChapters = [
-    { label: 'The Tower', href: '#landmark' },
-    { label: 'Architecture', href: '#architecture' },
-    { label: 'Residences', href: '#residences' },
-    { label: 'Interiors', href: '#interiors' },
-    { label: 'The Views', href: '#views' },
-    { label: 'Amenities', href: '#amenities' },
+    { label: 'About', href: '#about' },
+    { label: 'Services', href: '#services' },
+    { label: 'Properties', href: '#properties' },
+    { label: 'Dishank Asija', href: '#consultant' },
+    { label: 'Location', href: '#location' },
     { label: 'Availability', href: '#availability' }
   ];
 
@@ -72,7 +71,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
             justifyContent: 'space-between'
           }}
         >
-          {/* Brand Wordmark (Inspired by 111W57 Monogram & Address) */}
+          {/* Brand Wordmark */}
           <a
             href="#"
             style={{
@@ -85,26 +84,26 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
             <span
               style={{
                 fontFamily: 'var(--font-title)',
-                fontSize: '1.25rem',
-                letterSpacing: '0.25em',
+                fontSize: '1.15rem',
+                letterSpacing: '0.2em',
                 color: isScrolled ? 'var(--text-espresso)' : '#FAF8F5',
                 textTransform: 'uppercase',
                 transition: 'color 0.3s'
               }}
             >
-              117 WEST 57
+              NAMO PROPERTY CONSULTANT
             </span>
             <span
               className="hidden-mobile"
               style={{
                 fontFamily: 'var(--font-title)',
                 fontSize: '0.625rem',
-                letterSpacing: '0.3em',
+                letterSpacing: '0.25em',
                 color: isScrolled ? 'var(--text-bronze)' : 'rgba(250, 248, 245, 0.7)',
                 textTransform: 'uppercase'
               }}
             >
-              • NEW YORK
+              • KANDIVALI EAST, MUMBAI
             </span>
           </a>
 
@@ -285,7 +284,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
               textTransform: 'uppercase'
             }}
           >
-            117 WEST 57TH STREET • DIRECTORY
+            NAMO PROPERTY CONSULTANT • DIRECTORY
           </span>
 
           <div
@@ -338,7 +337,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 padding: '1rem 2.5rem'
               }}
             >
-              Private Salon Inquiry
+              Talk to a Property Consultant
             </button>
           </div>
         </div>

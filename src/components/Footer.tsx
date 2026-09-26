@@ -135,10 +135,10 @@ export const Footer: React.FC<FooterProps> = ({
                 marginBottom: '0.5rem'
               }}
             >
-              Aethelgard
+              Namo Property Consultant
             </span>
             <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', lineHeight: 1.8 }}>
-              Curators and creators of monumental architectural living spaces. Geneva • Zurich • London • New York • Tokyo.
+              Professional real-estate consultancy associated with Dishank Asija. Kandivali East, Mumbai, Maharashtra, India.
             </p>
           </div>
 
@@ -158,13 +158,12 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Private Offices */}
           <div>
             <h4 style={{ fontSize: '0.8125rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A982', marginBottom: '1.25rem' }}>
-              Executive Desks
+              Consultancy Office
             </h4>
             <div style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.7)', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              <div><strong>Geneva HQ:</strong> Rue du Rhône 42, 1204 Genève</div>
-              <div><strong>London Atelier:</strong> 15 Berkeley Square, Mayfair</div>
-              <div><strong>Direct Concierge:</strong> +41 22 819 9200</div>
-              <div><strong>Secure Signal:</strong> sovereign@aethelgard.ch</div>
+              <div><strong>Business:</strong> Namo Property Consultant</div>
+              <div><strong>Consultant:</strong> Dishank Asija</div>
+              <div><strong>Location:</strong> Kandivali East, Mumbai, Maharashtra</div>
             </div>
           </div>
 
@@ -227,7 +226,7 @@ export const Footer: React.FC<FooterProps> = ({
           }}
         >
           <div>
-            © 2026 Aethelgard Architectural Holdings S.A. All sovereign rights reserved. Confidentiality guaranteed under Swiss banking standards.
+            © 2026 Namo Property Consultant. Associated with Dishank Asija. All rights reserved. Kandivali East, Mumbai.
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>

@@ -1,37 +1,41 @@
 import React, { useState } from 'react';
-import { AMENITIES_SUITE } from '../data/towerData';
+import { SERVICES_DATA } from '../data/towerData';
 import { ScrollReveal } from './ScrollReveal';
+import { Check } from 'lucide-react';
 
 export const TowerAmenities: React.FC = () => {
-  const [activeAmenityIndex, setActiveAmenityIndex] = useState(0);
-  const active = AMENITIES_SUITE[activeAmenityIndex];
+  const [activeServiceIndex, setActiveServiceIndex] = useState(0);
+  const active = SERVICES_DATA[activeServiceIndex] || SERVICES_DATA[0];
 
   return (
     <section
-      id="amenities"
+      id="services"
       className="section-editorial"
       style={{
         backgroundColor: 'var(--bg-parchment)',
         borderBottom: '1px solid var(--hairline-light)'
       }}
     >
+      {/* Legacy anchor fallback */}
+      <div id="amenities" style={{ position: 'absolute', top: '-60px' }} />
+
       <div className="container-editorial">
         {/* Chapter Header */}
         <div style={{ marginBottom: '4.5rem' }}>
           <ScrollReveal delay={0} distance={10}>
-            <span className="chapter-number">VI. Amenities & Wellness</span>
+            <span className="chapter-number">III. Services & Expertise</span>
           </ScrollReveal>
           <ScrollReveal delay={80} distance={14}>
             <h2 style={{ maxWidth: '900px', color: 'var(--text-espresso)' }}>
-              Sanctuaries of Quietude.
+              Comprehensive Property Services.
             </h2>
-            <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem' }}>
-              Over 20,000 square feet of private residential amenities designed to serve as personal extensions of the home.
+            <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-bronze)' }}>
+              Personalised real-estate assistance and professional property guidance across residential and commercial sectors in Mumbai.
             </p>
           </ScrollReveal>
         </div>
 
-        {/* Interactive Master Suite Layout */}
+        {/* Interactive Master Services Layout */}
         <div
           style={{
             display: 'grid',
@@ -40,19 +44,19 @@ export const TowerAmenities: React.FC = () => {
             alignItems: 'center'
           }}
         >
-          {/* Left: Amenity Titles Menu */}
+          {/* Left: Service Titles Menu */}
           <ScrollReveal delay={100} distance={12}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {AMENITIES_SUITE.map((item, idx) => {
-                const isSelected = activeAmenityIndex === idx;
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              {SERVICES_DATA.map((item, idx) => {
+                const isSelected = activeServiceIndex === idx;
 
                 return (
                   <div
                     key={item.id}
-                    onClick={() => setActiveAmenityIndex(idx)}
-                    onMouseEnter={() => setActiveAmenityIndex(idx)}
+                    onClick={() => setActiveServiceIndex(idx)}
+                    onMouseEnter={() => setActiveServiceIndex(idx)}
                     style={{
-                      padding: '1.5rem',
+                      padding: '1.25rem 1.5rem',
                       backgroundColor: isSelected ? 'var(--bg-limestone)' : 'transparent',
                       borderLeft: `2px solid ${isSelected ? 'var(--accent-gold)' : 'transparent'}`,
                       cursor: 'pointer',
@@ -63,9 +67,9 @@ export const TowerAmenities: React.FC = () => {
                       <h3
                         style={{
                           fontFamily: 'var(--font-title)',
-                          fontSize: 'clamp(1.15rem, 1.8vw, 1.45rem)',
+                          fontSize: 'clamp(1.05rem, 1.6vw, 1.3rem)',
                           color: isSelected ? 'var(--text-espresso)' : 'var(--text-muted)',
-                          letterSpacing: '0.1em'
+                          letterSpacing: '0.08em'
                         }}
                       >
                         {item.title}
@@ -79,14 +83,14 @@ export const TowerAmenities: React.FC = () => {
                       style={{
                         fontSize: '0.75rem',
                         fontFamily: 'var(--font-title)',
-                        letterSpacing: '0.15em',
+                        letterSpacing: '0.12em',
                         textTransform: 'uppercase',
                         color: isSelected ? 'var(--text-bronze)' : 'transparent',
                         display: 'block',
-                        marginTop: '0.35rem'
+                        marginTop: '0.25rem'
                       }}
                     >
-                      {item.dimensions}
+                      {item.category}
                     </span>
                   </div>
                 );
@@ -104,7 +108,7 @@ export const TowerAmenities: React.FC = () => {
                 overflow: 'hidden'
               }}
             >
-              <div style={{ height: 'clamp(440px, 55vh, 620px)', position: 'relative' }}>
+              <div style={{ height: 'clamp(460px, 58vh, 640px)', position: 'relative' }}>
                 <img
                   key={active.id}
                   src={active.image}
@@ -121,7 +125,7 @@ export const TowerAmenities: React.FC = () => {
                   style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to top, rgba(27, 25, 23, 0.9) 0%, rgba(27, 25, 23, 0.1) 60%, transparent 100%)'
+                    background: 'linear-gradient(to top, rgba(27, 25, 23, 0.92) 0%, rgba(27, 25, 23, 0.25) 55%, transparent 100%)'
                   }}
                 />
 
@@ -132,19 +136,28 @@ export const TowerAmenities: React.FC = () => {
                     bottom: 0,
                     left: 0,
                     width: '100%',
-                    padding: '2.5rem',
+                    padding: '2.25rem',
                     color: '#FAF8F5'
                   }}
                 >
                   <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.25em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
-                    {active.material}
+                    {active.subtitle}
                   </span>
-                  <h4 style={{ fontFamily: 'var(--font-title)', fontSize: '1.65rem', margin: '0.25rem 0 0.5rem 0', color: '#FAF8F5' }}>
+                  <h4 style={{ fontFamily: 'var(--font-title)', fontSize: '1.5rem', margin: '0.25rem 0 0.5rem 0', color: '#FAF8F5' }}>
                     {active.title}
                   </h4>
-                  <p style={{ color: 'rgba(250, 248, 245, 0.85)', fontSize: '0.875rem', lineHeight: 1.8, maxWidth: '520px' }}>
+                  <p style={{ color: 'rgba(250, 248, 245, 0.9)', fontSize: '0.875rem', lineHeight: 1.75, maxWidth: '540px', marginBottom: '1rem' }}>
                     {active.description}
                   </p>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                    {active.featurePoints.slice(0, 3).map((fp, i) => (
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.75rem', color: 'rgba(250, 248, 245, 0.75)' }}>
+                        <Check size={12} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
+                        <span>{fp}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

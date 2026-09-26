@@ -14,31 +14,34 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
 }) => {
   return (
     <section
-      id="residences"
+      id="properties"
       className="section-editorial"
       style={{
         backgroundColor: 'var(--bg-parchment)',
         borderBottom: '1px solid var(--hairline-light)'
       }}
     >
+      {/* Legacy anchor fallback */}
+      <div id="residences" style={{ position: 'absolute', top: '-60px' }} />
+
       <div className="container-editorial">
         {/* Chapter Header */}
         <div style={{ marginBottom: '5rem' }}>
           <ScrollReveal delay={0} distance={10}>
-            <span className="chapter-number">III. The Residences</span>
+            <span className="chapter-number">IV. Featured Properties</span>
           </ScrollReveal>
           <ScrollReveal delay={80} distance={14}>
             <h2 style={{ maxWidth: '900px', color: 'var(--text-espresso)' }}>
-              Full-Floor Grandeur.
+              Residential & Commercial Properties.
               <br />
               <span style={{ fontFamily: 'var(--font-editorial)', fontStyle: 'italic', fontWeight: 300, color: 'var(--text-bronze)' }}>
-                Centuries of decorative mastery, suspended in the sky.
+                Carefully evaluated properties in Kandivali East and Mumbai.
               </span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={160} distance={12}>
-            <p style={{ maxWidth: '640px', marginTop: '1rem', fontSize: '1.05rem' }}>
-              A limited collection of sovereign residences, each occupying a full or multi-level floor plate with private high-speed elevator vestibules and perfectly centered Central Park vistas.
+            <p style={{ maxWidth: '640px', marginTop: '1rem', fontSize: '1.05rem', color: 'var(--text-espresso)' }}>
+              Assistance for buyers, sellers, and tenants seeking residential homes, rental spaces, and commercial real-estate opportunities.
             </p>
           </ScrollReveal>
         </div>
@@ -87,7 +90,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                         onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                       />
 
-                      {/* Minimal Floor Badge */}
+                      {/* Location Badge */}
                       <div
                         style={{
                           position: 'absolute',
@@ -102,13 +105,13 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                           textTransform: 'uppercase'
                         }}
                       >
-                        Floor {res.floor} • {res.ceilingHeight} Ceilings
+                        {res.location || 'Kandivali East, Mumbai'}
                       </div>
                     </div>
                   </ScrollReveal>
                 </div>
 
-                {/* Editorial Narrative & Specs with Staggered Fluidity */}
+                {/* Editorial Narrative & Specs */}
                 <div style={{ order: isReversed ? 1 : 2, maxWidth: '540px' }}>
                   <ScrollReveal delay={100} distance={10}>
                     <span
@@ -130,7 +133,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                         fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
                         color: 'var(--text-espresso)',
                         marginBottom: '0.75rem',
-                        letterSpacing: '0.08em'
+                        letterSpacing: '0.05em'
                       }}
                     >
                       {res.residenceNumber}
@@ -153,7 +156,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                   </ScrollReveal>
 
                   <ScrollReveal delay={200} distance={12}>
-                    <p style={{ lineHeight: 1.9, marginBottom: '2rem' }}>
+                    <p style={{ lineHeight: 1.9, marginBottom: '2rem', color: 'var(--text-espresso)' }}>
                       {res.description}
                     </p>
                   </ScrollReveal>
@@ -173,16 +176,16 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                     >
                       <div>
                         <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                          Bedrooms
+                          Configuration
                         </span>
                         <div style={{ fontFamily: 'var(--font-title)', fontSize: '1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
-                          {res.bedrooms} Ensuite
+                          {res.bedrooms > 0 ? `${res.bedrooms} BHK` : 'Commercial'}
                         </div>
                       </div>
 
                       <div>
                         <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                          Interior
+                          Carpet Area
                         </span>
                         <div style={{ fontFamily: 'var(--font-title)', fontSize: '1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
                           {res.interiorSqFt.toLocaleString()} SQ FT
@@ -191,7 +194,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
 
                       <div>
                         <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                          Acquisition
+                          Price / Terms
                         </span>
                         <div style={{ fontFamily: 'var(--font-title)', fontSize: '1rem', color: 'var(--text-espresso)', marginTop: '0.2rem', fontWeight: 600 }}>
                           {res.priceFormatted}
@@ -207,7 +210,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                         onClick={() => onSelectResidence(res)}
                         className="btn-111-primary"
                       >
-                        <span>Explore Dossier</span>
+                        <span>Explore Property</span>
                         <ArrowUpRight size={14} />
                       </button>
 
@@ -215,7 +218,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                         onClick={() => onInquireResidence(res)}
                         className="btn-111-secondary"
                       >
-                        Private Viewing
+                        Inquire With Consultant
                       </button>
                     </div>
                   </ScrollReveal>

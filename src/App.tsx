@@ -92,7 +92,7 @@ export const App: React.FC = () => {
         {/* Full-Screen Soaring Slender Silhouette Hero */}
         <TowerHero
           onExploreClick={() => {
-            const el = document.getElementById('landmark');
+            const el = document.getElementById('properties') || document.getElementById('about') || document.getElementById('landmark');
             if (el) {
               const lenis = (window as any).__lenis;
               if (lenis) {
@@ -105,35 +105,35 @@ export const App: React.FC = () => {
           onInquireClick={() => handleOpenInquire()}
         />
 
-        {/* Chapter I: The Landmark (1,428 FT, 1:24 Aspect Ratio, Asymmetric Grid) */}
+        {/* Chapter I: About Namo Property Consultant */}
         <TowerManifesto />
 
-        {/* Chapter II: Architecture & Craft (Terra-Cotta & Cast Bronze Filigree) */}
+        {/* Chapter II: Dishank Asija • Property Consultant & Philosophy */}
         <TowerArchitecture />
 
-        {/* Chapter III: The Residences (Full-Bleed Editorial Spreads) */}
+        {/* Chapter III: Featured Properties (Residential & Commercial) */}
         <TowerResidences
           onSelectResidence={(res) => setSelectedResidence(res)}
           onInquireResidence={(res) => handleOpenInquire(res)}
         />
 
-        {/* Chapter IV: Interior Craft (French Herringbone, Cristallo Quartzite, Statuario Marble) */}
-        <TowerInteriors />
-
-        {/* Chapter V: The Panorama (Interactive Central Park Day/Dusk/Night Views) */}
-        <TowerPanorama />
-
-        {/* Chapter VI: Amenities & Wellness (82-Ft Limestone Pool, Private Dining, Athletic Club) */}
+        {/* Chapter IV: Services & Advisory Suite */}
         <TowerAmenities />
 
-        {/* Chapter VII: The Enclave (Billionaires' Row & Cultural Destinations) */}
-        <TowerLocation />
-
-        {/* Chapter VIII: Availability Index (Clean Editorial Inventory Table) */}
+        {/* Chapter V: Availability Index */}
         <TowerAvailability
           onSelectResidence={(res) => setSelectedResidence(res)}
           onInquireResidence={(res) => handleOpenInquire(res)}
         />
+
+        {/* Chapter VI: Property Evaluation & Quality Standards */}
+        <TowerInteriors />
+
+        {/* Chapter VII: The Mumbai Landscape & Panorama */}
+        <TowerPanorama />
+
+        {/* Chapter VIII: Location & Connectivity (Kandivali East, Mumbai) */}
+        <TowerLocation />
       </main>
 
       {/* Editorial Footer */}

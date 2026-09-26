@@ -25,19 +25,19 @@ export const TowerAvailability: React.FC<TowerAvailabilityProps> = ({
         {/* Chapter Header */}
         <div style={{ marginBottom: '4rem' }}>
           <ScrollReveal delay={0} distance={10}>
-            <span className="chapter-number">VIII. Availability Index</span>
+            <span className="chapter-number">V. Availability Index</span>
           </ScrollReveal>
           <ScrollReveal delay={80} distance={14}>
             <h2 style={{ maxWidth: '900px', color: 'var(--text-espresso)' }}>
-              The Tower Inventory.
+              Property Directory & Inquiries.
             </h2>
-            <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem' }}>
-              A limited selection of completed full-floor and duplex residences currently offered for immediate private acquisition.
+            <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-espresso)' }}>
+              Representative residential and commercial properties available for acquisition, lease, or consultation in Kandivali East and Mumbai.
             </p>
           </ScrollReveal>
         </div>
 
-        {/* Minimalist Editorial Inventory Table with Subtle Progressive Settle */}
+        {/* Minimalist Editorial Inventory Table */}
         <ScrollReveal delay={120} distance={12}>
           <div
             style={{
@@ -61,13 +61,13 @@ export const TowerAvailability: React.FC<TowerAvailabilityProps> = ({
                     color: 'var(--text-muted)'
                   }}
                 >
-                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Residence</th>
+                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Property</th>
                   <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Floor</th>
-                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Layout</th>
-                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Beds / Baths</th>
-                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Interior</th>
-                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Exposure</th>
-                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Price</th>
+                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Category</th>
+                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Configuration</th>
+                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Carpet Area</th>
+                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Facing</th>
+                  <th style={{ padding: '1.25rem 1rem', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Price / Terms</th>
                   <th style={{ padding: '1.25rem 1rem', textAlign: 'right', fontFamily: 'var(--font-title)', letterSpacing: '0.15em', fontWeight: 500, fontSize: '0.6875rem' }}>Actions</th>
                 </tr>
               </thead>
@@ -92,7 +92,7 @@ export const TowerAvailability: React.FC<TowerAvailabilityProps> = ({
                       {res.type}
                     </td>
                     <td style={{ padding: '1.5rem 1rem', color: 'var(--text-bronze)' }}>
-                      {res.bedrooms} Beds / {res.bathrooms}.{res.powderRooms} Baths
+                      {res.bedrooms > 0 ? `${res.bedrooms} Beds / ${res.bathrooms} Baths` : 'Commercial Unit'}
                     </td>
                     <td style={{ padding: '1.5rem 1rem', color: 'var(--text-espresso)' }}>
                       {res.interiorSqFt.toLocaleString()} SQ FT
@@ -109,7 +109,7 @@ export const TowerAvailability: React.FC<TowerAvailabilityProps> = ({
                           onClick={() => onSelectResidence(res)}
                           className="btn-111-ghost"
                         >
-                          <span>Dossier</span>
+                          <span>Details</span>
                           <ArrowUpRight size={12} />
                         </button>
 

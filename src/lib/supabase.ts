@@ -6,8 +6,12 @@ const envUrl = import.meta.env.VITE_SUPABASE_URL || '';
 const envKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
 // Stored credentials from settings if configured by user
-const storedUrl = typeof window !== 'undefined' ? localStorage.getItem('AETHELGARD_SUPABASE_URL') || '' : '';
-const storedKey = typeof window !== 'undefined' ? localStorage.getItem('AETHELGARD_SUPABASE_KEY') || '' : '';
+const storedUrl = typeof window !== 'undefined'
+  ? localStorage.getItem('NAMO_SUPABASE_URL') || localStorage.getItem('AETHELGARD_SUPABASE_URL') || ''
+  : '';
+const storedKey = typeof window !== 'undefined'
+  ? localStorage.getItem('NAMO_SUPABASE_KEY') || localStorage.getItem('AETHELGARD_SUPABASE_KEY') || ''
+  : '';
 
 export const SUPABASE_URL = storedUrl || envUrl;
 export const SUPABASE_ANON_KEY = storedKey || envKey;
@@ -24,43 +28,47 @@ export const supabase = isSupabaseConfigured
   : null;
 
 // Local fallback store keys
-const LOCAL_APPOINTMENTS_KEY = 'aethelgard_appointments_vault';
-const LOCAL_LEADS_KEY = 'aethelgard_leads_vault';
+const LOCAL_APPOINTMENTS_KEY = 'namo_appointments_vault';
+const LOCAL_LEADS_KEY = 'namo_leads_vault';
 
 export const getStoredAppointments = (): Appointment[] => {
   try {
-    const raw = localStorage.getItem(LOCAL_APPOINTMENTS_KEY);
+    let raw = localStorage.getItem(LOCAL_APPOINTMENTS_KEY);
     if (!raw) {
-      // Seed default demonstration appointments
+      // Check legacy store key if existing data was saved
+      raw = localStorage.getItem('aethelgard_appointments_vault');
+    }
+    if (!raw) {
+      // Seed default consultation demonstration records
       const initial: Appointment[] = [
         {
           id: 'apt-001',
           created_at: new Date(Date.now() - 86400000 * 2).toISOString(),
-          property_id: 'villa-solaria',
-          property_title: 'Villa Solaria | Modernist Monolith',
-          full_name: 'Lord Jonathan Vance',
-          email: 'j.vance@vanceholdings.ch',
-          phone: '+41 22 819 9200',
-          date_of_birth: '1978-04-14',
+          property_id: 'res-kandivali-3bhk',
+          property_title: '3 BHK Premium Residence',
+          full_name: 'Amitabh Sen',
+          email: 'amitabh.sen@example.com',
+          phone: '+91 98201 12345',
+          date_of_birth: '1982-04-14',
           preferred_date: '2026-10-15',
-          preferred_time: '14:00 (Afternoon Light)',
-          inquiry_type: 'Private Viewing',
-          notes: 'Arriving via chartered helicopter. Requires architectural dossier.',
+          preferred_time: '11:00 AM (Morning)',
+          inquiry_type: 'Property Consultation',
+          notes: 'Interested in ready possession 3 BHK in Kandivali East on a higher floor.',
           status: 'Confirmed'
         },
         {
           id: 'apt-002',
           created_at: new Date(Date.now() - 86400000 * 5).toISOString(),
-          property_id: 'the-monolith-sky',
-          property_title: 'The Monolith Penthouse',
-          full_name: 'Elena Rostova',
-          email: 'elena.rostova@designforum.org',
-          phone: '+44 20 7946 0912',
-          date_of_birth: '1985-11-23',
+          property_id: 'res-comm-office',
+          property_title: 'Commercial Office Space',
+          full_name: 'Pooja Mehta',
+          email: 'pooja.mehta@consultancy.in',
+          phone: '+91 98190 67890',
+          date_of_birth: '1989-11-23',
           preferred_date: '2026-10-22',
-          preferred_time: '11:00 (Morning Light)',
-          inquiry_type: 'Architectural Tour',
-          notes: 'Interested in bespoke travertine finishes and cantilever terrace structure.',
+          preferred_time: '03:00 PM (Afternoon)',
+          inquiry_type: 'Commercial Real Estate',
+          notes: 'Looking for 900+ sq ft office space for professional firm near Western Express Highway.',
           status: 'Pending'
         }
       ];
@@ -128,19 +136,22 @@ export const saveAppointmentToStore = async (appointmentData: Omit<Appointment, 
 
 export const getStoredLeads = (): LeadEnquiry[] => {
   try {
-    const raw = localStorage.getItem(LOCAL_LEADS_KEY);
+    let raw = localStorage.getItem(LOCAL_LEADS_KEY);
+    if (!raw) {
+      raw = localStorage.getItem('aethelgard_leads_vault');
+    }
     if (!raw) {
       const initial: LeadEnquiry[] = [
         {
           id: 'lead-001',
           created_at: new Date(Date.now() - 3600000 * 12).toISOString(),
-          name: 'Marcus Sterling',
-          email: 'm.sterling@sterlingasset.com',
-          phone: '+1 (310) 849-2100',
+          name: 'Rajesh Vora',
+          email: 'rajesh.vora@business.in',
+          phone: '+91 98210 54321',
           preferred_contact: 'WhatsApp',
-          property_interest: 'Waterfront Estates',
-          budget_range: '$15M – $35M',
-          message: 'Looking for a private waterfront sanctuary with deep-water mooring.',
+          property_interest: 'Residential 3 BHK',
+          budget_range: '₹2 Cr – ₹3.5 Cr',
+          message: 'Looking for a verified residential flat in Kandivali East with car parking.',
           status: 'New'
         }
       ];

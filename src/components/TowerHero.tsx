@@ -6,21 +6,85 @@ interface TowerHeroProps {
   onInquireClick: () => void;
 }
 
+interface HeroSlide {
+  url: string;
+  alt: string;
+  position?: string;
+}
+
+const HERO_SLIDES: HeroSlide[] = [
+  {
+    url: '/images/hero/hero-1.jpg',
+    alt: 'Mumbai Skyline and Residential Horizon',
+    position: 'center center'
+  },
+  {
+    url: '/images/hero/hero-2.jpg',
+    alt: 'Curated Residential Enclave and Landscape',
+    position: 'center 45%'
+  },
+  {
+    url: '/images/hero/hero-3.jpg',
+    alt: 'Contemporary Residential Courtyard and Architecture',
+    position: 'center 45%'
+  },
+  {
+    url: '/images/hero/hero-4.jpg',
+    alt: 'Premium Living Salon and Balcony Vista',
+    position: 'center center'
+  },
+  {
+    url: '/images/hero/hero-5.jpg',
+    alt: 'Manicured Grounds and Community Living',
+    position: 'center 40%'
+  }
+];
+
 export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireClick }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [previousSlide, setPreviousSlide] = useState<number | null>(null);
 
   useEffect(() => {
     setIsLoaded(true);
 
+    // Preload all slides immediately and decode them for instant, flicker-free rendering
+    HERO_SLIDES.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.url;
+      if (img.decode) {
+        img.decode().catch(() => {});
+      }
+    });
+
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
+
+    // Fast, smooth, dynamic slide progression (3.5s visibility + 0.75s crossfade)
+    let transitionTimer: ReturnType<typeof setTimeout>;
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => {
+        setPreviousSlide(prev);
+        // Clear previous slide once incoming crossfade transition finishes (750ms)
+        transitionTimer = setTimeout(() => {
+          setPreviousSlide(null);
+        }, 800);
+        return (prev + 1) % HERO_SLIDES.length;
+      });
+    }, 3500);
+
+    if (prefersReducedMotion) {
+      return () => {
+        clearInterval(interval);
+        clearTimeout(transitionTimer);
+      };
+    }
 
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          // Subtle, restrained parallax (only within the hero viewport)
+          // Restrained, lag-free parallax strictly within the hero viewport
           if (window.scrollY < window.innerHeight) {
             setScrollY(window.scrollY);
           }
@@ -31,7 +95,11 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(transitionTimer);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
@@ -48,30 +116,100 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
         backgroundColor: '#121110'
       }}
     >
-      {/* Background Architectural Canvas with Subtle Scroll-Linked Parallax */}
+      {/* Background Slideshow Canvas: completely locked, rock-solid positioning with zero layout shift */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `linear-gradient(to bottom, rgba(18, 17, 16, 0.35) 0%, rgba(18, 17, 16, 0.45) 50%, rgba(18, 17, 16, 0.9) 100%), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2600&q=90')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 30%',
-          transform: isLoaded
-            ? `translate3d(0, ${scrollY * 0.18}px, 0) scale(1)`
-            : 'translate3d(0, 0, 0) scale(1.06)',
-          transition: isLoaded ? 'transform 0.15s ease-out' : 'transform 2.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease',
-          opacity: isLoaded ? 1 : 0,
-          willChange: 'transform, opacity'
+          width: '100%',
+          height: '100%',
+          overflow: 'hidden',
+          pointerEvents: 'none',
+          transform: scrollY > 0 ? `translate3d(0, ${scrollY * 0.15}px, 0)` : 'translate3d(0, 0, 0)',
+          willChange: 'transform'
+        }}
+      >
+        {HERO_SLIDES.map((slide, index) => {
+          const isCurrent = index === currentSlide;
+          const isPrev = index === previousSlide;
+
+          // Stable dual-layer GPU crossfade:
+          // Incoming slide (current) has zIndex 2 and fades in smoothly over 0.75s.
+          // Outgoing slide (prev) remains at opacity 1 underneath at zIndex 1 until incoming is solid.
+          // Inactive slides stay hidden at opacity 0 at zIndex 0.
+          // No snapping animations, no layout resizing, no jerks.
+          let opacity = 0;
+          let zIndex = 0;
+
+          if (isCurrent) {
+            opacity = 1;
+            zIndex = 2;
+          } else if (isPrev) {
+            opacity = 1;
+            zIndex = 1;
+          }
+
+          return (
+            <div
+              key={slide.url}
+              aria-hidden={!isCurrent}
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                opacity,
+                zIndex,
+                transition: isCurrent && previousSlide !== null
+                  ? 'opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1)'
+                  : 'none',
+                overflow: 'hidden',
+                pointerEvents: 'none',
+                willChange: 'opacity',
+                transform: 'translateZ(0)'
+              }}
+            >
+              <img
+                src={slide.url}
+                alt={slide.alt}
+                loading="eager"
+                decoding="async"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: slide.position || 'center center',
+                  display: 'block',
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden'
+                }}
+              />
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Cinematic Multi-Stop Dark Gradient Overlay for Crisp Contrast & Atmospheric Luxury */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(to bottom, rgba(18, 17, 16, 0.48) 0%, rgba(18, 17, 16, 0.38) 40%, rgba(18, 17, 16, 0.92) 100%)',
+          pointerEvents: 'none',
+          zIndex: 3
         }}
       />
 
-      {/* Atmospheric Vignette */}
+      {/* Atmospheric Radial Vignette */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(ellipse at 50% 40%, transparent 40%, rgba(18, 17, 16, 0.8) 100%)',
-          pointerEvents: 'none'
+          background: 'radial-gradient(ellipse at 50% 45%, transparent 35%, rgba(18, 17, 16, 0.78) 100%)',
+          pointerEvents: 'none',
+          zIndex: 4
         }}
       />
 
@@ -104,7 +242,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          • CXVII • NEW YORK •
+          • KANDIVALI EAST • MUMBAI •
         </span>
 
         {/* Monumental Headline */}
@@ -121,7 +259,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          117 WEST 57
+          FIND THE RIGHT PROPERTY IN MUMBAI
         </h1>
 
         {/* Elegant Supporting Subhead */}
@@ -131,7 +269,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             fontSize: 'clamp(1.15rem, 2.2vw, 1.65rem)',
             fontStyle: 'italic',
             color: 'rgba(250, 248, 245, 0.85)',
-            maxWidth: '720px',
+            maxWidth: '780px',
             letterSpacing: '0.04em',
             lineHeight: 1.6,
             marginBottom: '3rem',
@@ -141,7 +279,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          A soaring silhouette of fluted terra-cotta, cast bronze, and classical grandeur rising 1,428 feet above Central Park.
+          Namo Property Consultant provides professional guidance for residential and commercial property requirements in Mumbai, with personalised assistance from Dishank Asija.
         </p>
 
         {/* Minimal CTAs */}
@@ -168,7 +306,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
               padding: '1.15rem 2.5rem'
             }}
           >
-            Explore The Residences
+            Explore Properties
           </button>
 
           <button
@@ -180,7 +318,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
               padding: '1.15rem 2.5rem'
             }}
           >
-            Private Viewing Salon
+            Talk to a Property Consultant
           </button>
         </div>
       </div>
@@ -221,3 +359,4 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
     </section>
   );
 };
+

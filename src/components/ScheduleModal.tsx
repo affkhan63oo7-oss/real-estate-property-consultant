@@ -595,7 +595,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
               Clearance & Appointment Confirmed
             </h3>
             <p style={{ maxWidth: '480px', margin: '0 auto 1.75rem auto', fontSize: '0.9375rem' }}>
-              Your private viewing has been registered in the Aethelgard executive registry and dispatched to the resident curator.
+              Your private viewing has been registered in the Namo Property Consultant registry and dispatched to Dishank Asija.
             </p>
 
             <div

@@ -62,7 +62,7 @@ export interface Appointment {
   date_of_birth: string; // Must allow dates before 2026
   preferred_date: string;
   preferred_time: string;
-  inquiry_type: 'Private Viewing' | 'Architectural Tour' | 'Virtual Video Walkthrough' | 'Financial & Portfolio Consultation';
+  inquiry_type: 'Private Viewing' | 'Architectural Tour' | 'Virtual Video Walkthrough' | 'Financial & Portfolio Consultation' | 'Property Consultation' | 'Commercial Real Estate' | 'Residential Buying' | 'Residential Selling' | 'Property Rentals';
   notes?: string;
   status: 'Pending' | 'Confirmed' | 'Completed' | 'Archived';
 }
