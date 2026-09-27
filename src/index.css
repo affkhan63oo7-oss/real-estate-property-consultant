@@ -8,29 +8,46 @@
   --font-editorial: 'Cormorant Garamond', Garamond, Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Palette */
-  --bg-parchment: #F4F1EA;
-  --bg-limestone: #FAF8F5;
-  --bg-sandstone: #ECE7DE;
-  --bg-dark: #121110;
-  --bg-dark-card: #1C1A18;
+  /* Luxury Dark Campaign Palette (Inspired by Reference Direction) */
+  --bg-dark-obsidian: #0D1310;
+  --bg-dark-surface: #121815;
+  --bg-dark-card: #161D19;
+  --bg-dark-card-subtle: rgba(22, 29, 25, 0.72);
+  --bg-dark-card-hover: #1B241F;
 
-  --text-espresso: #1B1917;
-  --text-bronze: #726A5F;
-  --text-muted: #999083;
-  --text-white: #FAF9F6;
-  --text-white-muted: #C2BBB0;
+  /* Legacy & Neutral Tones */
+  --bg-parchment: #0D1310;
+  --bg-limestone: #121815;
+  --bg-sandstone: #161D19;
+  --bg-dark: #0D1310;
 
-  --accent-gold: #BCA06B;
-  --accent-gold-hover: #9E834F;
-  --accent-gold-light: #F7F3EB;
+  /* Typography Colors */
+  --text-light: #FAF8F5;
+  --text-light-muted: rgba(250, 248, 245, 0.72);
+  --text-light-dim: rgba(250, 248, 245, 0.45);
+  --text-espresso: #FAF8F5;
+  --text-bronze: rgba(250, 248, 245, 0.72);
+  --text-muted: rgba(250, 248, 245, 0.48);
+  --text-white: #FAF8F5;
+  --text-white-muted: rgba(250, 248, 245, 0.72);
 
-  --hairline-light: rgba(114, 106, 95, 0.22);
-  --hairline-dark: rgba(244, 241, 234, 0.14);
+  /* Gold & Champagne Accents */
+  --accent-gold: #C9A982;
+  --accent-gold-bright: #D4B483;
+  --accent-gold-hover: #E0C599;
+  --accent-gold-muted: rgba(201, 169, 130, 0.22);
+  --accent-gold-light: rgba(201, 169, 130, 0.08);
+
+  /* Hairlines & Borders */
+  --hairline-light: rgba(201, 169, 130, 0.22);
+  --hairline-dark: rgba(255, 255, 255, 0.08);
+  --border-gold-subtle: rgba(201, 169, 130, 0.22);
+  --border-gold-strong: rgba(201, 169, 130, 0.45);
 
   /* Shadows */
-  --shadow-editorial: 0 20px 50px -10px rgba(27, 25, 23, 0.08);
-  --shadow-elevated: 0 30px 80px -15px rgba(27, 25, 23, 0.16);
+  --shadow-editorial: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
+  --shadow-elevated: 0 30px 80px -15px rgba(0, 0, 0, 0.7);
+  --shadow-gold-glow: 0 0 35px -5px rgba(201, 169, 130, 0.15);
 
   /* Smooth Transitions */
   --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
@@ -45,8 +62,8 @@
 html {
   font-family: var(--font-sans);
   font-size: 16px;
-  background-color: var(--bg-parchment);
-  color: var(--text-espresso);
+  background-color: var(--bg-dark-obsidian);
+  color: var(--text-light);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -237,11 +254,106 @@ p {
 }
 
 .section-editorial {
-  padding-top: clamp(3.5rem, 7.5vw, 9.5rem);
-  padding-bottom: clamp(3.5rem, 7.5vw, 9.5rem);
+  padding-top: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+  position: relative;
+  background-color: var(--bg-dark-obsidian);
 }
 
-/* 111W57 Inspired Buttons */
+/* Luxury Editorial Cards */
+.card-editorial {
+  background: var(--bg-dark-card-subtle);
+  border: 1px solid var(--border-gold-subtle);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: all 0.35s var(--ease-cinematic);
+}
+
+.card-editorial:hover {
+  border-color: var(--border-gold-strong);
+  background: var(--bg-dark-card-hover);
+  box-shadow: var(--shadow-gold-glow);
+}
+
+/* Luxury Eyebrow Badges */
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-title);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  padding: 0.35rem 0.95rem;
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 9999px;
+  background: rgba(201, 169, 130, 0.08);
+  margin-bottom: 1.25rem;
+}
+
+/* Buttons */
+.btn-gold-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: clamp(0.75rem, 2vw, 0.95rem) clamp(1.4rem, 3vw, 2.2rem);
+  min-height: 46px;
+  font-family: var(--font-title);
+  font-size: clamp(0.65rem, 1.6vw, 0.72rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #0D1310;
+  background-color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-cinematic);
+}
+
+.btn-gold-primary:hover {
+  background-color: var(--accent-gold-bright);
+  border-color: var(--accent-gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 169, 130, 0.25);
+}
+
+.btn-gold-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: clamp(0.75rem, 2vw, 0.95rem) clamp(1.4rem, 3vw, 2.2rem);
+  min-height: 46px;
+  font-family: var(--font-title);
+  font-size: clamp(0.65rem, 1.6vw, 0.72rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  background-color: rgba(22, 29, 25, 0.5);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-cinematic);
+}
+
+.btn-gold-outline:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background-color: rgba(201, 169, 130, 0.08);
+  transform: translateY(-2px);
+}
+
+/* 111W57 Compatible Buttons */
 .btn-111-primary {
   display: inline-flex;
   align-items: center;
@@ -254,9 +366,9 @@ p {
   font-weight: 500;
   letter-spacing: clamp(0.12em, 2vw, 0.22em);
   text-transform: uppercase;
-  color: var(--text-white);
-  background-color: var(--text-espresso);
-  border: 1px solid var(--text-espresso);
+  color: #0D1310;
+  background-color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
@@ -264,9 +376,9 @@ p {
 }
 
 .btn-111-primary:hover {
-  background-color: var(--accent-gold);
-  border-color: var(--accent-gold);
-  color: #121110;
+  background-color: var(--accent-gold-bright);
+  border-color: var(--accent-gold-bright);
+  color: #0D1310;
   transform: translateY(-2px);
 }
 
@@ -282,9 +394,9 @@ p {
   font-weight: 500;
   letter-spacing: clamp(0.12em, 2vw, 0.22em);
   text-transform: uppercase;
-  color: var(--text-espresso);
-  background: transparent;
-  border: 1px solid var(--hairline-light);
+  color: var(--text-light);
+  background: rgba(22, 29, 25, 0.4);
+  border: 1px solid var(--border-gold-subtle);
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
@@ -292,8 +404,9 @@ p {
 }
 
 .btn-111-secondary:hover {
-  border-color: var(--text-espresso);
-  background-color: rgba(27, 25, 23, 0.04);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background-color: rgba(201, 169, 130, 0.08);
   transform: translateY(-2px);
 }
 

@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import Lenis from 'lenis';
 import { TowerResidence } from './data/towerData';
 
-// 111W57-Inspired Component Suite
+// Reference-Inspired Luxury Campaign Component Suite
 import { CustomCursor } from './components/CustomCursor';
 import { TowerHeader } from './components/TowerHeader';
 import { TowerHero } from './components/TowerHero';
-import { TowerManifesto } from './components/TowerManifesto';
-import { TowerArchitecture } from './components/TowerArchitecture';
-import { TowerResidences } from './components/TowerResidences';
-import { TowerInteriors } from './components/TowerInteriors';
-import { TowerPanorama } from './components/TowerPanorama';
-import { TowerAmenities } from './components/TowerAmenities';
-import { TowerLocation } from './components/TowerLocation';
-import { TowerAvailability } from './components/TowerAvailability';
+import { ProjectStatsBar } from './components/ProjectStatsBar';
+import { ProjectIntroduction } from './components/ProjectIntroduction';
+import { ProjectMasterPlan } from './components/ProjectMasterPlan';
+import { ProjectConfigurations } from './components/ProjectConfigurations';
+import { ProjectAmenities } from './components/ProjectAmenities';
+import { ProjectLocation } from './components/ProjectLocation';
+import { ProjectGallery } from './components/ProjectGallery';
+import { ProjectFAQ } from './components/ProjectFAQ';
+import { ProjectFinalCTA } from './components/ProjectFinalCTA';
 import { TowerFooter } from './components/TowerFooter';
 
 // Modals
@@ -90,10 +91,10 @@ export const App: React.FC = () => {
 
       {/* Main Architectural Storytelling Stream */}
       <main>
-        {/* Full-Screen Soaring Slender Silhouette Hero */}
+        {/* Full-Screen Hero (Preserved Exactly As-Is with 0 redesign) */}
         <TowerHero
           onExploreClick={() => {
-            const el = document.getElementById('properties') || document.getElementById('about') || document.getElementById('landmark');
+            const el = document.getElementById('overview') || document.getElementById('quick-stats') || document.getElementById('configurations');
             if (el) {
               const lenis = (window as any).__lenis;
               if (lenis) {
@@ -106,35 +107,35 @@ export const App: React.FC = () => {
           onInquireClick={() => handleOpenInquire()}
         />
 
-        {/* Chapter I: About Namo Property Consultant */}
-        <TowerManifesto />
+        {/* 1. Project Quick Stats (Inspired by Reference Horizontal Cards) */}
+        <ProjectStatsBar />
 
-        {/* Chapter II: Dishank Asija • Property Consultant & Philosophy */}
-        <TowerArchitecture />
+        {/* 2. Project Editorial Introduction */}
+        <ProjectIntroduction onInquireClick={() => handleOpenInquire()} />
 
-        {/* Chapter III: Featured Properties (Residential & Commercial) */}
-        <TowerResidences
+        {/* 3. Master Plan Section */}
+        <ProjectMasterPlan />
+
+        {/* 4. Configurations & Floor Plans Section */}
+        <ProjectConfigurations
           onSelectResidence={(res) => setSelectedResidence(res)}
           onInquireResidence={(res) => handleOpenInquire(res)}
         />
 
-        {/* Chapter IV: Services & Advisory Suite */}
-        <TowerAmenities />
+        {/* 5. Lifestyle & Curated Amenities Section */}
+        <ProjectAmenities />
 
-        {/* Chapter V: Availability Index */}
-        <TowerAvailability
-          onSelectResidence={(res) => setSelectedResidence(res)}
-          onInquireResidence={(res) => handleOpenInquire(res)}
-        />
+        {/* 6. Location & Connectivity Section */}
+        <ProjectLocation />
 
-        {/* Chapter VI: Property Evaluation & Quality Standards */}
-        <TowerInteriors />
+        {/* 7. Architectural Gallery Section */}
+        <ProjectGallery />
 
-        {/* Chapter VII: The Mumbai Landscape & Panorama */}
-        <TowerPanorama />
+        {/* 8. Frequently Asked Questions (FAQ) */}
+        <ProjectFAQ />
 
-        {/* Chapter VIII: Location & Connectivity (Kandivali East, Mumbai) */}
-        <TowerLocation />
+        {/* 9. Final Consultant Advisory CTA Banner */}
+        <ProjectFinalCTA onInquireClick={() => handleOpenInquire()} />
       </main>
 
       {/* Editorial Footer */}

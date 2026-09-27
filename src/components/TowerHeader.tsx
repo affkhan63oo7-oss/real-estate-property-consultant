@@ -26,12 +26,13 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
   }, []);
 
   const navChapters = [
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Properties', href: '#properties' },
-    { label: 'Dishank Asija', href: '#consultant' },
+    { label: 'Overview', href: '#overview' },
+    { label: 'Master Plan', href: '#master-plan' },
+    { label: 'Configurations', href: '#configurations' },
+    { label: 'Amenities', href: '#amenities' },
     { label: 'Location', href: '#location' },
-    { label: 'Availability', href: '#availability' }
+    { label: 'Gallery', href: '#gallery' },
+    { label: 'FAQ', href: '#faq' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -57,10 +58,10 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
           width: '100%',
           zIndex: 1000,
           padding: isScrolled ? '0.75rem 0' : 'clamp(1rem, 2.8vw, 2.25rem) 0',
-          backgroundColor: isScrolled ? 'rgba(244, 241, 234, 0.96)' : 'transparent',
+          backgroundColor: isScrolled ? 'rgba(10, 15, 13, 0.95)' : 'transparent',
           backdropFilter: isScrolled ? 'blur(16px)' : 'none',
           WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'none',
-          borderBottom: isScrolled ? '1px solid var(--hairline-light)' : '1px solid transparent',
+          borderBottom: isScrolled ? '1px solid var(--border-gold-subtle)' : '1px solid transparent',
           transition: 'padding 0.3s var(--ease-cinematic), background-color 0.3s, border-color 0.3s'
         }}
       >
@@ -219,13 +220,12 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
             {/* Inquire Primary CTA */}
             <button
               onClick={onOpenInquire}
-              className="btn-111-primary hidden-mobile"
+              className="btn-gold-primary hidden-mobile"
               style={{
-                padding: '0.65rem 1.4rem',
+                padding: '0.6rem 1.35rem',
+                minHeight: '38px',
                 fontSize: '0.625rem',
-                backgroundColor: isScrolled ? 'var(--text-espresso)' : '#FAF8F5',
-                color: isScrolled ? '#FAF8F5' : 'var(--text-espresso)',
-                borderColor: isScrolled ? 'var(--text-espresso)' : '#FAF8F5'
+                letterSpacing: '0.15em'
               }}
             >
               Inquire
