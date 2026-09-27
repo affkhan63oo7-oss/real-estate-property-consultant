@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TowerResidence, TOWER_RESIDENCES } from '../data/towerData';
 import { saveAppointmentToStore } from '../lib/supabase';
 import { Appointment } from '../types';
@@ -20,6 +20,12 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
   const [selectedId, setSelectedId] = useState<string>(
     selectedResidence ? selectedResidence.id : TOWER_RESIDENCES[0].id
   );
+
+  useEffect(() => {
+    if (selectedResidence) {
+      setSelectedId(selectedResidence.id);
+    }
+  }, [selectedResidence]);
 
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');

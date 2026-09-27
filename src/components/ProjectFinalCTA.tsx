@@ -135,6 +135,7 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                       color: 'var(--accent-gold)'
                     }}
                   >
+                    <MessageSquare size={15} />
                     <span>WhatsApp Us</span>
                   </a>
                 </div>

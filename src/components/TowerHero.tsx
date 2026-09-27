@@ -15,7 +15,7 @@ interface HeroSlide {
 const HERO_SLIDES: HeroSlide[] = [
   {
     url: '/images/hero/hero-1.jpg',
-    alt: 'Mumbai Skyline and Residential Horizon',
+    alt: 'Pune Skyline and Residential Horizon',
     position: 'center center'
   },
   {

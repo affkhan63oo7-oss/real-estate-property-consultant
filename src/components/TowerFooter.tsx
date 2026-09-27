@@ -1,18 +1,32 @@
 import React from 'react';
-import { ArrowUp, MapPin, Phone, Clock, Star, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { ArrowUp, MapPin, Phone, Clock, Star, ArrowUpRight, MessageCircle, Send } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 interface TowerFooterProps {
   onInquireClick: () => void;
+  onToast?: (msg: string) => void;
 }
 
-export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
+export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToast }) => {
   const scrollToTop = () => {
     const lenis = (window as any).__lenis;
     if (lenis) {
       lenis.scrollTo(0, { duration: 1.4 });
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      const lenis = (window as any).__lenis;
+      if (lenis) {
+        lenis.scrollTo(element, { offset: -40, duration: 1.35 });
+      } else {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -207,6 +221,29 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                   <div style={{ fontSize: '0.75rem', color: 'rgba(250, 248, 245, 0.5)' }}>Closed on Tuesdays</div>
                 </div>
               </div>
+              <div style={{ marginTop: '0.35rem' }}>
+                <button
+                  onClick={onInquireClick}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: 'var(--accent-gold)',
+                    cursor: 'pointer',
+                    padding: 0,
+                    fontFamily: 'var(--font-title)',
+                    fontSize: '0.6875rem',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.35rem',
+                    minHeight: '34px'
+                  }}
+                >
+                  <Send size={12} />
+                  <span>Send Property Enquiry</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -229,12 +266,15 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                 <li key={item.label}>
                   <a
                     href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
                     style={{
                       fontFamily: 'var(--font-sans)',
                       fontSize: '0.85rem',
                       color: 'rgba(250, 248, 245, 0.72)',
                       textDecoration: 'none',
-                      transition: 'color 0.2s'
+                      transition: 'color 0.2s',
+                      display: 'inline-block',
+                      padding: '2px 0'
                     }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-gold)')}
                     onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(250, 248, 245, 0.72)')}
@@ -311,7 +351,14 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
             <p style={{ fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.55)', marginBottom: '0.35rem' }}>
               <strong style={{ color: 'var(--accent-gold)' }}>Disclaimer:</strong> Future Construction is a real estate developer and property developer operating in Pune, Marunji, Hinjawadi, and Narhe. All property dimensions, layout plans, and specifications are indicative and subject to verification with respective authorities and planning bodies.
             </p>
-            <p style={{ fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.45)' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center', fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.55)', marginTop: '0.5rem' }}>
+              <span>Privacy Policy</span>
+              <span>•</span>
+              <span>Terms of Discretion</span>
+              <span>•</span>
+              <span>RERA Compliance</span>
+            </div>
+            <p style={{ fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.45)', marginTop: '0.35rem' }}>
               © {new Date().getFullYear()} Future Construction. All rights reserved. Sakhare Complex, Marunji Road, Hinjawadi, Pune.
             </p>
           </div>
@@ -319,10 +366,11 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
           {/* Back to Top */}
           <button
             onClick={scrollToTop}
+            aria-label="Back to Top"
             style={{
               background: 'none',
               border: 'none',
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
               color: 'var(--accent-gold)',
@@ -331,7 +379,8 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               cursor: 'pointer',
-              padding: '0.5rem 0'
+              padding: '0.5rem 0',
+              minHeight: '40px'
             }}
           >
             <span>Back to Top</span>

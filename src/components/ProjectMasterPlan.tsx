@@ -20,7 +20,7 @@ export const ProjectMasterPlan: React.FC = () => {
     {
       icon: <Wind size={18} color="var(--accent-gold)" />,
       title: 'Unobstructed Wind Corridors',
-      desc: 'Calculated building separation maximizing coastal wind flow and natural daylong interior illumination.'
+      desc: 'Calculated layout orientation maximizing natural cross-ventilation, fresh breeze airflow, and daylong interior illumination.'
     },
     {
       icon: <Shield size={18} color="var(--accent-gold)" />,
