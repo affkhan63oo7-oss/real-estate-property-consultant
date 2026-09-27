@@ -156,7 +156,7 @@ export const ProjectAmenities: React.FC = () => {
                 lineHeight: 1.6
               }}
             >
-              Curated leisure environments engineered for vitality, quiet contemplation, and community celebration in Kandivali East.
+              Curated leisure environments engineered for vitality, quiet contemplation, and community living across our developments in Pune.
             </p>
           </ScrollReveal>
         </div>

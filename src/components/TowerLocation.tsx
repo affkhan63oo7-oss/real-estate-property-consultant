@@ -21,10 +21,10 @@ export const TowerLocation: React.FC = () => {
           </ScrollReveal>
           <ScrollReveal delay={80} distance={14}>
             <h2 style={{ maxWidth: '900px', color: 'var(--text-espresso)' }}>
-              Kandivali East, Mumbai.
+              Hinjawadi, Pune.
             </h2>
             <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-bronze)' }}>
-              Strategically located in Mumbai's thriving Western Suburbs, offering seamless arterial road connectivity, suburban railway access, and rapid metro networks.
+              Conveniently located at Sakhare Complex on Marunji Road near Hotel Mezza9, offering seamless connectivity across Pune, Marunji, Hinjawadi, and Narhe.
             </p>
           </ScrollReveal>
         </div>
@@ -94,32 +94,32 @@ export const TowerLocation: React.FC = () => {
                   LOKHANDWALA COMPLEX
                 </text>
 
-                {/* Kandivali Railway Station Marker */}
+                {/* Hinjawadi IT Park Marker */}
                 <g transform="translate(100, 210)">
                   <circle cx="0" cy="0" r="5" fill="#726A5F" />
                   <text x="-8" y="-12" textAnchor="end" fontSize="9" fontFamily="Cinzel" fontWeight="600" fill="#1B1917">
-                    Kandivali Stn
+                    Hinjawadi IT Park
                   </text>
                 </g>
 
-                {/* Growel's 101 Mall Marker */}
+                {/* Hotel Mezza9 Marker */}
                 <g transform="translate(280, 160)">
                   <circle cx="0" cy="0" r="4" fill="#726A5F" />
                   <text x="-12" y="4" textAnchor="end" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">
-                    Growel's 101 Mall
+                    Near Hotel Mezza9
                   </text>
                 </g>
 
-                {/* Namo Property Consultant — Dishank Asija Marker */}
+                {/* Future Construction Marker */}
                 <g transform="translate(240, 210)">
                   <circle cx="0" cy="0" r="16" fill="rgba(188, 160, 107, 0.3)" />
                   <circle cx="0" cy="0" r="8" fill="#BCA06B" />
                   <circle cx="0" cy="0" r="3" fill="#1B1917" />
                   <text x="0" y="-22" textAnchor="middle" fontSize="10" fontFamily="Cinzel" fontWeight="700" letterSpacing="1" fill="#1B1917">
-                    NAMO PROPERTY CONSULTANT
+                    FUTURE CONSTRUCTION
                   </text>
                   <text x="0" y="26" textAnchor="middle" fontSize="8" fontFamily="Plus Jakarta Sans" fontWeight="600" fill="#726A5F">
-                    Dishank Asija • Kandivali East
+                    Hinjawadi, Pune
                   </text>
                 </g>
               </svg>
@@ -145,7 +145,7 @@ export const TowerLocation: React.FC = () => {
               >
                 <MapPin size={11} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
                 <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  Kandivali East, Mumbai
+                  Hinjawadi, Pune
                 </span>
               </div>
             </div>
@@ -181,7 +181,7 @@ export const TowerLocation: React.FC = () => {
 
             <div style={{ marginTop: '0.5rem' }}>
               <a
-                href="https://maps.google.com/?q=Kandivali+East+Mumbai+Maharashtra"
+                href="https://maps.google.com/?q=Sakhare+Complex+Marunji+Road+Hinjawadi+Pune+411057"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -200,7 +200,7 @@ export const TowerLocation: React.FC = () => {
                 }}
               >
                 <Navigation size={13} color="var(--accent-gold)" />
-                <span>Get Directions to Kandivali East</span>
+                <span>Get Directions to Future Construction (Hinjawadi)</span>
               </a>
             </div>
           </div>

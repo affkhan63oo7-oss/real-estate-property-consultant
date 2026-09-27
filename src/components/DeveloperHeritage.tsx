@@ -74,10 +74,10 @@ export const DeveloperHeritage: React.FC = () => {
             09 / Professional Lineage
           </span>
           <h2 style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', color: 'var(--text-primary)' }}>
-            Namo Property Consultant
+            Future Construction
           </h2>
           <p style={{ maxWidth: '650px', marginTop: '0.5rem' }}>
-            Namo Property Consultant is a Mumbai-based real-estate consultancy associated with Dishank Asija, helping clients navigate residential and commercial property requirements with practical guidance.
+            Future Construction is a real estate developer and property developer based in Hinjawadi, Pune, specializing in residential and commercial plots, land property, and development across Pune, Marunji, Hinjawadi, and Narhe.
           </p>
         </div>
 

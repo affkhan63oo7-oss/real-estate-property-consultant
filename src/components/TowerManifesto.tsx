@@ -54,7 +54,7 @@ export const TowerManifesto: React.FC = () => {
             >
               <img
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85"
-                alt="Namo Property Consultant Kandivali East Mumbai"
+                alt="Future Construction Hinjawadi Pune"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -78,7 +78,7 @@ export const TowerManifesto: React.FC = () => {
                   maxWidth: 'calc(100% - 2rem)'
                 }}
               >
-                Namo Property Consultant • Kandivali East, Mumbai
+                Future Construction • Hinjawadi, Pune
               </div>
             </div>
           </ScrollReveal>
@@ -96,13 +96,13 @@ export const TowerManifesto: React.FC = () => {
                   marginBottom: '1.5rem'
                 }}
               >
-                "Navigating Mumbai’s property market requires practical guidance, transparent communication, and dedicated assistance focused on your individual goals."
+                "Navigating Pune’s property market requires practical guidance, transparent communication, and dedicated assistance focused on your individual goals."
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={200} distance={12}>
               <p style={{ marginBottom: '1.25rem', lineHeight: 1.85 }}>
-                Namo Property Consultant is a Mumbai-based real-estate consultancy associated with Dishank Asija, helping clients with residential and commercial property requirements.
+                Future Construction is a real estate developer and property developer based in Hinjawadi, Pune, helping clients with residential land & plots, commercial plots, and property development.
               </p>
             </ScrollReveal>
 
@@ -152,10 +152,10 @@ export const TowerManifesto: React.FC = () => {
                     Location
                   </span>
                   <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
-                    Mumbai
+                    Pune
                   </div>
                   <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.15rem' }}>
-                    Kandivali East & Suburbs
+                    Hinjawadi, Marunji & Narhe
                   </span>
                 </div>
               </div>

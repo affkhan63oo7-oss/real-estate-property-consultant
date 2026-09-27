@@ -7,10 +7,10 @@ const envKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
 // Stored credentials from settings if configured by user
 const storedUrl = typeof window !== 'undefined'
-  ? localStorage.getItem('NAMO_SUPABASE_URL') || localStorage.getItem('AETHELGARD_SUPABASE_URL') || ''
+  ? localStorage.getItem('FUTURE_SUPABASE_URL') || localStorage.getItem('NAMO_SUPABASE_URL') || localStorage.getItem('AETHELGARD_SUPABASE_URL') || ''
   : '';
 const storedKey = typeof window !== 'undefined'
-  ? localStorage.getItem('NAMO_SUPABASE_KEY') || localStorage.getItem('AETHELGARD_SUPABASE_KEY') || ''
+  ? localStorage.getItem('FUTURE_SUPABASE_KEY') || localStorage.getItem('NAMO_SUPABASE_KEY') || localStorage.getItem('AETHELGARD_SUPABASE_KEY') || ''
   : '';
 
 export const SUPABASE_URL = storedUrl || envUrl;
@@ -28,15 +28,15 @@ export const supabase = isSupabaseConfigured
   : null;
 
 // Local fallback store keys
-const LOCAL_APPOINTMENTS_KEY = 'namo_appointments_vault';
-const LOCAL_LEADS_KEY = 'namo_leads_vault';
+const LOCAL_APPOINTMENTS_KEY = 'future_appointments_vault';
+const LOCAL_LEADS_KEY = 'future_leads_vault';
 
 export const getStoredAppointments = (): Appointment[] => {
   try {
     let raw = localStorage.getItem(LOCAL_APPOINTMENTS_KEY);
     if (!raw) {
       // Check legacy store key if existing data was saved
-      raw = localStorage.getItem('aethelgard_appointments_vault');
+      raw = localStorage.getItem('namo_appointments_vault') || localStorage.getItem('aethelgard_appointments_vault');
     }
     if (!raw) {
       // Seed default consultation demonstration records
@@ -44,8 +44,8 @@ export const getStoredAppointments = (): Appointment[] => {
         {
           id: 'apt-001',
           created_at: new Date(Date.now() - 86400000 * 2).toISOString(),
-          property_id: 'res-kandivali-3bhk',
-          property_title: '3 BHK Premium Residence',
+          property_id: 'res-plots-hinjawadi',
+          property_title: 'Residential Land & Plots',
           full_name: 'Amitabh Sen',
           email: 'amitabh.sen@example.com',
           phone: '+91 98201 12345',
@@ -53,7 +53,7 @@ export const getStoredAppointments = (): Appointment[] => {
           preferred_date: '2026-10-15',
           preferred_time: '11:00 AM (Morning)',
           inquiry_type: 'Property Consultation',
-          notes: 'Interested in ready possession 3 BHK in Kandivali East on a higher floor.',
+          notes: 'Interested in clear-title residential plot in Hinjawadi / Marunji.',
           status: 'Confirmed'
         },
         {
@@ -138,7 +138,7 @@ export const getStoredLeads = (): LeadEnquiry[] => {
   try {
     let raw = localStorage.getItem(LOCAL_LEADS_KEY);
     if (!raw) {
-      raw = localStorage.getItem('aethelgard_leads_vault');
+      raw = localStorage.getItem('namo_leads_vault') || localStorage.getItem('aethelgard_leads_vault');
     }
     if (!raw) {
       const initial: LeadEnquiry[] = [
@@ -151,7 +151,7 @@ export const getStoredLeads = (): LeadEnquiry[] => {
           preferred_contact: 'WhatsApp',
           property_interest: 'Residential 3 BHK',
           budget_range: '₹2 Cr – ₹3.5 Cr',
-          message: 'Looking for a verified residential flat in Kandivali East with car parking.',
+          message: 'Looking for a verified residential plot or property in Hinjawadi, Pune.',
           status: 'New'
         }
       ];

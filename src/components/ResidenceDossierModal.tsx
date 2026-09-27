@@ -1,6 +1,6 @@
 import React from 'react';
 import { TowerResidence } from '../data/towerData';
-import { X, ArrowUpRight, Check } from 'lucide-react';
+import { X, ArrowUpRight, Check, Phone } from 'lucide-react';
 
 interface ResidenceDossierModalProps {
   residence: TowerResidence | null;
@@ -100,7 +100,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
           >
             <div style={{ flex: '1 1 240px' }}>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
-                {residence.type} • Floor {residence.floor} • {residence.location || 'Kandivali East, Mumbai'}
+                {residence.type} • Floor {residence.floor} • {residence.location || 'Hinjawadi, Pune'}
               </span>
               <h2 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#FAF8F5', marginTop: '0.25rem', lineHeight: 1.15 }}>
                 {residence.residenceNumber}
@@ -166,7 +166,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
                 Location
               </span>
               <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
-                {residence.location || 'Kandivali East, Mumbai'}
+                {residence.location || 'Hinjawadi, Pune'}
               </div>
             </div>
 
@@ -210,10 +210,48 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
             <button
               onClick={onClose}
               className="btn-111-secondary"
-              style={{ flex: '1 1 140px', minHeight: '48px' }}
+              style={{ flex: '1 1 120px', minHeight: '44px' }}
             >
-              Close Details
+              Close
             </button>
+
+            <a
+              href="tel:+917210320001"
+              className="btn-111-secondary"
+              style={{
+                flex: '1 1 140px',
+                minHeight: '44px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.45rem',
+                textDecoration: 'none',
+                color: 'var(--text-espresso)'
+              }}
+            >
+              <Phone size={14} color="var(--accent-gold)" />
+              <span>Call Now</span>
+            </a>
+
+            <a
+              href={`https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20the%20${encodeURIComponent(residence.residenceNumber)}.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-111-secondary"
+              style={{
+                flex: '1 1 140px',
+                minHeight: '44px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.45rem',
+                textDecoration: 'none',
+                borderColor: 'var(--accent-gold)',
+                color: 'var(--accent-gold)'
+              }}
+            >
+              <span>WhatsApp Us</span>
+            </a>
 
             <button
               onClick={() => {
@@ -221,9 +259,9 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
                 onInquire(residence);
               }}
               className="btn-111-primary"
-              style={{ flex: '2 1 220px', minHeight: '48px' }}
+              style={{ flex: '2 1 180px', minHeight: '44px' }}
             >
-              <span>Inquire Regarding Property</span>
+              <span>Enquire Now</span>
               <ArrowUpRight size={14} />
             </button>
           </div>

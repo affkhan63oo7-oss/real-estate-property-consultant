@@ -135,10 +135,10 @@ export const Footer: React.FC<FooterProps> = ({
                 marginBottom: '0.5rem'
               }}
             >
-              Namo Property Consultant
+              Future Construction
             </span>
             <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', lineHeight: 1.8 }}>
-              Professional real-estate consultancy associated with Dishank Asija. Kandivali East, Mumbai, Maharashtra, India.
+              Real estate developer and property developer based in Hinjawadi, Pune. Sakhare Complex, Marunji Road, Near Hotel Mezza9, Pune – 411057.
             </p>
           </div>
 
@@ -161,9 +161,9 @@ export const Footer: React.FC<FooterProps> = ({
               Consultancy Office
             </h4>
             <div style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.7)', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              <div><strong>Business:</strong> Namo Property Consultant</div>
-              <div><strong>Consultant:</strong> Dishank Asija</div>
-              <div><strong>Location:</strong> Kandivali East, Mumbai, Maharashtra</div>
+              <div><strong>Business:</strong> Future Construction</div>
+              <div><strong>Type:</strong> Real Estate Developer / Property Developer</div>
+              <div><strong>Location:</strong> Sakhare Complex, Marunji Road, Near Hotel Mezza9, Hinjawadi, Pune – 411057</div>
             </div>
           </div>
 
@@ -226,7 +226,7 @@ export const Footer: React.FC<FooterProps> = ({
           }}
         >
           <div>
-            © 2026 Namo Property Consultant. Associated with Dishank Asija. All rights reserved. Kandivali East, Mumbai.
+            © 2026 Future Construction. All rights reserved. Sakhare Complex, Hinjawadi, Pune.
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>

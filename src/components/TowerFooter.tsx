@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, MapPin, Phone, Mail, Clock, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import { ArrowUp, MapPin, Phone, Clock, Star, ArrowUpRight, MessageCircle } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 interface TowerFooterProps {
@@ -27,21 +27,19 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
   ];
 
   const services = [
-    'Residential Property Buying',
-    'Residential Property Selling',
-    'Property Rentals & Leasing',
-    'Commercial Office & Retail',
-    'Property Title Due Diligence',
-    'Bank Home Loan Assistance'
+    'Residential Land & Plots',
+    'Commercial Plots',
+    'Residential Property',
+    'Commercial Property',
+    'Land Property',
+    'Property Development'
   ];
 
   const localities = [
-    'Kandivali East Prime',
-    'Thakur Village Enclave',
-    'Lokhandwala Township',
-    'Western Express Highway',
-    'Metro Line 7 Corridor',
-    'Western Mumbai Suburbs'
+    'Pune',
+    'Marunji',
+    'Hinjawadi',
+    'Narhe'
   ];
 
   return (
@@ -83,7 +81,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                   marginBottom: '0.65rem'
                 }}
               >
-                Real Estate Consultant • Mumbai
+                Real Estate Developer & Property Developer • Pune
               </span>
               <h2
                 style={{
@@ -94,7 +92,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                   letterSpacing: 'clamp(0.04em, 1.2vw, 0.08em)'
                 }}
               >
-                NAMO PROPERTY CONSULTANT
+                FUTURE CONSTRUCTION
               </h2>
               <span
                 style={{
@@ -103,22 +101,63 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                   fontStyle: 'italic',
                   color: 'rgba(250, 248, 245, 0.75)',
                   display: 'block',
-                  marginTop: '0.4rem'
+                  marginTop: '0.4rem',
+                  maxWidth: '680px'
                 }}
               >
-                Associated with Dishank Asija • Kandivali East, Mumbai, Maharashtra
+                Sakhare Complex, Marunji Road, Near Hotel Mezza9, Hinjawadi, Pune, Maharashtra – 411057
               </span>
             </div>
 
-            <div style={{ width: '100%', maxWidth: '340px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', width: '100%', maxWidth: '480px' }}>
               <button
                 onClick={onInquireClick}
                 className="btn-gold-primary"
-                style={{ width: '100%', padding: '1rem 2rem' }}
+                style={{ flex: '1 1 160px', padding: '0.9rem 1.4rem', minHeight: '44px' }}
               >
-                <span>Talk to Property Consultant</span>
+                <span>Enquire Now</span>
                 <ArrowUpRight size={16} />
               </button>
+
+              <a
+                href="tel:+917210320001"
+                className="btn-gold-outline"
+                style={{
+                  flex: '1 1 140px',
+                  padding: '0.9rem 1.2rem',
+                  minHeight: '44px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.45rem',
+                  textDecoration: 'none'
+                }}
+              >
+                <Phone size={14} color="var(--accent-gold)" />
+                <span>Call Now</span>
+              </a>
+
+              <a
+                href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold-outline"
+                style={{
+                  flex: '1 1 140px',
+                  padding: '0.9rem 1.2rem',
+                  minHeight: '44px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.45rem',
+                  textDecoration: 'none',
+                  borderColor: 'var(--accent-gold)',
+                  color: 'var(--accent-gold)'
+                }}
+              >
+                <MessageCircle size={14} />
+                <span>WhatsApp Us</span>
+              </a>
             </div>
           </div>
         </ScrollReveal>
@@ -144,28 +183,29 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                 marginBottom: '1.25rem'
               }}
             >
-              Consultant Office
+              Office & Contact
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', fontSize: '0.85rem', color: 'rgba(250, 248, 245, 0.75)' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
                 <MapPin size={16} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '0.2rem' }} />
-                <span>Kandivali East, Mumbai, Maharashtra 400101, India</span>
+                <span>Sakhare Complex, Marunji Road, Near Hotel Mezza9, Hinjawadi, Pune, Maharashtra – 411057, India</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                 <Phone size={15} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
-                <a href="tel:+919820112345" style={{ color: 'inherit', textDecoration: 'none' }}>
-                  +91 98201 12345
+                <a href="tel:+917210320001" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  +91 72103 20001
                 </a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-                <Mail size={15} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
-                <a href="mailto:consult@namoproperty.in" style={{ color: 'inherit', textDecoration: 'none' }}>
-                  consult@namoproperty.in
-                </a>
+                <Star size={15} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
+                <span>4.0 / 5 (42 Google Reviews)</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-                <Clock size={15} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
-                <span>Mon – Sat: 10:00 AM – 7:30 PM</span>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
+                <Clock size={15} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '0.2rem' }} />
+                <div>
+                  <div>Mon, Wed – Sun: 9:00 AM – 8:00 PM</div>
+                  <div style={{ fontSize: '0.75rem', color: 'rgba(250, 248, 245, 0.5)' }}>Closed on Tuesdays</div>
+                </div>
               </div>
             </div>
           </div>
@@ -206,7 +246,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
             </ul>
           </div>
 
-          {/* Column 3: Advisory Scope */}
+          {/* Column 3: Services / Property Categories */}
           <div>
             <h4
               style={{
@@ -218,7 +258,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                 marginBottom: '1.25rem'
               }}
             >
-              Advisory Scope
+              Services & Categories
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
               {services.map((item) => (
@@ -229,7 +269,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
             </ul>
           </div>
 
-          {/* Column 4: Focus Localities */}
+          {/* Column 4: Areas of Operation */}
           <div>
             <h4
               style={{
@@ -241,7 +281,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
                 marginBottom: '1.25rem'
               }}
             >
-              Focus Territories
+              Areas of Operation
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
               {localities.map((item) => (
@@ -253,7 +293,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
           </div>
         </div>
 
-        {/* Bottom Disclaimer & Legal Accord */}
+        {/* Bottom Disclaimer & Copyright */}
         <div
           style={{
             borderTop: '1px solid rgba(201, 169, 130, 0.15)',
@@ -269,10 +309,10 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick }) => {
         >
           <div style={{ maxWidth: '780px', lineHeight: 1.6 }}>
             <p style={{ fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.55)', marginBottom: '0.35rem' }}>
-              <strong style={{ color: 'var(--accent-gold)' }}>Disclaimer:</strong> Namo Property Consultant is an independent property advisory service associated with Dishank Asija, providing consultation and property facilitation in Kandivali East and Mumbai. All property details, dimensions, layouts, and specifications are indicative and subject to verification with respective builders, owners, and statutory authorities under applicable RERA provisions.
+              <strong style={{ color: 'var(--accent-gold)' }}>Disclaimer:</strong> Future Construction is a real estate developer and property developer operating in Pune, Marunji, Hinjawadi, and Narhe. All property dimensions, layout plans, and specifications are indicative and subject to verification with respective authorities and planning bodies.
             </p>
             <p style={{ fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.45)' }}>
-              © {new Date().getFullYear()} Namo Property Consultant • Dishank Asija. All rights reserved.
+              © {new Date().getFullYear()} Future Construction. All rights reserved. Sakhare Complex, Marunji Road, Hinjawadi, Pune.
             </p>
           </div>
 

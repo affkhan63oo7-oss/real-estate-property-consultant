@@ -32,7 +32,7 @@ export const TowerAvailability: React.FC<TowerAvailabilityProps> = ({
               Property Directory & Inquiries.
             </h2>
             <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-espresso)' }}>
-              Representative residential and commercial properties available for acquisition, lease, or consultation in Kandivali East and Mumbai.
+              Representative residential and commercial properties available across Pune, Marunji, Hinjawadi, and Narhe.
             </p>
           </ScrollReveal>
         </div>

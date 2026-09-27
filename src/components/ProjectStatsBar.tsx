@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
-import { MapPin, Home, Maximize2, Building2, Navigation, ShieldCheck } from 'lucide-react';
+import { MapPin, Home, Layers, Building2, Star, Clock } from 'lucide-react';
 
 interface StatItem {
   icon: React.ReactNode;
@@ -13,39 +13,39 @@ export const ProjectStatsBar: React.FC = () => {
   const stats: StatItem[] = [
     {
       icon: <MapPin size={18} color="var(--accent-gold)" />,
-      value: 'Kandivali E.',
-      label: 'Prime Location',
-      caption: 'Western Suburbs, Mumbai'
+      value: 'Hinjawadi',
+      label: 'Developer Hub',
+      caption: 'Marunji Rd, Pune 411057'
     },
     {
       icon: <Home size={18} color="var(--accent-gold)" />,
-      value: '2, 3 & 4 BHK',
-      label: 'Configurations',
-      caption: '+ Commercial Suites'
+      value: 'Plots & Homes',
+      label: 'Property Categories',
+      caption: 'Residential & Commercial'
     },
     {
-      icon: <Maximize2 size={18} color="var(--accent-gold)" />,
-      value: '720 – 1,850+',
-      label: 'Carpet Area (Sq.Ft)',
-      caption: 'Optimal Space Planning'
+      icon: <Layers size={18} color="var(--accent-gold)" />,
+      value: '4 Core Hubs',
+      label: 'Areas of Operation',
+      caption: 'Pune, Marunji, Hinjawadi, Narhe'
+    },
+    {
+      icon: <Star size={18} color="var(--accent-gold)" />,
+      value: '4.0 / 5',
+      label: 'Google Rating',
+      caption: '42 Verified Reviews'
     },
     {
       icon: <Building2 size={18} color="var(--accent-gold)" />,
-      value: '24+ Floors',
-      label: 'High-Rise Horizon',
-      caption: 'Open Suburban Vistas'
+      value: '6 Categories',
+      label: 'Services Offered',
+      caption: 'Land & Property Development'
     },
     {
-      icon: <Navigation size={18} color="var(--accent-gold)" />,
-      value: '4 – 5 Mins',
-      label: 'Rapid Transit',
-      caption: 'To WEH & Metro Line 7'
-    },
-    {
-      icon: <ShieldCheck size={18} color="var(--accent-gold)" />,
-      value: '100% Clear',
-      label: 'Verified Titles',
-      caption: 'RERA & Legal Clarity'
+      icon: <Clock size={18} color="var(--accent-gold)" />,
+      value: '9 AM – 8 PM',
+      label: 'Business Hours',
+      caption: 'Mon, Wed – Sun Open'
     }
   ];
 

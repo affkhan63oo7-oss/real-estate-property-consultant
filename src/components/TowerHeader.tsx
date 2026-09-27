@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield, Volume2, VolumeX } from 'lucide-react';
+import { Menu, X, Shield, Volume2, VolumeX, Phone } from 'lucide-react';
 import { isSupabaseConfigured } from '../lib/supabase';
 
 interface TowerHeaderProps {
@@ -99,7 +99,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 textOverflow: 'ellipsis'
               }}
             >
-              NAMO PROPERTY CONSULTANT
+              FUTURE CONSTRUCTION
             </span>
             <span
               className="hidden-mobile"
@@ -112,7 +112,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 whiteSpace: 'nowrap'
               }}
             >
-              • KANDIVALI EAST, MUMBAI
+              • HINJAWADI, PUNE
             </span>
           </a>
 
@@ -217,6 +217,30 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
               />
             </button>
 
+            {/* Call Now Secondary CTA */}
+            <a
+              href="tel:+917210320001"
+              className="hidden-mobile"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                padding: '0.55rem 1rem',
+                minHeight: '38px',
+                fontSize: '0.625rem',
+                fontFamily: 'var(--font-title)',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                color: isScrolled ? 'var(--text-espresso)' : '#FAF8F5',
+                border: '1px solid ' + (isScrolled ? 'var(--hairline-medium)' : 'rgba(255, 255, 255, 0.35)'),
+                transition: 'all 0.2s'
+              }}
+            >
+              <Phone size={11} color="var(--accent-gold)" />
+              <span>Call Now</span>
+            </a>
+
             {/* Inquire Primary CTA */}
             <button
               onClick={onOpenInquire}
@@ -228,7 +252,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 letterSpacing: '0.15em'
               }}
             >
-              Inquire
+              Enquire Now
             </button>
 
             {/* Mobile Menu Trigger with accessible touch target */}
@@ -310,7 +334,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
               textAlign: 'center'
             }}
           >
-            NAMO PROPERTY CONSULTANT • DIRECTORY
+            FUTURE CONSTRUCTION • DIRECTORY
           </span>
 
           <div
@@ -357,7 +381,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
             ))}
           </div>
 
-          <div style={{ marginTop: 'clamp(2rem, 4vh, 3rem)', width: '100%', maxWidth: '340px', paddingBottom: '2rem' }}>
+          <div style={{ marginTop: 'clamp(1.75rem, 3.5vh, 2.5rem)', width: '100%', maxWidth: '340px', display: 'flex', flexDirection: 'column', gap: '0.75rem', paddingBottom: '2rem' }}>
             <button
               onClick={() => {
                 setIsMenuOpen(false);
@@ -369,12 +393,53 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 backgroundColor: 'var(--accent-gold)',
                 color: '#121110',
                 borderColor: 'var(--accent-gold)',
-                padding: '1rem 1.5rem',
+                padding: '0.85rem 1.5rem',
                 fontSize: '0.6875rem'
               }}
             >
-              Talk to a Property Consultant
+              Enquire Now
             </button>
+
+            <a
+              href="tel:+917210320001"
+              className="btn-111-secondary"
+              style={{
+                width: '100%',
+                color: '#FAF8F5',
+                borderColor: 'rgba(250, 248, 245, 0.4)',
+                padding: '0.85rem 1.5rem',
+                fontSize: '0.6875rem',
+                textDecoration: 'none',
+                textAlign: 'center',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              Call: +91 72103 20001
+            </a>
+
+            <a
+              href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-111-secondary"
+              style={{
+                width: '100%',
+                color: 'var(--accent-gold)',
+                borderColor: 'var(--accent-gold)',
+                backgroundColor: 'rgba(197, 160, 89, 0.08)',
+                padding: '0.85rem 1.5rem',
+                fontSize: '0.6875rem',
+                textDecoration: 'none',
+                textAlign: 'center',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              WhatsApp Us
+            </a>
           </div>
         </div>
       )}

@@ -16,19 +16,19 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
   const [selectedResidenceId, setSelectedResidenceId] = useState<string>(TOWER_RESIDENCES[0].id);
 
   const filterTabs = [
-    { id: 'all', label: 'All Residences' },
-    { id: '2bhk', label: '2 BHK' },
-    { id: '3bhk', label: '3 BHK' },
-    { id: '4bhk', label: '4 BHK' },
-    { id: 'commercial', label: 'Commercial' }
+    { id: 'all', label: 'All Categories' },
+    { id: 'plots', label: 'Land & Plots' },
+    { id: 'residential', label: 'Residential Property' },
+    { id: 'commercial', label: 'Commercial' },
+    { id: 'development', label: 'Property Development' }
   ];
 
   const filteredResidences = TOWER_RESIDENCES.filter((r) => {
     if (activeTab === 'all') return true;
-    if (activeTab === '2bhk') return r.bedrooms === 2;
-    if (activeTab === '3bhk') return r.bedrooms === 3;
-    if (activeTab === '4bhk') return r.bedrooms === 4;
+    if (activeTab === 'plots') return r.type.includes('Plots') || r.type.includes('Land');
+    if (activeTab === 'residential') return r.category === 'Residential' && !r.type.includes('Development');
     if (activeTab === 'commercial') return r.category === 'Commercial';
+    if (activeTab === 'development') return r.type.includes('Development');
     return true;
   });
 
@@ -58,7 +58,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
           <ScrollReveal delay={0} distance={10}>
             <div className="eyebrow-pill" style={{ marginInline: 'auto' }}>
               <Compass size={12} color="var(--accent-gold)" />
-              <span>Floor Plans & Living Spaces</span>
+              <span>Properties & Plots • Pune</span>
             </div>
           </ScrollReveal>
 
@@ -73,7 +73,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                 marginBottom: '1rem'
               }}
             >
-              Find the Space That Reflects{' '}
+              Explore Properties &{' '}
               <span
                 style={{
                   fontFamily: 'var(--font-editorial)',
@@ -82,7 +82,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                   color: 'var(--accent-gold)'
                 }}
               >
-                Your Rhythm
+                Development Land
               </span>
             </h2>
           </ScrollReveal>
@@ -97,7 +97,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                 lineHeight: 1.6
               }}
             >
-              From efficient 2 BHK family homes to expansive 4 BHK sky residences and prime commercial suites in Kandivali East.
+              Residential land & plots, commercial plots, and curated residential & commercial properties across Pune, Marunji, Hinjawadi, and Narhe.
             </p>
           </ScrollReveal>
 
@@ -125,10 +125,10 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                       setActiveTab(tab.id);
                       const matching = TOWER_RESIDENCES.filter((r) => {
                         if (tab.id === 'all') return true;
-                        if (tab.id === '2bhk') return r.bedrooms === 2;
-                        if (tab.id === '3bhk') return r.bedrooms === 3;
-                        if (tab.id === '4bhk') return r.bedrooms === 4;
+                        if (tab.id === 'plots') return r.type.includes('Plots') || r.type.includes('Land');
+                        if (tab.id === 'residential') return r.category === 'Residential' && !r.type.includes('Development');
                         if (tab.id === 'commercial') return r.category === 'Commercial';
+                        if (tab.id === 'development') return r.type.includes('Development');
                         return true;
                       });
                       if (matching.length > 0) {
@@ -385,18 +385,38 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                 <button
                   onClick={() => onInquireResidence(currentResidence)}
                   className="btn-gold-primary"
+                  style={{ minHeight: '44px' }}
                 >
-                  <span>Enquire About This Configuration</span>
+                  <span>Enquire Now</span>
                   <ArrowUpRight size={16} />
                 </button>
 
                 <button
                   onClick={() => onSelectResidence(currentResidence)}
                   className="btn-gold-outline"
+                  style={{ minHeight: '44px' }}
                 >
                   <FileText size={15} />
-                  <span>View Full Architectural Dossier</span>
+                  <span>Get Property Details</span>
                 </button>
+
+                <a
+                  href={`https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20the%20${encodeURIComponent(currentResidence.residenceNumber)}%20at%20${encodeURIComponent(currentResidence.location || 'Pune')}.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold-outline"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    textDecoration: 'none',
+                    borderColor: 'var(--accent-gold)',
+                    color: 'var(--accent-gold)',
+                    minHeight: '44px'
+                  }}
+                >
+                  <span>WhatsApp Us</span>
+                </a>
               </div>
             </div>
           </div>

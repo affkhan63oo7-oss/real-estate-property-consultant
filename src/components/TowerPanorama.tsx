@@ -87,7 +87,7 @@ export const TowerPanorama: React.FC = () => {
                   textTransform: 'uppercase'
                 }}
               >
-                Kandivali East • Mumbai Horizon
+                Hinjawadi • Pune Horizon
               </span>
             </div>
           </ScrollReveal>

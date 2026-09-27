@@ -67,7 +67,7 @@ export const ProjectLocation: React.FC = () => {
                 lineHeight: 1.6
               }}
             >
-              Positioned in Kandivali East, Mumbai—seamlessly linked to the Western Express Highway, elevated metro networks, and protected green reserves.
+              Positioned in Hinjawadi, Pune—conveniently situated at Sakhare Complex on Marunji Road near Hotel Mezza9, with swift access across Pune, Marunji, Hinjawadi, and Narhe.
             </p>
           </ScrollReveal>
         </div>
@@ -210,68 +210,68 @@ export const ProjectLocation: React.FC = () => {
                   </defs>
                   <rect width="500" height="420" fill="url(#grid)" />
 
-                  {/* Sanjay Gandhi National Park Green Reserve East Flank */}
+                  {/* Marunji Green Buffer Corridor */}
                   <rect x="370" y="0" width="130" height="420" fill="rgba(42, 64, 50, 0.35)" />
                   <line x1="370" y1="0" x2="370" y2="420" stroke="rgba(201, 169, 130, 0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
                   <text x="435" y="210" textAnchor="middle" fontSize="10" fontFamily="Cinzel" letterSpacing="3" fill="var(--accent-gold)" transform="rotate(-90 435 210)">
-                    NATIONAL PARK GREEN RESERVE
+                    MARUNJI GREEN CORRIDOR
                   </text>
 
-                  {/* Western Express Highway (WEH) Main North-South Artery */}
+                  {/* Marunji Road Main North-South Artery */}
                   <line x1="280" y1="0" x2="280" y2="420" stroke="#FAF8F5" strokeWidth="3" />
                   <text x="288" y="45" fontSize="9" fontFamily="Cinzel" fontWeight="600" letterSpacing="1" fill="#FAF8F5">
-                    WESTERN EXPRESS HIGHWAY (WEH)
+                    MARUNJI ROAD ARTERIAL
                   </text>
 
-                  {/* Metro Line 7 Elevated Corridor */}
+                  {/* Pune Metro Line 3 Corridor */}
                   <line x1="300" y1="0" x2="300" y2="420" stroke="var(--accent-gold)" strokeWidth="2.5" strokeDasharray="6 3" />
                   <text x="308" y="110" fontSize="8" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="var(--accent-gold)">
-                    METRO LINE 7 (ELEVATED)
+                    PUNE METRO LINE 3
                   </text>
 
-                  {/* Suburban Railway Line (Western Line) */}
+                  {/* Mumbai-Pune Expressway Link */}
                   <line x1="100" y1="0" x2="100" y2="420" stroke="rgba(250, 248, 245, 0.45)" strokeWidth="2" strokeDasharray="8 4" />
                   <text x="108" y="380" fontSize="9" fontFamily="Cinzel" letterSpacing="1" fill="rgba(250, 248, 245, 0.7)">
-                    WESTERN RAILWAY LINE
+                    MUMBAI-PUNE EXPRESSWAY LINK
                   </text>
 
-                  {/* East-West Cross Roads */}
+                  {/* Hinjawadi IT Park Cross Road */}
                   <line x1="100" y1="210" x2="370" y2="210" stroke="rgba(250, 248, 245, 0.5)" strokeWidth="2" />
-                  <text x="190" y="202" fontSize="9" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="#FAF8F5">
-                    AKURLI ROAD CORRIDOR
+                  <text x="175" y="202" fontSize="9" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="#FAF8F5">
+                    HINJAWADI INFOTECH PARK AXIS
                   </text>
 
                   <line x1="100" y1="120" x2="370" y2="120" stroke="rgba(201, 169, 130, 0.35)" strokeWidth="1.5" strokeDasharray="3 3" />
                   <text x="175" y="112" fontSize="8" fontFamily="Plus Jakarta Sans" fill="rgba(250, 248, 245, 0.75)">
-                    THAKUR VILLAGE ROAD
+                    NARHE / REGIONAL RING ROAD
                   </text>
 
                   <line x1="100" y1="300" x2="370" y2="300" stroke="rgba(201, 169, 130, 0.35)" strokeWidth="1.5" strokeDasharray="3 3" />
                   <text x="175" y="292" fontSize="8" fontFamily="Plus Jakarta Sans" fill="rgba(250, 248, 245, 0.75)">
-                    LOKHANDWALA COMPLEX ROAD
+                    WAKAD & PUNE BYPASS
                   </text>
 
-                  {/* Kandivali Railway Station Marker */}
+                  {/* Hinjawadi IT Park Node */}
                   <g transform="translate(100, 210)">
                     <circle cx="0" cy="0" r="6" fill="var(--accent-gold)" />
                     <text x="-10" y="-12" textAnchor="end" fontSize="9" fontFamily="Cinzel" fontWeight="600" fill="#FAF8F5">
-                      KANDIVALI STATION
+                      HINJAWADI IT PARK
                     </text>
                   </g>
 
-                  {/* WEH Junction Marker */}
+                  {/* Marunji Road Junction Marker */}
                   <g transform="translate(280, 210)">
                     <circle cx="0" cy="0" r="5" fill="#FAF8F5" />
                     <text x="10" y="-10" fontSize="8" fontFamily="Plus Jakarta Sans" fill="var(--accent-gold)">
-                      WEH FLYOVER JUNCTION
+                      MARUNJI JUNCTION
                     </text>
                   </g>
 
-                  {/* Growel's 101 Mall Marker */}
+                  {/* Hotel Mezza9 Marker */}
                   <g transform="translate(250, 260)">
                     <rect x="-4" y="-4" width="8" height="8" fill="var(--accent-gold)" />
                     <text x="12" y="3" fontSize="8" fontFamily="Cinzel" fill="#FAF8F5">
-                      GROWEL'S 101 MALL
+                      NEAR HOTEL MEZZA9
                     </text>
                   </g>
 
@@ -286,10 +286,10 @@ export const ProjectLocation: React.FC = () => {
 
                     <rect x="14" y="-16" width="165" height="32" rx="4" fill="rgba(13, 19, 16, 0.95)" stroke="var(--accent-gold)" strokeWidth="1" />
                     <text x="22" y="-3" fontSize="8" fontFamily="Cinzel" fontWeight="600" letterSpacing="0.5" fill="#FAF8F5">
-                      NAMO PROPERTY CONSULTANT
+                      FUTURE CONSTRUCTION
                     </text>
                     <text x="22" y="10" fontSize="7" fontFamily="Plus Jakarta Sans" fill="var(--accent-gold)">
-                      Kandivali East, Mumbai
+                      Sakhare Complex, Hinjawadi
                     </text>
                   </g>
                 </svg>
@@ -318,15 +318,15 @@ export const ProjectLocation: React.FC = () => {
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                     <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--accent-gold)' }} />
-                    <span>Project Location</span>
+                    <span>Future Construction Hub</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                     <div style={{ width: '12px', height: '2px', backgroundColor: '#FAF8F5' }} />
-                    <span>Arterial WEH</span>
+                    <span>Marunji Road</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                     <div style={{ width: '12px', height: '2px', backgroundColor: 'var(--accent-gold)' }} />
-                    <span>Metro Line 7</span>
+                    <span>Metro Line 3</span>
                   </div>
                 </div>
               </div>

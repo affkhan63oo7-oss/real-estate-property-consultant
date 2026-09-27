@@ -35,7 +35,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
               Residential & Commercial Properties.
               <br />
               <span style={{ fontFamily: 'var(--font-editorial)', fontStyle: 'italic', fontWeight: 300, color: 'var(--text-bronze)' }}>
-                Carefully evaluated properties in Kandivali East and Mumbai.
+                Carefully evaluated properties in Hinjawadi, Marunji, and Pune.
               </span>
             </h2>
           </ScrollReveal>
@@ -106,7 +106,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                           maxWidth: 'calc(100% - 2rem)'
                         }}
                       >
-                        {res.location || 'Kandivali East, Mumbai'}
+                        {res.location || 'Hinjawadi, Pune'}
                       </div>
                     </div>
                   </ScrollReveal>

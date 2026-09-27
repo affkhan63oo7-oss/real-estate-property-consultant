@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
-import { ArrowUpRight, CheckCircle2, Shield, Sparkles } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, Shield, Sparkles, Phone } from 'lucide-react';
 
 interface ProjectIntroductionProps {
   onInquireClick: () => void;
@@ -35,7 +35,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
             <ScrollReveal delay={0} distance={10}>
               <div className="eyebrow-pill">
                 <Sparkles size={12} color="var(--accent-gold)" />
-                <span>Western Suburbs • Mumbai</span>
+                <span>Hinjawadi • Pune</span>
               </div>
             </ScrollReveal>
 
@@ -50,7 +50,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                   marginBottom: '1.25rem'
                 }}
               >
-                Where Thoughtful Living Meets{' '}
+                Where Strategic Development Meets{' '}
                 <span
                   style={{
                     fontFamily: 'var(--font-editorial)',
@@ -59,7 +59,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                     color: 'var(--accent-gold)'
                   }}
                 >
-                  Mumbai’s Horizon
+                  Pune’s Growth
                 </span>
               </h2>
             </ScrollReveal>
@@ -76,15 +76,15 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                   maxWidth: '580px'
                 }}
               >
-                "A calmer rhythm of life shaped by generous natural light, verified paperwork, and transparent advisory."
+                "Dedicated property development, verified land & plots, and responsive client assistance across Pune."
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem', maxWidth: '600px' }}>
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8 }}>
-                  Associated with Dishank Asija, Namo Property Consultant brings a considered approach to residential and commercial real estate in Kandivali East. Rather than pushing generic square footage, we evaluate every residence on the metrics that truly shape everyday family life—cross-ventilation azimuths, expansive ceiling heights, well-separated social and private zones, and peaceful society setbacks.
+                  Located at Sakhare Complex on Marunji Road near Hotel Mezza9 in Hinjawadi, Future Construction is a trusted real estate and property developer. We assist individuals, families, and businesses across residential land & plots, commercial plots, residential property, commercial property, and comprehensive land development.
                 </p>
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8 }}>
-                  Whether acquiring your permanent family home, leasing an executive flat, or securing prime commercial premises along Western Mumbai’s growth corridor, you receive verified documentation, realistic valuations, and attentive guidance at every milestone.
+                  With active operations in Pune, Marunji, Hinjawadi, and Narhe, Future Construction holds a 4.0/5 rating based on 42 Google reviews. Our doors are open Monday through Sunday (9:00 AM – 8:00 PM) for consultation, plot walk-throughs, and property inquiries.
                 </p>
               </div>
             </ScrollReveal>
@@ -100,10 +100,10 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                 }}
               >
                 {[
-                  '100% Clear Legal Titles',
-                  'High-Floor Cross-Ventilation',
-                  'Prime Western Suburbs Location',
-                  'Direct Guidance by Dishank Asija'
+                  'Residential Land & Plots',
+                  'Commercial Plots',
+                  'Residential & Commercial Property',
+                  'Property Development'
                 ].map((item) => (
                   <div
                     key={item}
@@ -129,20 +129,47 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
               </div>
 
               {/* Action Buttons */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.85rem', alignItems: 'center' }}>
                 <button
                   onClick={onInquireClick}
                   className="btn-gold-primary"
+                  style={{ minHeight: '44px' }}
                 >
-                  <span>Schedule a Private Consultation</span>
+                  <span>Enquire Now</span>
                   <ArrowUpRight size={16} />
                 </button>
 
                 <a
-                  href="#configurations"
+                  href="tel:+917210320001"
                   className="btn-gold-outline"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    textDecoration: 'none',
+                    minHeight: '44px'
+                  }}
                 >
-                  Explore Available Layouts
+                  <Phone size={14} color="var(--accent-gold)" />
+                  <span>Call Now</span>
+                </a>
+
+                <a
+                  href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold-outline"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    textDecoration: 'none',
+                    borderColor: 'var(--accent-gold)',
+                    color: 'var(--accent-gold)',
+                    minHeight: '44px'
+                  }}
+                >
+                  <span>WhatsApp Us</span>
                 </a>
               </div>
             </ScrollReveal>
@@ -169,7 +196,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
               >
                 <img
                   src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85"
-                  alt="Architectural Overview Kandivali East Mumbai"
+                  alt="Future Construction Property Development Hinjawadi Pune"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -218,7 +245,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                         display: 'block'
                       }}
                     >
-                      Architectural Elevation
+                      Property Development
                     </span>
                     <span
                       style={{
@@ -229,7 +256,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                         letterSpacing: '0.05em'
                       }}
                     >
-                      Kandivali East, Mumbai
+                      Hinjawadi, Pune
                     </span>
                   </div>
                   <div

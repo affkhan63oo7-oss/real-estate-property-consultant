@@ -196,7 +196,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
               Consultation Enquiry Received
             </h3>
             <p style={{ fontSize: '0.9375rem', lineHeight: 1.8, marginBottom: '2rem', color: 'var(--text-espresso)' }}>
-              Your consultation request has been registered with Namo Property Consultant. Dishank Asija will connect with you to review your property requirements and discuss next steps.
+              Your enquiry has been registered with Future Construction. Our team in Hinjawadi will connect with you to review your property requirements and discuss next steps.
             </p>
 
             <div
@@ -240,12 +240,12 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
           </div>
         ) : (
           <div>
-            <span className="chapter-number">Consultant Inquiry</span>
+            <span className="chapter-number">Future Construction</span>
             <h3 style={{ fontSize: '1.85rem', color: 'var(--text-espresso)', marginBottom: '0.5rem' }}>
-              Talk to a Property Consultant
+              Enquire with Future Construction
             </h3>
             <p style={{ fontSize: '0.875rem', lineHeight: 1.8, marginBottom: '2rem', color: 'var(--text-espresso)' }}>
-              Personalised real-estate guidance with Dishank Asija. Submit your details to discuss residential, commercial, buying, selling, or rental requirements in Mumbai.
+              Dedicated property consultation in Hinjawadi, Pune. Submit your details to discuss residential land & plots, commercial plots, residential or commercial properties, or land development.
             </p>
 
             {errorMessage && (
@@ -342,7 +342,7 @@ export const TowerInquiryModal: React.FC<TowerInquiryModalProps> = ({
                   <input
                     type="tel"
                     required
-                    placeholder="e.g. +91 98200 00000"
+                    placeholder="e.g. +91 72103 20001"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     style={{

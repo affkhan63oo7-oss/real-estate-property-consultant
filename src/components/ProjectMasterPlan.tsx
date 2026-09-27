@@ -72,7 +72,7 @@ export const ProjectMasterPlan: React.FC = () => {
               >
                 <img
                   src="/images/master-plan.jpg"
-                  alt="Architectural Master Site Plan Kandivali East Mumbai"
+                  alt="Future Construction Property Development Site Plan Hinjawadi Pune"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -223,7 +223,7 @@ export const ProjectMasterPlan: React.FC = () => {
               </p>
 
               <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '600px' }}>
-                The master layout prioritizes generous peripheral setbacks and wide spacing between tower footprints. By carefully orienting living balconies away from dense vehicle traffic, every home enjoys uninterrupted sunlight, sweeping western vistas, and refreshing cross-breezes flowing across Mumbai's natural contours.
+                The master layout prioritizes generous peripheral setbacks and wide spacing between tower footprints. By carefully orienting living balconies away from dense vehicle traffic, every home enjoys uninterrupted sunlight, sweeping western vistas, and refreshing cross-breezes flowing across Pune's natural contours.
               </p>
             </ScrollReveal>
 

@@ -12,34 +12,34 @@ export const ProjectFAQ: React.FC = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: 'How does Dishank Asija & Namo Property Consultant assist buyers?',
+      question: 'What services and property categories does Future Construction offer?',
       answer:
-        'We provide dedicated, one-on-one property advisory. Rather than promoting random listings, Dishank Asija analyzes your family’s budget, configuration goals, and preferred localities to curate verified residential options in Kandivali East and Mumbai. We assist throughout property visits, layout evaluations, price negotiations, and final registration.'
+        'Future Construction is a real estate developer and property developer based in Hinjawadi, Pune. We specialize across six core property categories: Residential Land & Plots, Commercial Plots, Residential Property, Commercial Property, Land Property, and Property Development.'
     },
     {
-      question: 'What configurations and carpet sizes are available in Kandivali East?',
+      question: 'Which areas does Future Construction operate in?',
       answer:
-        'We showcase verified 2 BHK (approx. 780 sq.ft), 3 BHK (approx. 1,180 sq.ft), and 4 BHK (approx. 1,850 sq.ft) residential homes situated on higher floors with open suburban views, as well as prime commercial office suites (approx. 950 sq.ft) with prominent arterial road visibility.'
+        'Our active areas of operation include Pune, Marunji, Hinjawadi, and Narhe. We assist buyers, investors, and landowners in selecting prime plots, commercial spaces, and residential developments across these high-growth corridors.'
     },
     {
-      question: 'How are property titles and legal documentation verified?',
+      question: 'Where is Future Construction located and how can I visit?',
       answer:
-        'Every property recommended by Namo Property Consultant undergoes thorough documentation evaluation—including chain of title inspection, society NOC status, RERA compliance verification, and occupancy certification checks to ensure absolute transparency and peace of mind.'
+        'Our office is conveniently located at Sakhare Complex, Marunji Road, Near Hotel Mezza9, Hinjawadi, Pune, Maharashtra – 411057, India. You can connect with our team for in-person consultations, plot surveys, and property walkthroughs.'
     },
     {
-      question: 'Can I arrange a private physical site visit or sample residence inspection?',
+      question: 'What are Future Construction’s business hours?',
       answer:
-        'Yes. You can schedule a private consultation directly through this website or by contacting Dishank Asija via phone/WhatsApp. We will coordinate with property management and personally accompany you for a comprehensive on-site walk-through of the residence and society amenities.'
+        'We are open Monday, Wednesday, Thursday, Friday, Saturday, and Sunday from 9:00 AM to 8:00 PM. (Closed on Tuesdays).'
     },
     {
-      question: 'Do you provide assistance with home loans and bank financing?',
+      question: 'How do I arrange a site visit or enquire about available plots?',
       answer:
-        'Yes. We guide clients through documentation requirements and liaise with major nationalized and private banking institutions (including SBI, HDFC, ICICI, and Axis Bank) to facilitate transparent loan pre-approvals, valuation clearances, and legal disbursement assistance.'
+        'You can click "Enquire Now" on this website, call us directly at +91 72103 20001, or reach out via WhatsApp at +91 72103 20001. Our team will promptly assist with site visits, plot dimensions, and documentation.'
     },
     {
-      question: 'What advisory support is provided for commercial and rental properties?',
+      question: 'What customer ratings and reviews does Future Construction hold?',
       answer:
-        'For commercial clients, we analyze road frontage, passenger elevator capacities, and flexible floor-plate zoning. For rental clients, we coordinate leave-and-license agreements, police verification formalities, and smooth handover protocols for both owners and tenants.'
+        'Future Construction holds a 4.0/5 rating with 42 verified reviews on Google, reflecting our commitment to transparent property guidance and dedicated client service in Pune.'
     }
   ];
 

@@ -238,7 +238,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          • KANDIVALI EAST • MUMBAI •
+          • HINJAWADI • PUNE •
         </span>
 
         {/* Monumental Headline */}
@@ -257,7 +257,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          FIND THE RIGHT PROPERTY IN MUMBAI
+          FUTURE CONSTRUCTION
         </h1>
 
         {/* Elegant Supporting Subhead */}
@@ -267,7 +267,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             fontSize: 'clamp(0.95rem, 2.2vw, 1.55rem)',
             fontStyle: 'italic',
             color: 'rgba(250, 248, 245, 0.88)',
-            maxWidth: '780px',
+            maxWidth: '820px',
             letterSpacing: '0.03em',
             lineHeight: 1.6,
             marginBottom: 'clamp(1.75rem, 4vh, 3rem)',
@@ -277,55 +277,86 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          Namo Property Consultant provides professional guidance for residential and commercial property requirements in Mumbai, with personalised assistance from Dishank Asija.
+          Real Estate Developer & Property Developer in Hinjawadi, Pune. Residential land & plots, commercial plots, residential & commercial properties, and land development across Pune, Marunji, Hinjawadi, and Narhe.
         </p>
 
-        {/* Minimal CTAs */}
+        {/* Direct Action-Focused CTAs */}
         <div
           style={{
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: 'clamp(0.75rem, 2vw, 1.25rem)',
+            gap: 'clamp(0.75rem, 1.5vw, 1.1rem)',
             width: '100%',
-            maxWidth: '680px',
+            maxWidth: '780px',
             opacity: isLoaded ? 1 : 0,
             transform: isLoaded ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
             transition: 'all 1.1s var(--ease-cinematic) 0.8s',
             willChange: 'opacity, transform'
           }}
         >
+          {/* Primary CTA */}
           <button
-            onClick={onExploreClick}
+            onClick={onInquireClick}
             className="btn-111-primary"
             style={{
               backgroundColor: '#FAF8F5',
               color: '#1A1917',
               borderColor: '#FAF8F5',
-              padding: 'clamp(0.85rem, 2.5vw, 1.15rem) clamp(1.5rem, 3.5vw, 2.5rem)',
-              flex: '1 1 240px',
-              maxWidth: '320px'
+              padding: 'clamp(0.85rem, 2vw, 1.1rem) clamp(1.6rem, 3vw, 2.25rem)',
+              flex: '1 1 200px',
+              maxWidth: '260px'
             }}
           >
-            Explore Properties
+            Enquire Now
           </button>
 
-          <button
-            onClick={onInquireClick}
+          {/* Secondary CTA: Call Now */}
+          <a
+            href="tel:+917210320001"
             className="btn-111-secondary"
             style={{
               color: '#FAF8F5',
-              borderColor: 'rgba(250, 248, 245, 0.45)',
-              backgroundColor: 'rgba(18, 17, 16, 0.35)',
+              borderColor: 'rgba(250, 248, 245, 0.5)',
+              backgroundColor: 'rgba(18, 17, 16, 0.4)',
               backdropFilter: 'blur(8px)',
-              padding: 'clamp(0.85rem, 2.5vw, 1.15rem) clamp(1.5rem, 3.5vw, 2.5rem)',
-              flex: '1 1 240px',
-              maxWidth: '320px'
+              padding: 'clamp(0.85rem, 2vw, 1.1rem) clamp(1.4rem, 2.5vw, 2rem)',
+              flex: '1 1 180px',
+              maxWidth: '230px',
+              textDecoration: 'none',
+              textAlign: 'center',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
           >
-            Talk to a Property Consultant
-          </button>
+            Call Now
+          </a>
+
+          {/* Direct CTA: WhatsApp Us */}
+          <a
+            href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-111-secondary"
+            style={{
+              color: 'var(--accent-gold)',
+              borderColor: 'var(--accent-gold)',
+              backgroundColor: 'rgba(197, 160, 89, 0.08)',
+              backdropFilter: 'blur(8px)',
+              padding: 'clamp(0.85rem, 2vw, 1.1rem) clamp(1.4rem, 2.5vw, 2rem)',
+              flex: '1 1 180px',
+              maxWidth: '230px',
+              textDecoration: 'none',
+              textAlign: 'center',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            WhatsApp Us
+          </a>
         </div>
       </div>
 

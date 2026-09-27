@@ -92,31 +92,50 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                     marginBottom: '1.25rem'
                   }}
                 >
-                  "Personalised property guidance, transparent paperwork, and dedicated consultation by Dishank Asija."
+                  "Strategic property development, verified residential & commercial plots, and attentive client service."
                 </p>
 
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '540px' }}>
-                  Whether you are planning to purchase a spacious family residence, explore rental properties, or acquire commercial premises in Kandivali East, connect directly with our advisory for verified options and tailored site walkthroughs.
+                  Whether you are looking for residential land & plots, commercial plots, residential property, commercial spaces, or property development in Pune, Marunji, Hinjawadi, or Narhe, connect directly with Future Construction.
                 </p>
 
                 {/* CTAs */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', marginBottom: '2.5rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.85rem', alignItems: 'center', marginBottom: '2.5rem' }}>
                   <button
                     onClick={onInquireClick}
                     className="btn-gold-primary"
-                    style={{ padding: '0.95rem 1.85rem' }}
+                    style={{ padding: '0.9rem 1.75rem', minHeight: '44px' }}
                   >
-                    <span>Schedule a Private Consultation</span>
+                    <span>Enquire Now</span>
                     <ArrowUpRight size={16} />
                   </button>
 
                   <a
-                    href="tel:+919820112345"
+                    href="tel:+917210320001"
                     className="btn-gold-outline"
-                    style={{ padding: '0.95rem 1.6rem' }}
+                    style={{ padding: '0.9rem 1.5rem', minHeight: '44px', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
                   >
                     <Phone size={15} color="var(--accent-gold)" />
-                    <span>Call: +91 98201 12345</span>
+                    <span>Call: +91 72103 20001</span>
+                  </a>
+
+                  <a
+                    href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-gold-outline"
+                    style={{
+                      padding: '0.9rem 1.5rem',
+                      minHeight: '44px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      textDecoration: 'none',
+                      borderColor: 'var(--accent-gold)',
+                      color: 'var(--accent-gold)'
+                    }}
+                  >
+                    <span>WhatsApp Us</span>
                   </a>
                 </div>
 
@@ -133,15 +152,15 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#FAF8F5', fontSize: '0.78rem', fontFamily: 'var(--font-sans)' }}>
                     <ShieldCheck size={15} color="var(--accent-gold)" />
-                    <span>100% Clear Titles</span>
+                    <span>Verified Developer</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#FAF8F5', fontSize: '0.78rem', fontFamily: 'var(--font-sans)' }}>
                     <MapPin size={15} color="var(--accent-gold)" />
-                    <span>Kandivali East, Mumbai</span>
+                    <span>Hinjawadi, Pune</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#FAF8F5', fontSize: '0.78rem', fontFamily: 'var(--font-sans)' }}>
                     <Sparkles size={15} color="var(--accent-gold)" />
-                    <span>End-to-End Assistance</span>
+                    <span>4.0/5 Rating (42 Reviews)</span>
                   </div>
                 </div>
               </div>
@@ -159,7 +178,7 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
               >
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
-                  alt="Namo Property Consultant Kandivali East"
+                  alt="Future Construction Hinjawadi Pune"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -190,10 +209,10 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                   }}
                 >
                   <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-title)', color: 'var(--accent-gold)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                    Dishank Asija • Property Consultant
+                    Future Construction • Property Developer
                   </span>
                   <span style={{ fontSize: '0.72rem', color: '#FAF8F5' }}>
-                    Mumbai, Maharashtra
+                    Hinjawadi, Pune
                   </span>
                 </div>
               </div>

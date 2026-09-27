@@ -42,11 +42,11 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
           }}
         >
           <span style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--accent-bronze)' }}>
-            VIP Private Concierge
+            Future Construction Help Desk
           </span>
 
           <a
-            href="https://wa.me/?text=I%20am%20inquiring%20regarding%20properties%20with%20Namo%20Property%20Consultant."
+            href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -63,7 +63,7 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
             }}
           >
             <MessageCircle size={16} />
-            <span>Direct WhatsApp Desk</span>
+            <span>WhatsApp Us</span>
           </a>
 
           <button
@@ -82,11 +82,11 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
             }}
           >
             <Sparkles size={15} color="var(--accent-bronze)" />
-            <span>Confidential Inquiry</span>
+            <span>Enquire Now</span>
           </button>
 
           <a
-            href="tel:+41228199200"
+            href="tel:+917210320001"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -101,7 +101,7 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
             }}
           >
             <Phone size={14} />
-            <span>+41 22 819 9200 (Geneva)</span>
+            <span>Call Now: +91 72103 20001</span>
           </a>
         </div>
       )}

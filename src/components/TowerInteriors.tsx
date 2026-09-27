@@ -42,7 +42,7 @@ export const TowerInteriors: React.FC = () => {
               <div style={{ height: 'clamp(220px, 40vw, 400px)', overflow: 'hidden', marginBottom: '1.25rem', backgroundColor: 'var(--bg-sandstone)', boxShadow: 'var(--shadow-editorial)' }}>
                 <img
                   src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85"
-                  alt="Residential Living Quality Kandivali East"
+                  alt="Residential Living Quality Hinjawadi Pune"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>

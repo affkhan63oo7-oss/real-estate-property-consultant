@@ -35,144 +35,144 @@ export interface BusinessService {
 
 export const TOWER_RESIDENCES: TowerResidence[] = [
   {
-    id: 'res-kandivali-3bhk',
-    residenceNumber: '3 BHK Premium Residence',
-    floor: 18,
-    type: 'Residential Property for Sale',
-    tagline: 'Well-ventilated high-floor residence with open city views in Kandivali East.',
-    price: 24500000,
-    priceFormatted: '₹2.45 Cr',
+    id: 'res-plots-hinjawadi',
+    residenceNumber: 'Residential Land & Plots',
+    floor: 1,
+    type: 'Residential Land & Plots',
+    tagline: 'Clear-title residential plots in rapidly growing sectors of Hinjawadi & Marunji.',
+    price: 0,
+    priceFormatted: 'Contact for Pricing',
+    bedrooms: 0,
+    bathrooms: 0,
+    powderRooms: 0,
+    interiorSqFt: 1500,
+    exposure: 'Road Facing / Corner Plots',
+    ceilingHeight: 'Open Plot',
+    imageHero: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+    description: 'Well-demarcated residential land and plot options located in prime growth pockets of Hinjawadi and Marunji with direct road connectivity and planned utility access.',
+    keyFeatures: [
+      'Located in Hinjawadi & Marunji growth sector',
+      'Clear demarcation and direct access road',
+      'Suitable for independent home or residential construction',
+      'Proximity to Hinjawadi IT Park and Marunji Road',
+      'Dedicated property facilitation by Future Construction'
+    ],
+    location: 'Hinjawadi & Marunji, Pune',
+    category: 'Residential'
+  },
+  {
+    id: 'res-comm-plots',
+    residenceNumber: 'Commercial Plots',
+    floor: 1,
+    type: 'Commercial Plots',
+    tagline: 'High-visibility commercial plots suitable for enterprise development and businesses.',
+    price: 0,
+    priceFormatted: 'Contact for Pricing',
+    bedrooms: 0,
+    bathrooms: 0,
+    powderRooms: 0,
+    interiorSqFt: 2400,
+    exposure: 'Main Road Frontage',
+    ceilingHeight: 'Commercial Zone',
+    imageHero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    description: 'Strategically positioned commercial plots offering high footfall, arterial road visibility, and multi-purpose business potential along the Marunji and Hinjawadi corridors.',
+    keyFeatures: [
+      'Prominent road frontage in Hinjawadi / Marunji',
+      'High commercial viability and footfall potential',
+      'Direct connectivity to Pune-Mumbai transit arteries',
+      'Clear title documentation and plot verification',
+      'Advisory and site coordination by Future Construction'
+    ],
+    location: 'Hinjawadi, Pune',
+    category: 'Commercial'
+  },
+  {
+    id: 'res-residential-prop',
+    residenceNumber: 'Residential Property',
+    floor: 12,
+    type: 'Residential Property',
+    tagline: 'Carefully curated residential properties designed for modern family living in Pune.',
+    price: 0,
+    priceFormatted: 'Contact for Pricing',
     bedrooms: 3,
     bathrooms: 3,
     powderRooms: 0,
-    interiorSqFt: 1180,
+    interiorSqFt: 1250,
     exposure: 'East / North Facing',
     ceilingHeight: '10 FT',
     imageHero: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-    description: 'A spacious 3 BHK residential layout situated on an upper floor with ample natural light, cross-ventilation, and unobstructed views. Located in a prime residential pocket of Kandivali East with direct access to local conveniences, schools, and transit links.',
-    keyFeatures: [
-      'Prime residential location in Kandivali East, Mumbai',
-      'Spacious living-dining layout with dedicated balcony space',
-      'Master bedroom with ensuite bathroom and wardrobe niche',
-      'Gated residential society with 24/7 security and elevators',
-      'Assistance with verified property paperwork and bank loan coordination'
-    ],
-    location: 'Kandivali East, Mumbai',
-    category: 'Buy'
-  },
-  {
-    id: 'res-kandivali-2bhk',
-    residenceNumber: '2 BHK Modern Apartment',
-    floor: 12,
-    type: 'Residential Property for Sale',
-    tagline: 'Thoughtfully designed 2 BHK home ideal for families seeking connectivity and comfort.',
-    price: 16500000,
-    priceFormatted: '₹1.65 Cr',
-    bedrooms: 2,
-    bathrooms: 2,
-    powderRooms: 0,
-    interiorSqFt: 780,
-    exposure: 'North / West Facing',
-    ceilingHeight: '10 FT',
-    imageHero: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    description: 'Efficiently planned 2 BHK flat offering comfortable living areas, modern kitchen platform, and peaceful residential surroundings in Kandivali East. Close to Western Express Highway and Western Line suburban railway.',
+    description: 'Thoughtfully configured residential properties featuring optimal room proportions, cross-ventilation, and peaceful neighborhood settings in Pune and Hinjawadi.',
     keyFeatures: [
-      'Proximity to Western Express Highway and metro station',
-      'Well-lit bedrooms with vitrified flooring throughout',
-      'Modular kitchen setup with piped gas provision',
-      'Reserved covered parking space and visitor parking',
-      'Transparent title verification and property consultation'
+      'Quality construction standards with modern layouts',
+      'Well-separated living, dining, and private bedroom zones',
+      'Balcony exposure with expansive natural lighting',
+      'Convenient access to Hinjawadi IT Park, schools, and conveniences',
+      'End-to-end guidance from Future Construction team'
     ],
-    location: 'Kandivali East, Mumbai',
-    category: 'Buy'
+    location: 'Hinjawadi, Pune',
+    category: 'Residential'
   },
   {
-    id: 'res-kandivali-4bhk',
-    residenceNumber: '4 BHK Luxury Deck Residence',
-    floor: 24,
-    type: 'Residential Property for Sale',
-    tagline: 'Expansive family residence featuring panoramic green vistas and premium layout.',
-    price: 39500000,
-    priceFormatted: '₹3.95 Cr',
-    bedrooms: 4,
-    bathrooms: 4,
-    powderRooms: 1,
-    interiorSqFt: 1850,
-    exposure: 'East / South Panoramic',
-    ceilingHeight: '11 FT',
-    imageHero: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-    description: 'Generously proportioned 4 BHK residence offering large living spaces, dedicated dining zone, and open decks framing views toward the Sanjay Gandhi National Park greens and the Mumbai city skyline.',
-    keyFeatures: [
-      'High-floor configuration with expansive wide-deck balcony',
-      'Four ensuite bedrooms with private bath suites',
-      'Modern modular kitchen with adjoining utility and service area',
-      'Clubhouse, fitness center, and landscaped garden amenities',
-      'Full guidance on legal evaluation and ownership transfer'
-    ],
-    location: 'Kandivali East, Mumbai',
-    category: 'Buy'
-  },
-  {
-    id: 'res-comm-office',
-    residenceNumber: 'Commercial Office Space',
-    floor: 7,
-    type: 'Commercial Real Estate',
-    tagline: 'Prime commercial office space suited for corporate setups, clinics, or consultancies.',
-    price: 21000000,
-    priceFormatted: '₹2.10 Cr',
+    id: 'res-commercial-prop',
+    residenceNumber: 'Commercial Property',
+    floor: 4,
+    type: 'Commercial Property',
+    tagline: 'Modern commercial premises and workspaces tailored for corporate and business operations.',
+    price: 0,
+    priceFormatted: 'Contact for Pricing',
     bedrooms: 0,
     bathrooms: 2,
     powderRooms: 0,
-    interiorSqFt: 950,
-    exposure: 'Main Road Frontage',
+    interiorSqFt: 1100,
+    exposure: 'Arterial Frontage',
     ceilingHeight: '12 FT',
-    imageHero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-    description: 'Strategic commercial unit situated in a well-connected commercial complex in Kandivali East. Features open floor-plate flexibility, high ceiling clearance, power backup, and prominent road visibility.',
+    imageHero: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+    description: 'Flexible commercial spaces situated in active business corridors of Pune, Hinjawadi, and Narhe. Engineered for corporate offices, retail, and commercial ventures.',
     keyFeatures: [
-      'Prominent business commercial hub in Kandivali East',
-      'Suitable for corporate office, consultancy, IT, or healthcare clinic',
-      '24/7 building access with multiple high-speed elevators',
-      'Close to metro corridor and public transport nodes',
-      'Dedicated commercial leasing & sale advisory support'
+      'Prime business location in Pune / Hinjawadi / Narhe',
+      'Open floor-plate design for modular workspace layouts',
+      'High footfall and arterial connectivity',
+      'Ample parking provision and essential commercial utilities',
+      'Assistance throughout inspection and agreement stages'
     ],
-    location: 'Kandivali East, Mumbai',
+    location: 'Pune & Narhe',
     category: 'Commercial'
   },
   {
-    id: 'res-rental-2bhk',
-    residenceNumber: '2 BHK Rental Residence',
-    floor: 9,
-    type: 'Property Rental / Lease',
-    tagline: 'Semi-furnished 2 BHK apartment available for immediate family or corporate lease.',
-    price: 45000,
-    priceFormatted: '₹45,000 / month',
-    bedrooms: 2,
-    bathrooms: 2,
+    id: 'res-land-development',
+    residenceNumber: 'Land Property & Property Development',
+    floor: 1,
+    type: 'Property Development',
+    tagline: 'Comprehensive land acquisition, parcel planning, and property development solutions in Pune.',
+    price: 0,
+    priceFormatted: 'Contact for Pricing',
+    bedrooms: 0,
+    bathrooms: 0,
     powderRooms: 0,
-    interiorSqFt: 720,
-    exposure: 'Garden Facing',
-    ceilingHeight: '10 FT',
-    imageHero: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=85',
+    interiorSqFt: 5000,
+    exposure: 'Strategic Growth Sector',
+    ceilingHeight: 'Development Parcel',
+    imageHero: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
-    description: 'Well-maintained rental apartment in an established gated community in Kandivali East. Comes with essential woodwork, modular kitchen, safety grills, and pleasant internal garden exposure.',
+    description: 'End-to-end property development and land property services by Future Construction. Focused on parcel planning, boundary demarcation, and development execution in Pune, Marunji, and Narhe.',
     keyFeatures: [
-      'Ready to move in with essential fittings and wardrobes',
-      'Peaceful society environment with children play zone',
-      'Convenient access to local markets, banks, and schools',
-      'Assistance with police verification, agreement, and registration',
-      'Rental management support for both tenants and landlords'
+      'Active land development in Pune, Marunji, Hinjawadi, and Narhe',
+      'Systematic parcel planning and boundary demarcation',
+      'Clear paperwork and title transparency',
+      'Backed by verified 4.0/5 Google review track record',
+      'Direct developer consultation at Sakhare Complex, Hinjawadi'
     ],
-    location: 'Kandivali East, Mumbai',
-    category: 'Rent'
+    location: 'Marunji & Pune',
+    category: 'Residential'
   }
 ];
 
@@ -181,24 +181,24 @@ export const PANORAMA_VIEWS = [
     id: 'day',
     label: 'Morning Light',
     time: '09:30 AM',
-    headline: 'Western Suburbs Daylight & Connectivity',
-    description: 'Expansive vistas stretching across Kandivali East and Mumbai’s western corridor, framed by lush foliage and thriving neighborhoods.',
+    headline: 'Pune & Hinjawadi Daylight & Growth',
+    description: 'Expansive vistas stretching across Hinjawadi, Marunji, and Pune’s western development corridor, framed by open green landscapes and active infrastructure.',
     imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2200&q=90'
   },
   {
     id: 'dusk',
     label: 'Golden Hour',
     time: '06:15 PM',
-    headline: 'Warm Sunset Over Mumbai Skyline',
-    description: 'Sunlight casts an amber glow across residential towers and arterial highways connecting Kandivali East to the wider metropolis.',
+    headline: 'Warm Sunset Over Hinjawadi Skyline',
+    description: 'Golden sunlight illuminates the tech corridors, open residential plots, and arterial roads connecting Marunji and Hinjawadi to Pune city.',
     imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2200&q=90'
   },
   {
     id: 'night',
     label: 'Evening Citylights',
     time: '09:45 PM',
-    headline: 'Metropolitan Illumination & Community Life',
-    description: 'The vibrant evening rhythm of Mumbai comes alive with illuminated transit arteries, neighborhood avenues, and calm residential enclaves.',
+    headline: 'Vibrant Tech Hub & Living Corridors',
+    description: 'The energetic evening atmosphere of Pune and Hinjawadi comes alive with illuminated transit arteries, business hubs, and tranquil residential zones.',
     imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90'
   }
 ];
@@ -206,146 +206,131 @@ export const PANORAMA_VIEWS = [
 export const SERVICES_DATA: BusinessService[] = [
   {
     id: 'service-1',
-    title: 'Residential Property Buying',
-    subtitle: 'Service 01 • Buying Assistance',
-    category: 'Residential Buying',
-    description: 'Assistance for clients looking to find and evaluate residential properties based on their requirements, location preferences and budget.',
-    scope: 'Requirement Assessment • Property Scouting • Price Evaluation',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+    title: 'Residential Land & Plots',
+    subtitle: 'Category 01 • Land & Plots',
+    category: 'Residential Land & Plots',
+    description: 'Verified residential plots and land options across growing residential localities in Hinjawadi, Marunji, and Pune.',
+    scope: 'Plot Scouting • Demarcation • Title Verification',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Careful analysis of client budget, configuration, and preferred localities',
-      'Shortlisting verified residential options across Kandivali East and Mumbai',
-      'Objective evaluation of carpet areas, builder reputation, and layout efficiency',
-      'Assistance with property visits and negotiation support'
+      'Carefully surveyed plots with clear access roads',
+      'Verified land records in Pune and Marunji',
+      'Assistance with boundary demarcation and documentation',
+      'Direct developer advisory from Future Construction'
     ]
   },
   {
     id: 'service-2',
-    title: 'Residential Property Selling',
-    subtitle: 'Service 02 • Selling Assistance',
-    category: 'Residential Selling',
-    description: 'Property selling assistance for owners looking to present and market their property to potential buyers.',
-    scope: 'Property Valuation • Strategic Presentation • Qualified Buyer Reach',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
+    title: 'Commercial Plots',
+    subtitle: 'Category 02 • Enterprise Land',
+    category: 'Commercial Plots',
+    description: 'Prime commercial land and plot parcels along high-traffic roads and business zones in Hinjawadi and Pune.',
+    scope: 'Commercial Zoning • Arterial Frontage • High Footfall',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Realistic market evaluation based on current Mumbai property trends',
-      'Preparation and clear presentation of property highlights',
-      'Direct outreach to genuine, pre-screened prospective buyers',
-      'Guidance through documentation, agreement drafting, and closing procedures'
+      'Prominent road visibility on Marunji Road & Hinjawadi corridors',
+      'Suitable for retail, corporate hubs, and commercial ventures',
+      'Clear title evaluation and transparent paperwork',
+      'Strategic growth potential in expanding Pune business belts'
     ]
   },
   {
     id: 'service-3',
-    title: 'Property Rentals',
-    subtitle: 'Service 03 • Leasing & Tenancy',
-    category: 'Rental Assistance',
-    description: 'Assistance with residential and rental property requirements for clients looking to find suitable properties.',
-    scope: 'Tenant Matching • Lease Agreements • Property Handover',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
+    title: 'Residential Property',
+    subtitle: 'Category 03 • Living Spaces',
+    category: 'Residential Property',
+    description: 'Quality residential homes and family living options across Pune, Hinjawadi, and Marunji.',
+    scope: 'Family Living • Modern Layouts • Convenient Access',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Helping tenants discover verified homes that fit their lifestyle needs',
-      'Assisting landlords in securing reliable, verified tenants',
-      'Coordination of leave-and-license agreements and registration',
-      'Smooth move-in and handover guidance'
+      'Carefully planned residences with natural lighting and airflow',
+      'Proximity to IT parks, educational institutions, and healthcare',
+      'Transparent buying assistance and paperwork coordination',
+      'Personalised consultation based on your family requirements'
     ]
   },
   {
     id: 'service-4',
-    title: 'Commercial Real Estate',
-    subtitle: 'Service 04 • Commercial Support',
+    title: 'Commercial Property',
+    subtitle: 'Category 04 • Business Spaces',
     category: 'Commercial Property',
-    description: 'Support for clients exploring commercial property opportunities and requirements.',
-    scope: 'Office Spaces • Retail Outlets • Commercial Investment',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
+    description: 'Commercial workspaces, office suites, and retail premises across Pune, Hinjawadi, and Narhe.',
+    scope: 'Office Spaces • Retail Outlets • Enterprise Units',
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Support for commercial office spaces, clinics, and business consultancies',
-      'Evaluation of footfall, frontage, connectivity, and commercial zoning',
-      'Commercial purchase and leasing negotiation assistance',
-      'Understanding of business requirements and practical workspace planning'
+      'Modern commercial units designed for functional business workflows',
+      'Active commercial pockets in Hinjawadi, Narhe, and Pune',
+      'Support throughout property inspections and lease/sale agreements',
+      'Clear documentation and transparent commercial terms'
     ]
   },
   {
     id: 'service-5',
-    title: 'Property Management',
-    subtitle: 'Service 05 • Asset Care',
-    category: 'Property Management',
-    description: 'Property-related management assistance for owners who need support with their real-estate assets.',
-    scope: 'Tenancy Oversight • Asset Coordination • Owner Peace of Mind',
-    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85',
+    title: 'Land Property',
+    subtitle: 'Category 05 • Strategic Land',
+    category: 'Land Property',
+    description: 'Acquisition, evaluation, and transaction guidance for land parcels throughout the Pune metropolitan region.',
+    scope: 'Land Evaluation • Demarcation • Parcel Verification',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Support for non-resident and outstation property owners',
-      'Tenancy management, agreement renewals, and tenant coordination',
-      'Periodic inspection support and asset maintenance monitoring',
-      'Dedicated point of contact for property-related matters'
+      'Land opportunities across Marunji, Hinjawadi, Narhe, and Pune',
+      'Thorough due diligence on title chains and land surveys',
+      'Objective guidance tailored to buyer goals and development plans',
+      'Direct coordination with Future Construction leadership'
     ]
   },
   {
     id: 'service-6',
-    title: 'Real Estate Marketing',
-    subtitle: 'Service 06 • Targeted Marketing',
-    category: 'Property Marketing',
-    description: 'Property marketing support designed to present properties clearly to potential buyers and tenants.',
-    scope: 'Clear Presentation • Targeted Outreach • Honest Communication',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=85',
+    title: 'Property Development',
+    subtitle: 'Category 06 • Development Solutions',
+    category: 'Property Development',
+    description: 'Professional property development services delivering planned layouts, infrastructure, and built environments in Pune.',
+    scope: 'Site Planning • Infrastructure • Project Execution',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Clear, honest photography and accurate property feature articulation',
-      'Direct distribution across active buyer and investor networks in Mumbai',
-      'Transparent communication without exaggerated marketing claims',
-      'Highlighting actual location advantages and real living amenities'
-    ]
-  },
-  {
-    id: 'service-7',
-    title: 'Property Consultation',
-    subtitle: 'Service 07 • Advisory Guidance',
-    category: 'Personalised Advisory',
-    description: 'Personalised guidance for clients evaluating property options and making real-estate decisions.',
-    scope: 'One-on-One Advisory • Market Insight • Goal Alignment',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1800&q=85',
-    featurePoints: [
-      'One-on-one consultation with Dishank Asija for individual property questions',
-      'Objective analysis of market conditions in Kandivali East and Mumbai',
-      'Balancing budget considerations with long-term lifestyle and family goals',
-      'Unbiased advice focused solely on client best interests'
+      'End-to-end property development execution in Pune & Marunji',
+      'Site preparation, road layout, and utility planning',
+      'Quality development standards backed by 42 Google reviews (4.0/5)',
+      'Office conveniently located at Sakhare Complex, Hinjawadi'
     ]
   }
 ];
 
 export const NEIGHBORHOOD_DESTINATIONS = [
   {
-    name: 'Western Express Highway (WEH)',
-    category: 'Arterial Highway',
+    name: 'Hotel Mezza9 Landmark',
+    category: 'Prominent Landmark',
+    distance: '1 Minute',
+    desc: 'Prominent dining and hospitality landmark located right beside Sakhare Complex on Marunji Road.'
+  },
+  {
+    name: 'Hinjawadi Rajiv Gandhi Infotech Park',
+    category: 'Major IT / Business Hub',
     distance: '5 Minutes',
-    desc: 'Direct north-south arterial transit spine connecting Kandivali East to Mumbai International Airport, Bandra-Kurla Complex (BKC), and South Mumbai.'
+    desc: 'Premier technology and business park housing leading IT campuses, tech giants, and commercial centers.'
   },
   {
-    name: 'Kandivali Railway Station',
-    category: 'Suburban Rail',
-    distance: '7 Minutes',
-    desc: 'Key Western Railway suburban hub with regular fast and slow train access throughout Mumbai’s rail corridor.'
+    name: 'Marunji Road Arterial Corridor',
+    category: 'Arterial Transit Spine',
+    distance: 'Immediate Access',
+    desc: 'Key transit spine directly connecting Hinjawadi Phase 1 & 2 to Marunji and surrounding development zones.'
   },
   {
-    name: 'Metro Line 7 & Line 2A',
-    category: 'Metro Transit',
-    distance: '4 Minutes',
-    desc: 'Rapid elevated transit network connecting Dahisar, Kandivali, Andheri, and interchanging with Line 1 for East-West cross connectivity.'
-  },
-  {
-    name: 'Growel’s 101 Mall',
-    category: 'Retail & Dining',
-    distance: '5 Minutes',
-    desc: 'Major shopping, dining, entertainment, and department retail center serving residents across Kandivali East.'
-  },
-  {
-    name: 'Thakur Village & Lokhandwala',
-    category: 'Civic & Commercial Hub',
-    distance: 'Within Vicinity',
-    desc: 'Established residential townships featuring reputed schools, healthcare centers, banks, sports clubs, and business avenues.'
-  },
-  {
-    name: 'Sanjay Gandhi National Park',
-    category: 'Green Reserve',
+    name: 'Mumbai-Pune Expressway',
+    category: 'Expressway Link',
     distance: '10 Minutes',
-    desc: 'Expansive natural protected forest and green reserve flanking eastern Kandivali, offering clean air and scenic vistas.'
+    desc: 'High-speed transit access connecting Pune to Mumbai, Dehu Road bypass, and western Maharashtra corridors.'
+  },
+  {
+    name: 'Narhe & Pune Ring Road',
+    category: 'Growth Corridor',
+    distance: 'Key Connectivity',
+    desc: 'Strategic linkage to southern and western Pune commercial and residential sectors including Narhe.'
+  },
+  {
+    name: 'Pune Metro Line 3 Corridor',
+    category: 'Elevated Rapid Transit',
+    distance: 'Within Vicinity',
+    desc: 'Elevated metro transit connecting Hinjawadi directly to Pune University, Shivaji Nagar, and city center.'
   }
 ];

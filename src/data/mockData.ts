@@ -669,10 +669,10 @@ export const STATS_DATA = [
 export const TESTIMONIALS = [
   {
     id: 't-01',
-    quote: 'Namo Property Consultant provides practical guidance and personalised real-estate assistance. Navigating our property decision was seamless, transparent, and focused on our requirements.',
-    author: 'Resident Client',
+    quote: 'Future Construction provided responsive guidance and transparent assistance for our property requirements in Pune.',
+    author: 'Verified Client',
     title: 'Property Buyer',
-    location: 'Kandivali East, Mumbai'
+    location: 'Hinjawadi, Pune'
   },
   {
     id: 't-02',
