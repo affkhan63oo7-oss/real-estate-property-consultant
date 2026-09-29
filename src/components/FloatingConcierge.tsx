@@ -42,11 +42,11 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
           }}
         >
           <span style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--accent-bronze)' }}>
-            The Real Realty Desk
+            South Bopal Real Estate
           </span>
 
           <a
-            href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
+            href="https://wa.me/919998633795?text=Hello%20South%20Bopal%20Real%20Estate%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20South%20Bopal%2C%20Ahmedabad."
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -86,7 +86,7 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
           </button>
 
           <a
-            href="tel:+917210320001"
+            href="tel:+919998633795"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -101,7 +101,7 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
             }}
           >
             <Phone size={14} />
-            <span>Call Now: +91 72103 20001</span>
+            <span>Call Now: +91 99986 33795</span>
           </a>
         </div>
       )}

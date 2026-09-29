@@ -109,7 +109,7 @@ export const EnquiryDrawer: React.FC<EnquiryDrawerProps> = ({
             Property Consultation Enquiry
           </h3>
           <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-            Connect with The Real Realty advisory team regarding residential and commercial property buying, selling, rentals, and property consultation across Ahmedabad.
+            Connect with South Bopal Real Estate and Kishor Udhas regarding Property Buying, Property Selling, Property Renting, Residential Properties, Bungalows / Villas, and Property Consultation in South Bopal, Ahmedabad.
           </p>
 
           {isSubmitted ? (

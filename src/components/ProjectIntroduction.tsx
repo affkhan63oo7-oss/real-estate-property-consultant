@@ -76,15 +76,15 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                   maxWidth: '580px'
                 }}
               >
-                "Born to Consult — Dedicated property consultation, verified residential & commercial realty across Ahmedabad."
+                "Dedicated property consultation, verified residential properties & bungalows in South Bopal, Ahmedabad."
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem', maxWidth: '600px' }}>
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8 }}>
-                  Located at Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, The Real Realty is a premier property consultant and real estate agency established in 2022.
+                  Located at D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058, South Bopal Real Estate is a premier real estate agency and property consultant led by Kishor Udhas.
                 </p>
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8 }}>
-                  True to our motto "Born to Consult", we deliver seamless client solutions across residential and commercial property buying, selling, property rentals, property consultation, and property dealing throughout Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and Ahmedabad.
+                  We deliver seamless client solutions across Property Buying, Property Selling, Property Renting, Residential Properties, Bungalows / Villas, and Property Consultation throughout South Bopal, Ahmedabad.
                 </p>
               </div>
             </ScrollReveal>
@@ -100,11 +100,12 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                 }}
               >
                 {[
-                  'Residential Buying & Selling',
-                  'Commercial Buying & Selling',
-                  'Property Rentals',
-                  'Property Consultation',
-                  'Agency Services'
+                  'Property Buying',
+                  'Property Selling',
+                  'Property Renting',
+                  'Residential Properties',
+                  'Bungalows / Villas',
+                  'Property Consultation'
                 ].map((item) => (
                   <div
                     key={item}
@@ -141,7 +142,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                 </button>
 
                 <a
-                  href="tel:+917210320001"
+                  href="tel:+919998633795"
                   className="btn-gold-outline"
                   style={{
                     display: 'inline-flex',
@@ -156,7 +157,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                 </a>
 
                 <a
-                  href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
+                  href="https://wa.me/919998633795?text=Hello%20South%20Bopal%20Real%20Estate%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20South%20Bopal%2C%20Ahmedabad."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold-outline"
@@ -197,7 +198,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
               >
                 <img
                   src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85"
-                  alt="The Real Realty Property Consultant Ahmedabad"
+                  alt="South Bopal Real Estate Kishor Udhas Property Consultant Ahmedabad"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -246,7 +247,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                         display: 'block'
                       }}
                     >
-                      The Real Realty • Est. 2022
+                      South Bopal Real Estate • Kishor Udhas
                     </span>
                     <span
                       style={{

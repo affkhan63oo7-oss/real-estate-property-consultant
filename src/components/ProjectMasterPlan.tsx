@@ -72,7 +72,7 @@ export const ProjectMasterPlan: React.FC = () => {
               >
                 <img
                   src="/images/master-plan.jpg"
-                  alt="The Real Realty Master Planning & Property Layouts Ahmedabad"
+                  alt="South Bopal Real Estate Master Planning & Property Layouts Ahmedabad"
                   style={{
                     width: '100%',
                     height: '100%',

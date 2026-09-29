@@ -17,18 +17,22 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
 
   const filterTabs = [
     { id: 'all', label: 'All Portfolios' },
-    { id: 'apartments', label: 'Apartments & Flats' },
-    { id: 'villas', label: 'Villas & Houses' },
-    { id: 'commercial', label: 'Commercial' },
-    { id: 'rentals', label: 'Rental Properties' }
+    { id: 'residential', label: 'Residential Properties' },
+    { id: 'villas', label: 'Bungalows / Villas' },
+    { id: 'buying', label: 'Property Buying' },
+    { id: 'selling', label: 'Property Selling' },
+    { id: 'rentals', label: 'Property Renting' },
+    { id: 'consultation', label: 'Property Consultation' }
   ];
 
   const filteredResidences = TOWER_RESIDENCES.filter((r) => {
     if (activeTab === 'all') return true;
-    if (activeTab === 'apartments') return r.type.includes('Apartments') || r.type.includes('Flats');
-    if (activeTab === 'villas') return r.type.includes('Villas') || r.type.includes('Houses');
-    if (activeTab === 'commercial') return r.category === 'Commercial';
-    if (activeTab === 'rentals') return r.category === 'Rent' || r.type.includes('Rental');
+    if (activeTab === 'residential') return r.type.includes('Residential') || r.category === 'Residential';
+    if (activeTab === 'villas') return r.type.includes('Villas') || r.type.includes('Bungalows');
+    if (activeTab === 'buying') return r.type.includes('Buying') || r.category === 'Buy';
+    if (activeTab === 'selling') return r.type.includes('Selling');
+    if (activeTab === 'rentals') return r.category === 'Rent' || r.type.includes('Renting');
+    if (activeTab === 'consultation') return r.type.includes('Consultation');
     return true;
   });
 
@@ -58,7 +62,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
           <ScrollReveal delay={0} distance={10}>
             <div className="eyebrow-pill" style={{ marginInline: 'auto' }}>
               <Compass size={12} color="var(--accent-gold)" />
-              <span>Properties & Portfolios • Ahmedabad</span>
+              <span>Properties & Portfolios • South Bopal</span>
             </div>
           </ScrollReveal>
 
@@ -97,7 +101,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                 lineHeight: 1.6
               }}
             >
-              Apartments, flats, luxury villas, independent houses, commercial properties, and rental properties across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, and Maninagar.
+              Residential properties, bungalows, villas, and property consultation across South Bopal, Ahmedabad.
             </p>
           </ScrollReveal>
 
@@ -125,10 +129,12 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                       setActiveTab(tab.id);
                       const matching = TOWER_RESIDENCES.filter((r) => {
                         if (tab.id === 'all') return true;
-                        if (tab.id === 'plots') return r.type.includes('Plots') || r.type.includes('Land');
-                        if (tab.id === 'residential') return r.category === 'Residential' && !r.type.includes('Development');
-                        if (tab.id === 'commercial') return r.category === 'Commercial';
-                        if (tab.id === 'development') return r.type.includes('Development');
+                        if (tab.id === 'residential') return r.type.includes('Residential') || r.category === 'Residential';
+                        if (tab.id === 'villas') return r.type.includes('Villas') || r.type.includes('Bungalows');
+                        if (tab.id === 'buying') return r.type.includes('Buying') || r.category === 'Buy';
+                        if (tab.id === 'selling') return r.type.includes('Selling');
+                        if (tab.id === 'rentals') return r.category === 'Rent' || r.type.includes('Renting');
+                        if (tab.id === 'consultation') return r.type.includes('Consultation');
                         return true;
                       });
                       if (matching.length > 0) {
@@ -401,7 +407,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                 </button>
 
                 <a
-                  href={`https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20the%20${encodeURIComponent(currentResidence.residenceNumber)}%20at%20${encodeURIComponent(currentResidence.location || 'Ahmedabad')}.`}
+                  href={`https://wa.me/919998633795?text=Hello%20South%20Bopal%20Real%20Estate%2C%20I%20am%20inquiring%20about%20the%20${encodeURIComponent(currentResidence.residenceNumber)}%20at%20${encodeURIComponent(currentResidence.location || 'South%20Bopal%2C%20Ahmedabad')}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold-outline"

@@ -64,7 +64,7 @@ export const getStoredAppointments = (): Appointment[] => {
           preferred_date: '2026-10-22',
           preferred_time: '03:00 PM (Afternoon)',
           inquiry_type: 'Commercial Real Estate',
-          notes: 'Looking for 1200+ sq ft showroom/office space in SBTS on South Bopal Road.',
+          notes: 'Looking for a residential property consultation in South Bopal.',
           status: 'Pending'
         }
       ];

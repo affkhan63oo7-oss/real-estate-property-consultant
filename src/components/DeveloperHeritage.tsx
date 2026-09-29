@@ -74,10 +74,10 @@ export const DeveloperHeritage: React.FC = () => {
             09 / Professional Lineage
           </span>
           <h2 style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', color: 'var(--text-primary)' }}>
-            The Real Realty
+            South Bopal Real Estate
           </h2>
           <p style={{ maxWidth: '650px', marginTop: '0.5rem' }}>
-            The Real Realty is a premier property consultant and real estate agency established in 2022 in Bopal, Ahmedabad. Guided by our motto "Born to Consult", we specialize in residential and commercial property buying, selling, rentals, and property consultation across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and Ahmedabad.
+            South Bopal Real Estate is a premier real estate agency and property consultant led by Kishor Udhas, based at D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058. We specialize in Property Buying, Property Selling, Property Renting, Residential Properties, Bungalows / Villas, and Property Consultation across South Bopal, Ahmedabad.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export const DeveloperHeritage: React.FC = () => {
             <Award size={28} color="var(--accent-bronze)" style={{ flexShrink: 0 }} />
             <div>
               <h4 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
-                Born to Consult Advisory
+                Client-First Advisory
               </h4>
               <p style={{ fontSize: '0.875rem' }}>
                 Objective, research-backed consultation designed to identify optimal residential and commercial real estate value.

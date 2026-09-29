@@ -595,7 +595,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
               Clearance & Appointment Confirmed
             </h3>
             <p style={{ maxWidth: '480px', margin: '0 auto 1.75rem auto', fontSize: '0.9375rem' }}>
-              Your consultation appointment has been registered with The Real Realty and dispatched to our advisory team in Ahmedabad.
+              Your consultation appointment has been registered with South Bopal Real Estate and dispatched to Kishor Udhas in Ahmedabad.
             </p>
 
             <div

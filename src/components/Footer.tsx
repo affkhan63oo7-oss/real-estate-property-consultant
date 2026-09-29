@@ -135,10 +135,10 @@ export const Footer: React.FC<FooterProps> = ({
                 marginBottom: '0.5rem'
               }}
             >
-              The Real Realty
+              South Bopal Real Estate
             </span>
             <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', lineHeight: 1.8 }}>
-              Property Consultant & Real Estate Agency • Born to Consult. Established in 2022. Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, Gujarat – 380058.
+              Real Estate Agency / Property Consultant led by Kishor Udhas. D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058. Phone: +91 99986 33795.
             </p>
           </div>
 
@@ -148,11 +148,12 @@ export const Footer: React.FC<FooterProps> = ({
               Core Services
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.875rem' }}>
-              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Residential Buying & Selling</span></li>
-              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Commercial Buying & Selling</span></li>
-              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Rentals</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Buying</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Selling</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Renting</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Residential Properties</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Bungalows / Villas</span></li>
               <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Consultation</span></li>
-              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Dealing / Agency</span></li>
             </ul>
           </div>
 
@@ -162,23 +163,24 @@ export const Footer: React.FC<FooterProps> = ({
               Consultancy Office
             </h4>
             <div style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.7)', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              <div><strong>Business:</strong> The Real Realty</div>
-              <div><strong>Tagline:</strong> Born to Consult (Est. 2022)</div>
-              <div><strong>Type:</strong> Property Consultant / Real Estate Agency</div>
-              <div><strong>Address:</strong> Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad – 380058</div>
+              <div><strong>Business:</strong> South Bopal Real Estate</div>
+              <div><strong>Owner / Consultant:</strong> Kishor Udhas</div>
+              <div><strong>Type:</strong> Real Estate Agency / Property Consultant</div>
+              <div><strong>Phone:</strong> <a href="tel:+919998633795" style={{ color: 'inherit', textDecoration: 'none' }}>+91 99986 33795</a></div>
+              <div><strong>Address:</strong> D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058</div>
             </div>
           </div>
 
           {/* Service Areas */}
           <div>
             <h4 style={{ fontSize: '0.8125rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A982', marginBottom: '1.25rem' }}>
-              Main Service Areas
+              Primary Location
             </h4>
             <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '1rem', lineHeight: 1.7 }}>
-              Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and Ahmedabad.
+              South Bopal, Ahmedabad, Gujarat.
             </p>
             <div style={{ fontSize: '0.8125rem', color: '#C9A982' }}>
-              Property Types: Apartments, Flats, Villas, Independent Houses, Commercial & Rentals.
+              Services: Residential Properties, Bungalows, Villas & Expert Property Consultation.
             </div>
           </div>
         </div>
@@ -198,7 +200,7 @@ export const Footer: React.FC<FooterProps> = ({
           }}
         >
           <div>
-            © {new Date().getFullYear()} The Real Realty. All rights reserved. Shop No. 208, SBTS, South Bopal Road, Bopal, Ahmedabad.
+            © {new Date().getFullYear()} South Bopal Real Estate. All rights reserved. D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058.
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>

@@ -660,33 +660,33 @@ export const AMENITIES_DATA = [
 ];
 
 export const STATS_DATA = [
-  { value: 2022, suffix: '', label: 'Established Year • Bopal' },
-  { value: 5, suffix: '★', label: 'Core Advisory Services' },
-  { value: 8, suffix: '+', label: 'Prime Ahmedabad Localities' },
+  { value: 6, suffix: '+', label: 'Core Real Estate Services' },
+  { value: 100, suffix: '%', label: 'Verified Properties' },
+  { value: 1, suffix: ' Hub', label: 'South Bopal Focus' },
   { value: 99.4, suffix: '%', label: 'Client Advisory Satisfaction' }
 ];
 
 export const TESTIMONIALS = [
   {
     id: 't-01',
-    quote: 'The Real Realty provided exceptional property consultation and transparent guidance for our apartment purchase in South Bopal. Truly born to consult.',
+    quote: 'South Bopal Real Estate provided exceptional property consultation and transparent guidance for our apartment purchase in South Bopal. Kishor Udhas was thorough and reliable.',
     author: 'Rajesh Patel',
     title: 'Home Buyer',
     location: 'South Bopal, Ahmedabad'
   },
   {
     id: 't-02',
-    quote: 'Securing a high-visibility commercial showroom on South Bopal Road was seamless with The Real Realty. Their market valuation and title due diligence were flawless.',
+    quote: 'Finding the right residential property in South Bopal was seamless with South Bopal Real Estate. Kishor Udhas ensured flawless valuation and title due diligence.',
     author: 'Mehul Shah',
-    title: 'Commercial Investor',
-    location: 'Bopal, Ahmedabad'
+    title: 'Property Buyer',
+    location: 'South Bopal, Ahmedabad'
   },
   {
     id: 't-03',
-    quote: 'Outstanding advisory on our gated villa acquisition in Shela. Objective market analysis, zero hidden terms, and attentive support throughout the documentation.',
+    quote: 'Outstanding advisory on our bungalow and villa acquisition. Objective market analysis, zero hidden terms, and attentive support throughout the documentation from Kishor Udhas.',
     author: 'Darshan Dave',
-    title: 'Villa Owner',
-    location: 'Shela, Ahmedabad'
+    title: 'Bungalow Owner',
+    location: 'South Bopal, Ahmedabad'
   }
 ];
 

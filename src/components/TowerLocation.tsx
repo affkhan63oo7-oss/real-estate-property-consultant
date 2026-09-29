@@ -24,7 +24,7 @@ export const TowerLocation: React.FC = () => {
               South Bopal, Ahmedabad.
             </h2>
             <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-bronze)' }}>
-              Conveniently located at Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, offering seamless connectivity across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, and Maninagar.
+              Conveniently located at D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058, offering specialized property consultation across South Bopal, Ahmedabad.
             </p>
           </ScrollReveal>
         </div>
@@ -102,24 +102,24 @@ export const TowerLocation: React.FC = () => {
                   </text>
                 </g>
 
-                {/* Near Aaryan Gloria Marker */}
+                {/* SOBO Centre Landmark */}
                 <g transform="translate(280, 160)">
                   <circle cx="0" cy="0" r="4" fill="#726A5F" />
                   <text x="-12" y="4" textAnchor="end" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">
-                    Near Aaryan Gloria
+                    SOBO Centre
                   </text>
                 </g>
 
-                {/* The Real Realty Office Marker */}
+                {/* South Bopal Real Estate Office Marker */}
                 <g transform="translate(240, 210)">
                   <circle cx="0" cy="0" r="16" fill="rgba(188, 160, 107, 0.3)" />
                   <circle cx="0" cy="0" r="8" fill="#BCA06B" />
                   <circle cx="0" cy="0" r="3" fill="#1B1917" />
-                  <text x="0" y="-22" textAnchor="middle" fontSize="10" fontFamily="Cinzel" fontWeight="700" letterSpacing="1" fill="#1B1917">
-                    THE REAL REALTY
+                  <text x="0" y="-22" textAnchor="middle" fontSize="9" fontFamily="Cinzel" fontWeight="700" letterSpacing="0.8" fill="#1B1917">
+                    SOUTH BOPAL REAL ESTATE
                   </text>
                   <text x="0" y="26" textAnchor="middle" fontSize="8" fontFamily="Plus Jakarta Sans" fontWeight="600" fill="#726A5F">
-                    Shop 208, SBTS, South Bopal
+                    D 382, SOBO Centre, South Bopal
                   </text>
                 </g>
               </svg>
@@ -181,7 +181,7 @@ export const TowerLocation: React.FC = () => {
 
             <div style={{ marginTop: '0.5rem' }}>
               <a
-                href="https://maps.google.com/?q=Shop+No+208+SBTS+South+Bopal+Trade+Centre+Near+Aaryan+Gloria+South+Bopal+Road+Bopal+Ahmedabad+Gujarat+380058"
+                href="https://maps.google.com/?q=D+382+SOBO+Centre+South+Bopal+Ahmedabad+Gujarat+380058"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -200,7 +200,7 @@ export const TowerLocation: React.FC = () => {
                 }}
               >
                 <Navigation size={13} color="var(--accent-gold)" />
-                <span>Get Directions to The Real Realty (South Bopal)</span>
+                <span>Get Directions to South Bopal Real Estate (SOBO Centre)</span>
               </a>
             </div>
           </div>

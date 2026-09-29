@@ -12,34 +12,34 @@ export const ProjectFAQ: React.FC = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: 'What services does The Real Realty offer?',
+      question: 'What services does South Bopal Real Estate offer?',
       answer:
-        'The Real Realty is a premier property consultant and real estate agency established in 2022. True to our tagline "Born to Consult", we offer five core real estate services: Residential Property Buying & Selling, Commercial Property Buying & Selling, Property Rentals, Property Consultation, and Property Dealing / Agency Services.'
+        'South Bopal Real Estate is a premier real estate agency and property consultant led by Kishor Udhas. We offer six core real estate services: Property Buying, Property Selling, Property Renting, Residential Properties, Bungalows / Villas, and Property Consultation.'
     },
     {
-      question: 'Which main service areas does The Real Realty cover?',
+      question: 'What is your primary location and area focus?',
       answer:
-        'Our primary service areas across Ahmedabad include Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and other premier residential and commercial growth corridors of Ahmedabad.'
+        'Our primary location is South Bopal, Ahmedabad, Gujarat. We provide comprehensive property buying, selling, renting, and consultation services focused on South Bopal and key Ahmedabad residential corridors.'
     },
     {
-      question: 'What types of properties do you deal in?',
+      question: 'What types of properties do you specialize in?',
       answer:
-        'We specialize across a comprehensive spectrum of property types: Apartments, Flats, Villas, Independent Houses, Commercial Properties (corporate offices, retail showrooms), and Rental Properties across Ahmedabad.'
+        'We specialize in residential properties, premium apartments, flats, independent bungalows, and private gated villas across South Bopal, Ahmedabad.'
     },
     {
-      question: 'Where is The Real Realty located and how can I visit?',
+      question: 'Where is South Bopal Real Estate located and how can I visit?',
       answer:
-        'Our office is located at Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, Gujarat – 380058. You are warmly welcome to visit us for personalized, in-person property consultations.'
+        'Our office is located at D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058. You are warmly welcome to visit us for personalized, in-person property consultations with Kishor Udhas.'
     },
     {
-      question: 'When was The Real Realty established and what is your consulting philosophy?',
+      question: 'Who is Kishor Udhas and what is your consulting philosophy?',
       answer:
-        'The Real Realty was established in 2022 with the foundational motto "Born to Consult". We are committed to objective, transparent, and research-backed advisory to ensure clients achieve optimal value in every property transaction.'
+        'Kishor Udhas is the owner and property consultant of South Bopal Real Estate. We are committed to objective, transparent, and personalized advisory to ensure clients achieve optimal value in every property transaction.'
     },
     {
       question: 'How do I arrange a property consultation or site visit?',
       answer:
-        'You can click "Enquire Now" on this website, call our team directly, or connect with us on WhatsApp. Our advisors will promptly assist with curated listings, physical property visits, title checks, and registration guidance.'
+        'You can click "Enquire Now" on this website, call us directly at +91 99986 33795, or connect with us on WhatsApp. We will promptly assist with curated listings, physical property visits, title checks, and documentation guidance.'
     }
   ];
 

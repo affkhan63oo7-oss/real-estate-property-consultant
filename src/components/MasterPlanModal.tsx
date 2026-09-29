@@ -150,7 +150,7 @@ export const MasterPlanModal: React.FC<MasterPlanModalProps> = ({ isOpen, onClos
         >
           <img
             src="/images/master-plan.jpg"
-            alt="Master Site Plan Blueprint Ahmedabad The Real Realty"
+            alt="Master Site Plan Blueprint South Bopal Real Estate Ahmedabad"
             style={{
               display: 'block',
               maxWidth: '100%',

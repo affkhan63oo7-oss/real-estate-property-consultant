@@ -238,7 +238,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          • BOPAL • SOUTH BOPAL • AHMEDABAD •
+          • SOUTH BOPAL • AHMEDABAD • GUJARAT •
         </span>
 
         {/* Monumental Headline */}
@@ -257,7 +257,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          THE REAL REALTY
+          SOUTH BOPAL REAL ESTATE
         </h1>
 
         {/* Elegant Supporting Subhead */}
@@ -277,7 +277,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          Property Consultant & Real Estate Agency • Born to Consult. Established in 2022. Specialists in Apartments, Flats, Villas, Independent Houses, Commercial Properties, and Rental Properties across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, and Maninagar.
+          Real Estate Agency / Property Consultant led by Kishor Udhas. Specialists in Property Buying, Property Selling, Property Renting, Residential Properties, Bungalows / Villas, and Property Consultation in South Bopal, Ahmedabad.
         </p>
 
         {/* Direct Action-Focused CTAs */}
@@ -314,7 +314,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
 
           {/* Secondary CTA: Call Now */}
           <a
-            href="tel:+917210320001"
+            href="tel:+919998633795"
             className="btn-111-secondary"
             style={{
               color: '#FAF8F5',
@@ -331,12 +331,12 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
               justifyContent: 'center'
             }}
           >
-            Call Now
+            Call: +91 99986 33795
           </a>
 
           {/* Direct CTA: WhatsApp Us */}
           <a
-            href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
+            href="https://wa.me/919998633795?text=Hello%20South%20Bopal%20Real%20Estate%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20South%20Bopal%2C%20Ahmedabad."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-111-secondary"

@@ -92,11 +92,11 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                     marginBottom: '1.25rem'
                   }}
                 >
-                  "Born to Consult — Strategic property consultation, verified residential & commercial realty, and attentive client advisory."
+                  "Dedicated property consultation, verified residential properties & bungalows in South Bopal, Ahmedabad."
                 </p>
 
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '540px' }}>
-                  Whether you are looking for apartments, flats, villas, independent houses, commercial properties, or rental properties in Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, or Maninagar, connect directly with The Real Realty.
+                  Whether you are looking for property buying, selling, renting, residential properties, bungalows, villas, or property consultation, connect directly with South Bopal Real Estate and Kishor Udhas.
                 </p>
 
                 {/* CTAs */}
@@ -111,16 +111,16 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                   </button>
 
                   <a
-                    href="tel:+917210320001"
+                    href="tel:+919998633795"
                     className="btn-gold-outline"
                     style={{ padding: '0.9rem 1.5rem', minHeight: '44px', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
                   >
                     <Phone size={15} color="var(--accent-gold)" />
-                    <span>Call Us</span>
+                    <span>Call: +91 99986 33795</span>
                   </a>
 
                   <a
-                    href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
+                    href="https://wa.me/919998633795?text=Hello%20South%20Bopal%20Real%20Estate%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20South%20Bopal%2C%20Ahmedabad."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-gold-outline"
@@ -161,7 +161,7 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#FAF8F5', fontSize: '0.78rem', fontFamily: 'var(--font-sans)' }}>
                     <Sparkles size={15} color="var(--accent-gold)" />
-                    <span>Born to Consult (Est. 2022)</span>
+                    <span>Kishor Udhas • Consultant</span>
                   </div>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
               >
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
-                  alt="The Real Realty South Bopal Ahmedabad"
+                  alt="South Bopal Real Estate Kishor Udhas South Bopal Ahmedabad"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -210,7 +210,7 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                   }}
                 >
                   <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-title)', color: 'var(--accent-gold)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                    The Real Realty • Born to Consult
+                    South Bopal Real Estate • Kishor Udhas
                   </span>
                   <span style={{ fontSize: '0.72rem', color: '#FAF8F5' }}>
                     South Bopal, Ahmedabad

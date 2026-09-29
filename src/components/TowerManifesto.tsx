@@ -54,7 +54,7 @@ export const TowerManifesto: React.FC = () => {
             >
               <img
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85"
-                alt="The Real Realty Bopal Ahmedabad"
+                alt="South Bopal Real Estate Kishor Udhas South Bopal Ahmedabad"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -78,7 +78,7 @@ export const TowerManifesto: React.FC = () => {
                   maxWidth: 'calc(100% - 2rem)'
                 }}
               >
-                The Real Realty • Bopal, Ahmedabad
+                South Bopal Real Estate • South Bopal, Ahmedabad
               </div>
             </div>
           </ScrollReveal>
@@ -96,19 +96,19 @@ export const TowerManifesto: React.FC = () => {
                   marginBottom: '1.5rem'
                 }}
               >
-                "Navigating Ahmedabad’s property market requires practical guidance, transparent communication, and dedicated consultation — Born to Consult."
+                "Navigating South Bopal and Ahmedabad’s property market requires practical guidance, transparent communication, and dedicated consultation led by Kishor Udhas."
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={200} distance={12}>
               <p style={{ marginBottom: '1.25rem', lineHeight: 1.85 }}>
-                The Real Realty is a premier property consultant and real estate agency established in 2022, based in Bopal, Ahmedabad. Guided by our motto "Born to Consult", we specialize in residential and commercial property buying, selling, rentals, and property consultation.
+                South Bopal Real Estate is a premier real estate agency and property consultant led by Kishor Udhas, based at D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058. We specialize in Property Buying, Property Selling, Property Renting, Residential Properties, Bungalows / Villas, and Property Consultation.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={240} distance={12}>
               <p style={{ marginBottom: '2rem', lineHeight: 1.85 }}>
-                We guide clients through buying, selling, renting, commercial property, and comprehensive property consultation. Our approach centers on practical property assistance, local market understanding, and clear communication from your first inquiry to the final decision.
+                We guide clients through Property Buying, Property Selling, Property Renting, Residential Properties, Bungalows / Villas, and Property Consultation. Our approach centers on practical property assistance, local market understanding, and clear communication from your first inquiry to the final transaction.
               </p>
             </ScrollReveal>
 

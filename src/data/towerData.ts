@@ -35,11 +35,11 @@ export interface BusinessService {
 
 export const TOWER_RESIDENCES: TowerResidence[] = [
   {
-    id: 'res-apartments-flats',
-    residenceNumber: 'Apartments & Flats',
-    floor: 14,
-    type: 'Apartments & Flats',
-    tagline: 'Contemporary high-rise apartments and premium flats in South Bopal & Shela.',
+    id: 'res-residential-properties',
+    residenceNumber: 'Residential Properties',
+    floor: 12,
+    type: 'Residential Properties',
+    tagline: 'Premium apartments, luxury flats, and modern residential homes in South Bopal, Ahmedabad.',
     price: 0,
     priceFormatted: 'Contact for Consultation',
     bedrooms: 3,
@@ -51,23 +51,23 @@ export const TOWER_RESIDENCES: TowerResidence[] = [
     imageHero: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-    description: 'Curated 2, 3, and 4 BHK premium apartments and modern flats situated in prime residential communities of South Bopal, Shela, and Ghuma with superb natural light and ventilation.',
+    description: 'Curated 2, 3, and 4 BHK residential apartments and contemporary flats situated in prime residential communities of South Bopal, Ahmedabad with superb natural light and ventilation.',
     keyFeatures: [
-      'Prime locations in South Bopal & Shela growth belts',
+      'Prime residential locations in South Bopal, Ahmedabad',
       'Modern open-plan living, dining, and expansive balconies',
-      'Proximity to top schools, supermarkets, and SP Ring Road',
+      'Proximity to top schools, shopping centers, and SP Ring Road',
       'Verified clear title documentation and compliance',
-      'Dedicated property consultation by The Real Realty'
+      'Dedicated property consultation by South Bopal Real Estate'
     ],
-    location: 'South Bopal & Shela, Ahmedabad',
+    location: 'South Bopal, Ahmedabad, Gujarat',
     category: 'Residential'
   },
   {
-    id: 'res-villas-houses',
-    residenceNumber: 'Villas & Independent Houses',
+    id: 'res-bungalows-villas',
+    residenceNumber: 'Bungalows / Villas',
     floor: 2,
-    type: 'Villas & Independent Houses',
-    tagline: 'Exclusive private villas and independent gated homes in Bopal & Shilaj.',
+    type: 'Bungalows / Villas',
+    tagline: 'Exclusive private bungalows, luxury villas, and independent gated residences.',
     price: 0,
     priceFormatted: 'Contact for Consultation',
     bedrooms: 4,
@@ -80,79 +80,23 @@ export const TOWER_RESIDENCES: TowerResidence[] = [
     imageHero: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
-    description: 'Bespoke independent bungalows, duplex villas, and premium houses in Bopal, Shilaj, and Shantipura offering serene private gardens and superior privacy.',
+    description: 'Bespoke independent bungalows, duplex villas, and premium gated residences in South Bopal, Ahmedabad offering serene private gardens, superior privacy, and luxury finishes.',
     keyFeatures: [
-      'Gated villa communities with dedicated security and clubhouse',
-      'Independent plot ownership with private garden space',
-      'Easy connectivity to SP Ring Road and SG Highway',
+      'Gated bungalow and villa communities with dedicated security',
+      'Independent plot ownership with private landscaped gardens',
+      'Easy connectivity to SP Ring Road and key Ahmedabad corridors',
       'Full legal due diligence and transparent documentation',
-      'Consultation backed by The Real Realty advisory team'
+      'Consultation backed by Kishor Udhas'
     ],
-    location: 'Bopal & Shilaj, Ahmedabad',
+    location: 'South Bopal, Ahmedabad, Gujarat',
     category: 'Residential'
   },
   {
-    id: 'res-commercial-properties',
-    residenceNumber: 'Commercial Properties',
-    floor: 3,
-    type: 'Commercial Properties',
-    tagline: 'Prime retail showrooms, corporate offices, and business spaces on South Bopal Road.',
-    price: 0,
-    priceFormatted: 'Contact for Consultation',
-    bedrooms: 0,
-    bathrooms: 2,
-    powderRooms: 0,
-    interiorSqFt: 1450,
-    exposure: 'Main South Bopal Road Frontage',
-    ceilingHeight: '12 FT',
-    imageHero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-    description: 'High-visibility commercial units, premium office spaces, and ground-floor retail showrooms in SBTS (South Bopal Trade Centre) and leading business corridors of Ahmedabad.',
-    keyFeatures: [
-      'High footfall arterial frontage near Aaryan Gloria & SBTS',
-      'Ideal for corporate firms, clinics, retail showrooms, and consultancies',
-      'Ample basement and visitor parking infrastructure',
-      'Clear commercial title verification and transparent lease/sale terms',
-      'In-person advisory at Shop 208, SBTS, South Bopal'
-    ],
-    location: 'South Bopal & Bopal, Ahmedabad',
-    category: 'Commercial'
-  },
-  {
-    id: 'res-rental-properties',
-    residenceNumber: 'Rental Properties',
-    floor: 8,
-    type: 'Rental Properties',
-    tagline: 'High-yield residential rentals and premium commercial leases across Ahmedabad.',
-    price: 0,
-    priceFormatted: 'Contact for Consultation',
-    bedrooms: 3,
-    bathrooms: 3,
-    powderRooms: 0,
-    interiorSqFt: 1550,
-    exposure: 'West / Skyline Facing',
-    ceilingHeight: '10 FT',
-    imageHero: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    description: 'Comprehensive rental brokerage connecting verified tenants with premier residential flats, independent homes, and commercial units in Bopal, South Bopal, and Ghuma.',
-    keyFeatures: [
-      'Verified tenant profiling and background screening',
-      'Quick turnaround times for residential and commercial leasing',
-      'End-to-end rental agreement drafting and police verification guidance',
-      'Rental options across Bopal, South Bopal, Shela, and Maninagar',
-      'Complete management support by The Real Realty'
-    ],
-    location: 'Bopal, South Bopal & Ghuma, Ahmedabad',
-    category: 'Rent'
-  },
-  {
-    id: 'res-residential-buying-selling',
-    residenceNumber: 'Residential Buying & Selling',
+    id: 'res-property-buying',
+    residenceNumber: 'Property Buying',
     floor: 6,
-    type: 'Residential Property',
-    tagline: 'Expert facilitation for buying and selling residential properties across Ahmedabad.',
+    type: 'Property Buying',
+    tagline: 'Expert end-to-end guidance for acquiring residential properties and bungalows.',
     price: 0,
     priceFormatted: 'Contact for Consultation',
     bedrooms: 3,
@@ -164,44 +108,100 @@ export const TOWER_RESIDENCES: TowerResidence[] = [
     imageHero: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-    description: 'End-to-end buying and selling services for flats, luxury apartments, and residential homes in Shela, Shantipura, Shilaj, and Ahmedabad’s top neighborhoods.',
+    description: 'Comprehensive property buying advisory assisting clients in discovering and purchasing verified residential properties, bungalows, and villas across South Bopal, Ahmedabad.',
     keyFeatures: [
       'Fair market valuations and transparent price discovery',
-      'Targeted matching for buyers and serious sellers',
-      'Complete guidance on deed registration, loans, and legal transfer',
-      'Active deals in Shela, South Bopal, Ghuma, and Shantipura',
-      'Consultation from licensed experts established in 2022'
+      'Targeted matching for buyers seeking quality homes and bungalows',
+      'Complete guidance on deed registration, paperwork, and legal transfer',
+      'Focused expertise in South Bopal, Ahmedabad, Gujarat',
+      'Direct, personalized advisory from Kishor Udhas'
     ],
-    location: 'Shela & Shantipura, Ahmedabad',
+    location: 'South Bopal, Ahmedabad, Gujarat',
     category: 'Buy'
   },
   {
-    id: 'res-commercial-dealing',
-    residenceNumber: 'Commercial Property Dealing',
+    id: 'res-property-selling',
+    residenceNumber: 'Property Selling',
     floor: 5,
-    type: 'Commercial Properties',
-    tagline: 'Specialized commercial property transactions and brokerage across Ahmedabad.',
+    type: 'Property Selling',
+    tagline: 'Strategic marketing and premium representation for property sellers.',
+    price: 0,
+    priceFormatted: 'Contact for Consultation',
+    bedrooms: 3,
+    bathrooms: 3,
+    powderRooms: 0,
+    interiorSqFt: 1750,
+    exposure: 'Prime Boulevard Exposure',
+    ceilingHeight: '11 FT',
+    imageHero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+    description: 'Dedicated property selling services connecting homeowners and sellers with qualified, serious buyers for residential properties and bungalows in South Bopal.',
+    keyFeatures: [
+      'Active network of genuine, pre-qualified buyers in South Bopal',
+      'Accurate property valuation and strategic market positioning',
+      'Complete assistance with documentation, NOCs, and deal closure',
+      'Dedicated marketing across Ahmedabad real estate channels',
+      'Professional representation by South Bopal Real Estate'
+    ],
+    location: 'South Bopal, Ahmedabad, Gujarat',
+    category: 'Residential'
+  },
+  {
+    id: 'res-property-renting',
+    residenceNumber: 'Property Renting',
+    floor: 8,
+    type: 'Property Renting',
+    tagline: 'Reliable residential leasing and rental solutions for tenants and owners.',
+    price: 0,
+    priceFormatted: 'Contact for Consultation',
+    bedrooms: 3,
+    bathrooms: 3,
+    powderRooms: 0,
+    interiorSqFt: 1550,
+    exposure: 'West / Skyline Facing',
+    ceilingHeight: '10 FT',
+    imageHero: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    description: 'Comprehensive property renting services connecting verified tenants with premier residential flats, apartments, bungalows, and villas in South Bopal, Ahmedabad.',
+    keyFeatures: [
+      'Verified tenant profiling and thorough background screening',
+      'Quick turnaround times for residential leasing and renting',
+      'End-to-end rental agreement drafting and documentation guidance',
+      'Extensive rental inventory in South Bopal, Ahmedabad',
+      'Complete management support by South Bopal Real Estate'
+    ],
+    location: 'South Bopal, Ahmedabad, Gujarat',
+    category: 'Rent'
+  },
+  {
+    id: 'res-property-consultation',
+    residenceNumber: 'Property Consultation',
+    floor: 1,
+    type: 'Property Consultation',
+    tagline: 'Personalized real estate advisory and strategic consulting by Kishor Udhas.',
     price: 0,
     priceFormatted: 'Contact for Consultation',
     bedrooms: 0,
-    bathrooms: 2,
+    bathrooms: 1,
     powderRooms: 0,
-    interiorSqFt: 2200,
-    exposure: 'High-Visibility Commercial Corridor',
-    ceilingHeight: '12 FT',
+    interiorSqFt: 1200,
+    exposure: 'SOBO Centre Executive Suite',
+    ceilingHeight: '11 FT',
     imageHero: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85',
     imageDetail: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
-    description: 'Strategic commercial property dealing, office acquisition, and retail showroom brokerage across Bopal, South Bopal, and Maninagar.',
+    description: 'Personalized one-on-one property consultation with Kishor Udhas at D 382, SOBO Centre, providing transparent market analysis, valuation, and advisory for buyers, sellers, and investors in South Bopal.',
     keyFeatures: [
-      'Commercial property dealing in South Bopal, Bopal & Maninagar',
-      'Thorough due diligence on title deeds and municipal clearances',
-      'Expert deal structuring for retail investors and corporate occupiers',
-      'Direct access to prominent trade hubs including SBTS',
-      'The Real Realty "Born to Consult" advisory commitment'
+      'Direct one-on-one property consultation with Kishor Udhas',
+      'In-depth local market intelligence in South Bopal, Ahmedabad',
+      'Clear title verification, legal checks, and documentation advice',
+      'Office consultation at D 382, SOBO Centre, South Bopal',
+      'Objective, client-first advisory tailored to your exact property goals'
     ],
-    location: 'Maninagar & Bopal, Ahmedabad',
-    category: 'Commercial'
+    location: 'South Bopal, Ahmedabad, Gujarat',
+    category: 'Residential'
   }
 ];
 
@@ -210,24 +210,24 @@ export const PANORAMA_VIEWS = [
     id: 'day',
     label: 'Morning Light',
     time: '09:30 AM',
-    headline: 'Ahmedabad & South Bopal Daylight & Growth',
-    description: 'Expansive vistas stretching across South Bopal, Shela, and Ahmedabad’s thriving western growth corridor, framed by modern towers and open green landscapes.',
+    headline: 'South Bopal Daylight & Growth',
+    description: 'Expansive vistas stretching across South Bopal and Ahmedabad’s thriving western growth corridor, framed by modern residential enclaves and green avenues.',
     imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2200&q=90'
   },
   {
     id: 'dusk',
     label: 'Golden Hour',
     time: '06:15 PM',
-    headline: 'Warm Sunset Over Bopal & Shela Skyline',
-    description: 'Golden sunlight illuminates the lively avenues, modern residential towers, and arterial boulevards connecting South Bopal Road to the SP Ring Road.',
+    headline: 'Warm Sunset Over South Bopal Skyline',
+    description: 'Golden sunlight illuminates the lively avenues, modern residential communities, and arterial boulevards connecting South Bopal to the SP Ring Road.',
     imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2200&q=90'
   },
   {
     id: 'night',
     label: 'Evening Citylights',
     time: '09:45 PM',
-    headline: 'Vibrant Ahmedabad Cityscapes & Trade Hubs',
-    description: 'The energetic evening atmosphere of Ahmedabad comes alive with illuminated shopping hubs, trade centers like SBTS, and tranquil residential enclaves.',
+    headline: 'Vibrant South Bopal & Ahmedabad Cityscapes',
+    description: 'The energetic evening atmosphere comes alive with illuminated commercial destinations like SOBO Centre and tranquil residential enclaves.',
     imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90'
   }
 ];
@@ -235,105 +235,120 @@ export const PANORAMA_VIEWS = [
 export const SERVICES_DATA: BusinessService[] = [
   {
     id: 'service-1',
-    title: 'Residential Property Buying & Selling',
-    subtitle: 'Category 01 • Residential Realty',
-    category: 'Residential Buying & Selling',
-    description: 'End-to-end buying and selling solutions for apartments, flats, luxury villas, and independent houses across Bopal, South Bopal, Shela, and Ahmedabad.',
-    scope: 'Apartments • Flats • Villas • Independent Houses',
+    title: 'Property Buying',
+    subtitle: 'Service 01 • Property Buying',
+    category: 'Property Buying',
+    description: 'End-to-end guidance and advisory for discovering and purchasing verified residential properties, modern flats, bungalows, and villas in South Bopal, Ahmedabad.',
+    scope: 'Residential Properties • Bungalows • Villas • Acquisition',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Carefully curated listings across South Bopal, Shela, Ghuma & Shilaj',
-      'Realistic property valuations and buyer-seller matchmaking',
+      'Carefully curated properties across South Bopal, Ahmedabad',
+      'Realistic property valuations and buyer-first price negotiation',
       'Transparent verification of title deeds, society NOCs, and municipal records',
-      'Direct, client-first advisory from The Real Realty consultants'
+      'Direct, dedicated advisory from Kishor Udhas'
     ]
   },
   {
     id: 'service-2',
-    title: 'Commercial Property Buying & Selling',
-    subtitle: 'Category 02 • Commercial Real Estate',
-    category: 'Commercial Buying & Selling',
-    description: 'Strategic acquisition and sale of premium commercial properties, office spaces, retail showrooms, and corporate premises in high-growth corridors.',
-    scope: 'Offices • Showrooms • Commercial Complexes • Retail Hubs',
+    title: 'Property Selling',
+    subtitle: 'Service 02 • Property Selling',
+    category: 'Property Selling',
+    description: 'Professional property selling service connecting homeowners and sellers with qualified, serious buyers for residential properties, bungalows, and villas in South Bopal.',
+    scope: 'Seller Representation • Property Marketing • Deal Closures',
     image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Prime properties at SBTS (South Bopal Trade Centre) & key corridors',
-      'High-traffic commercial frontage suited for retail and enterprise suites',
-      'Rigorous title due diligence, zoning checks, and documentation',
-      'Strategic advisory tailored to business growth and high rental yields'
+      'Targeted matching for serious and verified buyers',
+      'Accurate market pricing and strategic positioning',
+      'Seamless paperwork, NOC assistance, and transaction closure',
+      'Dedicated marketing across South Bopal, Ahmedabad'
     ]
   },
   {
     id: 'service-3',
-    title: 'Property Rentals',
-    subtitle: 'Category 03 • Rental & Leasing Services',
-    category: 'Property Rentals',
-    description: 'Professional rental and leasing solutions catering to residential tenants, homeowners, corporate relocations, and commercial business occupiers.',
-    scope: 'Residential Rentals • Commercial Leasing • Tenancy Agreements',
+    title: 'Property Renting',
+    subtitle: 'Service 03 • Property Renting',
+    category: 'Property Renting',
+    description: 'Professional rental and leasing solutions connecting verified tenants with quality residential flats, apartments, bungalows, and villas across South Bopal, Ahmedabad.',
+    scope: 'Residential Rentals • Leasing • Tenancy Agreements',
     image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
       'Verified tenant screening and swift occupancy solutions',
-      'Comprehensive rental inventory of flats, apartments, and villas',
-      'Assistance with legal rent agreements and police verification formalities',
-      'Serving Bopal, South Bopal, Ghuma, Shela, Shilaj, and Maninagar'
+      'Comprehensive rental inventory of residential properties and bungalows',
+      'Assistance with legal rent agreements and documentation',
+      'Complete rental management by South Bopal Real Estate'
     ]
   },
   {
     id: 'service-4',
-    title: 'Property Consultation',
-    subtitle: 'Category 04 • Strategic Consultation',
-    category: 'Property Consultation',
-    description: 'Expert consultation true to our motto "Born to Consult" — providing objective market analysis, property appraisal, and tailored advisory.',
-    scope: 'Advisory • Market Analysis • Investment Planning • Due Diligence',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
+    title: 'Residential Properties',
+    subtitle: 'Service 04 • Residential Properties',
+    category: 'Residential Properties',
+    description: 'Curated 2, 3, and 4 BHK premium apartments and modern flats situated in prime residential communities of South Bopal, Ahmedabad with excellent light and ventilation.',
+    scope: 'Apartments • Flats • Residential Homes • Gated Enclaves',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      '"Born to Consult" dedication to authentic, client-first property guidance',
-      'Deep insights into Ahmedabad’s fastest-appreciating residential corridors',
-      'Comprehensive evaluation of legal paperwork, approvals, and titles',
-      'Personalized property strategies for home buyers and seasoned investors'
+      'Prime residential locations in South Bopal growth corridors',
+      'Modern open-plan living, dining, and expansive balconies',
+      'Proximity to top schools, supermarkets, and SP Ring Road',
+      'Dedicated property consultation by South Bopal Real Estate'
     ]
   },
   {
     id: 'service-5',
-    title: 'Property Dealing / Agency Services',
-    subtitle: 'Category 05 • Agency & Brokerage',
-    category: 'Property Dealing / Agency',
-    description: 'Full-service real estate agency and property dealing backed by integrity, local market mastery, and an established track record since 2022.',
-    scope: 'Agency Representation • Deal Structuring • Registration Assistance',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
+    title: 'Bungalows / Villas',
+    subtitle: 'Service 05 • Bungalows / Villas',
+    category: 'Bungalows / Villas',
+    description: 'Bespoke independent bungalows, duplex villas, and premium gated residences in South Bopal, Ahmedabad offering serene private gardens and superior privacy.',
+    scope: 'Independent Bungalows • Luxury Villas • Private Gardens',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Trusted property agency established in 2022 in Ahmedabad',
-      'Headquartered at Shop No. 208, SBTS, South Bopal Road, Bopal',
-      'Active coverage: Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar',
-      'Seamless coordination from initial inquiry to final property handover'
+      'Gated bungalow and villa communities with dedicated security',
+      'Independent plot ownership with private garden space',
+      'Easy connectivity to SP Ring Road and SG Highway',
+      'Consultation backed by Kishor Udhas'
+    ]
+  },
+  {
+    id: 'service-6',
+    title: 'Property Consultation',
+    subtitle: 'Service 06 • Property Consultation',
+    category: 'Property Consultation',
+    description: 'Strategic one-on-one consultation led by Kishor Udhas — providing objective market analysis, property valuation, legal documentation guidance, and tailored property solutions.',
+    scope: 'Advisory • Valuation • Due Diligence • Investment Planning',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
+    featurePoints: [
+      'Direct, personalized property consultation with Kishor Udhas',
+      'Deep insights into South Bopal and Ahmedabad property dynamics',
+      'Clear verification of documentation, approvals, and titles',
+      'In-person advisory at D 382, SOBO Centre, South Bopal'
     ]
   }
 ];
 
 export const NEIGHBORHOOD_DESTINATIONS = [
   {
-    name: 'SBTS (South Bopal Trade Centre)',
-    category: 'Prominent Commercial Hub',
+    name: 'SOBO Centre',
+    category: 'Prominent Commercial Landmark',
     distance: 'Direct Location',
-    desc: 'Premier commercial landmark on South Bopal Road housing The Real Realty at Shop No. 208, near Aaryan Gloria.'
+    desc: 'Premier commercial and retail landmark in South Bopal housing South Bopal Real Estate at D 382.'
   },
   {
-    name: 'Aaryan Gloria Landmark',
-    category: 'Key Area Landmark',
+    name: 'South Bopal Boulevard',
+    category: 'Key Area Corridor',
     distance: '1 Minute',
-    desc: 'Renowned residential and commercial landmark situated on South Bopal Road in immediate proximity to our office.'
+    desc: 'Thriving arterial avenue with prime residential communities, retail amenities, and dining in South Bopal.'
   },
   {
     name: 'SP Ring Road (Sardar Patel Ring Road)',
     category: 'Arterial Transit Spine',
     distance: '3 Minutes',
-    desc: 'Vital ring highway providing seamless rapid connectivity across Bopal, Shela, Shilaj, SG Highway, and Ahmedabad.'
+    desc: 'Vital ring highway providing seamless rapid connectivity across South Bopal, SG Highway, and greater Ahmedabad.'
   },
   {
-    name: 'Shela & Ghuma Residential Belt',
+    name: 'Western Ahmedabad Residential Hub',
     category: 'Premium Living Corridor',
     distance: '5 Minutes',
-    desc: 'Rapidly growing residential sector known for luxury apartments, villas, premier international schools, and clubs.'
+    desc: 'Rapidly growing residential sector known for luxury apartments, bungalows, premier schools, and clubs.'
   },
   {
     name: 'SG Highway (Sarkhej-Gandhinagar)',
@@ -342,9 +357,9 @@ export const NEIGHBORHOOD_DESTINATIONS = [
     desc: 'Ahmedabad’s premier commercial avenue with corporate headquarters, upscale shopping destinations, and hospitals.'
   },
   {
-    name: 'Maninagar & Eastern Ahmedabad Link',
+    name: 'Ahmedabad City Core Link',
     category: 'Connected City Hub',
     distance: 'Key Transit Link',
-    desc: 'Direct transit connectivity linking western growth corridors to established cultural and business hubs in Maninagar.'
+    desc: 'Direct transit connectivity linking South Bopal to established commercial and cultural centers across Ahmedabad.'
   }
 ];

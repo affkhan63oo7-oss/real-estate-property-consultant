@@ -67,7 +67,7 @@ export const ProjectLocation: React.FC = () => {
                 lineHeight: 1.6
               }}
             >
-              Headquartered at Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, with swift access across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, and Maninagar.
+              Located at D 382, SOBO Centre, South Bopal, Ahmedabad, Gujarat – 380058, offering specialized property consultation and advisory across South Bopal and Ahmedabad.
             </p>
           </ScrollReveal>
         </div>
@@ -267,11 +267,11 @@ export const ProjectLocation: React.FC = () => {
                     </text>
                   </g>
 
-                  {/* Aaryan Gloria Landmark */}
+                  {/* SOBO Centre Landmark */}
                   <g transform="translate(250, 260)">
                     <rect x="-4" y="-4" width="8" height="8" fill="var(--accent-gold)" />
                     <text x="12" y="3" fontSize="8" fontFamily="Cinzel" fill="#FAF8F5">
-                      NEAR AARYAN GLORIA
+                      SOBO CENTRE
                     </text>
                   </g>
 
@@ -284,12 +284,12 @@ export const ProjectLocation: React.FC = () => {
                     <circle cx="0" cy="0" r="8" fill="var(--accent-gold)" />
                     <circle cx="0" cy="0" r="3" fill="#0D1310" />
 
-                    <rect x="14" y="-16" width="165" height="32" rx="4" fill="rgba(13, 19, 16, 0.95)" stroke="var(--accent-gold)" strokeWidth="1" />
-                    <text x="22" y="-3" fontSize="8" fontFamily="Cinzel" fontWeight="600" letterSpacing="0.5" fill="#FAF8F5">
-                      THE REAL REALTY
+                    <rect x="14" y="-16" width="180" height="32" rx="4" fill="rgba(13, 19, 16, 0.95)" stroke="var(--accent-gold)" strokeWidth="1" />
+                    <text x="22" y="-3" fontSize="7.5" fontFamily="Cinzel" fontWeight="600" letterSpacing="0.5" fill="#FAF8F5">
+                      SOUTH BOPAL REAL ESTATE
                     </text>
                     <text x="22" y="10" fontSize="7" fontFamily="Plus Jakarta Sans" fill="var(--accent-gold)">
-                      Shop 208, SBTS, South Bopal
+                      D 382, SOBO Centre, South Bopal
                     </text>
                   </g>
                 </svg>
@@ -318,7 +318,7 @@ export const ProjectLocation: React.FC = () => {
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                     <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--accent-gold)' }} />
-                    <span>The Real Realty Hub</span>
+                    <span>South Bopal Real Estate</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                     <div style={{ width: '12px', height: '2px', backgroundColor: '#FAF8F5' }} />

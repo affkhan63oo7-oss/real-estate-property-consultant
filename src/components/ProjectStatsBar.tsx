@@ -14,38 +14,38 @@ export const ProjectStatsBar: React.FC = () => {
     {
       icon: <MapPin size={18} color="var(--accent-gold)" />,
       value: 'South Bopal',
-      label: 'Headquarters',
-      caption: 'Shop 208, SBTS, 380058'
+      label: 'Office Location',
+      caption: 'D 382, SOBO Centre'
     },
     {
       icon: <Home size={18} color="var(--accent-gold)" />,
-      value: '6 Portfolios',
-      label: 'Property Types',
-      caption: 'Apartments, Villas & Commercial'
+      value: 'Curated',
+      label: 'Properties',
+      caption: 'Residential & Bungalows'
     },
     {
       icon: <Layers size={18} color="var(--accent-gold)" />,
-      value: '7+ Hubs',
-      label: 'Main Service Areas',
-      caption: 'Bopal, Shela, Shilaj & More'
+      value: 'Ahmedabad',
+      label: 'Primary Location',
+      caption: 'South Bopal, Gujarat'
     },
     {
       icon: <Star size={18} color="var(--accent-gold)" />,
-      value: 'Est. 2022',
-      label: 'Property Advisory',
-      caption: 'Born to Consult'
+      value: 'Kishor Udhas',
+      label: 'Property Consultant',
+      caption: 'Owner & Advisory Lead'
     },
     {
       icon: <Building2 size={18} color="var(--accent-gold)" />,
-      value: '5 Services',
+      value: '6 Services',
       label: 'Agency Solutions',
-      caption: 'Buy, Sell, Rent & Deal'
+      caption: 'Buy, Sell, Rent & Consult'
     },
     {
       icon: <Clock size={18} color="var(--accent-gold)" />,
-      value: 'Full-Week',
-      label: 'Consultation Desk',
-      caption: 'Personalized Advisory'
+      value: 'Direct Call',
+      label: 'Phone Consultation',
+      caption: '+91 99986 33795'
     }
   ];
 
