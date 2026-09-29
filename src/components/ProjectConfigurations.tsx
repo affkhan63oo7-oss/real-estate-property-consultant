@@ -16,19 +16,19 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
   const [selectedResidenceId, setSelectedResidenceId] = useState<string>(TOWER_RESIDENCES[0].id);
 
   const filterTabs = [
-    { id: 'all', label: 'All Categories' },
-    { id: 'plots', label: 'Land & Plots' },
-    { id: 'residential', label: 'Residential Property' },
+    { id: 'all', label: 'All Portfolios' },
+    { id: 'apartments', label: 'Apartments & Flats' },
+    { id: 'villas', label: 'Villas & Houses' },
     { id: 'commercial', label: 'Commercial' },
-    { id: 'development', label: 'Property Development' }
+    { id: 'rentals', label: 'Rental Properties' }
   ];
 
   const filteredResidences = TOWER_RESIDENCES.filter((r) => {
     if (activeTab === 'all') return true;
-    if (activeTab === 'plots') return r.type.includes('Plots') || r.type.includes('Land');
-    if (activeTab === 'residential') return r.category === 'Residential' && !r.type.includes('Development');
+    if (activeTab === 'apartments') return r.type.includes('Apartments') || r.type.includes('Flats');
+    if (activeTab === 'villas') return r.type.includes('Villas') || r.type.includes('Houses');
     if (activeTab === 'commercial') return r.category === 'Commercial';
-    if (activeTab === 'development') return r.type.includes('Development');
+    if (activeTab === 'rentals') return r.category === 'Rent' || r.type.includes('Rental');
     return true;
   });
 
@@ -58,7 +58,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
           <ScrollReveal delay={0} distance={10}>
             <div className="eyebrow-pill" style={{ marginInline: 'auto' }}>
               <Compass size={12} color="var(--accent-gold)" />
-              <span>Properties & Plots • Pune</span>
+              <span>Properties & Portfolios • Ahmedabad</span>
             </div>
           </ScrollReveal>
 
@@ -82,7 +82,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                   color: 'var(--accent-gold)'
                 }}
               >
-                Development Land
+                Curated Portfolios
               </span>
             </h2>
           </ScrollReveal>
@@ -97,7 +97,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                 lineHeight: 1.6
               }}
             >
-              Residential land & plots, commercial plots, and curated residential & commercial properties across Pune, Marunji, Hinjawadi, and Narhe.
+              Apartments, flats, luxury villas, independent houses, commercial properties, and rental properties across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, and Maninagar.
             </p>
           </ScrollReveal>
 
@@ -401,7 +401,7 @@ export const ProjectConfigurations: React.FC<ProjectConfigurationsProps> = ({
                 </button>
 
                 <a
-                  href={`https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20the%20${encodeURIComponent(currentResidence.residenceNumber)}%20at%20${encodeURIComponent(currentResidence.location || 'Pune')}.`}
+                  href={`https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20the%20${encodeURIComponent(currentResidence.residenceNumber)}%20at%20${encodeURIComponent(currentResidence.location || 'Ahmedabad')}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold-outline"

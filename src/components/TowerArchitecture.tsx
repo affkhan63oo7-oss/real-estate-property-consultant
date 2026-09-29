@@ -22,10 +22,10 @@ export const TowerArchitecture: React.FC = () => {
           </ScrollReveal>
           <ScrollReveal delay={80} distance={14}>
             <h2 style={{ maxWidth: '950px', color: 'var(--text-espresso)' }}>
-              Future Construction • Property Developer
+              The Real Realty • Property Consultant
             </h2>
             <p style={{ maxWidth: '680px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-bronze)' }}>
-              Real Estate Developer and Property Developer based in Hinjawadi, Pune. Providing dedicated property guidance across Pune, Marunji, Hinjawadi, and Narhe.
+              Property Consultant and Real Estate Agency based in Bopal, Ahmedabad. Providing dedicated property guidance across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and Ahmedabad.
             </p>
           </ScrollReveal>
         </div>
@@ -40,24 +40,24 @@ export const TowerArchitecture: React.FC = () => {
             marginBottom: 'clamp(3rem, 6vw, 5.5rem)'
           }}
         >
-          {/* Card 1: Future Construction Profile */}
+          {/* Card 1: The Real Realty Profile */}
           <ScrollReveal delay={100} distance={16} scale>
             <div>
               <div style={{ height: 'clamp(240px, 45vw, 440px)', overflow: 'hidden', marginBottom: '1.5rem', backgroundColor: 'var(--bg-sandstone)', boxShadow: 'var(--shadow-editorial)' }}>
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-                  alt="Future Construction Real Estate Developer Hinjawadi Pune"
+                  alt="The Real Realty Property Consultant Bopal Ahmedabad"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.22em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
-                Real Estate Developer • Property Developer
+                Property Consultant • Real Estate Agency
               </span>
               <h3 style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.6rem)', color: 'var(--text-espresso)', marginTop: '0.35rem', marginBottom: '0.65rem' }}>
-                Future Construction
+                The Real Realty
               </h3>
               <p style={{ lineHeight: 1.85, color: 'var(--text-espresso)' }}>
-                Helping clients navigate Pune’s property and land market with practical guidance and dedicated development solutions. Future Construction works directly with buyers, investors, and landowners to understand their unique property goals and deliver clear, responsive support at every stage.
+                Helping clients navigate Ahmedabad’s dynamic property market with practical guidance and dedicated advisory solutions. Established in 2022 with the tagline "Born to Consult", The Real Realty works directly with buyers, sellers, tenants, and investors across Bopal, South Bopal, and Ahmedabad to understand their unique property goals and deliver clear, responsive support at every stage.
               </p>
             </div>
           </ScrollReveal>
@@ -69,7 +69,7 @@ export const TowerArchitecture: React.FC = () => {
                 <div style={{ height: 'clamp(240px, 45vw, 440px)', overflow: 'hidden', marginBottom: '1.5rem', backgroundColor: 'var(--bg-sandstone)', boxShadow: 'var(--shadow-editorial)' }}>
                   <img
                     src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85"
-                    alt="Professional Real Estate Guidance in Mumbai"
+                    alt="Professional Real Estate Guidance in Ahmedabad The Real Realty"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
@@ -111,7 +111,7 @@ export const TowerArchitecture: React.FC = () => {
                 lineHeight: 1.5
               }}
             >
-              "Helping clients navigate Mumbai’s property market with practical guidance and personalised assistance."
+              "Helping clients navigate Ahmedabad’s property market with practical guidance, transparent advisory, and personalized consultation — Born to Consult."
             </p>
           </div>
         </ScrollReveal>

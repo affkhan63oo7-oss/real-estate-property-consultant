@@ -25,7 +25,7 @@ export const TowerManifesto: React.FC = () => {
               Practical Property Guidance.
               <br />
               <span style={{ fontFamily: 'var(--font-editorial)', fontStyle: 'italic', fontWeight: 300, color: 'var(--text-bronze)' }}>
-                Personalised assistance built on local Mumbai insight.
+                Personalised property consultation built on local Ahmedabad market insight.
               </span>
             </h2>
           </ScrollReveal>
@@ -54,7 +54,7 @@ export const TowerManifesto: React.FC = () => {
             >
               <img
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85"
-                alt="Future Construction Hinjawadi Pune"
+                alt="The Real Realty Bopal Ahmedabad"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -78,7 +78,7 @@ export const TowerManifesto: React.FC = () => {
                   maxWidth: 'calc(100% - 2rem)'
                 }}
               >
-                Future Construction • Hinjawadi, Pune
+                The Real Realty • Bopal, Ahmedabad
               </div>
             </div>
           </ScrollReveal>
@@ -96,19 +96,19 @@ export const TowerManifesto: React.FC = () => {
                   marginBottom: '1.5rem'
                 }}
               >
-                "Navigating Pune’s property market requires practical guidance, transparent communication, and dedicated assistance focused on your individual goals."
+                "Navigating Ahmedabad’s property market requires practical guidance, transparent communication, and dedicated consultation — Born to Consult."
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={200} distance={12}>
               <p style={{ marginBottom: '1.25rem', lineHeight: 1.85 }}>
-                Future Construction is a real estate developer and property developer based in Hinjawadi, Pune, helping clients with residential land & plots, commercial plots, and property development.
+                The Real Realty is a premier property consultant and real estate agency established in 2022, based in Bopal, Ahmedabad. Guided by our motto "Born to Consult", we specialize in residential and commercial property buying, selling, rentals, and property consultation.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={240} distance={12}>
               <p style={{ marginBottom: '2rem', lineHeight: 1.85 }}>
-                We guide clients through buying, selling, renting, commercial property, property management, and personalised real-estate consultation. Our approach centers on practical property assistance, local market understanding, and clear communication from your first inquiry to the final decision.
+                We guide clients through buying, selling, renting, commercial property, and comprehensive property consultation. Our approach centers on practical property assistance, local market understanding, and clear communication from your first inquiry to the final decision.
               </p>
             </ScrollReveal>
 
@@ -152,10 +152,10 @@ export const TowerManifesto: React.FC = () => {
                     Location
                   </span>
                   <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
-                    Pune
+                    Ahmedabad
                   </div>
                   <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.15rem' }}>
-                    Hinjawadi, Marunji & Narhe
+                    Bopal, South Bopal & Shela
                   </span>
                 </div>
               </div>

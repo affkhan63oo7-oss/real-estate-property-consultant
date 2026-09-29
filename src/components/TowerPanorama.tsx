@@ -87,7 +87,7 @@ export const TowerPanorama: React.FC = () => {
                   textTransform: 'uppercase'
                 }}
               >
-                Hinjawadi • Pune Horizon
+                South Bopal • Ahmedabad Horizon
               </span>
             </div>
           </ScrollReveal>
@@ -154,7 +154,7 @@ export const TowerPanorama: React.FC = () => {
           <ScrollReveal delay={120} distance={14}>
             <div style={{ maxWidth: '680px' }}>
               <span style={{ fontSize: '0.625rem', fontFamily: 'var(--font-title)', letterSpacing: '0.22em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
-                {activeView.time} • Mumbai Western Suburbs Perspective
+                {activeView.time} • Ahmedabad Western Growth Corridor Perspective
               </span>
               <h3
                 style={{

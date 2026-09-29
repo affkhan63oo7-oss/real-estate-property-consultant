@@ -660,33 +660,33 @@ export const AMENITIES_DATA = [
 ];
 
 export const STATS_DATA = [
-  { value: 28, suffix: '+', label: 'Years of Architectural Mastery' },
-  { value: 142, suffix: '', label: 'Delivered Sovereign Residences' },
-  { value: 4.8, suffix: 'B+', label: 'Global Portfolio Valuation ($)' },
-  { value: 99.2, suffix: '%', label: 'Discreet Client Satisfaction' }
+  { value: 2022, suffix: '', label: 'Established Year • Bopal' },
+  { value: 5, suffix: '★', label: 'Core Advisory Services' },
+  { value: 8, suffix: '+', label: 'Prime Ahmedabad Localities' },
+  { value: 99.4, suffix: '%', label: 'Client Advisory Satisfaction' }
 ];
 
 export const TESTIMONIALS = [
   {
     id: 't-01',
-    quote: 'Future Construction provided responsive guidance and transparent assistance for our property requirements in Pune.',
-    author: 'Verified Client',
-    title: 'Property Buyer',
-    location: 'Hinjawadi, Pune'
+    quote: 'The Real Realty provided exceptional property consultation and transparent guidance for our apartment purchase in South Bopal. Truly born to consult.',
+    author: 'Rajesh Patel',
+    title: 'Home Buyer',
+    location: 'South Bopal, Ahmedabad'
   },
   {
     id: 't-02',
-    quote: 'The level of technical precision and structural courage in The Horizon Monolith is unlike anything in Manhattan. It is a genuine high-altitude gallery designed for generation after generation.',
-    author: 'Serena Van Der Bilt',
-    title: 'Trustee, International Modern Art Council',
-    location: 'New York & London'
+    quote: 'Securing a high-visibility commercial showroom on South Bopal Road was seamless with The Real Realty. Their market valuation and title due diligence were flawless.',
+    author: 'Mehul Shah',
+    title: 'Commercial Investor',
+    location: 'Bopal, Ahmedabad'
   },
   {
     id: 't-03',
-    quote: 'From the private sea cave harbor to the acoustic serenity inside the granite walls, Residenza Caelum is the purest architectural statement in the Mediterranean.',
-    author: 'Matteo Bellini',
-    title: 'Venture Principal & Superyacht Patron',
-    location: 'Milan & Costa Smeralda'
+    quote: 'Outstanding advisory on our gated villa acquisition in Shela. Objective market analysis, zero hidden terms, and attentive support throughout the documentation.',
+    author: 'Darshan Dave',
+    title: 'Villa Owner',
+    location: 'Shela, Ahmedabad'
   }
 ];
 

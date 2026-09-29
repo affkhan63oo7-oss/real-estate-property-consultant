@@ -21,10 +21,10 @@ export const TowerLocation: React.FC = () => {
           </ScrollReveal>
           <ScrollReveal delay={80} distance={14}>
             <h2 style={{ maxWidth: '900px', color: 'var(--text-espresso)' }}>
-              Hinjawadi, Pune.
+              South Bopal, Ahmedabad.
             </h2>
             <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-bronze)' }}>
-              Conveniently located at Sakhare Complex on Marunji Road near Hotel Mezza9, offering seamless connectivity across Pune, Marunji, Hinjawadi, and Narhe.
+              Conveniently located at Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, offering seamless connectivity across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, and Maninagar.
             </p>
           </ScrollReveal>
         </div>
@@ -54,72 +54,72 @@ export const TowerLocation: React.FC = () => {
                 viewBox="0 0 500 420"
                 style={{ width: '100%', height: '100%', backgroundColor: '#ECE7DE' }}
               >
-                {/* Sanjay Gandhi National Park Green Reserve East Flank */}
+                {/* Shela & Shilaj Green Reserve West Flank */}
                 <rect x="370" y="0" width="130" height="420" fill="#DDD8CE" />
                 <text x="435" y="210" textAnchor="middle" fontSize="10" fontFamily="Cinzel" letterSpacing="3" fill="#726A5F" transform="rotate(-90 435 210)">
-                  NATIONAL PARK GREEN BELT
+                  SHELA & SHILAJ GREEN BELT
                 </text>
 
-                {/* Western Express Highway (WEH) Main North-South Artery */}
+                {/* SP Ring Road (Sardar Patel Ring Road) */}
                 <line x1="280" y1="0" x2="280" y2="420" stroke="#1B1917" strokeWidth="3" />
                 <text x="288" y="45" fontSize="9" fontFamily="Cinzel" fontWeight="600" letterSpacing="1" fill="#1B1917">
-                  WESTERN EXPRESS HIGHWAY (WEH)
+                  SP RING ROAD (SARDAR PATEL)
                 </text>
 
-                {/* Metro Line 7 Elevated Corridor */}
+                {/* SG Highway Connectivity Corridor */}
                 <line x1="295" y1="0" x2="295" y2="420" stroke="#BCA06B" strokeWidth="2" strokeDasharray="6 3" />
                 <text x="303" y="110" fontSize="8" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="#726A5F">
-                  METRO LINE 7
+                  SG HIGHWAY ACCESS
                 </text>
 
-                {/* Suburban Railway Line (Western Line) */}
+                {/* Ahmedabad Metro West Line */}
                 <line x1="100" y1="0" x2="100" y2="420" stroke="#726A5F" strokeWidth="2" strokeDasharray="8 4" />
                 <text x="108" y="380" fontSize="9" fontFamily="Cinzel" letterSpacing="1" fill="#726A5F">
-                  WESTERN RAILWAY LINE
+                  METRO TRANSIT LINK
                 </text>
 
-                {/* East-West Cross Roads: Akurli Road / Lokhandwala Township Road */}
+                {/* South Bopal Road Main Artery */}
                 <line x1="100" y1="210" x2="370" y2="210" stroke="#726A5F" strokeWidth="2" />
-                <text x="190" y="202" fontSize="9" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="#726A5F">
-                  AKURLI ROAD
+                <text x="175" y="202" fontSize="9" fontFamily="Plus Jakarta Sans" letterSpacing="1" fill="#726A5F">
+                  SOUTH BOPAL ROAD
                 </text>
 
                 <line x1="100" y1="120" x2="370" y2="120" stroke="#C4BCAC" strokeWidth="1.5" strokeDasharray="3 3" />
                 <text x="175" y="112" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">
-                  THAKUR VILLAGE ROAD
+                  BOPAL-GHUMA ROAD
                 </text>
 
                 <line x1="100" y1="300" x2="370" y2="300" stroke="#C4BCAC" strokeWidth="1.5" strokeDasharray="3 3" />
                 <text x="175" y="292" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">
-                  LOKHANDWALA COMPLEX
+                  SHANTIPURA CROSS ROAD
                 </text>
 
-                {/* Hinjawadi IT Park Marker */}
+                {/* Shela Hub Marker */}
                 <g transform="translate(100, 210)">
                   <circle cx="0" cy="0" r="5" fill="#726A5F" />
                   <text x="-8" y="-12" textAnchor="end" fontSize="9" fontFamily="Cinzel" fontWeight="600" fill="#1B1917">
-                    Hinjawadi IT Park
+                    Shela Hub
                   </text>
                 </g>
 
-                {/* Hotel Mezza9 Marker */}
+                {/* Near Aaryan Gloria Marker */}
                 <g transform="translate(280, 160)">
                   <circle cx="0" cy="0" r="4" fill="#726A5F" />
                   <text x="-12" y="4" textAnchor="end" fontSize="8" fontFamily="Plus Jakarta Sans" fill="#726A5F">
-                    Near Hotel Mezza9
+                    Near Aaryan Gloria
                   </text>
                 </g>
 
-                {/* Future Construction Marker */}
+                {/* The Real Realty Office Marker */}
                 <g transform="translate(240, 210)">
                   <circle cx="0" cy="0" r="16" fill="rgba(188, 160, 107, 0.3)" />
                   <circle cx="0" cy="0" r="8" fill="#BCA06B" />
                   <circle cx="0" cy="0" r="3" fill="#1B1917" />
                   <text x="0" y="-22" textAnchor="middle" fontSize="10" fontFamily="Cinzel" fontWeight="700" letterSpacing="1" fill="#1B1917">
-                    FUTURE CONSTRUCTION
+                    THE REAL REALTY
                   </text>
                   <text x="0" y="26" textAnchor="middle" fontSize="8" fontFamily="Plus Jakarta Sans" fontWeight="600" fill="#726A5F">
-                    Hinjawadi, Pune
+                    Shop 208, SBTS, South Bopal
                   </text>
                 </g>
               </svg>
@@ -145,7 +145,7 @@ export const TowerLocation: React.FC = () => {
               >
                 <MapPin size={11} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
                 <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  Hinjawadi, Pune
+                  South Bopal, Ahmedabad
                 </span>
               </div>
             </div>
@@ -181,7 +181,7 @@ export const TowerLocation: React.FC = () => {
 
             <div style={{ marginTop: '0.5rem' }}>
               <a
-                href="https://maps.google.com/?q=Sakhare+Complex+Marunji+Road+Hinjawadi+Pune+411057"
+                href="https://maps.google.com/?q=Shop+No+208+SBTS+South+Bopal+Trade+Centre+Near+Aaryan+Gloria+South+Bopal+Road+Bopal+Ahmedabad+Gujarat+380058"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -200,7 +200,7 @@ export const TowerLocation: React.FC = () => {
                 }}
               >
                 <Navigation size={13} color="var(--accent-gold)" />
-                <span>Get Directions to Future Construction (Hinjawadi)</span>
+                <span>Get Directions to The Real Realty (South Bopal)</span>
               </a>
             </div>
           </div>

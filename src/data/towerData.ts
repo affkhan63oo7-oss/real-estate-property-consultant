@@ -35,144 +35,173 @@ export interface BusinessService {
 
 export const TOWER_RESIDENCES: TowerResidence[] = [
   {
-    id: 'res-plots-hinjawadi',
-    residenceNumber: 'Residential Land & Plots',
-    floor: 1,
-    type: 'Residential Land & Plots',
-    tagline: 'Clear-title residential plots in rapidly growing sectors of Hinjawadi & Marunji.',
+    id: 'res-apartments-flats',
+    residenceNumber: 'Apartments & Flats',
+    floor: 14,
+    type: 'Apartments & Flats',
+    tagline: 'Contemporary high-rise apartments and premium flats in South Bopal & Shela.',
     price: 0,
-    priceFormatted: 'Contact for Pricing',
-    bedrooms: 0,
-    bathrooms: 0,
-    powderRooms: 0,
-    interiorSqFt: 1500,
-    exposure: 'Road Facing / Corner Plots',
-    ceilingHeight: 'Open Plot',
-    imageHero: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-    description: 'Well-demarcated residential land and plot options located in prime growth pockets of Hinjawadi and Marunji with direct road connectivity and planned utility access.',
-    keyFeatures: [
-      'Located in Hinjawadi & Marunji growth sector',
-      'Clear demarcation and direct access road',
-      'Suitable for independent home or residential construction',
-      'Proximity to Hinjawadi IT Park and Marunji Road',
-      'Dedicated property facilitation by Future Construction'
-    ],
-    location: 'Hinjawadi & Marunji, Pune',
-    category: 'Residential'
-  },
-  {
-    id: 'res-comm-plots',
-    residenceNumber: 'Commercial Plots',
-    floor: 1,
-    type: 'Commercial Plots',
-    tagline: 'High-visibility commercial plots suitable for enterprise development and businesses.',
-    price: 0,
-    priceFormatted: 'Contact for Pricing',
-    bedrooms: 0,
-    bathrooms: 0,
-    powderRooms: 0,
-    interiorSqFt: 2400,
-    exposure: 'Main Road Frontage',
-    ceilingHeight: 'Commercial Zone',
-    imageHero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
-    description: 'Strategically positioned commercial plots offering high footfall, arterial road visibility, and multi-purpose business potential along the Marunji and Hinjawadi corridors.',
-    keyFeatures: [
-      'Prominent road frontage in Hinjawadi / Marunji',
-      'High commercial viability and footfall potential',
-      'Direct connectivity to Pune-Mumbai transit arteries',
-      'Clear title documentation and plot verification',
-      'Advisory and site coordination by Future Construction'
-    ],
-    location: 'Hinjawadi, Pune',
-    category: 'Commercial'
-  },
-  {
-    id: 'res-residential-prop',
-    residenceNumber: 'Residential Property',
-    floor: 12,
-    type: 'Residential Property',
-    tagline: 'Carefully curated residential properties designed for modern family living in Pune.',
-    price: 0,
-    priceFormatted: 'Contact for Pricing',
+    priceFormatted: 'Contact for Consultation',
     bedrooms: 3,
     bathrooms: 3,
-    powderRooms: 0,
-    interiorSqFt: 1250,
-    exposure: 'East / North Facing',
-    ceilingHeight: '10 FT',
-    imageHero: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    description: 'Thoughtfully configured residential properties featuring optimal room proportions, cross-ventilation, and peaceful neighborhood settings in Pune and Hinjawadi.',
+    powderRooms: 1,
+    interiorSqFt: 1650,
+    exposure: 'East / Garden Facing',
+    ceilingHeight: '10.5 FT',
+    imageHero: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+    description: 'Curated 2, 3, and 4 BHK premium apartments and modern flats situated in prime residential communities of South Bopal, Shela, and Ghuma with superb natural light and ventilation.',
     keyFeatures: [
-      'Quality construction standards with modern layouts',
-      'Well-separated living, dining, and private bedroom zones',
-      'Balcony exposure with expansive natural lighting',
-      'Convenient access to Hinjawadi IT Park, schools, and conveniences',
-      'End-to-end guidance from Future Construction team'
+      'Prime locations in South Bopal & Shela growth belts',
+      'Modern open-plan living, dining, and expansive balconies',
+      'Proximity to top schools, supermarkets, and SP Ring Road',
+      'Verified clear title documentation and compliance',
+      'Dedicated property consultation by The Real Realty'
     ],
-    location: 'Hinjawadi, Pune',
+    location: 'South Bopal & Shela, Ahmedabad',
     category: 'Residential'
   },
   {
-    id: 'res-commercial-prop',
-    residenceNumber: 'Commercial Property',
-    floor: 4,
-    type: 'Commercial Property',
-    tagline: 'Modern commercial premises and workspaces tailored for corporate and business operations.',
+    id: 'res-villas-houses',
+    residenceNumber: 'Villas & Independent Houses',
+    floor: 2,
+    type: 'Villas & Independent Houses',
+    tagline: 'Exclusive private villas and independent gated homes in Bopal & Shilaj.',
     price: 0,
-    priceFormatted: 'Contact for Pricing',
+    priceFormatted: 'Contact for Consultation',
+    bedrooms: 4,
+    bathrooms: 5,
+    powderRooms: 1,
+    interiorSqFt: 3200,
+    exteriorSqFt: 1800,
+    exposure: 'North-East Corner',
+    ceilingHeight: '11.5 FT',
+    imageHero: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
+    description: 'Bespoke independent bungalows, duplex villas, and premium houses in Bopal, Shilaj, and Shantipura offering serene private gardens and superior privacy.',
+    keyFeatures: [
+      'Gated villa communities with dedicated security and clubhouse',
+      'Independent plot ownership with private garden space',
+      'Easy connectivity to SP Ring Road and SG Highway',
+      'Full legal due diligence and transparent documentation',
+      'Consultation backed by The Real Realty advisory team'
+    ],
+    location: 'Bopal & Shilaj, Ahmedabad',
+    category: 'Residential'
+  },
+  {
+    id: 'res-commercial-properties',
+    residenceNumber: 'Commercial Properties',
+    floor: 3,
+    type: 'Commercial Properties',
+    tagline: 'Prime retail showrooms, corporate offices, and business spaces on South Bopal Road.',
+    price: 0,
+    priceFormatted: 'Contact for Consultation',
     bedrooms: 0,
     bathrooms: 2,
     powderRooms: 0,
-    interiorSqFt: 1100,
-    exposure: 'Arterial Frontage',
+    interiorSqFt: 1450,
+    exposure: 'Main South Bopal Road Frontage',
     ceilingHeight: '12 FT',
-    imageHero: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1800&q=85',
+    imageHero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
     floorPlanUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-    description: 'Flexible commercial spaces situated in active business corridors of Pune, Hinjawadi, and Narhe. Engineered for corporate offices, retail, and commercial ventures.',
+    description: 'High-visibility commercial units, premium office spaces, and ground-floor retail showrooms in SBTS (South Bopal Trade Centre) and leading business corridors of Ahmedabad.',
     keyFeatures: [
-      'Prime business location in Pune / Hinjawadi / Narhe',
-      'Open floor-plate design for modular workspace layouts',
-      'High footfall and arterial connectivity',
-      'Ample parking provision and essential commercial utilities',
-      'Assistance throughout inspection and agreement stages'
+      'High footfall arterial frontage near Aaryan Gloria & SBTS',
+      'Ideal for corporate firms, clinics, retail showrooms, and consultancies',
+      'Ample basement and visitor parking infrastructure',
+      'Clear commercial title verification and transparent lease/sale terms',
+      'In-person advisory at Shop 208, SBTS, South Bopal'
     ],
-    location: 'Pune & Narhe',
+    location: 'South Bopal & Bopal, Ahmedabad',
     category: 'Commercial'
   },
   {
-    id: 'res-land-development',
-    residenceNumber: 'Land Property & Property Development',
-    floor: 1,
-    type: 'Property Development',
-    tagline: 'Comprehensive land acquisition, parcel planning, and property development solutions in Pune.',
+    id: 'res-rental-properties',
+    residenceNumber: 'Rental Properties',
+    floor: 8,
+    type: 'Rental Properties',
+    tagline: 'High-yield residential rentals and premium commercial leases across Ahmedabad.',
     price: 0,
-    priceFormatted: 'Contact for Pricing',
-    bedrooms: 0,
-    bathrooms: 0,
+    priceFormatted: 'Contact for Consultation',
+    bedrooms: 3,
+    bathrooms: 3,
     powderRooms: 0,
-    interiorSqFt: 5000,
-    exposure: 'Strategic Growth Sector',
-    ceilingHeight: 'Development Parcel',
-    imageHero: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
-    imageDetail: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
-    floorPlanUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
-    description: 'End-to-end property development and land property services by Future Construction. Focused on parcel planning, boundary demarcation, and development execution in Pune, Marunji, and Narhe.',
+    interiorSqFt: 1550,
+    exposure: 'West / Skyline Facing',
+    ceilingHeight: '10 FT',
+    imageHero: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    description: 'Comprehensive rental brokerage connecting verified tenants with premier residential flats, independent homes, and commercial units in Bopal, South Bopal, and Ghuma.',
     keyFeatures: [
-      'Active land development in Pune, Marunji, Hinjawadi, and Narhe',
-      'Systematic parcel planning and boundary demarcation',
-      'Clear paperwork and title transparency',
-      'Backed by verified 4.0/5 Google review track record',
-      'Direct developer consultation at Sakhare Complex, Hinjawadi'
+      'Verified tenant profiling and background screening',
+      'Quick turnaround times for residential and commercial leasing',
+      'End-to-end rental agreement drafting and police verification guidance',
+      'Rental options across Bopal, South Bopal, Shela, and Maninagar',
+      'Complete management support by The Real Realty'
     ],
-    location: 'Marunji & Pune',
-    category: 'Residential'
+    location: 'Bopal, South Bopal & Ghuma, Ahmedabad',
+    category: 'Rent'
+  },
+  {
+    id: 'res-residential-buying-selling',
+    residenceNumber: 'Residential Buying & Selling',
+    floor: 6,
+    type: 'Residential Property',
+    tagline: 'Expert facilitation for buying and selling residential properties across Ahmedabad.',
+    price: 0,
+    priceFormatted: 'Contact for Consultation',
+    bedrooms: 3,
+    bathrooms: 3,
+    powderRooms: 1,
+    interiorSqFt: 1850,
+    exposure: 'Cross-Ventilated Garden View',
+    ceilingHeight: '10.5 FT',
+    imageHero: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    description: 'End-to-end buying and selling services for flats, luxury apartments, and residential homes in Shela, Shantipura, Shilaj, and Ahmedabad’s top neighborhoods.',
+    keyFeatures: [
+      'Fair market valuations and transparent price discovery',
+      'Targeted matching for buyers and serious sellers',
+      'Complete guidance on deed registration, loans, and legal transfer',
+      'Active deals in Shela, South Bopal, Ghuma, and Shantipura',
+      'Consultation from licensed experts established in 2022'
+    ],
+    location: 'Shela & Shantipura, Ahmedabad',
+    category: 'Buy'
+  },
+  {
+    id: 'res-commercial-dealing',
+    residenceNumber: 'Commercial Property Dealing',
+    floor: 5,
+    type: 'Commercial Properties',
+    tagline: 'Specialized commercial property transactions and brokerage across Ahmedabad.',
+    price: 0,
+    priceFormatted: 'Contact for Consultation',
+    bedrooms: 0,
+    bathrooms: 2,
+    powderRooms: 0,
+    interiorSqFt: 2200,
+    exposure: 'High-Visibility Commercial Corridor',
+    ceilingHeight: '12 FT',
+    imageHero: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85',
+    imageDetail: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
+    floorPlanUrl: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+    description: 'Strategic commercial property dealing, office acquisition, and retail showroom brokerage across Bopal, South Bopal, and Maninagar.',
+    keyFeatures: [
+      'Commercial property dealing in South Bopal, Bopal & Maninagar',
+      'Thorough due diligence on title deeds and municipal clearances',
+      'Expert deal structuring for retail investors and corporate occupiers',
+      'Direct access to prominent trade hubs including SBTS',
+      'The Real Realty "Born to Consult" advisory commitment'
+    ],
+    location: 'Maninagar & Bopal, Ahmedabad',
+    category: 'Commercial'
   }
 ];
 
@@ -181,24 +210,24 @@ export const PANORAMA_VIEWS = [
     id: 'day',
     label: 'Morning Light',
     time: '09:30 AM',
-    headline: 'Pune & Hinjawadi Daylight & Growth',
-    description: 'Expansive vistas stretching across Hinjawadi, Marunji, and Pune’s western development corridor, framed by open green landscapes and active infrastructure.',
+    headline: 'Ahmedabad & South Bopal Daylight & Growth',
+    description: 'Expansive vistas stretching across South Bopal, Shela, and Ahmedabad’s thriving western growth corridor, framed by modern towers and open green landscapes.',
     imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2200&q=90'
   },
   {
     id: 'dusk',
     label: 'Golden Hour',
     time: '06:15 PM',
-    headline: 'Warm Sunset Over Hinjawadi Skyline',
-    description: 'Golden sunlight illuminates the tech corridors, open residential plots, and arterial roads connecting Marunji and Hinjawadi to Pune city.',
+    headline: 'Warm Sunset Over Bopal & Shela Skyline',
+    description: 'Golden sunlight illuminates the lively avenues, modern residential towers, and arterial boulevards connecting South Bopal Road to the SP Ring Road.',
     imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2200&q=90'
   },
   {
     id: 'night',
     label: 'Evening Citylights',
     time: '09:45 PM',
-    headline: 'Vibrant Tech Hub & Living Corridors',
-    description: 'The energetic evening atmosphere of Pune and Hinjawadi comes alive with illuminated transit arteries, business hubs, and tranquil residential zones.',
+    headline: 'Vibrant Ahmedabad Cityscapes & Trade Hubs',
+    description: 'The energetic evening atmosphere of Ahmedabad comes alive with illuminated shopping hubs, trade centers like SBTS, and tranquil residential enclaves.',
     imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90'
   }
 ];
@@ -206,131 +235,116 @@ export const PANORAMA_VIEWS = [
 export const SERVICES_DATA: BusinessService[] = [
   {
     id: 'service-1',
-    title: 'Residential Land & Plots',
-    subtitle: 'Category 01 • Land & Plots',
-    category: 'Residential Land & Plots',
-    description: 'Verified residential plots and land options across growing residential localities in Hinjawadi, Marunji, and Pune.',
-    scope: 'Plot Scouting • Demarcation • Title Verification',
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85',
+    title: 'Residential Property Buying & Selling',
+    subtitle: 'Category 01 • Residential Realty',
+    category: 'Residential Buying & Selling',
+    description: 'End-to-end buying and selling solutions for apartments, flats, luxury villas, and independent houses across Bopal, South Bopal, Shela, and Ahmedabad.',
+    scope: 'Apartments • Flats • Villas • Independent Houses',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Carefully surveyed plots with clear access roads',
-      'Verified land records in Pune and Marunji',
-      'Assistance with boundary demarcation and documentation',
-      'Direct developer advisory from Future Construction'
+      'Carefully curated listings across South Bopal, Shela, Ghuma & Shilaj',
+      'Realistic property valuations and buyer-seller matchmaking',
+      'Transparent verification of title deeds, society NOCs, and municipal records',
+      'Direct, client-first advisory from The Real Realty consultants'
     ]
   },
   {
     id: 'service-2',
-    title: 'Commercial Plots',
-    subtitle: 'Category 02 • Enterprise Land',
-    category: 'Commercial Plots',
-    description: 'Prime commercial land and plot parcels along high-traffic roads and business zones in Hinjawadi and Pune.',
-    scope: 'Commercial Zoning • Arterial Frontage • High Footfall',
+    title: 'Commercial Property Buying & Selling',
+    subtitle: 'Category 02 • Commercial Real Estate',
+    category: 'Commercial Buying & Selling',
+    description: 'Strategic acquisition and sale of premium commercial properties, office spaces, retail showrooms, and corporate premises in high-growth corridors.',
+    scope: 'Offices • Showrooms • Commercial Complexes • Retail Hubs',
     image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Prominent road visibility on Marunji Road & Hinjawadi corridors',
-      'Suitable for retail, corporate hubs, and commercial ventures',
-      'Clear title evaluation and transparent paperwork',
-      'Strategic growth potential in expanding Pune business belts'
+      'Prime properties at SBTS (South Bopal Trade Centre) & key corridors',
+      'High-traffic commercial frontage suited for retail and enterprise suites',
+      'Rigorous title due diligence, zoning checks, and documentation',
+      'Strategic advisory tailored to business growth and high rental yields'
     ]
   },
   {
     id: 'service-3',
-    title: 'Residential Property',
-    subtitle: 'Category 03 • Living Spaces',
-    category: 'Residential Property',
-    description: 'Quality residential homes and family living options across Pune, Hinjawadi, and Marunji.',
-    scope: 'Family Living • Modern Layouts • Convenient Access',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+    title: 'Property Rentals',
+    subtitle: 'Category 03 • Rental & Leasing Services',
+    category: 'Property Rentals',
+    description: 'Professional rental and leasing solutions catering to residential tenants, homeowners, corporate relocations, and commercial business occupiers.',
+    scope: 'Residential Rentals • Commercial Leasing • Tenancy Agreements',
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Carefully planned residences with natural lighting and airflow',
-      'Proximity to IT parks, educational institutions, and healthcare',
-      'Transparent buying assistance and paperwork coordination',
-      'Personalised consultation based on your family requirements'
+      'Verified tenant screening and swift occupancy solutions',
+      'Comprehensive rental inventory of flats, apartments, and villas',
+      'Assistance with legal rent agreements and police verification formalities',
+      'Serving Bopal, South Bopal, Ghuma, Shela, Shilaj, and Maninagar'
     ]
   },
   {
     id: 'service-4',
-    title: 'Commercial Property',
-    subtitle: 'Category 04 • Business Spaces',
-    category: 'Commercial Property',
-    description: 'Commercial workspaces, office suites, and retail premises across Pune, Hinjawadi, and Narhe.',
-    scope: 'Office Spaces • Retail Outlets • Enterprise Units',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
+    title: 'Property Consultation',
+    subtitle: 'Category 04 • Strategic Consultation',
+    category: 'Property Consultation',
+    description: 'Expert consultation true to our motto "Born to Consult" — providing objective market analysis, property appraisal, and tailored advisory.',
+    scope: 'Advisory • Market Analysis • Investment Planning • Due Diligence',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'Modern commercial units designed for functional business workflows',
-      'Active commercial pockets in Hinjawadi, Narhe, and Pune',
-      'Support throughout property inspections and lease/sale agreements',
-      'Clear documentation and transparent commercial terms'
+      '"Born to Consult" dedication to authentic, client-first property guidance',
+      'Deep insights into Ahmedabad’s fastest-appreciating residential corridors',
+      'Comprehensive evaluation of legal paperwork, approvals, and titles',
+      'Personalized property strategies for home buyers and seasoned investors'
     ]
   },
   {
     id: 'service-5',
-    title: 'Land Property',
-    subtitle: 'Category 05 • Strategic Land',
-    category: 'Land Property',
-    description: 'Acquisition, evaluation, and transaction guidance for land parcels throughout the Pune metropolitan region.',
-    scope: 'Land Evaluation • Demarcation • Parcel Verification',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85',
-    featurePoints: [
-      'Land opportunities across Marunji, Hinjawadi, Narhe, and Pune',
-      'Thorough due diligence on title chains and land surveys',
-      'Objective guidance tailored to buyer goals and development plans',
-      'Direct coordination with Future Construction leadership'
-    ]
-  },
-  {
-    id: 'service-6',
-    title: 'Property Development',
-    subtitle: 'Category 06 • Development Solutions',
-    category: 'Property Development',
-    description: 'Professional property development services delivering planned layouts, infrastructure, and built environments in Pune.',
-    scope: 'Site Planning • Infrastructure • Project Execution',
+    title: 'Property Dealing / Agency Services',
+    subtitle: 'Category 05 • Agency & Brokerage',
+    category: 'Property Dealing / Agency',
+    description: 'Full-service real estate agency and property dealing backed by integrity, local market mastery, and an established track record since 2022.',
+    scope: 'Agency Representation • Deal Structuring • Registration Assistance',
     image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=85',
     featurePoints: [
-      'End-to-end property development execution in Pune & Marunji',
-      'Site preparation, road layout, and utility planning',
-      'Quality development standards backed by 42 Google reviews (4.0/5)',
-      'Office conveniently located at Sakhare Complex, Hinjawadi'
+      'Trusted property agency established in 2022 in Ahmedabad',
+      'Headquartered at Shop No. 208, SBTS, South Bopal Road, Bopal',
+      'Active coverage: Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar',
+      'Seamless coordination from initial inquiry to final property handover'
     ]
   }
 ];
 
 export const NEIGHBORHOOD_DESTINATIONS = [
   {
-    name: 'Hotel Mezza9 Landmark',
-    category: 'Prominent Landmark',
+    name: 'SBTS (South Bopal Trade Centre)',
+    category: 'Prominent Commercial Hub',
+    distance: 'Direct Location',
+    desc: 'Premier commercial landmark on South Bopal Road housing The Real Realty at Shop No. 208, near Aaryan Gloria.'
+  },
+  {
+    name: 'Aaryan Gloria Landmark',
+    category: 'Key Area Landmark',
     distance: '1 Minute',
-    desc: 'Prominent dining and hospitality landmark located right beside Sakhare Complex on Marunji Road.'
+    desc: 'Renowned residential and commercial landmark situated on South Bopal Road in immediate proximity to our office.'
   },
   {
-    name: 'Hinjawadi Rajiv Gandhi Infotech Park',
-    category: 'Major IT / Business Hub',
-    distance: '5 Minutes',
-    desc: 'Premier technology and business park housing leading IT campuses, tech giants, and commercial centers.'
-  },
-  {
-    name: 'Marunji Road Arterial Corridor',
+    name: 'SP Ring Road (Sardar Patel Ring Road)',
     category: 'Arterial Transit Spine',
-    distance: 'Immediate Access',
-    desc: 'Key transit spine directly connecting Hinjawadi Phase 1 & 2 to Marunji and surrounding development zones.'
+    distance: '3 Minutes',
+    desc: 'Vital ring highway providing seamless rapid connectivity across Bopal, Shela, Shilaj, SG Highway, and Ahmedabad.'
   },
   {
-    name: 'Mumbai-Pune Expressway',
-    category: 'Expressway Link',
+    name: 'Shela & Ghuma Residential Belt',
+    category: 'Premium Living Corridor',
+    distance: '5 Minutes',
+    desc: 'Rapidly growing residential sector known for luxury apartments, villas, premier international schools, and clubs.'
+  },
+  {
+    name: 'SG Highway (Sarkhej-Gandhinagar)',
+    category: 'Major Business Corridor',
     distance: '10 Minutes',
-    desc: 'High-speed transit access connecting Pune to Mumbai, Dehu Road bypass, and western Maharashtra corridors.'
+    desc: 'Ahmedabad’s premier commercial avenue with corporate headquarters, upscale shopping destinations, and hospitals.'
   },
   {
-    name: 'Narhe & Pune Ring Road',
-    category: 'Growth Corridor',
-    distance: 'Key Connectivity',
-    desc: 'Strategic linkage to southern and western Pune commercial and residential sectors including Narhe.'
-  },
-  {
-    name: 'Pune Metro Line 3 Corridor',
-    category: 'Elevated Rapid Transit',
-    distance: 'Within Vicinity',
-    desc: 'Elevated metro transit connecting Hinjawadi directly to Pune University, Shivaji Nagar, and city center.'
+    name: 'Maninagar & Eastern Ahmedabad Link',
+    category: 'Connected City Hub',
+    distance: 'Key Transit Link',
+    desc: 'Direct transit connectivity linking western growth corridors to established cultural and business hubs in Maninagar.'
   }
 ];

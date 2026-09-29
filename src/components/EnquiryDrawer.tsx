@@ -106,10 +106,10 @@ export const EnquiryDrawer: React.FC<EnquiryDrawerProps> = ({
           </div>
 
           <h3 style={{ fontSize: '1.85rem', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
-            Private Acquisition Inquiry
+            Property Consultation Enquiry
           </h3>
           <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-            Connect with our Managing Director regarding confidential off-market acquisitions and bespoke architectural commissions.
+            Connect with The Real Realty advisory team regarding residential and commercial property buying, selling, rentals, and property consultation across Ahmedabad.
           </p>
 
           {isSubmitted ? (

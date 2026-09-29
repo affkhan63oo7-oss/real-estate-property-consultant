@@ -30,7 +30,7 @@ export const TowerAmenities: React.FC = () => {
               Comprehensive Property Services.
             </h2>
             <p style={{ maxWidth: '640px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-bronze)' }}>
-              Personalised real-estate assistance and professional property guidance across residential and commercial sectors in Mumbai.
+              Personalised real-estate assistance and professional property guidance across residential and commercial sectors in Ahmedabad.
             </p>
           </ScrollReveal>
         </div>

@@ -7,10 +7,10 @@ const envKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
 // Stored credentials from settings if configured by user
 const storedUrl = typeof window !== 'undefined'
-  ? localStorage.getItem('FUTURE_SUPABASE_URL') || localStorage.getItem('NAMO_SUPABASE_URL') || localStorage.getItem('AETHELGARD_SUPABASE_URL') || ''
+  ? localStorage.getItem('REAL_REALTY_SUPABASE_URL') || ''
   : '';
 const storedKey = typeof window !== 'undefined'
-  ? localStorage.getItem('FUTURE_SUPABASE_KEY') || localStorage.getItem('NAMO_SUPABASE_KEY') || localStorage.getItem('AETHELGARD_SUPABASE_KEY') || ''
+  ? localStorage.getItem('REAL_REALTY_SUPABASE_KEY') || ''
   : '';
 
 export const SUPABASE_URL = storedUrl || envUrl;
@@ -28,24 +28,20 @@ export const supabase = isSupabaseConfigured
   : null;
 
 // Local fallback store keys
-const LOCAL_APPOINTMENTS_KEY = 'future_appointments_vault';
-const LOCAL_LEADS_KEY = 'future_leads_vault';
+const LOCAL_APPOINTMENTS_KEY = 'real_realty_appointments_vault';
+const LOCAL_LEADS_KEY = 'real_realty_leads_vault';
 
 export const getStoredAppointments = (): Appointment[] => {
   try {
     let raw = localStorage.getItem(LOCAL_APPOINTMENTS_KEY);
-    if (!raw) {
-      // Check legacy store key if existing data was saved
-      raw = localStorage.getItem('namo_appointments_vault') || localStorage.getItem('aethelgard_appointments_vault');
-    }
     if (!raw) {
       // Seed default consultation demonstration records
       const initial: Appointment[] = [
         {
           id: 'apt-001',
           created_at: new Date(Date.now() - 86400000 * 2).toISOString(),
-          property_id: 'res-plots-hinjawadi',
-          property_title: 'Residential Land & Plots',
+          property_id: 'res-apartments-flats',
+          property_title: 'Apartments & Flats',
           full_name: 'Amitabh Sen',
           email: 'amitabh.sen@example.com',
           phone: '+91 98201 12345',
@@ -53,14 +49,14 @@ export const getStoredAppointments = (): Appointment[] => {
           preferred_date: '2026-10-15',
           preferred_time: '11:00 AM (Morning)',
           inquiry_type: 'Property Consultation',
-          notes: 'Interested in clear-title residential plot in Hinjawadi / Marunji.',
+          notes: 'Interested in a 3 BHK premium apartment in South Bopal / Shela corridor.',
           status: 'Confirmed'
         },
         {
           id: 'apt-002',
           created_at: new Date(Date.now() - 86400000 * 5).toISOString(),
-          property_id: 'res-comm-office',
-          property_title: 'Commercial Office Space',
+          property_id: 'res-commercial-properties',
+          property_title: 'Commercial Properties',
           full_name: 'Pooja Mehta',
           email: 'pooja.mehta@consultancy.in',
           phone: '+91 98190 67890',
@@ -68,7 +64,7 @@ export const getStoredAppointments = (): Appointment[] => {
           preferred_date: '2026-10-22',
           preferred_time: '03:00 PM (Afternoon)',
           inquiry_type: 'Commercial Real Estate',
-          notes: 'Looking for 900+ sq ft office space for professional firm near Western Express Highway.',
+          notes: 'Looking for 1200+ sq ft showroom/office space in SBTS on South Bopal Road.',
           status: 'Pending'
         }
       ];
@@ -138,9 +134,6 @@ export const getStoredLeads = (): LeadEnquiry[] => {
   try {
     let raw = localStorage.getItem(LOCAL_LEADS_KEY);
     if (!raw) {
-      raw = localStorage.getItem('namo_leads_vault') || localStorage.getItem('aethelgard_leads_vault');
-    }
-    if (!raw) {
       const initial: LeadEnquiry[] = [
         {
           id: 'lead-001',
@@ -149,9 +142,9 @@ export const getStoredLeads = (): LeadEnquiry[] => {
           email: 'rajesh.vora@business.in',
           phone: '+91 98210 54321',
           preferred_contact: 'WhatsApp',
-          property_interest: 'Residential 3 BHK',
-          budget_range: '₹2 Cr – ₹3.5 Cr',
-          message: 'Looking for a verified residential plot or property in Hinjawadi, Pune.',
+          property_interest: 'Apartments & Flats',
+          budget_range: '₹85 Lakh – ₹2.5 Cr',
+          message: 'Looking for a verified residential apartment or commercial space in South Bopal, Ahmedabad.',
           status: 'New'
         }
       ];

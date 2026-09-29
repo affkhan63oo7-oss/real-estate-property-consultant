@@ -35,7 +35,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
               Residential & Commercial Properties.
               <br />
               <span style={{ fontFamily: 'var(--font-editorial)', fontStyle: 'italic', fontWeight: 300, color: 'var(--text-bronze)' }}>
-                Carefully evaluated properties in Hinjawadi, Marunji, and Pune.
+                Curated residential & commercial properties across Bopal, South Bopal, Shela, and Ahmedabad.
               </span>
             </h2>
           </ScrollReveal>
@@ -106,7 +106,7 @@ export const TowerResidences: React.FC<TowerResidencesProps> = ({
                           maxWidth: 'calc(100% - 2rem)'
                         }}
                       >
-                        {res.location || 'Hinjawadi, Pune'}
+                        {res.location || 'South Bopal, Ahmedabad'}
                       </div>
                     </div>
                   </ScrollReveal>

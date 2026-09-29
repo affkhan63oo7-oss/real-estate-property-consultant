@@ -41,19 +41,22 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToas
   ];
 
   const services = [
-    'Residential Land & Plots',
-    'Commercial Plots',
-    'Residential Property',
-    'Commercial Property',
-    'Land Property',
-    'Property Development'
+    'Residential Property Buying & Selling',
+    'Commercial Property Buying & Selling',
+    'Property Rentals',
+    'Property Consultation',
+    'Property Dealing / Agency Services'
   ];
 
   const localities = [
-    'Pune',
-    'Marunji',
-    'Hinjawadi',
-    'Narhe'
+    'Bopal',
+    'South Bopal',
+    'Ghuma',
+    'Shela',
+    'Shantipura',
+    'Shilaj',
+    'Maninagar',
+    'Ahmedabad'
   ];
 
   return (
@@ -95,7 +98,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToas
                   marginBottom: '0.65rem'
                 }}
               >
-                Real Estate Developer & Property Developer • Pune
+                Property Consultant & Real Estate Agency • Born to Consult
               </span>
               <h2
                 style={{
@@ -106,7 +109,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToas
                   letterSpacing: 'clamp(0.04em, 1.2vw, 0.08em)'
                 }}
               >
-                FUTURE CONSTRUCTION
+                THE REAL REALTY
               </h2>
               <span
                 style={{
@@ -116,10 +119,10 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToas
                   color: 'rgba(250, 248, 245, 0.75)',
                   display: 'block',
                   marginTop: '0.4rem',
-                  maxWidth: '680px'
+                  maxWidth: '750px'
                 }}
               >
-                Sakhare Complex, Marunji Road, Near Hotel Mezza9, Hinjawadi, Pune, Maharashtra – 411057
+                Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, Gujarat – 380058
               </span>
             </div>
 
@@ -148,11 +151,11 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToas
                 }}
               >
                 <Phone size={14} color="var(--accent-gold)" />
-                <span>Call Now</span>
+                <span>Call Us</span>
               </a>
 
               <a
-                href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+                href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold-outline"
@@ -202,23 +205,23 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToas
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', fontSize: '0.85rem', color: 'rgba(250, 248, 245, 0.75)' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
                 <MapPin size={16} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '0.2rem' }} />
-                <span>Sakhare Complex, Marunji Road, Near Hotel Mezza9, Hinjawadi, Pune, Maharashtra – 411057, India</span>
+                <span>Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, Gujarat – 380058, India</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                 <Phone size={15} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
                 <a href="tel:+917210320001" style={{ color: 'inherit', textDecoration: 'none' }}>
-                  +91 72103 20001
+                  Call Property Advisory Desk
                 </a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                 <Star size={15} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
-                <span>4.0 / 5 (42 Google Reviews)</span>
+                <span>Born to Consult • Established 2022</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
                 <Clock size={15} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '0.2rem' }} />
                 <div>
-                  <div>Mon, Wed – Sun: 9:00 AM – 8:00 PM</div>
-                  <div style={{ fontSize: '0.75rem', color: 'rgba(250, 248, 245, 0.5)' }}>Closed on Tuesdays</div>
+                  <div>Monday – Sunday: 9:00 AM – 8:00 PM</div>
+                  <div style={{ fontSize: '0.75rem', color: 'rgba(250, 248, 245, 0.5)' }}>Consultations by Appointment & Walk-in</div>
                 </div>
               </div>
               <div style={{ marginTop: '0.35rem' }}>
@@ -349,7 +352,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToas
         >
           <div style={{ maxWidth: '780px', lineHeight: 1.6 }}>
             <p style={{ fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.55)', marginBottom: '0.35rem' }}>
-              <strong style={{ color: 'var(--accent-gold)' }}>Disclaimer:</strong> Future Construction is a real estate developer and property developer operating in Pune, Marunji, Hinjawadi, and Narhe. All property dimensions, layout plans, and specifications are indicative and subject to verification with respective authorities and planning bodies.
+              <strong style={{ color: 'var(--accent-gold)' }}>Disclaimer:</strong> The Real Realty is a property consultant and real estate agency operating in Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and Ahmedabad. All property dimensions, layout plans, and specifications are indicative and subject to verification with respective developers, owners, and authorities.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center', fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.55)', marginTop: '0.5rem' }}>
               <span>Privacy Policy</span>
@@ -359,7 +362,7 @@ export const TowerFooter: React.FC<TowerFooterProps> = ({ onInquireClick, onToas
               <span>RERA Compliance</span>
             </div>
             <p style={{ fontSize: '0.72rem', color: 'rgba(250, 248, 245, 0.45)', marginTop: '0.35rem' }}>
-              © {new Date().getFullYear()} Future Construction. All rights reserved. Sakhare Complex, Marunji Road, Hinjawadi, Pune.
+              © {new Date().getFullYear()} The Real Realty. All rights reserved. Shop No. 208, SBTS, South Bopal Road, Bopal, Ahmedabad.
             </p>
           </div>
 

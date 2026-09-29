@@ -41,7 +41,7 @@ export const ProjectGallery: React.FC = () => {
     },
     {
       url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85',
-      caption: 'Panoramic Deck Overlooking Pune Landscapes',
+      caption: 'Panoramic Balcony Overlooking Ahmedabad Cityscapes',
       category: 'interior'
     },
     {

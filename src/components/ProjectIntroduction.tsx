@@ -35,7 +35,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
             <ScrollReveal delay={0} distance={10}>
               <div className="eyebrow-pill">
                 <Sparkles size={12} color="var(--accent-gold)" />
-                <span>Hinjawadi • Pune</span>
+                <span>South Bopal • Ahmedabad</span>
               </div>
             </ScrollReveal>
 
@@ -50,7 +50,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                   marginBottom: '1.25rem'
                 }}
               >
-                Where Strategic Development Meets{' '}
+                Where Trusted Advisory Meets{' '}
                 <span
                   style={{
                     fontFamily: 'var(--font-editorial)',
@@ -59,7 +59,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                     color: 'var(--accent-gold)'
                   }}
                 >
-                  Pune’s Growth
+                  Ahmedabad’s Growth
                 </span>
               </h2>
             </ScrollReveal>
@@ -76,15 +76,15 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                   maxWidth: '580px'
                 }}
               >
-                "Dedicated property development, verified land & plots, and responsive client assistance across Pune."
+                "Born to Consult — Dedicated property consultation, verified residential & commercial realty across Ahmedabad."
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem', maxWidth: '600px' }}>
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8 }}>
-                  Located at Sakhare Complex on Marunji Road near Hotel Mezza9 in Hinjawadi, Future Construction is a trusted real estate and property developer. We assist individuals, families, and businesses across residential land & plots, commercial plots, residential property, commercial property, and comprehensive land development.
+                  Located at Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, The Real Realty is a premier property consultant and real estate agency established in 2022.
                 </p>
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8 }}>
-                  With active operations in Pune, Marunji, Hinjawadi, and Narhe, Future Construction holds a 4.0/5 rating based on 42 Google reviews. Our doors are open Monday through Sunday (9:00 AM – 8:00 PM) for consultation, plot walk-throughs, and property inquiries.
+                  True to our motto "Born to Consult", we deliver seamless client solutions across residential and commercial property buying, selling, property rentals, property consultation, and property dealing throughout Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and Ahmedabad.
                 </p>
               </div>
             </ScrollReveal>
@@ -100,10 +100,11 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                 }}
               >
                 {[
-                  'Residential Land & Plots',
-                  'Commercial Plots',
-                  'Residential & Commercial Property',
-                  'Property Development'
+                  'Residential Buying & Selling',
+                  'Commercial Buying & Selling',
+                  'Property Rentals',
+                  'Property Consultation',
+                  'Agency Services'
                 ].map((item) => (
                   <div
                     key={item}
@@ -155,7 +156,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                 </a>
 
                 <a
-                  href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+                  href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold-outline"
@@ -196,7 +197,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
               >
                 <img
                   src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85"
-                  alt="Future Construction Property Development Hinjawadi Pune"
+                  alt="The Real Realty Property Consultant Ahmedabad"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -245,7 +246,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                         display: 'block'
                       }}
                     >
-                      Property Development
+                      The Real Realty • Est. 2022
                     </span>
                     <span
                       style={{
@@ -256,7 +257,7 @@ export const ProjectIntroduction: React.FC<ProjectIntroductionProps> = ({ onInqu
                         letterSpacing: '0.05em'
                       }}
                     >
-                      Hinjawadi, Pune
+                      South Bopal, Ahmedabad
                     </span>
                   </div>
                   <div

@@ -135,23 +135,24 @@ export const Footer: React.FC<FooterProps> = ({
                 marginBottom: '0.5rem'
               }}
             >
-              Future Construction
+              The Real Realty
             </span>
             <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', lineHeight: 1.8 }}>
-              Real estate developer and property developer based in Hinjawadi, Pune. Sakhare Complex, Marunji Road, Near Hotel Mezza9, Pune – 411057.
+              Property Consultant & Real Estate Agency • Born to Consult. Established in 2022. Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, Gujarat – 380058.
             </p>
           </div>
 
           {/* Navigation Links */}
           <div>
             <h4 style={{ fontSize: '0.8125rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A982', marginBottom: '1.25rem' }}>
-              The Portfolio
+              Core Services
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.875rem' }}>
-              <li><a href="#collection" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none' }}>Alpine Cantilevers</a></li>
-              <li><a href="#collection" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none' }}>Sky Penthouse Sanctuaries</a></li>
-              <li><a href="#collection" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none' }}>Mediterranean Cliff Havens</a></li>
-              <li><a href="#collection" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none' }}>Arctic Glass Observatories</a></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Residential Buying & Selling</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Commercial Buying & Selling</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Rentals</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Consultation</span></li>
+              <li><span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Property Dealing / Agency</span></li>
             </ul>
           </div>
 
@@ -161,53 +162,24 @@ export const Footer: React.FC<FooterProps> = ({
               Consultancy Office
             </h4>
             <div style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.7)', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              <div><strong>Business:</strong> Future Construction</div>
-              <div><strong>Type:</strong> Real Estate Developer / Property Developer</div>
-              <div><strong>Location:</strong> Sakhare Complex, Marunji Road, Near Hotel Mezza9, Hinjawadi, Pune – 411057</div>
+              <div><strong>Business:</strong> The Real Realty</div>
+              <div><strong>Tagline:</strong> Born to Consult (Est. 2022)</div>
+              <div><strong>Type:</strong> Property Consultant / Real Estate Agency</div>
+              <div><strong>Address:</strong> Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad – 380058</div>
             </div>
           </div>
 
-          {/* Newsletter Gazette */}
+          {/* Service Areas */}
           <div>
             <h4 style={{ fontSize: '0.8125rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A982', marginBottom: '1.25rem' }}>
-              The Architectural Gazette
+              Main Service Areas
             </h4>
-            <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '1rem' }}>
-              Receive discreet notifications of off-market private commissions before public release.
+            <p style={{ fontSize: '0.8125rem', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '1rem', lineHeight: 1.7 }}>
+              Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and Ahmedabad.
             </p>
-            <form onSubmit={handleSubscribe} style={{ display: 'flex', gap: '0.5rem' }}>
-              <input
-                type="email"
-                placeholder="Enter private email"
-                value={emailInput}
-                onChange={(e) => setEmailInput(e.target.value)}
-                style={{
-                  flex: 1,
-                  padding: '0.65rem 0.85rem',
-                  fontSize: '0.8125rem',
-                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  color: '#FFFFFF',
-                  borderRadius: '2px',
-                  outline: 'none'
-                }}
-              />
-              <button
-                type="submit"
-                style={{
-                  padding: '0.65rem 1rem',
-                  backgroundColor: '#FFFFFF',
-                  border: 'none',
-                  borderRadius: '2px',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}
-              >
-                <Send size={14} color="#121316" />
-              </button>
-            </form>
+            <div style={{ fontSize: '0.8125rem', color: '#C9A982' }}>
+              Property Types: Apartments, Flats, Villas, Independent Houses, Commercial & Rentals.
+            </div>
           </div>
         </div>
 
@@ -226,7 +198,7 @@ export const Footer: React.FC<FooterProps> = ({
           }}
         >
           <div>
-            © 2026 Future Construction. All rights reserved. Sakhare Complex, Hinjawadi, Pune.
+            © {new Date().getFullYear()} The Real Realty. All rights reserved. Shop No. 208, SBTS, South Bopal Road, Bopal, Ahmedabad.
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>

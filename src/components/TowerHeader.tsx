@@ -99,20 +99,20 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 textOverflow: 'ellipsis'
               }}
             >
-              FUTURE CONSTRUCTION
+              THE REAL REALTY
             </span>
             <span
               className="hidden-mobile"
               style={{
                 fontFamily: 'var(--font-title)',
                 fontSize: '0.625rem',
-                letterSpacing: '0.25em',
+                letterSpacing: '0.22em',
                 color: isScrolled ? 'var(--text-bronze)' : 'rgba(250, 248, 245, 0.7)',
                 textTransform: 'uppercase',
                 whiteSpace: 'nowrap'
               }}
             >
-              • HINJAWADI, PUNE
+              • BORN TO CONSULT • AHMEDABAD
             </span>
           </a>
 
@@ -334,7 +334,7 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
               textAlign: 'center'
             }}
           >
-            FUTURE CONSTRUCTION • DIRECTORY
+            THE REAL REALTY • DIRECTORY
           </span>
 
           <div
@@ -416,11 +416,11 @@ export const TowerHeader: React.FC<TowerHeaderProps> = ({
                 justifyContent: 'center'
               }}
             >
-              Call: +91 72103 20001
+              Call Us
             </a>
 
             <a
-              href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+              href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-111-secondary"

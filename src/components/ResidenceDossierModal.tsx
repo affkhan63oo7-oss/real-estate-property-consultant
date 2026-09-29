@@ -100,7 +100,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
           >
             <div style={{ flex: '1 1 240px' }}>
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-title)', letterSpacing: '0.2em', color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
-                {residence.type} • Floor {residence.floor} • {residence.location || 'Hinjawadi, Pune'}
+                {residence.type} • Floor {residence.floor} • {residence.location || 'South Bopal, Ahmedabad'}
               </span>
               <h2 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#FAF8F5', marginTop: '0.25rem', lineHeight: 1.15 }}>
                 {residence.residenceNumber}
@@ -166,7 +166,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
                 Location
               </span>
               <div style={{ fontFamily: 'var(--font-title)', fontSize: '1.1rem', color: 'var(--text-espresso)', marginTop: '0.2rem' }}>
-                {residence.location || 'Hinjawadi, Pune'}
+                {residence.location || 'South Bopal, Ahmedabad'}
               </div>
             </div>
 
@@ -234,7 +234,7 @@ export const ResidenceDossierModal: React.FC<ResidenceDossierModalProps> = ({
             </a>
 
             <a
-              href={`https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20the%20${encodeURIComponent(residence.residenceNumber)}.`}
+              href={`https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20the%20${encodeURIComponent(residence.residenceNumber)}.`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-111-secondary"

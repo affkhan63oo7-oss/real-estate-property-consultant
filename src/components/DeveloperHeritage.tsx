@@ -74,10 +74,10 @@ export const DeveloperHeritage: React.FC = () => {
             09 / Professional Lineage
           </span>
           <h2 style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4rem)', color: 'var(--text-primary)' }}>
-            Future Construction
+            The Real Realty
           </h2>
           <p style={{ maxWidth: '650px', marginTop: '0.5rem' }}>
-            Future Construction is a real estate developer and property developer based in Hinjawadi, Pune, specializing in residential and commercial plots, land property, and development across Pune, Marunji, Hinjawadi, and Narhe.
+            The Real Realty is a premier property consultant and real estate agency established in 2022 in Bopal, Ahmedabad. Guided by our motto "Born to Consult", we specialize in residential and commercial property buying, selling, rentals, and property consultation across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and Ahmedabad.
           </p>
         </div>
 
@@ -96,10 +96,10 @@ export const DeveloperHeritage: React.FC = () => {
             <Award size={28} color="var(--accent-bronze)" style={{ flexShrink: 0 }} />
             <div>
               <h4 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
-                Pritzker Collaborations
+                Born to Consult Advisory
               </h4>
               <p style={{ fontSize: '0.875rem' }}>
-                Direct commissions partnering with the most influential architectural minds of the 21st century.
+                Objective, research-backed consultation designed to identify optimal residential and commercial real estate value.
               </p>
             </div>
           </div>
@@ -108,10 +108,10 @@ export const DeveloperHeritage: React.FC = () => {
             <Shield size={28} color="var(--accent-bronze)" style={{ flexShrink: 0 }} />
             <div>
               <h4 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
-                Centennial Engineering
+                Verified Clear Titles
               </h4>
               <p style={{ fontSize: '0.875rem' }}>
-                Structural envelopes designed for a 100-year minimum lifecycle with carbon-neutral geothermal heating.
+                Rigorous legal documentation checks, municipal verification, and transparent paperwork for buyers and sellers.
               </p>
             </div>
           </div>
@@ -120,10 +120,10 @@ export const DeveloperHeritage: React.FC = () => {
             <Compass size={28} color="var(--accent-bronze)" style={{ flexShrink: 0 }} />
             <div>
               <h4 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
-                Discreet Sovereign Acquisition
+                Ahmedabad Market Mastery
               </h4>
               <p style={{ fontSize: '0.875rem' }}>
-                White-glove legal structuring and anonymity safeguards for international family offices.
+                Comprehensive coverage of Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, and Maninagar corridors.
               </p>
             </div>
           </div>

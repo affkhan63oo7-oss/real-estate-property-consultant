@@ -42,11 +42,11 @@ export const FloatingConcierge: React.FC<FloatingConciergeProps> = ({
           }}
         >
           <span style={{ fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--accent-bronze)' }}>
-            Future Construction Help Desk
+            The Real Realty Desk
           </span>
 
           <a
-            href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+            href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
             target="_blank"
             rel="noopener noreferrer"
             style={{

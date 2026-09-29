@@ -94,7 +94,7 @@ export const ProjectAmenities: React.FC = () => {
     {
       icon: <Eye size={20} color="var(--accent-gold)" />,
       title: 'Rooftop Panoramic Terrace',
-      desc: 'Panoramic elevated viewing deck framing vistas of Sanjay Gandhi National Park.'
+      desc: 'Panoramic elevated viewing deck framing expansive vistas of the Ahmedabad skyline.'
     }
   ];
 
@@ -156,7 +156,7 @@ export const ProjectAmenities: React.FC = () => {
                 lineHeight: 1.6
               }}
             >
-              Curated leisure environments engineered for vitality, quiet contemplation, and community living across our developments in Pune.
+              Curated leisure environments engineered for vitality, quiet contemplation, and community living across premier residential communities in Ahmedabad.
             </p>
           </ScrollReveal>
         </div>

@@ -40,10 +40,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
 
   // Supabase Custom Configuration in-browser override
   const [customUrl, setCustomUrl] = useState(
-    typeof window !== 'undefined' ? localStorage.getItem('FUTURE_SUPABASE_URL') || localStorage.getItem('NAMO_SUPABASE_URL') || localStorage.getItem('AETHELGARD_SUPABASE_URL') || '' : ''
+    typeof window !== 'undefined' ? localStorage.getItem('REAL_REALTY_SUPABASE_URL') || localStorage.getItem('FUTURE_SUPABASE_URL') || '' : ''
   );
   const [customKey, setCustomKey] = useState(
-    typeof window !== 'undefined' ? localStorage.getItem('FUTURE_SUPABASE_KEY') || localStorage.getItem('NAMO_SUPABASE_KEY') || localStorage.getItem('AETHELGARD_SUPABASE_KEY') || '' : ''
+    typeof window !== 'undefined' ? localStorage.getItem('REAL_REALTY_SUPABASE_KEY') || localStorage.getItem('FUTURE_SUPABASE_KEY') || '' : ''
   );
 
   const reloadData = () => {
@@ -61,20 +61,24 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
 
   const handleSaveCredentials = () => {
     if (customUrl.trim()) {
-      localStorage.setItem('FUTURE_SUPABASE_URL', customUrl.trim());
+      localStorage.setItem('REAL_REALTY_SUPABASE_URL', customUrl.trim());
+      localStorage.removeItem('FUTURE_SUPABASE_URL');
       localStorage.removeItem('NAMO_SUPABASE_URL');
       localStorage.removeItem('AETHELGARD_SUPABASE_URL');
     } else {
+      localStorage.removeItem('REAL_REALTY_SUPABASE_URL');
       localStorage.removeItem('FUTURE_SUPABASE_URL');
       localStorage.removeItem('NAMO_SUPABASE_URL');
       localStorage.removeItem('AETHELGARD_SUPABASE_URL');
     }
 
     if (customKey.trim()) {
-      localStorage.setItem('FUTURE_SUPABASE_KEY', customKey.trim());
+      localStorage.setItem('REAL_REALTY_SUPABASE_KEY', customKey.trim());
+      localStorage.removeItem('FUTURE_SUPABASE_KEY');
       localStorage.removeItem('NAMO_SUPABASE_KEY');
       localStorage.removeItem('AETHELGARD_SUPABASE_KEY');
     } else {
+      localStorage.removeItem('REAL_REALTY_SUPABASE_KEY');
       localStorage.removeItem('FUTURE_SUPABASE_KEY');
       localStorage.removeItem('NAMO_SUPABASE_KEY');
       localStorage.removeItem('AETHELGARD_SUPABASE_KEY');
@@ -91,9 +95,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
       apt.id === id ? { ...apt, status: newStatus } : apt
     );
     setAppointments(updated);
+    localStorage.setItem('real_realty_appointments_vault', JSON.stringify(updated));
     localStorage.setItem('future_appointments_vault', JSON.stringify(updated));
-    localStorage.setItem('namo_appointments_vault', JSON.stringify(updated));
-    localStorage.setItem('aethelgard_appointments_vault', JSON.stringify(updated));
     onToast(`Appointment #${id} updated to ${newStatus}.`);
   };
 
@@ -153,7 +156,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
             <Shield size={20} color="#C9A982" />
             <div>
               <span style={{ fontSize: '0.6875rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9A982', fontWeight: 700 }}>
-                Future Construction Admin
+                The Real Realty Admin
               </span>
               <h3 style={{ fontSize: '1.25rem', color: '#FFFFFF', fontWeight: 400 }}>
                 Consultancy Registry & Operations
@@ -615,9 +618,11 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onToast
                       onClick={() => {
                         setCustomUrl('');
                         setCustomKey('');
+                        localStorage.removeItem('REAL_REALTY_SUPABASE_URL');
                         localStorage.removeItem('FUTURE_SUPABASE_URL');
                         localStorage.removeItem('NAMO_SUPABASE_URL');
                         localStorage.removeItem('AETHELGARD_SUPABASE_URL');
+                        localStorage.removeItem('REAL_REALTY_SUPABASE_KEY');
                         localStorage.removeItem('FUTURE_SUPABASE_KEY');
                         localStorage.removeItem('NAMO_SUPABASE_KEY');
                         localStorage.removeItem('AETHELGARD_SUPABASE_KEY');

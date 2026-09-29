@@ -92,11 +92,11 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                     marginBottom: '1.25rem'
                   }}
                 >
-                  "Strategic property development, verified residential & commercial plots, and attentive client service."
+                  "Born to Consult — Strategic property consultation, verified residential & commercial realty, and attentive client advisory."
                 </p>
 
                 <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '540px' }}>
-                  Whether you are looking for residential land & plots, commercial plots, residential property, commercial spaces, or property development in Pune, Marunji, Hinjawadi, or Narhe, connect directly with Future Construction.
+                  Whether you are looking for apartments, flats, villas, independent houses, commercial properties, or rental properties in Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, or Maninagar, connect directly with The Real Realty.
                 </p>
 
                 {/* CTAs */}
@@ -116,11 +116,11 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                     style={{ padding: '0.9rem 1.5rem', minHeight: '44px', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
                   >
                     <Phone size={15} color="var(--accent-gold)" />
-                    <span>Call: +91 72103 20001</span>
+                    <span>Call Us</span>
                   </a>
 
                   <a
-                    href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+                    href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-gold-outline"
@@ -153,15 +153,15 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#FAF8F5', fontSize: '0.78rem', fontFamily: 'var(--font-sans)' }}>
                     <ShieldCheck size={15} color="var(--accent-gold)" />
-                    <span>Verified Developer</span>
+                    <span>Verified Agency</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#FAF8F5', fontSize: '0.78rem', fontFamily: 'var(--font-sans)' }}>
                     <MapPin size={15} color="var(--accent-gold)" />
-                    <span>Hinjawadi, Pune</span>
+                    <span>South Bopal, Ahmedabad</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#FAF8F5', fontSize: '0.78rem', fontFamily: 'var(--font-sans)' }}>
                     <Sparkles size={15} color="var(--accent-gold)" />
-                    <span>4.0/5 Rating (42 Reviews)</span>
+                    <span>Born to Consult (Est. 2022)</span>
                   </div>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
               >
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
-                  alt="Future Construction Hinjawadi Pune"
+                  alt="The Real Realty South Bopal Ahmedabad"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -210,10 +210,10 @@ export const ProjectFinalCTA: React.FC<ProjectFinalCTAProps> = ({ onInquireClick
                   }}
                 >
                   <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-title)', color: 'var(--accent-gold)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                    Future Construction • Property Developer
+                    The Real Realty • Born to Consult
                   </span>
                   <span style={{ fontSize: '0.72rem', color: '#FAF8F5' }}>
-                    Hinjawadi, Pune
+                    South Bopal, Ahmedabad
                   </span>
                 </div>
               </div>

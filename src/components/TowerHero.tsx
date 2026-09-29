@@ -15,7 +15,7 @@ interface HeroSlide {
 const HERO_SLIDES: HeroSlide[] = [
   {
     url: '/images/hero/hero-1.jpg',
-    alt: 'Pune Skyline and Residential Horizon',
+    alt: 'Ahmedabad Skyline and Residential Horizon',
     position: 'center center'
   },
   {
@@ -238,7 +238,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          • HINJAWADI • PUNE •
+          • BOPAL • SOUTH BOPAL • AHMEDABAD •
         </span>
 
         {/* Monumental Headline */}
@@ -257,7 +257,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          FUTURE CONSTRUCTION
+          THE REAL REALTY
         </h1>
 
         {/* Elegant Supporting Subhead */}
@@ -267,7 +267,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             fontSize: 'clamp(0.95rem, 2.2vw, 1.55rem)',
             fontStyle: 'italic',
             color: 'rgba(250, 248, 245, 0.88)',
-            maxWidth: '820px',
+            maxWidth: '860px',
             letterSpacing: '0.03em',
             lineHeight: 1.6,
             marginBottom: 'clamp(1.75rem, 4vh, 3rem)',
@@ -277,7 +277,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
             willChange: 'opacity, transform'
           }}
         >
-          Real Estate Developer & Property Developer in Hinjawadi, Pune. Residential land & plots, commercial plots, residential & commercial properties, and land development across Pune, Marunji, Hinjawadi, and Narhe.
+          Property Consultant & Real Estate Agency • Born to Consult. Established in 2022. Specialists in Apartments, Flats, Villas, Independent Houses, Commercial Properties, and Rental Properties across Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, and Maninagar.
         </p>
 
         {/* Direct Action-Focused CTAs */}
@@ -336,7 +336,7 @@ export const TowerHero: React.FC<TowerHeroProps> = ({ onExploreClick, onInquireC
 
           {/* Direct CTA: WhatsApp Us */}
           <a
-            href="https://wa.me/917210320001?text=Hello%20Future%20Construction%2C%20I%20am%20inquiring%20about%20your%20properties%20and%20plots."
+            href="https://wa.me/917210320001?text=Hello%20The%20Real%20Realty%2C%20I%20am%20inquiring%20about%20your%20property%20consultation%20and%20real%20estate%20services%20in%20Ahmedabad."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-111-secondary"

@@ -22,7 +22,7 @@ export const TowerInteriors: React.FC = () => {
               Practical Property Assessment.
             </h2>
             <p style={{ maxWidth: '650px', marginTop: '0.75rem', fontSize: '1.05rem', color: 'var(--text-bronze)' }}>
-              Objective criteria guiding every residential selection, commercial evaluation, and rental recommendation in Mumbai.
+              Objective criteria guiding every residential selection, commercial evaluation, and rental recommendation in Ahmedabad.
             </p>
           </ScrollReveal>
         </div>
@@ -42,7 +42,7 @@ export const TowerInteriors: React.FC = () => {
               <div style={{ height: 'clamp(220px, 40vw, 400px)', overflow: 'hidden', marginBottom: '1.25rem', backgroundColor: 'var(--bg-sandstone)', boxShadow: 'var(--shadow-editorial)' }}>
                 <img
                   src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85"
-                  alt="Residential Living Quality Hinjawadi Pune"
+                  alt="Residential Living Quality South Bopal Ahmedabad The Real Realty"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>

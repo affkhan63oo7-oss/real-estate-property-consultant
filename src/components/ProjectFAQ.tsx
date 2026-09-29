@@ -12,34 +12,34 @@ export const ProjectFAQ: React.FC = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: 'What services and property categories does Future Construction offer?',
+      question: 'What services does The Real Realty offer?',
       answer:
-        'Future Construction is a real estate developer and property developer based in Hinjawadi, Pune. We specialize across six core property categories: Residential Land & Plots, Commercial Plots, Residential Property, Commercial Property, Land Property, and Property Development.'
+        'The Real Realty is a premier property consultant and real estate agency established in 2022. True to our tagline "Born to Consult", we offer five core real estate services: Residential Property Buying & Selling, Commercial Property Buying & Selling, Property Rentals, Property Consultation, and Property Dealing / Agency Services.'
     },
     {
-      question: 'Which areas does Future Construction operate in?',
+      question: 'Which main service areas does The Real Realty cover?',
       answer:
-        'Our active areas of operation include Pune, Marunji, Hinjawadi, and Narhe. We assist buyers, investors, and landowners in selecting prime plots, commercial spaces, and residential developments across these high-growth corridors.'
+        'Our primary service areas across Ahmedabad include Bopal, South Bopal, Ghuma, Shela, Shantipura, Shilaj, Maninagar, and other premier residential and commercial growth corridors of Ahmedabad.'
     },
     {
-      question: 'Where is Future Construction located and how can I visit?',
+      question: 'What types of properties do you deal in?',
       answer:
-        'Our office is conveniently located at Sakhare Complex, Marunji Road, Near Hotel Mezza9, Hinjawadi, Pune, Maharashtra – 411057, India. You can connect with our team for in-person consultations, plot surveys, and property walkthroughs.'
+        'We specialize across a comprehensive spectrum of property types: Apartments, Flats, Villas, Independent Houses, Commercial Properties (corporate offices, retail showrooms), and Rental Properties across Ahmedabad.'
     },
     {
-      question: 'What are Future Construction’s business hours?',
+      question: 'Where is The Real Realty located and how can I visit?',
       answer:
-        'We are open Monday, Wednesday, Thursday, Friday, Saturday, and Sunday from 9:00 AM to 8:00 PM. (Closed on Tuesdays).'
+        'Our office is located at Shop No. 208, SBTS (South Bopal Trade Centre), Near Aaryan Gloria, South Bopal Road, Bopal, Ahmedabad, Gujarat – 380058. You are warmly welcome to visit us for personalized, in-person property consultations.'
     },
     {
-      question: 'How do I arrange a site visit or enquire about available plots?',
+      question: 'When was The Real Realty established and what is your consulting philosophy?',
       answer:
-        'You can click "Enquire Now" on this website, call us directly at +91 72103 20001, or reach out via WhatsApp at +91 72103 20001. Our team will promptly assist with site visits, plot dimensions, and documentation.'
+        'The Real Realty was established in 2022 with the foundational motto "Born to Consult". We are committed to objective, transparent, and research-backed advisory to ensure clients achieve optimal value in every property transaction.'
     },
     {
-      question: 'What customer ratings and reviews does Future Construction hold?',
+      question: 'How do I arrange a property consultation or site visit?',
       answer:
-        'Future Construction holds a 4.0/5 rating with 42 verified reviews on Google, reflecting our commitment to transparent property guidance and dedicated client service in Pune.'
+        'You can click "Enquire Now" on this website, call our team directly, or connect with us on WhatsApp. Our advisors will promptly assist with curated listings, physical property visits, title checks, and registration guidance.'
     }
   ];
 

@@ -72,7 +72,7 @@ export const ProjectMasterPlan: React.FC = () => {
               >
                 <img
                   src="/images/master-plan.jpg"
-                  alt="Future Construction Property Development Site Plan Hinjawadi Pune"
+                  alt="The Real Realty Master Planning & Property Layouts Ahmedabad"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -223,7 +223,7 @@ export const ProjectMasterPlan: React.FC = () => {
               </p>
 
               <p style={{ color: 'rgba(250, 248, 245, 0.72)', fontSize: '0.9375rem', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '600px' }}>
-                The master layout prioritizes generous peripheral setbacks and wide spacing between tower footprints. By carefully orienting living balconies away from dense vehicle traffic, every home enjoys uninterrupted sunlight, sweeping western vistas, and refreshing cross-breezes flowing across Pune's natural contours.
+                The master layout prioritizes generous peripheral setbacks and wide spacing between tower footprints. By carefully orienting living balconies away from dense vehicle traffic, every residence enjoys uninterrupted sunlight, sweeping western vistas, and refreshing cross-breezes flowing across Ahmedabad's vibrant western avenues.
               </p>
             </ScrollReveal>
 

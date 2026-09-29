@@ -13,39 +13,39 @@ export const ProjectStatsBar: React.FC = () => {
   const stats: StatItem[] = [
     {
       icon: <MapPin size={18} color="var(--accent-gold)" />,
-      value: 'Hinjawadi',
-      label: 'Developer Hub',
-      caption: 'Marunji Rd, Pune 411057'
+      value: 'South Bopal',
+      label: 'Headquarters',
+      caption: 'Shop 208, SBTS, 380058'
     },
     {
       icon: <Home size={18} color="var(--accent-gold)" />,
-      value: 'Plots & Homes',
-      label: 'Property Categories',
-      caption: 'Residential & Commercial'
+      value: '6 Portfolios',
+      label: 'Property Types',
+      caption: 'Apartments, Villas & Commercial'
     },
     {
       icon: <Layers size={18} color="var(--accent-gold)" />,
-      value: '4 Core Hubs',
-      label: 'Areas of Operation',
-      caption: 'Pune, Marunji, Hinjawadi, Narhe'
+      value: '7+ Hubs',
+      label: 'Main Service Areas',
+      caption: 'Bopal, Shela, Shilaj & More'
     },
     {
       icon: <Star size={18} color="var(--accent-gold)" />,
-      value: '4.0 / 5',
-      label: 'Google Rating',
-      caption: '42 Verified Reviews'
+      value: 'Est. 2022',
+      label: 'Property Advisory',
+      caption: 'Born to Consult'
     },
     {
       icon: <Building2 size={18} color="var(--accent-gold)" />,
-      value: '6 Categories',
-      label: 'Services Offered',
-      caption: 'Land & Property Development'
+      value: '5 Services',
+      label: 'Agency Solutions',
+      caption: 'Buy, Sell, Rent & Deal'
     },
     {
       icon: <Clock size={18} color="var(--accent-gold)" />,
-      value: '9 AM – 8 PM',
-      label: 'Business Hours',
-      caption: 'Mon, Wed – Sun Open'
+      value: 'Full-Week',
+      label: 'Consultation Desk',
+      caption: 'Personalized Advisory'
     }
   ];
 
